@@ -13,9 +13,11 @@ locations against each other — **not tax, legal, or financial advice.**
 
 ## What's inside
 
-- An interactive Leaflet map of 57 Chicagoland neighborhoods (35 Chicago community areas
-  + 22 suburbs across Cook, DuPage, Lake, Will, and Kane counties), color-coded by any of
-  9 selectable metrics (disposable income, rent, home price, tax burden, walkability, etc.)
+- A full-viewport interactive map covering all of Chicagoland edge-to-edge — all 77
+  official Chicago community areas plus 102 surrounding suburbs across 6 counties (Cook,
+  DuPage, Lake, Will, Kane, McHenry), tiled with no gaps via a Voronoi tessellation outside
+  Chicago proper — color-coded by any of 9 selectable metrics on a blue (better for you) to
+  red (worse for you) diverging scale
 - A simple onboarding profile (income, family, rent/own, car, commute, spending) that
   drives every calculation, saved locally in your browser
 - A neighborhood detail panel breaking down Housing / Taxes / Transportation / Cost of
@@ -73,7 +75,15 @@ src/
 docs/
   CONTRACT.md       Internal team contract: file ownership + data interfaces
   DATA_SOURCES.md   Full data provenance catalogue + "add a neighborhood" walkthrough
+scripts/
+  generate-dataset.mjs       One-time data-authoring script (`npm run data:generate`)
+  generate-tessellation.mjs  One-time Voronoi tessellation script (`npm run geo:generate`)
 ```
+
+The two `scripts/*.mjs` files are dev-only tooling that produce the static files in
+`src/data/**` — they never run as part of `npm run dev`/`npm run build`, and their
+geometry libraries (`d3-delaunay`, `@turf/turf`) are devDependencies only, never shipped
+to the browser.
 
 The app only ever touches data through the functions exported from `src/data/index.ts`
 and `src/calculations/*` — no component hardcodes neighborhood data, so the dataset can
@@ -118,7 +128,7 @@ catalogue. Summary:
 
 | Category | Real / actual | Estimated (MVP placeholder) |
 |---|---|---|
-| Geography | Chicago's 35 official community-area boundaries (City of Chicago Data Portal), real centroids, county/municipality assignments | 22 suburb boundary shapes (illustrative squares around real centroids) |
+| Geography | All 77 official Chicago community-area boundaries (City of Chicago Data Portal), real centroids, county/municipality assignments, real 6-county outer extent (Census TIGERweb) | 102 suburb "territory" shapes — a computed Voronoi tessellation anchored on real town centroids, not real municipal boundaries |
 | Taxes | IL flat 4.95% income tax, no local income tax, 2024 federal bracket structure | Combined sales tax rates, federal bracket *vintage* (drifts yearly), vehicle fees |
 | Transportation | CTA/Metra lines actually serving each area | Transit/walk scores, commute times, parking cost |
 | Housing | — | Median rent/home price, effective property tax rate |
@@ -132,11 +142,16 @@ Revenue rate tables, Census TIGER/Line).
 
 ## Known limitations
 
-- **57 of 77+ possible Chicagoland areas** are modeled — a solid MVP cross-section, not
-  full coverage.
-- **Suburb map boundaries are illustrative shapes**, not real municipal boundaries (real
-  centroids and county/municipality assignments are accurate). Chicago's 35 community-area
-  boundaries are real, simplified for file size.
+- **179 neighborhoods modeled** (all 77 official Chicago community areas + 102 suburbs
+  across 6 counties) — a large but still finite slice of Chicagoland, not literally every
+  town in the metro area.
+- **Suburb map shapes are a computed Voronoi tessellation**, not real municipal boundaries —
+  each suburb's real town-center coordinate is used to carve out a "nearest neighbor"
+  territory so the whole region reads as tiled with no gaps, the way hoodmaps-style maps
+  do, but a real town's actual shape can differ substantially from its Voronoi cell. This
+  is disclosed in the GeoJSON (`properties.geometrySource: "voronoi-illustrative"`) and in
+  `docs/DATA_SOURCES.md`. Chicago's 77 community-area boundaries are real, simplified only
+  for file size.
 - **One tax jurisdiction per municipality** — real Illinois sales tax can vary by special
   taxing district within a municipality; this MVP doesn't model that granularity.
 - **Federal tax brackets are pinned to 2024** and will drift from the current tax year
@@ -153,8 +168,10 @@ Revenue rate tables, Census TIGER/Line).
 Full step-by-step walkthrough (which files to touch, in what order) is in
 [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md#how-to-add-a-new-neighborhood). In short:
 add entries to `src/data/counties.json` → `municipalities.json` → `taxJurisdictions.json`
-→ `neighborhoods.json` → the four per-category dataset files → a GeoJSON feature — then
-run `npm run build` to confirm nothing broke.
+→ `neighborhoods.json` → the four per-category dataset files, then either add a GeoJSON
+feature by hand or — for a new suburb — just re-run `npm run geo:generate` to
+re-tessellate the map with the new town included as a Voronoi seed. Run `npm run build`
+afterward to confirm nothing broke.
 
 ## How this was built
 
