@@ -1041,5 +1041,2124 @@
       "valueType": "estimated",
       "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
     }
+  },
+  "edison-park": {
+    "neighborhoodId": "edison-park",
+    "transitScore": 74,
+    "walkScore": 78,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 26,
+    "parkingMonthlyEstimate": 154,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "norwood-park": {
+    "neighborhoodId": "norwood-park",
+    "transitScore": 74,
+    "walkScore": 78,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 27,
+    "parkingMonthlyEstimate": 152,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "forest-glen": {
+    "neighborhoodId": "forest-glen",
+    "transitScore": 77,
+    "walkScore": 81,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 25,
+    "parkingMonthlyEstimate": 164,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "north-park": {
+    "neighborhoodId": "north-park",
+    "transitScore": 59,
+    "walkScore": 70,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 149,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "dunning": {
+    "neighborhoodId": "dunning",
+    "transitScore": 72,
+    "walkScore": 77,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Blue Line (Cumberland, near edge)"
+    ],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 148,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "montclare": {
+    "neighborhoodId": "montclare",
+    "transitScore": 71,
+    "walkScore": 75,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District West"
+    ],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 144,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "belmont-cragin": {
+    "neighborhoodId": "belmont-cragin",
+    "transitScore": 56,
+    "walkScore": 67,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 32,
+    "parkingMonthlyEstimate": 140,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "hermosa": {
+    "neighborhoodId": "hermosa",
+    "transitScore": 55,
+    "walkScore": 67,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 32,
+    "parkingMonthlyEstimate": 137,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "west-garfield-park": {
+    "neighborhoodId": "west-garfield-park",
+    "transitScore": 67,
+    "walkScore": 71,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Green Line"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 128,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "east-garfield-park": {
+    "neighborhoodId": "east-garfield-park",
+    "transitScore": 68,
+    "walkScore": 72,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Green Line"
+    ],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 131,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "armour-square": {
+    "neighborhoodId": "armour-square",
+    "transitScore": 72,
+    "walkScore": 77,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Red Line"
+    ],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 148,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "douglas": {
+    "neighborhoodId": "douglas",
+    "transitScore": 71,
+    "walkScore": 75,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Green Line",
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 142,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "oakland": {
+    "neighborhoodId": "oakland",
+    "transitScore": 69,
+    "walkScore": 73,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 136,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "fuller-park": {
+    "neighborhoodId": "fuller-park",
+    "transitScore": 65,
+    "walkScore": 70,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Red Line (adjacent)"
+    ],
+    "avgCommuteMinutesToLoop": 32,
+    "parkingMonthlyEstimate": 123,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "grand-boulevard": {
+    "neighborhoodId": "grand-boulevard",
+    "transitScore": 70,
+    "walkScore": 75,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Green Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 141,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "washington-park": {
+    "neighborhoodId": "washington-park",
+    "transitScore": 67,
+    "walkScore": 72,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Green Line"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 129,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "avalon-park": {
+    "neighborhoodId": "avalon-park",
+    "transitScore": 69,
+    "walkScore": 73,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 136,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "south-chicago": {
+    "neighborhoodId": "south-chicago",
+    "transitScore": 67,
+    "walkScore": 71,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 127,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "burnside": {
+    "neighborhoodId": "burnside",
+    "transitScore": 66,
+    "walkScore": 70,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 125,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "calumet-heights": {
+    "neighborhoodId": "calumet-heights",
+    "transitScore": 70,
+    "walkScore": 74,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 138,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "roseland": {
+    "neighborhoodId": "roseland",
+    "transitScore": 67,
+    "walkScore": 71,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 128,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "south-deering": {
+    "neighborhoodId": "south-deering",
+    "transitScore": 52,
+    "walkScore": 63,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 34,
+    "parkingMonthlyEstimate": 124,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "east-side": {
+    "neighborhoodId": "east-side",
+    "transitScore": 67,
+    "walkScore": 72,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 129,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "west-pullman": {
+    "neighborhoodId": "west-pullman",
+    "transitScore": 66,
+    "walkScore": 71,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 127,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "riverdale": {
+    "neighborhoodId": "riverdale",
+    "transitScore": 64,
+    "walkScore": 69,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 32,
+    "parkingMonthlyEstimate": 120,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures. Well-documented as the lowest-income community area in Chicago; anchored below Englewood."
+    }
+  },
+  "hegewisch": {
+    "neighborhoodId": "hegewisch",
+    "transitScore": 68,
+    "walkScore": 72,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 131,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "garfield-ridge": {
+    "neighborhoodId": "garfield-ridge",
+    "transitScore": 71,
+    "walkScore": 75,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 142,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "archer-heights": {
+    "neighborhoodId": "archer-heights",
+    "transitScore": 70,
+    "walkScore": 74,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 139,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "brighton-park": {
+    "neighborhoodId": "brighton-park",
+    "transitScore": 69,
+    "walkScore": 74,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 138,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "mckinley-park": {
+    "neighborhoodId": "mckinley-park",
+    "transitScore": 70,
+    "walkScore": 74,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 140,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "new-city": {
+    "neighborhoodId": "new-city",
+    "transitScore": 55,
+    "walkScore": 66,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 33,
+    "parkingMonthlyEstimate": 134,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "west-elsdon": {
+    "neighborhoodId": "west-elsdon",
+    "transitScore": 70,
+    "walkScore": 74,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 139,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "gage-park": {
+    "neighborhoodId": "gage-park",
+    "transitScore": 55,
+    "walkScore": 66,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 33,
+    "parkingMonthlyEstimate": 136,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "clearing": {
+    "neighborhoodId": "clearing",
+    "transitScore": 71,
+    "walkScore": 75,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 142,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "west-lawn": {
+    "neighborhoodId": "west-lawn",
+    "transitScore": 70,
+    "walkScore": 74,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Orange Line"
+    ],
+    "avgCommuteMinutesToLoop": 29,
+    "parkingMonthlyEstimate": 138,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "chicago-lawn": {
+    "neighborhoodId": "chicago-lawn",
+    "transitScore": 54,
+    "walkScore": 66,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 33,
+    "parkingMonthlyEstimate": 134,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "west-englewood": {
+    "neighborhoodId": "west-englewood",
+    "transitScore": 66,
+    "walkScore": 70,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Green Line"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 125,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "greater-grand-crossing": {
+    "neighborhoodId": "greater-grand-crossing",
+    "transitScore": 67,
+    "walkScore": 71,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 31,
+    "parkingMonthlyEstimate": 128,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "ashburn": {
+    "neighborhoodId": "ashburn",
+    "transitScore": 55,
+    "walkScore": 67,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 32,
+    "parkingMonthlyEstimate": 137,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "washington-heights": {
+    "neighborhoodId": "washington-heights",
+    "transitScore": 68,
+    "walkScore": 72,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Rock Island District"
+    ],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 131,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "mount-greenwood": {
+    "neighborhoodId": "mount-greenwood",
+    "transitScore": 59,
+    "walkScore": 70,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 150,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures. Well-documented as one of the more stable, higher-homeownership, family-oriented community areas on the far southwest side; nudged above the pure price regression to reflect that reputation, similar in character to Beverly (already in the round-1 dataset)."
+    }
+  },
+  "ohare": {
+    "neighborhoodId": "ohare",
+    "transitScore": 72,
+    "walkScore": 76,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Blue Line"
+    ],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 145,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures. Dominated by O'Hare International Airport; residential population is small and concentrated in a few pockets (e.g. Schorsch Village), so family/lifestyle composites are nudged down relative to the price regression."
+    }
+  },
+  "winnetka": {
+    "neighborhoodId": "winnetka",
+    "transitScore": 88,
+    "walkScore": 66,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 35,
+    "parkingMonthlyEstimate": 205,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "glencoe": {
+    "neighborhoodId": "glencoe",
+    "transitScore": 86,
+    "walkScore": 65,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 35,
+    "parkingMonthlyEstimate": 195,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "northbrook": {
+    "neighborhoodId": "northbrook",
+    "transitScore": 77,
+    "walkScore": 61,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 38,
+    "parkingMonthlyEstimate": 150,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "glenview": {
+    "neighborhoodId": "glenview",
+    "transitScore": 75,
+    "walkScore": 60,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 39,
+    "parkingMonthlyEstimate": 137,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "morton-grove": {
+    "neighborhoodId": "morton-grove",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "niles": {
+    "neighborhoodId": "niles",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 103,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "lincolnwood": {
+    "neighborhoodId": "lincolnwood",
+    "transitScore": 57,
+    "walkScore": 53,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 120,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "palatine": {
+    "neighborhoodId": "palatine",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 106,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "mount-prospect": {
+    "neighborhoodId": "mount-prospect",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "rolling-meadows": {
+    "neighborhoodId": "rolling-meadows",
+    "transitScore": 53,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 99,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "wheeling": {
+    "neighborhoodId": "wheeling",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra North Central Service"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "elk-grove-village": {
+    "neighborhoodId": "elk-grove-village",
+    "transitScore": 54,
+    "walkScore": 52,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 105,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "rosemont": {
+    "neighborhoodId": "rosemont",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Blue Line"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 96,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "norridge": {
+    "neighborhoodId": "norridge",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "melrose-park": {
+    "neighborhoodId": "melrose-park",
+    "transitScore": 66,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 94,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "river-forest": {
+    "neighborhoodId": "river-forest",
+    "transitScore": 73,
+    "walkScore": 59,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West",
+      "CTA Green Line"
+    ],
+    "avgCommuteMinutesToLoop": 39,
+    "parkingMonthlyEstimate": 128,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "forest-park": {
+    "neighborhoodId": "forest-park",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "CTA Blue Line",
+      "Metra BNSF"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 106,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "maywood": {
+    "neighborhoodId": "maywood",
+    "transitScore": 66,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 90,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "bellwood": {
+    "neighborhoodId": "bellwood",
+    "transitScore": 66,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 89,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "westchester": {
+    "neighborhoodId": "westchester",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "la-grange": {
+    "neighborhoodId": "la-grange",
+    "transitScore": 74,
+    "walkScore": 60,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra BNSF"
+    ],
+    "avgCommuteMinutesToLoop": 39,
+    "parkingMonthlyEstimate": 132,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "oak-lawn": {
+    "neighborhoodId": "oak-lawn",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra SouthWest Service"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "evergreen-park": {
+    "neighborhoodId": "evergreen-park",
+    "transitScore": 52,
+    "walkScore": 50,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 94,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "palos-heights": {
+    "neighborhoodId": "palos-heights",
+    "transitScore": 55,
+    "walkScore": 52,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "palos-park": {
+    "neighborhoodId": "palos-park",
+    "transitScore": 72,
+    "walkScore": 59,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra SouthWest Service"
+    ],
+    "avgCommuteMinutesToLoop": 39,
+    "parkingMonthlyEstimate": 125,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "worth": {
+    "neighborhoodId": "worth",
+    "transitScore": 52,
+    "walkScore": 50,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 92,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "homewood": {
+    "neighborhoodId": "homewood",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 96,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "flossmoor": {
+    "neighborhoodId": "flossmoor",
+    "transitScore": 70,
+    "walkScore": 58,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 111,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "chicago-heights": {
+    "neighborhoodId": "chicago-heights",
+    "transitScore": 64,
+    "walkScore": 55,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 42,
+    "parkingMonthlyEstimate": 82,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "calumet-city": {
+    "neighborhoodId": "calumet-city",
+    "transitScore": 49,
+    "walkScore": 49,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 52,
+    "parkingMonthlyEstimate": 78,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "harvey": {
+    "neighborhoodId": "harvey",
+    "transitScore": 63,
+    "walkScore": 54,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 42,
+    "parkingMonthlyEstimate": 75,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "matteson": {
+    "neighborhoodId": "matteson",
+    "transitScore": 66,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Electric"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 90,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "lombard": {
+    "neighborhoodId": "lombard",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 106,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "villa-park": {
+    "neighborhoodId": "villa-park",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "glen-ellyn": {
+    "neighborhoodId": "glen-ellyn",
+    "transitScore": 73,
+    "walkScore": 59,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 39,
+    "parkingMonthlyEstimate": 126,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "carol-stream": {
+    "neighborhoodId": "carol-stream",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 103,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "bloomingdale": {
+    "neighborhoodId": "bloomingdale",
+    "transitScore": 55,
+    "walkScore": 52,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 106,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "addison": {
+    "neighborhoodId": "addison",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "bensenville": {
+    "neighborhoodId": "bensenville",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District West"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "itasca": {
+    "neighborhoodId": "itasca",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District West"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "oak-brook": {
+    "neighborhoodId": "oak-brook",
+    "transitScore": 68,
+    "walkScore": 58,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 47,
+    "parkingMonthlyEstimate": 173,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "hinsdale": {
+    "neighborhoodId": "hinsdale",
+    "transitScore": 86,
+    "walkScore": 65,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra BNSF"
+    ],
+    "avgCommuteMinutesToLoop": 35,
+    "parkingMonthlyEstimate": 195,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "westmont": {
+    "neighborhoodId": "westmont",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra BNSF"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "lisle": {
+    "neighborhoodId": "lisle",
+    "transitScore": 70,
+    "walkScore": 58,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra BNSF"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 111,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "woodridge": {
+    "neighborhoodId": "woodridge",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 103,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "west-chicago": {
+    "neighborhoodId": "west-chicago",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 96,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "north-chicago": {
+    "neighborhoodId": "north-chicago",
+    "transitScore": 63,
+    "walkScore": 55,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 42,
+    "parkingMonthlyEstimate": 77,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "gurnee": {
+    "neighborhoodId": "gurnee",
+    "transitScore": 53,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 99,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "zion": {
+    "neighborhoodId": "zion",
+    "transitScore": 64,
+    "walkScore": 55,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 42,
+    "parkingMonthlyEstimate": 81,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "lake-forest": {
+    "neighborhoodId": "lake-forest",
+    "transitScore": 84,
+    "walkScore": 64,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 36,
+    "parkingMonthlyEstimate": 184,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "deerfield": {
+    "neighborhoodId": "deerfield",
+    "transitScore": 78,
+    "walkScore": 62,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-N"
+    ],
+    "avgCommuteMinutesToLoop": 38,
+    "parkingMonthlyEstimate": 154,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "libertyville": {
+    "neighborhoodId": "libertyville",
+    "transitScore": 73,
+    "walkScore": 59,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 39,
+    "parkingMonthlyEstimate": 126,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "mundelein": {
+    "neighborhoodId": "mundelein",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 105,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "vernon-hills": {
+    "neighborhoodId": "vernon-hills",
+    "transitScore": 70,
+    "walkScore": 58,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 114,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "grayslake": {
+    "neighborhoodId": "grayslake",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 106,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "antioch": {
+    "neighborhoodId": "antioch",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 96,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "lake-zurich": {
+    "neighborhoodId": "lake-zurich",
+    "transitScore": 57,
+    "walkScore": 53,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 115,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "round-lake-beach": {
+    "neighborhoodId": "round-lake-beach",
+    "transitScore": 66,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Milwaukee District North"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 89,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "bolingbrook": {
+    "neighborhoodId": "bolingbrook",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "plainfield": {
+    "neighborhoodId": "plainfield",
+    "transitScore": 55,
+    "walkScore": 52,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "romeoville": {
+    "neighborhoodId": "romeoville",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Heritage Corridor"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 96,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "new-lenox": {
+    "neighborhoodId": "new-lenox",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Rock Island District"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 106,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "frankfort": {
+    "neighborhoodId": "frankfort",
+    "transitScore": 56,
+    "walkScore": 52,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 114,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "mokena": {
+    "neighborhoodId": "mokena",
+    "transitScore": 69,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Rock Island District"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "lockport": {
+    "neighborhoodId": "lockport",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Heritage Corridor"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 98,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "shorewood": {
+    "neighborhoodId": "shorewood",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "homer-glen": {
+    "neighborhoodId": "homer-glen",
+    "transitScore": 57,
+    "walkScore": 53,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 115,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "wilmington": {
+    "neighborhoodId": "wilmington",
+    "transitScore": 52,
+    "walkScore": 50,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 89,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "st-charles": {
+    "neighborhoodId": "st-charles",
+    "transitScore": 57,
+    "walkScore": 53,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 115,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "geneva": {
+    "neighborhoodId": "geneva",
+    "transitScore": 71,
+    "walkScore": 59,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra Union Pacific West"
+    ],
+    "avgCommuteMinutesToLoop": 40,
+    "parkingMonthlyEstimate": 120,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "batavia": {
+    "neighborhoodId": "batavia",
+    "transitScore": 55,
+    "walkScore": 52,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 50,
+    "parkingMonthlyEstimate": 107,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "south-elgin": {
+    "neighborhoodId": "south-elgin",
+    "transitScore": 53,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 98,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "carpentersville": {
+    "neighborhoodId": "carpentersville",
+    "transitScore": 52,
+    "walkScore": 50,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 91,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "north-aurora": {
+    "neighborhoodId": "north-aurora",
+    "transitScore": 53,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 98,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "sugar-grove": {
+    "neighborhoodId": "sugar-grove",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "crystal-lake": {
+    "neighborhoodId": "crystal-lake",
+    "transitScore": 68,
+    "walkScore": 57,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "woodstock": {
+    "neighborhoodId": "woodstock",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 96,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "mchenry": {
+    "neighborhoodId": "mchenry",
+    "transitScore": 67,
+    "walkScore": 56,
+    "hasRailAccess": true,
+    "transitLines": [
+      "Metra UP-NW"
+    ],
+    "avgCommuteMinutesToLoop": 41,
+    "parkingMonthlyEstimate": 95,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "algonquin": {
+    "neighborhoodId": "algonquin",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 103,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
+  },
+  "huntley": {
+    "neighborhoodId": "huntley",
+    "transitScore": 54,
+    "walkScore": 51,
+    "hasRailAccess": false,
+    "transitLines": [],
+    "avgCommuteMinutesToLoop": 51,
+    "parkingMonthlyEstimate": 102,
+    "meta": {
+      "source": "Informed MVP estimate; see notes for what is fact-sourced vs. modeled.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "transitLines and hasRailAccess reflect actual, currently operating CTA/Metra routes serving this area; transitScore, walkScore, avgCommuteMinutesToLoop, and parkingMonthlyEstimate are informed MVP estimates — replace with the Walk Score API, CTA/Metra published schedules, and U.S. Census ACS commute-time tables for production figures."
+    }
   }
 }

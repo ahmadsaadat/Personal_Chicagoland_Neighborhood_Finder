@@ -1,0 +1,380 @@
+// The 42 official Chicago community areas NOT already in the round-1 dataset
+// (the round-1 dataset covered 35 of the 77). Each entry carries:
+//   - communityName: the exact `community` property value used by the City of
+//     Chicago Data Portal "Boundaries - Community Areas (current)" dataset
+//     (resource igwz-8jzy), used to match the fetched polygon.
+//   - id / name: our kebab-case id and display name.
+//   - targetHomePrice: a hand-assigned relative-price anchor (USD), chosen by
+//     comparing each area's real-world reputation/character to the 35 areas
+//     already in the dataset (e.g. Riverdale anchored below Englewood since
+//     it is well-documented as the lowest-income community area in the city;
+//     Mount Greenwood anchored near Beverly since both are known as stabler,
+//     higher-homeownership bungalow-belt areas). This anchor feeds a
+//     regression fit on the real 35 (see scripts/data/lib.mjs) that derives
+//     rent, tax rate, transportation, cost-of-living, and lifestyle figures
+//     consistently with the existing dataset's relative calibration.
+//   - hasRailAccess / transitLines: real, currently-operating CTA/Metra
+//     service for the area (general knowledge of the CTA/Metra system maps).
+//   - safetyAdj / familyAdj: small, clearly-flagged manual nudges for the
+//     handful of areas whose real-world reputation for safety/family
+//     friendliness is well-documented as diverging from what a pure
+//     price-based regression would predict (e.g. Mount Greenwood is
+//     consistently reported as one of the safer, more family-oriented parts
+//     of the city despite only moderate home prices).
+export const NEW_COMMUNITY_AREAS = [
+  // --- Far north / northwest side: quieter, higher-homeownership, Metra-served ---
+  {
+    communityName: 'EDISON PARK',
+    id: 'edison-park',
+    name: 'Edison Park',
+    targetHomePrice: 345000,
+    hasRailAccess: true,
+    transitLines: ['Metra UP-NW'],
+  },
+  {
+    communityName: 'NORWOOD PARK',
+    id: 'norwood-park',
+    name: 'Norwood Park',
+    targetHomePrice: 335000,
+    hasRailAccess: true,
+    transitLines: ['Metra UP-NW'],
+  },
+  {
+    communityName: 'FOREST GLEN',
+    id: 'forest-glen',
+    name: 'Forest Glen',
+    targetHomePrice: 420000,
+    hasRailAccess: true,
+    transitLines: ['Metra UP-NW'],
+  },
+  {
+    communityName: 'NORTH PARK',
+    id: 'north-park',
+    name: 'North Park',
+    targetHomePrice: 310000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'DUNNING',
+    id: 'dunning',
+    name: 'Dunning',
+    targetHomePrice: 300000,
+    hasRailAccess: true,
+    transitLines: ['CTA Blue Line (Cumberland, near edge)'],
+  },
+  {
+    communityName: 'MONTCLARE',
+    id: 'montclare',
+    name: 'Montclare',
+    targetHomePrice: 270000,
+    hasRailAccess: true,
+    transitLines: ['Metra Milwaukee District West'],
+  },
+  {
+    communityName: 'BELMONT CRAGIN',
+    id: 'belmont-cragin',
+    name: 'Belmont Cragin',
+    targetHomePrice: 240000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'HERMOSA',
+    id: 'hermosa',
+    name: 'Hermosa',
+    targetHomePrice: 220000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+
+  // --- West side ---
+  {
+    communityName: 'WEST GARFIELD PARK',
+    id: 'west-garfield-park',
+    name: 'West Garfield Park',
+    targetHomePrice: 155000,
+    hasRailAccess: true,
+    transitLines: ['CTA Green Line'],
+  },
+  {
+    communityName: 'EAST GARFIELD PARK',
+    id: 'east-garfield-park',
+    name: 'East Garfield Park',
+    targetHomePrice: 175000,
+    hasRailAccess: true,
+    transitLines: ['CTA Green Line'],
+  },
+
+  // --- Near south / Bronzeville / Douglas corridor ---
+  {
+    communityName: 'ARMOUR SQUARE',
+    id: 'armour-square',
+    name: 'Armour Square',
+    targetHomePrice: 300000,
+    hasRailAccess: true,
+    transitLines: ['CTA Red Line'],
+  },
+  {
+    communityName: 'DOUGLAS',
+    id: 'douglas',
+    name: 'Douglas (Bronzeville)',
+    targetHomePrice: 260000,
+    hasRailAccess: true,
+    transitLines: ['CTA Green Line', 'Metra Electric'],
+  },
+  {
+    communityName: 'OAKLAND',
+    id: 'oakland',
+    name: 'Oakland',
+    targetHomePrice: 210000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'FULLER PARK',
+    id: 'fuller-park',
+    name: 'Fuller Park',
+    targetHomePrice: 120000,
+    hasRailAccess: true,
+    transitLines: ['CTA Red Line (adjacent)'],
+    safetyAdj: -5,
+  },
+  {
+    communityName: 'GRAND BOULEVARD',
+    id: 'grand-boulevard',
+    name: 'Grand Boulevard (Bronzeville)',
+    targetHomePrice: 250000,
+    hasRailAccess: true,
+    transitLines: ['CTA Green Line'],
+  },
+  {
+    communityName: 'WASHINGTON PARK',
+    id: 'washington-park',
+    name: 'Washington Park',
+    targetHomePrice: 165000,
+    hasRailAccess: true,
+    transitLines: ['CTA Green Line'],
+  },
+
+  // --- South side / far southeast side ---
+  {
+    communityName: 'AVALON PARK',
+    id: 'avalon-park',
+    name: 'Avalon Park',
+    targetHomePrice: 210000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'SOUTH CHICAGO',
+    id: 'south-chicago',
+    name: 'South Chicago',
+    targetHomePrice: 150000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'BURNSIDE',
+    id: 'burnside',
+    name: 'Burnside',
+    targetHomePrice: 130000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'CALUMET HEIGHTS',
+    id: 'calumet-heights',
+    name: 'Calumet Heights',
+    targetHomePrice: 230000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'ROSELAND',
+    id: 'roseland',
+    name: 'Roseland',
+    targetHomePrice: 155000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'SOUTH DEERING',
+    id: 'south-deering',
+    name: 'South Deering',
+    targetHomePrice: 125000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'EAST SIDE',
+    id: 'east-side',
+    name: 'East Side',
+    targetHomePrice: 165000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'WEST PULLMAN',
+    id: 'west-pullman',
+    name: 'West Pullman',
+    targetHomePrice: 145000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'RIVERDALE',
+    id: 'riverdale',
+    name: 'Riverdale',
+    targetHomePrice: 95000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+    safetyAdj: -8,
+    notes: 'Well-documented as the lowest-income community area in Chicago; anchored below Englewood.',
+  },
+  {
+    communityName: 'HEGEWISCH',
+    id: 'hegewisch',
+    name: 'Hegewisch',
+    targetHomePrice: 175000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+
+  // --- Southwest side (Midway-adjacent, higher homeownership) ---
+  {
+    communityName: 'GARFIELD RIDGE',
+    id: 'garfield-ridge',
+    name: 'Garfield Ridge',
+    targetHomePrice: 260000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'ARCHER HEIGHTS',
+    id: 'archer-heights',
+    name: 'Archer Heights',
+    targetHomePrice: 235000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'BRIGHTON PARK',
+    id: 'brighton-park',
+    name: 'Brighton Park',
+    targetHomePrice: 225000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'MCKINLEY PARK',
+    id: 'mckinley-park',
+    name: 'McKinley Park',
+    targetHomePrice: 240000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'NEW CITY',
+    id: 'new-city',
+    name: 'New City (Back of the Yards)',
+    targetHomePrice: 200000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'WEST ELSDON',
+    id: 'west-elsdon',
+    name: 'West Elsdon',
+    targetHomePrice: 235000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'GAGE PARK',
+    id: 'gage-park',
+    name: 'Gage Park',
+    targetHomePrice: 210000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'CLEARING',
+    id: 'clearing',
+    name: 'Clearing',
+    targetHomePrice: 255000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'WEST LAWN',
+    id: 'west-lawn',
+    name: 'West Lawn',
+    targetHomePrice: 230000,
+    hasRailAccess: true,
+    transitLines: ['CTA Orange Line'],
+  },
+  {
+    communityName: 'CHICAGO LAWN',
+    id: 'chicago-lawn',
+    name: 'Chicago Lawn',
+    targetHomePrice: 195000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'WEST ENGLEWOOD',
+    id: 'west-englewood',
+    name: 'West Englewood',
+    targetHomePrice: 130000,
+    hasRailAccess: true,
+    transitLines: ['CTA Green Line'],
+  },
+  {
+    communityName: 'GREATER GRAND CROSSING',
+    id: 'greater-grand-crossing',
+    name: 'Greater Grand Crossing',
+    targetHomePrice: 155000,
+    hasRailAccess: true,
+    transitLines: ['Metra Electric'],
+  },
+  {
+    communityName: 'ASHBURN',
+    id: 'ashburn',
+    name: 'Ashburn',
+    targetHomePrice: 220000,
+    hasRailAccess: false,
+    transitLines: [],
+  },
+  {
+    communityName: 'WASHINGTON HEIGHTS',
+    id: 'washington-heights',
+    name: 'Washington Heights',
+    targetHomePrice: 175000,
+    hasRailAccess: true,
+    transitLines: ['Metra Rock Island District'],
+  },
+  {
+    communityName: 'MOUNT GREENWOOD',
+    id: 'mount-greenwood',
+    name: 'Mount Greenwood',
+    targetHomePrice: 320000,
+    hasRailAccess: false,
+    transitLines: [],
+    safetyAdj: 12,
+    familyAdj: 12,
+    notes: 'Well-documented as one of the more stable, higher-homeownership, family-oriented community areas on the far southwest side; nudged above the pure price regression to reflect that reputation, similar in character to Beverly (already in the round-1 dataset).',
+  },
+  {
+    communityName: "OHARE",
+    id: 'ohare',
+    name: "O'Hare",
+    targetHomePrice: 280000,
+    hasRailAccess: true,
+    transitLines: ['CTA Blue Line'],
+    familyAdj: -15,
+    restaurantDensityAdj: -10,
+    parksAccessAdj: -10,
+    notes: "Dominated by O'Hare International Airport; residential population is small and concentrated in a few pockets (e.g. Schorsch Village), so family/lifestyle composites are nudged down relative to the price regression.",
+  },
+]

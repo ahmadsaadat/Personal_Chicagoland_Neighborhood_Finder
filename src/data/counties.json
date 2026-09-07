@@ -23,5 +23,10 @@
     "id": "kane",
     "name": "Kane County",
     "state": "IL"
+  },
+  {
+    "id": "mchenry",
+    "name": "McHenry County",
+    "state": "IL"
   }
 ]

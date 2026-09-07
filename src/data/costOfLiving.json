@@ -796,5 +796,1713 @@
       "year": 2025,
       "valueType": "estimated"
     }
+  },
+  "edison-park": {
+    "neighborhoodId": "edison-park",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 176,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "norwood-park": {
+    "neighborhoodId": "norwood-park",
+    "groceriesMonthly": 374,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 190,
+    "otherMonthly": 175,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "forest-glen": {
+    "neighborhoodId": "forest-glen",
+    "groceriesMonthly": 387,
+    "utilitiesMonthly": 142,
+    "restaurantsMonthly": 240,
+    "healthcareMonthly": 196,
+    "otherMonthly": 185,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "north-park": {
+    "neighborhoodId": "north-park",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 212,
+    "healthcareMonthly": 188,
+    "otherMonthly": 172,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "dunning": {
+    "neighborhoodId": "dunning",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 209,
+    "healthcareMonthly": 187,
+    "otherMonthly": 171,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "montclare": {
+    "neighborhoodId": "montclare",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 201,
+    "healthcareMonthly": 185,
+    "otherMonthly": 167,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "belmont-cragin": {
+    "neighborhoodId": "belmont-cragin",
+    "groceriesMonthly": 359,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 194,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "hermosa": {
+    "neighborhoodId": "hermosa",
+    "groceriesMonthly": 356,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 188,
+    "healthcareMonthly": 181,
+    "otherMonthly": 162,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-garfield-park": {
+    "neighborhoodId": "west-garfield-park",
+    "groceriesMonthly": 346,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 172,
+    "healthcareMonthly": 177,
+    "otherMonthly": 154,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "east-garfield-park": {
+    "neighborhoodId": "east-garfield-park",
+    "groceriesMonthly": 349,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 177,
+    "healthcareMonthly": 178,
+    "otherMonthly": 156,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "armour-square": {
+    "neighborhoodId": "armour-square",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 209,
+    "healthcareMonthly": 187,
+    "otherMonthly": 171,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "douglas": {
+    "neighborhoodId": "douglas",
+    "groceriesMonthly": 362,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 199,
+    "healthcareMonthly": 184,
+    "otherMonthly": 166,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "oakland": {
+    "neighborhoodId": "oakland",
+    "groceriesMonthly": 355,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 186,
+    "healthcareMonthly": 181,
+    "otherMonthly": 161,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "fuller-park": {
+    "neighborhoodId": "fuller-park",
+    "groceriesMonthly": 341,
+    "utilitiesMonthly": 129,
+    "restaurantsMonthly": 163,
+    "healthcareMonthly": 174,
+    "otherMonthly": 150,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "grand-boulevard": {
+    "neighborhoodId": "grand-boulevard",
+    "groceriesMonthly": 361,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 196,
+    "healthcareMonthly": 184,
+    "otherMonthly": 165,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "washington-park": {
+    "neighborhoodId": "washington-park",
+    "groceriesMonthly": 348,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 174,
+    "healthcareMonthly": 177,
+    "otherMonthly": 155,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "avalon-park": {
+    "neighborhoodId": "avalon-park",
+    "groceriesMonthly": 355,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 186,
+    "healthcareMonthly": 181,
+    "otherMonthly": 161,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "south-chicago": {
+    "neighborhoodId": "south-chicago",
+    "groceriesMonthly": 345,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 170,
+    "healthcareMonthly": 176,
+    "otherMonthly": 154,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "burnside": {
+    "neighborhoodId": "burnside",
+    "groceriesMonthly": 342,
+    "utilitiesMonthly": 130,
+    "restaurantsMonthly": 165,
+    "healthcareMonthly": 175,
+    "otherMonthly": 151,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "calumet-heights": {
+    "neighborhoodId": "calumet-heights",
+    "groceriesMonthly": 358,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 191,
+    "healthcareMonthly": 182,
+    "otherMonthly": 163,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "roseland": {
+    "neighborhoodId": "roseland",
+    "groceriesMonthly": 346,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 172,
+    "healthcareMonthly": 177,
+    "otherMonthly": 154,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "south-deering": {
+    "neighborhoodId": "south-deering",
+    "groceriesMonthly": 341,
+    "utilitiesMonthly": 129,
+    "restaurantsMonthly": 164,
+    "healthcareMonthly": 175,
+    "otherMonthly": 151,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "east-side": {
+    "neighborhoodId": "east-side",
+    "groceriesMonthly": 348,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 174,
+    "healthcareMonthly": 177,
+    "otherMonthly": 155,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-pullman": {
+    "neighborhoodId": "west-pullman",
+    "groceriesMonthly": 345,
+    "utilitiesMonthly": 130,
+    "restaurantsMonthly": 169,
+    "healthcareMonthly": 176,
+    "otherMonthly": 153,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "riverdale": {
+    "neighborhoodId": "riverdale",
+    "groceriesMonthly": 337,
+    "utilitiesMonthly": 128,
+    "restaurantsMonthly": 156,
+    "healthcareMonthly": 172,
+    "otherMonthly": 147,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "hegewisch": {
+    "neighborhoodId": "hegewisch",
+    "groceriesMonthly": 349,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 177,
+    "healthcareMonthly": 178,
+    "otherMonthly": 156,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "garfield-ridge": {
+    "neighborhoodId": "garfield-ridge",
+    "groceriesMonthly": 362,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 199,
+    "healthcareMonthly": 184,
+    "otherMonthly": 166,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "archer-heights": {
+    "neighborhoodId": "archer-heights",
+    "groceriesMonthly": 358,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 192,
+    "healthcareMonthly": 182,
+    "otherMonthly": 163,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "brighton-park": {
+    "neighborhoodId": "brighton-park",
+    "groceriesMonthly": 357,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 190,
+    "healthcareMonthly": 182,
+    "otherMonthly": 162,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mckinley-park": {
+    "neighborhoodId": "mckinley-park",
+    "groceriesMonthly": 359,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 194,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "new-city": {
+    "neighborhoodId": "new-city",
+    "groceriesMonthly": 353,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 183,
+    "healthcareMonthly": 180,
+    "otherMonthly": 159,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-elsdon": {
+    "neighborhoodId": "west-elsdon",
+    "groceriesMonthly": 358,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 192,
+    "healthcareMonthly": 182,
+    "otherMonthly": 163,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "gage-park": {
+    "neighborhoodId": "gage-park",
+    "groceriesMonthly": 355,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 186,
+    "healthcareMonthly": 181,
+    "otherMonthly": 161,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "clearing": {
+    "neighborhoodId": "clearing",
+    "groceriesMonthly": 362,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 197,
+    "healthcareMonthly": 184,
+    "otherMonthly": 166,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-lawn": {
+    "neighborhoodId": "west-lawn",
+    "groceriesMonthly": 358,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 191,
+    "healthcareMonthly": 182,
+    "otherMonthly": 163,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "chicago-lawn": {
+    "neighborhoodId": "chicago-lawn",
+    "groceriesMonthly": 352,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 182,
+    "healthcareMonthly": 180,
+    "otherMonthly": 159,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-englewood": {
+    "neighborhoodId": "west-englewood",
+    "groceriesMonthly": 342,
+    "utilitiesMonthly": 130,
+    "restaurantsMonthly": 165,
+    "healthcareMonthly": 175,
+    "otherMonthly": 151,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "greater-grand-crossing": {
+    "neighborhoodId": "greater-grand-crossing",
+    "groceriesMonthly": 346,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 172,
+    "healthcareMonthly": 177,
+    "otherMonthly": 154,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "ashburn": {
+    "neighborhoodId": "ashburn",
+    "groceriesMonthly": 356,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 188,
+    "healthcareMonthly": 181,
+    "otherMonthly": 162,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "washington-heights": {
+    "neighborhoodId": "washington-heights",
+    "groceriesMonthly": 349,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 177,
+    "healthcareMonthly": 178,
+    "otherMonthly": 156,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mount-greenwood": {
+    "neighborhoodId": "mount-greenwood",
+    "groceriesMonthly": 372,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 214,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "ohare": {
+    "neighborhoodId": "ohare",
+    "groceriesMonthly": 365,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 204,
+    "healthcareMonthly": 186,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "winnetka": {
+    "neighborhoodId": "winnetka",
+    "groceriesMonthly": 481,
+    "utilitiesMonthly": 181,
+    "restaurantsMonthly": 407,
+    "healthcareMonthly": 245,
+    "otherMonthly": 261,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "glencoe": {
+    "neighborhoodId": "glencoe",
+    "groceriesMonthly": 470,
+    "utilitiesMonthly": 177,
+    "restaurantsMonthly": 388,
+    "healthcareMonthly": 239,
+    "otherMonthly": 253,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "northbrook": {
+    "neighborhoodId": "northbrook",
+    "groceriesMonthly": 422,
+    "utilitiesMonthly": 157,
+    "restaurantsMonthly": 302,
+    "healthcareMonthly": 214,
+    "otherMonthly": 212,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "glenview": {
+    "neighborhoodId": "glenview",
+    "groceriesMonthly": 409,
+    "utilitiesMonthly": 152,
+    "restaurantsMonthly": 278,
+    "healthcareMonthly": 207,
+    "otherMonthly": 201,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "morton-grove": {
+    "neighborhoodId": "morton-grove",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "niles": {
+    "neighborhoodId": "niles",
+    "groceriesMonthly": 372,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 213,
+    "healthcareMonthly": 187,
+    "otherMonthly": 170,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lincolnwood": {
+    "neighborhoodId": "lincolnwood",
+    "groceriesMonthly": 389,
+    "utilitiesMonthly": 144,
+    "restaurantsMonthly": 244,
+    "healthcareMonthly": 197,
+    "otherMonthly": 185,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "palatine": {
+    "neighborhoodId": "palatine",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mount-prospect": {
+    "neighborhoodId": "mount-prospect",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "rolling-meadows": {
+    "neighborhoodId": "rolling-meadows",
+    "groceriesMonthly": 367,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 205,
+    "healthcareMonthly": 185,
+    "otherMonthly": 167,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "wheeling": {
+    "neighborhoodId": "wheeling",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 208,
+    "healthcareMonthly": 186,
+    "otherMonthly": 168,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "elk-grove-village": {
+    "neighborhoodId": "elk-grove-village",
+    "groceriesMonthly": 373,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 216,
+    "healthcareMonthly": 188,
+    "otherMonthly": 172,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "rosemont": {
+    "neighborhoodId": "rosemont",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 200,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "norridge": {
+    "neighborhoodId": "norridge",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "melrose-park": {
+    "neighborhoodId": "melrose-park",
+    "groceriesMonthly": 361,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 195,
+    "healthcareMonthly": 182,
+    "otherMonthly": 162,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "river-forest": {
+    "neighborhoodId": "river-forest",
+    "groceriesMonthly": 398,
+    "utilitiesMonthly": 148,
+    "restaurantsMonthly": 260,
+    "healthcareMonthly": 201,
+    "otherMonthly": 193,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "forest-park": {
+    "neighborhoodId": "forest-park",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "maywood": {
+    "neighborhoodId": "maywood",
+    "groceriesMonthly": 358,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 188,
+    "healthcareMonthly": 180,
+    "otherMonthly": 159,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bellwood": {
+    "neighborhoodId": "bellwood",
+    "groceriesMonthly": 357,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 187,
+    "healthcareMonthly": 180,
+    "otherMonthly": 158,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "westchester": {
+    "neighborhoodId": "westchester",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "la-grange": {
+    "neighborhoodId": "la-grange",
+    "groceriesMonthly": 403,
+    "utilitiesMonthly": 150,
+    "restaurantsMonthly": 268,
+    "healthcareMonthly": 204,
+    "otherMonthly": 196,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "oak-lawn": {
+    "neighborhoodId": "oak-lawn",
+    "groceriesMonthly": 368,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 206,
+    "healthcareMonthly": 185,
+    "otherMonthly": 167,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "evergreen-park": {
+    "neighborhoodId": "evergreen-park",
+    "groceriesMonthly": 361,
+    "utilitiesMonthly": 133,
+    "restaurantsMonthly": 195,
+    "healthcareMonthly": 182,
+    "otherMonthly": 162,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "palos-heights": {
+    "neighborhoodId": "palos-heights",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "palos-park": {
+    "neighborhoodId": "palos-park",
+    "groceriesMonthly": 395,
+    "utilitiesMonthly": 147,
+    "restaurantsMonthly": 255,
+    "healthcareMonthly": 200,
+    "otherMonthly": 190,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "worth": {
+    "neighborhoodId": "worth",
+    "groceriesMonthly": 360,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 192,
+    "healthcareMonthly": 181,
+    "otherMonthly": 161,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "homewood": {
+    "neighborhoodId": "homewood",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 200,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "flossmoor": {
+    "neighborhoodId": "flossmoor",
+    "groceriesMonthly": 381,
+    "utilitiesMonthly": 141,
+    "restaurantsMonthly": 229,
+    "healthcareMonthly": 192,
+    "otherMonthly": 178,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "chicago-heights": {
+    "neighborhoodId": "chicago-heights",
+    "groceriesMonthly": 349,
+    "utilitiesMonthly": 128,
+    "restaurantsMonthly": 172,
+    "healthcareMonthly": 175,
+    "otherMonthly": 151,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "calumet-city": {
+    "neighborhoodId": "calumet-city",
+    "groceriesMonthly": 345,
+    "utilitiesMonthly": 126,
+    "restaurantsMonthly": 166,
+    "healthcareMonthly": 173,
+    "otherMonthly": 148,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "harvey": {
+    "neighborhoodId": "harvey",
+    "groceriesMonthly": 342,
+    "utilitiesMonthly": 125,
+    "restaurantsMonthly": 159,
+    "healthcareMonthly": 171,
+    "otherMonthly": 145,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "matteson": {
+    "neighborhoodId": "matteson",
+    "groceriesMonthly": 358,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 188,
+    "healthcareMonthly": 180,
+    "otherMonthly": 159,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lombard": {
+    "neighborhoodId": "lombard",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "villa-park": {
+    "neighborhoodId": "villa-park",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "glen-ellyn": {
+    "neighborhoodId": "glen-ellyn",
+    "groceriesMonthly": 397,
+    "utilitiesMonthly": 147,
+    "restaurantsMonthly": 257,
+    "healthcareMonthly": 200,
+    "otherMonthly": 191,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "carol-stream": {
+    "neighborhoodId": "carol-stream",
+    "groceriesMonthly": 372,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 213,
+    "healthcareMonthly": 187,
+    "otherMonthly": 170,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bloomingdale": {
+    "neighborhoodId": "bloomingdale",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "addison": {
+    "neighborhoodId": "addison",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 208,
+    "healthcareMonthly": 186,
+    "otherMonthly": 168,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bensenville": {
+    "neighborhoodId": "bensenville",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 208,
+    "healthcareMonthly": 186,
+    "otherMonthly": 168,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "itasca": {
+    "neighborhoodId": "itasca",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "oak-brook": {
+    "neighborhoodId": "oak-brook",
+    "groceriesMonthly": 447,
+    "utilitiesMonthly": 168,
+    "restaurantsMonthly": 346,
+    "healthcareMonthly": 227,
+    "otherMonthly": 233,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "hinsdale": {
+    "neighborhoodId": "hinsdale",
+    "groceriesMonthly": 470,
+    "utilitiesMonthly": 177,
+    "restaurantsMonthly": 388,
+    "healthcareMonthly": 239,
+    "otherMonthly": 253,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "westmont": {
+    "neighborhoodId": "westmont",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lisle": {
+    "neighborhoodId": "lisle",
+    "groceriesMonthly": 381,
+    "utilitiesMonthly": 141,
+    "restaurantsMonthly": 229,
+    "healthcareMonthly": 192,
+    "otherMonthly": 178,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "woodridge": {
+    "neighborhoodId": "woodridge",
+    "groceriesMonthly": 372,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 213,
+    "healthcareMonthly": 187,
+    "otherMonthly": 170,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-chicago": {
+    "neighborhoodId": "west-chicago",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 200,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "north-chicago": {
+    "neighborhoodId": "north-chicago",
+    "groceriesMonthly": 344,
+    "utilitiesMonthly": 126,
+    "restaurantsMonthly": 163,
+    "healthcareMonthly": 173,
+    "otherMonthly": 147,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "gurnee": {
+    "neighborhoodId": "gurnee",
+    "groceriesMonthly": 367,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 205,
+    "healthcareMonthly": 185,
+    "otherMonthly": 167,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "zion": {
+    "neighborhoodId": "zion",
+    "groceriesMonthly": 348,
+    "utilitiesMonthly": 128,
+    "restaurantsMonthly": 171,
+    "healthcareMonthly": 175,
+    "otherMonthly": 151,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lake-forest": {
+    "neighborhoodId": "lake-forest",
+    "groceriesMonthly": 459,
+    "utilitiesMonthly": 172,
+    "restaurantsMonthly": 367,
+    "healthcareMonthly": 233,
+    "otherMonthly": 243,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "deerfield": {
+    "neighborhoodId": "deerfield",
+    "groceriesMonthly": 426,
+    "utilitiesMonthly": 159,
+    "restaurantsMonthly": 310,
+    "healthcareMonthly": 216,
+    "otherMonthly": 216,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "libertyville": {
+    "neighborhoodId": "libertyville",
+    "groceriesMonthly": 397,
+    "utilitiesMonthly": 147,
+    "restaurantsMonthly": 257,
+    "healthcareMonthly": 200,
+    "otherMonthly": 191,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mundelein": {
+    "neighborhoodId": "mundelein",
+    "groceriesMonthly": 373,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 216,
+    "healthcareMonthly": 188,
+    "otherMonthly": 172,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "vernon-hills": {
+    "neighborhoodId": "vernon-hills",
+    "groceriesMonthly": 384,
+    "utilitiesMonthly": 142,
+    "restaurantsMonthly": 234,
+    "healthcareMonthly": 194,
+    "otherMonthly": 180,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "grayslake": {
+    "neighborhoodId": "grayslake",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "antioch": {
+    "neighborhoodId": "antioch",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 200,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lake-zurich": {
+    "neighborhoodId": "lake-zurich",
+    "groceriesMonthly": 385,
+    "utilitiesMonthly": 143,
+    "restaurantsMonthly": 237,
+    "healthcareMonthly": 194,
+    "otherMonthly": 182,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "round-lake-beach": {
+    "neighborhoodId": "round-lake-beach",
+    "groceriesMonthly": 357,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 187,
+    "healthcareMonthly": 180,
+    "otherMonthly": 158,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bolingbrook": {
+    "neighborhoodId": "bolingbrook",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 208,
+    "healthcareMonthly": 186,
+    "otherMonthly": 168,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "plainfield": {
+    "neighborhoodId": "plainfield",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "romeoville": {
+    "neighborhoodId": "romeoville",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 200,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "new-lenox": {
+    "neighborhoodId": "new-lenox",
+    "groceriesMonthly": 375,
+    "utilitiesMonthly": 138,
+    "restaurantsMonthly": 218,
+    "healthcareMonthly": 189,
+    "otherMonthly": 173,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "frankfort": {
+    "neighborhoodId": "frankfort",
+    "groceriesMonthly": 384,
+    "utilitiesMonthly": 142,
+    "restaurantsMonthly": 234,
+    "healthcareMonthly": 194,
+    "otherMonthly": 180,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mokena": {
+    "neighborhoodId": "mokena",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lockport": {
+    "neighborhoodId": "lockport",
+    "groceriesMonthly": 366,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 203,
+    "healthcareMonthly": 184,
+    "otherMonthly": 166,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "shorewood": {
+    "neighborhoodId": "shorewood",
+    "groceriesMonthly": 369,
+    "utilitiesMonthly": 136,
+    "restaurantsMonthly": 208,
+    "healthcareMonthly": 186,
+    "otherMonthly": 168,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "homer-glen": {
+    "neighborhoodId": "homer-glen",
+    "groceriesMonthly": 385,
+    "utilitiesMonthly": 143,
+    "restaurantsMonthly": 237,
+    "healthcareMonthly": 194,
+    "otherMonthly": 182,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "wilmington": {
+    "neighborhoodId": "wilmington",
+    "groceriesMonthly": 357,
+    "utilitiesMonthly": 131,
+    "restaurantsMonthly": 187,
+    "healthcareMonthly": 180,
+    "otherMonthly": 158,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "st-charles": {
+    "neighborhoodId": "st-charles",
+    "groceriesMonthly": 385,
+    "utilitiesMonthly": 143,
+    "restaurantsMonthly": 237,
+    "healthcareMonthly": 194,
+    "otherMonthly": 182,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "geneva": {
+    "neighborhoodId": "geneva",
+    "groceriesMonthly": 389,
+    "utilitiesMonthly": 144,
+    "restaurantsMonthly": 244,
+    "healthcareMonthly": 197,
+    "otherMonthly": 185,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "batavia": {
+    "neighborhoodId": "batavia",
+    "groceriesMonthly": 376,
+    "utilitiesMonthly": 139,
+    "restaurantsMonthly": 221,
+    "healthcareMonthly": 190,
+    "otherMonthly": 174,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "south-elgin": {
+    "neighborhoodId": "south-elgin",
+    "groceriesMonthly": 366,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 203,
+    "healthcareMonthly": 184,
+    "otherMonthly": 166,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "carpentersville": {
+    "neighborhoodId": "carpentersville",
+    "groceriesMonthly": 359,
+    "utilitiesMonthly": 132,
+    "restaurantsMonthly": 189,
+    "healthcareMonthly": 180,
+    "otherMonthly": 159,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "north-aurora": {
+    "neighborhoodId": "north-aurora",
+    "groceriesMonthly": 366,
+    "utilitiesMonthly": 135,
+    "restaurantsMonthly": 203,
+    "healthcareMonthly": 184,
+    "otherMonthly": 166,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "sugar-grove": {
+    "neighborhoodId": "sugar-grove",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "crystal-lake": {
+    "neighborhoodId": "crystal-lake",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "woodstock": {
+    "neighborhoodId": "woodstock",
+    "groceriesMonthly": 364,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 200,
+    "healthcareMonthly": 183,
+    "otherMonthly": 164,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mchenry": {
+    "neighborhoodId": "mchenry",
+    "groceriesMonthly": 363,
+    "utilitiesMonthly": 134,
+    "restaurantsMonthly": 197,
+    "healthcareMonthly": 183,
+    "otherMonthly": 163,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "algonquin": {
+    "neighborhoodId": "algonquin",
+    "groceriesMonthly": 372,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 213,
+    "healthcareMonthly": 187,
+    "otherMonthly": 170,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "huntley": {
+    "neighborhoodId": "huntley",
+    "groceriesMonthly": 370,
+    "utilitiesMonthly": 137,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 187,
+    "otherMonthly": 169,
+    "meta": {
+      "source": "Informed MVP estimate scaled to each area’s relative cost tier — replace with BLS Consumer Expenditure Survey regional data and/or a Numbeo-style local cost index for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
   }
 }
