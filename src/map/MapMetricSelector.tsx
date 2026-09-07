@@ -18,7 +18,7 @@ export function MapMetricSelector({ value, onChange }: MapMetricSelectorProps) {
         id="map-metric-select"
         value={value}
         onChange={(e) => onChange(e.target.value as MapMetric)}
-        className="appearance-none rounded-xl border border-slate-200 bg-white py-2 pl-3 pr-9 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-300 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
+        className="appearance-none rounded-xl border border-slate-200 bg-white/95 py-2.5 pl-3.5 pr-9 text-sm font-medium text-slate-700 shadow-lg backdrop-blur transition hover:border-slate-300 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
       >
         {MAP_METRICS.map((m) => (
           <option key={m.key} value={m.key}>

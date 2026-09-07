@@ -2,6 +2,7 @@ import { SlidersHorizontal, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { rankNeighborhoods } from '../calculations/ranking'
 import { ChicagolandMap } from '../map/ChicagolandMap'
+import { MapMetricSelector } from '../map/MapMetricSelector'
 import { FilterDrawer } from '../components/filters/FilterDrawer'
 import { EmptyState } from '../components/common/EmptyState'
 import { SlideOver } from '../components/common/SlideOver'
@@ -67,8 +68,6 @@ export function ExplorePage({
     profile,
     onOpenProfile,
     isOnboarded,
-    metric,
-    onMetricChange: setMetric,
     metricConfig,
     min,
     max,
@@ -125,6 +124,12 @@ export function ExplorePage({
       <aside className="absolute inset-y-0 left-0 z-10 hidden w-[380px] flex-col border-r border-slate-200 bg-white shadow-xl lg:flex xl:w-[420px]">
         <ToolsPanel {...panelProps} />
       </aside>
+
+      {/* The metric selector floats over the map's top-right corner, separate
+          from the tools panel, on every screen size. */}
+      <div className="pointer-events-auto absolute right-3 top-3 z-10">
+        <MapMetricSelector value={metric} onChange={setMetric} />
+      </div>
 
       {/* Mobile/tablet: a floating trigger that opens the same panel as a sheet. */}
       <button

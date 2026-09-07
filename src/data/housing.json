@@ -1,302 +1,322 @@
 {
   "rogers-park": {
     "neighborhoodId": "rogers-park",
-    "medianRentStudio": 816,
-    "medianRent1BR": 1050,
-    "medianRent2BR": 1291,
-    "medianRent3BR": 1656,
+    "medianRentStudio": 1024,
+    "medianRent1BR": 1320,
+    "medianRent2BR": 1650,
+    "medianRent3BR": 2168,
     "medianHomePrice": 230000,
     "effectivePropertyTaxRate": 0.0226,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "edgewater": {
     "neighborhoodId": "edgewater",
-    "medianRentStudio": 983,
-    "medianRent1BR": 1276,
-    "medianRent2BR": 1565,
-    "medianRent3BR": 2104,
+    "medianRentStudio": 1148,
+    "medianRent1BR": 1479,
+    "medianRent2BR": 1850,
+    "medianRent3BR": 2431,
     "medianHomePrice": 288000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "uptown": {
     "neighborhoodId": "uptown",
-    "medianRentStudio": 923,
-    "medianRent1BR": 1187,
-    "medianRent2BR": 1512,
-    "medianRent3BR": 2016,
+    "medianRentStudio": 1117,
+    "medianRent1BR": 1439,
+    "medianRent2BR": 1800,
+    "medianRent3BR": 2365,
     "medianHomePrice": 277000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "lincoln-square": {
     "neighborhoodId": "lincoln-square",
-    "medianRentStudio": 1201,
-    "medianRent1BR": 1498,
-    "medianRent2BR": 1906,
-    "medianRent3BR": 2500,
+    "medianRentStudio": 1273,
+    "medianRent1BR": 1639,
+    "medianRent2BR": 2050,
+    "medianRent3BR": 2694,
     "medianHomePrice": 465000,
     "effectivePropertyTaxRate": 0.0208,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "north-center": {
     "neighborhoodId": "north-center",
-    "medianRentStudio": 1334,
-    "medianRent1BR": 1768,
-    "medianRent2BR": 2177,
-    "medianRent3BR": 2830,
+    "medianRentStudio": 1428,
+    "medianRent1BR": 1839,
+    "medianRent2BR": 2300,
+    "medianRent3BR": 3022,
     "medianHomePrice": 564000,
     "effectivePropertyTaxRate": 0.0202,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "lakeview": {
     "neighborhoodId": "lakeview",
-    "medianRentStudio": 1329,
-    "medianRent1BR": 1738,
-    "medianRent2BR": 2157,
-    "medianRent3BR": 2840,
+    "medianRentStudio": 1552,
+    "medianRent1BR": 1999,
+    "medianRent2BR": 2500,
+    "medianRent3BR": 3285,
     "medianHomePrice": 571000,
     "effectivePropertyTaxRate": 0.0202,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "lincoln-park": {
     "neighborhoodId": "lincoln-park",
-    "medianRentStudio": 1535,
-    "medianRent1BR": 1989,
-    "medianRent2BR": 2483,
-    "medianRent3BR": 3249,
+    "medianRentStudio": 1924,
+    "medianRent1BR": 2479,
+    "medianRent2BR": 3100,
+    "medianRent3BR": 4073,
     "medianHomePrice": 717000,
     "effectivePropertyTaxRate": 0.0196,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "west-ridge": {
     "neighborhoodId": "west-ridge",
-    "medianRentStudio": 838,
-    "medianRent1BR": 1072,
-    "medianRent2BR": 1354,
-    "medianRent3BR": 1801,
+    "medianRentStudio": 931,
+    "medianRent1BR": 1200,
+    "medianRent2BR": 1500,
+    "medianRent3BR": 1971,
     "medianHomePrice": 224000,
     "effectivePropertyTaxRate": 0.0226,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "albany-park": {
     "neighborhoodId": "albany-park",
-    "medianRentStudio": 943,
-    "medianRent1BR": 1211,
-    "medianRent2BR": 1498,
-    "medianRent3BR": 1982,
+    "medianRentStudio": 993,
+    "medianRent1BR": 1280,
+    "medianRent2BR": 1600,
+    "medianRent3BR": 2102,
     "medianHomePrice": 291000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "portage-park": {
     "neighborhoodId": "portage-park",
-    "medianRentStudio": 904,
-    "medianRent1BR": 1138,
-    "medianRent2BR": 1447,
-    "medianRent3BR": 1862,
+    "medianRentStudio": 993,
+    "medianRent1BR": 1280,
+    "medianRent2BR": 1600,
+    "medianRent3BR": 2102,
     "medianHomePrice": 286000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "irving-park": {
     "neighborhoodId": "irving-park",
-    "medianRentStudio": 907,
-    "medianRent1BR": 1167,
-    "medianRent2BR": 1450,
-    "medianRent3BR": 1875,
+    "medianRentStudio": 1086,
+    "medianRent1BR": 1399,
+    "medianRent2BR": 1750,
+    "medianRent3BR": 2300,
     "medianHomePrice": 273000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "jefferson-park": {
     "neighborhoodId": "jefferson-park",
-    "medianRentStudio": 940,
-    "medianRent1BR": 1206,
-    "medianRent2BR": 1502,
-    "medianRent3BR": 1957,
+    "medianRentStudio": 1024,
+    "medianRent1BR": 1320,
+    "medianRent2BR": 1650,
+    "medianRent3BR": 2168,
     "medianHomePrice": 297000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "avondale": {
     "neighborhoodId": "avondale",
-    "medianRentStudio": 975,
-    "medianRent1BR": 1253,
-    "medianRent2BR": 1557,
-    "medianRent3BR": 2096,
+    "medianRentStudio": 1211,
+    "medianRent1BR": 1559,
+    "medianRent2BR": 1950,
+    "medianRent3BR": 2562,
     "medianHomePrice": 274000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "logan-square": {
     "neighborhoodId": "logan-square",
-    "medianRentStudio": 1099,
-    "medianRent1BR": 1400,
-    "medianRent2BR": 1760,
-    "medianRent3BR": 2330,
+    "medianRentStudio": 1459,
+    "medianRent1BR": 1879,
+    "medianRent2BR": 2350,
+    "medianRent3BR": 3088,
     "medianHomePrice": 356000,
     "effectivePropertyTaxRate": 0.0214,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "near-north-side": {
     "neighborhoodId": "near-north-side",
-    "medianRentStudio": 1787,
-    "medianRent1BR": 2302,
-    "medianRent2BR": 2869,
-    "medianRent3BR": 3837,
+    "medianRentStudio": 2173,
+    "medianRent1BR": 2799,
+    "medianRent2BR": 3500,
+    "medianRent3BR": 4599,
     "medianHomePrice": 922000,
     "effectivePropertyTaxRate": 0.019,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "loop": {
     "neighborhoodId": "loop",
-    "medianRentStudio": 1361,
-    "medianRent1BR": 1778,
-    "medianRent2BR": 2189,
-    "medianRent3BR": 2919,
+    "medianRentStudio": 1676,
+    "medianRent1BR": 2159,
+    "medianRent2BR": 2700,
+    "medianRent3BR": 3548,
     "medianHomePrice": 580000,
     "effectivePropertyTaxRate": 0.0202,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "near-south-side": {
     "neighborhoodId": "near-south-side",
-    "medianRentStudio": 1365,
-    "medianRent1BR": 1750,
-    "medianRent2BR": 2215,
-    "medianRent3BR": 2917,
+    "medianRentStudio": 1614,
+    "medianRent1BR": 2079,
+    "medianRent2BR": 2600,
+    "medianRent3BR": 3416,
     "medianHomePrice": 580000,
     "effectivePropertyTaxRate": 0.0202,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "near-west-side": {
     "neighborhoodId": "near-west-side",
-    "medianRentStudio": 1213,
-    "medianRent1BR": 1576,
-    "medianRent2BR": 1971,
-    "medianRent3BR": 2618,
+    "medianRentStudio": 1676,
+    "medianRent1BR": 2159,
+    "medianRent2BR": 2700,
+    "medianRent3BR": 3548,
     "medianHomePrice": 455000,
     "effectivePropertyTaxRate": 0.0208,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "west-town": {
     "neighborhoodId": "west-town",
-    "medianRentStudio": 1199,
-    "medianRent1BR": 1572,
-    "medianRent2BR": 1928,
-    "medianRent3BR": 2568,
+    "medianRentStudio": 1552,
+    "medianRent1BR": 1999,
+    "medianRent2BR": 2500,
+    "medianRent3BR": 3285,
     "medianHomePrice": 447000,
     "effectivePropertyTaxRate": 0.0208,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "humboldt-park": {
     "neighborhoodId": "humboldt-park",
-    "medianRentStudio": 823,
-    "medianRent1BR": 1052,
-    "medianRent2BR": 1296,
-    "medianRent3BR": 1663,
+    "medianRentStudio": 962,
+    "medianRent1BR": 1240,
+    "medianRent2BR": 1550,
+    "medianRent3BR": 2037,
     "medianHomePrice": 231000,
     "effectivePropertyTaxRate": 0.0226,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "austin": {
@@ -346,92 +366,98 @@
   },
   "pilsen": {
     "neighborhoodId": "pilsen",
-    "medianRentStudio": 978,
-    "medianRent1BR": 1275,
-    "medianRent2BR": 1559,
-    "medianRent3BR": 2090,
+    "medianRentStudio": 1148,
+    "medianRent1BR": 1479,
+    "medianRent2BR": 1850,
+    "medianRent3BR": 2431,
     "medianHomePrice": 297000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "bridgeport": {
     "neighborhoodId": "bridgeport",
-    "medianRentStudio": 903,
-    "medianRent1BR": 1157,
-    "medianRent2BR": 1482,
-    "medianRent3BR": 1949,
+    "medianRentStudio": 1024,
+    "medianRent1BR": 1320,
+    "medianRent2BR": 1650,
+    "medianRent3BR": 2168,
     "medianHomePrice": 278000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "hyde-park": {
     "neighborhoodId": "hyde-park",
-    "medianRentStudio": 1033,
-    "medianRent1BR": 1322,
-    "medianRent2BR": 1666,
-    "medianRent3BR": 2142,
+    "medianRentStudio": 1180,
+    "medianRent1BR": 1519,
+    "medianRent2BR": 1900,
+    "medianRent3BR": 2497,
     "medianHomePrice": 356000,
     "effectivePropertyTaxRate": 0.0214,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "kenwood": {
     "neighborhoodId": "kenwood",
-    "medianRentStudio": 1034,
-    "medianRent1BR": 1327,
-    "medianRent2BR": 1684,
-    "medianRent3BR": 2211,
+    "medianRentStudio": 1211,
+    "medianRent1BR": 1559,
+    "medianRent2BR": 1950,
+    "medianRent3BR": 2562,
     "medianHomePrice": 369000,
     "effectivePropertyTaxRate": 0.0214,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "woodlawn": {
     "neighborhoodId": "woodlawn",
-    "medianRentStudio": 806,
-    "medianRent1BR": 1076,
-    "medianRent2BR": 1323,
-    "medianRent3BR": 1698,
+    "medianRentStudio": 900,
+    "medianRent1BR": 1160,
+    "medianRent2BR": 1450,
+    "medianRent3BR": 1905,
     "medianHomePrice": 217000,
     "effectivePropertyTaxRate": 0.0226,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "south-shore": {
     "neighborhoodId": "south-shore",
-    "medianRentStudio": 841,
-    "medianRent1BR": 1070,
-    "medianRent2BR": 1374,
-    "medianRent3BR": 1848,
+    "medianRentStudio": 882,
+    "medianRent1BR": 1136,
+    "medianRent2BR": 1420,
+    "medianRent3BR": 1866,
     "medianHomePrice": 220000,
     "effectivePropertyTaxRate": 0.0226,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "chatham": {
@@ -481,32 +507,34 @@
   },
   "beverly": {
     "neighborhoodId": "beverly",
-    "medianRentStudio": 1053,
-    "medianRent1BR": 1366,
-    "medianRent2BR": 1714,
-    "medianRent3BR": 2271,
+    "medianRentStudio": 1086,
+    "medianRent1BR": 1399,
+    "medianRent2BR": 1750,
+    "medianRent3BR": 2300,
     "medianHomePrice": 350000,
     "effectivePropertyTaxRate": 0.0214,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "morgan-park": {
     "neighborhoodId": "morgan-park",
-    "medianRentStudio": 912,
-    "medianRent1BR": 1226,
-    "medianRent2BR": 1497,
-    "medianRent3BR": 1923,
+    "medianRentStudio": 931,
+    "medianRent1BR": 1200,
+    "medianRent2BR": 1500,
+    "medianRent3BR": 1971,
     "medianHomePrice": 289000,
     "effectivePropertyTaxRate": 0.022,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "pullman": {
@@ -856,47 +884,50 @@
   },
   "edison-park": {
     "neighborhoodId": "edison-park",
-    "medianRentStudio": 1008,
-    "medianRent1BR": 1299,
-    "medianRent2BR": 1624,
-    "medianRent3BR": 2134,
+    "medianRentStudio": 1086,
+    "medianRent1BR": 1399,
+    "medianRent2BR": 1750,
+    "medianRent3BR": 2300,
     "medianHomePrice": 345000,
     "effectivePropertyTaxRate": 0.0218,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "norwood-park": {
     "neighborhoodId": "norwood-park",
-    "medianRentStudio": 993,
-    "medianRent1BR": 1279,
-    "medianRent2BR": 1600,
-    "medianRent3BR": 2102,
+    "medianRentStudio": 1024,
+    "medianRent1BR": 1320,
+    "medianRent2BR": 1650,
+    "medianRent3BR": 2168,
     "medianHomePrice": 335000,
     "effectivePropertyTaxRate": 0.0218,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "forest-glen": {
     "neighborhoodId": "forest-glen",
-    "medianRentStudio": 1119,
-    "medianRent1BR": 1442,
-    "medianRent2BR": 1803,
-    "medianRent3BR": 2369,
+    "medianRentStudio": 1180,
+    "medianRent1BR": 1519,
+    "medianRent2BR": 1900,
+    "medianRent3BR": 2497,
     "medianHomePrice": 420000,
     "effectivePropertyTaxRate": 0.0213,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "north-park": {
@@ -916,47 +947,50 @@
   },
   "dunning": {
     "neighborhoodId": "dunning",
-    "medianRentStudio": 941,
-    "medianRent1BR": 1212,
-    "medianRent2BR": 1516,
-    "medianRent3BR": 1992,
+    "medianRentStudio": 962,
+    "medianRent1BR": 1240,
+    "medianRent2BR": 1550,
+    "medianRent3BR": 2037,
     "medianHomePrice": 300000,
     "effectivePropertyTaxRate": 0.0221,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "montclare": {
     "neighborhoodId": "montclare",
-    "medianRentStudio": 896,
-    "medianRent1BR": 1155,
-    "medianRent2BR": 1444,
-    "medianRent3BR": 1897,
+    "medianRentStudio": 962,
+    "medianRent1BR": 1240,
+    "medianRent2BR": 1550,
+    "medianRent3BR": 2037,
     "medianHomePrice": 270000,
     "effectivePropertyTaxRate": 0.0222,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "belmont-cragin": {
     "neighborhoodId": "belmont-cragin",
-    "medianRentStudio": 852,
-    "medianRent1BR": 1097,
-    "medianRent2BR": 1372,
-    "medianRent3BR": 1803,
+    "medianRentStudio": 882,
+    "medianRent1BR": 1136,
+    "medianRent2BR": 1420,
+    "medianRent3BR": 1866,
     "medianHomePrice": 240000,
     "effectivePropertyTaxRate": 0.0224,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "hermosa": {
@@ -1006,32 +1040,34 @@
   },
   "armour-square": {
     "neighborhoodId": "armour-square",
-    "medianRentStudio": 941,
-    "medianRent1BR": 1212,
-    "medianRent2BR": 1516,
-    "medianRent3BR": 1992,
+    "medianRentStudio": 993,
+    "medianRent1BR": 1280,
+    "medianRent2BR": 1600,
+    "medianRent3BR": 2102,
     "medianHomePrice": 300000,
     "effectivePropertyTaxRate": 0.0221,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "douglas": {
     "neighborhoodId": "douglas",
-    "medianRentStudio": 882,
-    "medianRent1BR": 1136,
-    "medianRent2BR": 1420,
-    "medianRent3BR": 1866,
+    "medianRentStudio": 993,
+    "medianRent1BR": 1280,
+    "medianRent2BR": 1600,
+    "medianRent3BR": 2102,
     "medianHomePrice": 260000,
     "effectivePropertyTaxRate": 0.0223,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "oakland": {
@@ -1066,17 +1102,18 @@
   },
   "grand-boulevard": {
     "neighborhoodId": "grand-boulevard",
-    "medianRentStudio": 867,
-    "medianRent1BR": 1116,
-    "medianRent2BR": 1396,
-    "medianRent3BR": 1834,
+    "medianRentStudio": 962,
+    "medianRent1BR": 1240,
+    "medianRent2BR": 1550,
+    "medianRent3BR": 2037,
     "medianHomePrice": 250000,
     "effectivePropertyTaxRate": 0.0224,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "washington-park": {
@@ -1291,17 +1328,18 @@
   },
   "mckinley-park": {
     "neighborhoodId": "mckinley-park",
-    "medianRentStudio": 852,
-    "medianRent1BR": 1097,
-    "medianRent2BR": 1372,
-    "medianRent3BR": 1803,
+    "medianRentStudio": 900,
+    "medianRent1BR": 1160,
+    "medianRent2BR": 1450,
+    "medianRent3BR": 1905,
     "medianHomePrice": 240000,
     "effectivePropertyTaxRate": 0.0224,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "new-city": {
@@ -1471,17 +1509,18 @@
   },
   "ohare": {
     "neighborhoodId": "ohare",
-    "medianRentStudio": 911,
-    "medianRent1BR": 1174,
-    "medianRent2BR": 1468,
-    "medianRent3BR": 1929,
+    "medianRentStudio": 931,
+    "medianRent1BR": 1200,
+    "medianRent2BR": 1500,
+    "medianRent3BR": 1971,
     "medianHomePrice": 280000,
     "effectivePropertyTaxRate": 0.0222,
     "meta": {
       "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
       "geographicLevel": "neighborhood",
       "year": 2025,
-      "valueType": "estimated"
+      "valueType": "estimated",
+      "notes": "medianRent2BR manually rechecked against real-world Chicago rental market knowledge (Sept 2026 pass) — the shared home-price-based regression used to derive the round-2 dataset systematically compressed rent estimates for mid-to-high-value and rental-stock-heavy neighborhoods; this figure was corrected independently of that formula. medianRentStudio/1BR/3BR are recomputed from the corrected 2BR figure using the dataset-wide ratios (not independently re-derived)."
     }
   },
   "winnetka": {

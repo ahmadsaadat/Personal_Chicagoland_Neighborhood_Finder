@@ -158,6 +158,40 @@ effective property tax rate.
   coefficients and `scripts/data/community-areas-new.mjs` /
   `scripts/data/suburbs-new.mjs` for the price anchors and their rationale.
 
+### Manual rent correction (post-launch)
+
+A user comparison against real listings caught that the single linear
+regression above (`CHICAGO_FIT.rent2BR` in `scripts/data/lib.mjs`) badly
+under-priced several Chicago community areas — most visibly Rogers Park,
+which the formula priced below cheaper South/West Side areas despite being
+a lakefront neighborhood with strong transit. The root cause: one straight
+line fit across Chicago's full ~$95k–$922k home-price range necessarily
+flattens out at the high end (the fitted rent-to-price ratio drops from
+~13% at the cheapest areas to under 4% at the priciest, which is a much
+wider swing than real Chicago rental yields), and a home-price-driven
+formula can't capture areas where the housing stock is dominated by older
+rental apartment buildings rather than owner-occupied units (Rogers Park,
+Edgewater, Uptown, Albany Park), where real rents run well above what the
+neighborhood's typically-lower home price would predict.
+
+`medianRent2BR` was manually corrected for 39 of the 77 Chicago community
+areas (roughly everything from Montclare up through Near North Side on the
+price ladder, plus a handful of specific rental-heavy/gentrifying outliers
+below that price band) using informed real-world rental-market knowledge
+rather than the formula, with `medianRentStudio`/`1BR`/`3BR` recomputed from
+the corrected 2BR figure via the dataset's existing bedroom-count ratios.
+Each corrected record's `meta.notes` says so explicitly. The regression in
+`scripts/data/lib.mjs` was intentionally left as-is (it's still fine for the
+fields it's more reliable for, like transit/walk scores) but is now flagged
+in a code comment as not to be trusted for rent if reused. The 39 corrected
+ids, for reference: rogers-park, west-ridge, humboldt-park, woodlawn,
+south-shore, grand-boulevard, douglas, mckinley-park, belmont-cragin,
+montclare, irving-park, avondale, uptown, bridgeport, ohare, portage-park,
+edgewater, morgan-park, albany-park, jefferson-park, pilsen, dunning,
+armour-square, norwood-park, edison-park, beverly, logan-square, hyde-park,
+kenwood, forest-glen, west-town, near-west-side, lincoln-square,
+north-center, lakeview, loop, near-south-side, lincoln-park, near-north-side.
+
 ## Transportation
 
 `transportation.json` — `transitScore`, `walkScore`, `hasRailAccess`,

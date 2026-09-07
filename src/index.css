@@ -7,15 +7,9 @@
      Blue always means "better for you" (more left over), red always means
      "worse for you" (less left over) — which raw direction maps to which
      color depends on each metric's goodDirection, handled in colorScale.ts.
-     Reddest = worst for you, bluest = best for you, with a neutral midpoint. */
+     Reddest = worst for you, bluest = best for you; the full scale is a
+     direct interpolation between these two endpoints, no neutral midpoint. */
   --color-div-red-700: #b3261e;
-  --color-div-red-600: #cc4a3c;
-  --color-div-red-500: #e0765f;
-  --color-div-red-300: #eeb29d;
-  --color-div-neutral: #f1eee7;
-  --color-div-blue-300: #a9c6ee;
-  --color-div-blue-500: #6f9de3;
-  --color-div-blue-600: #3d75d1;
   --color-div-blue-700: #1d4fa0;
 
   /* Fixed status palette — never reassigned to a series, always paired with an icon/label. */

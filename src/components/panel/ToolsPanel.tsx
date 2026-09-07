@@ -3,11 +3,10 @@ import { EmptyState } from '../common/EmptyState'
 import { NeighborhoodCard } from '../neighborhood/NeighborhoodCard'
 import { ProfileChips } from '../profile/ProfileChips'
 import { RankedList } from '../ranking/RankedList'
-import { MapMetricSelector } from '../../map/MapMetricSelector'
 import { DIVERGING_STEPS, NO_DATA_COLOR } from '../../utils/colorScale'
 import type { MetricConfig, NeighborhoodEntry } from '../../utils/metrics'
 import type { RankedNeighborhood } from '../../calculations/ranking'
-import type { MapMetric, UserProfile } from '../../types'
+import type { UserProfile } from '../../types'
 import { MAX_COMPARE } from '../../hooks/useCompareSelection'
 import type { UseCompareSelectionResult } from '../../hooks/useCompareSelection'
 
@@ -17,8 +16,6 @@ interface ToolsPanelProps {
   profile: UserProfile
   onOpenProfile: () => void
   isOnboarded: boolean
-  metric: MapMetric
-  onMetricChange: (metric: MapMetric) => void
   metricConfig: MetricConfig
   min: number
   max: number
@@ -45,8 +42,6 @@ export function ToolsPanel({
   profile,
   onOpenProfile,
   isOnboarded,
-  metric,
-  onMetricChange,
   metricConfig,
   min,
   max,
@@ -83,22 +78,19 @@ export function ToolsPanel({
 
         <ProfileChips profile={profile} onEdit={onOpenProfile} />
 
-        <div className="flex items-center gap-2">
-          <MapMetricSelector value={metric} onChange={onMetricChange} />
-          <button
-            type="button"
-            onClick={onOpenFilters}
-            className="relative flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
-          >
-            <SlidersHorizontal size={14} />
-            Filters
-            {activeFilterCount > 0 && (
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
-                {activeFilterCount}
-              </span>
-            )}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={onOpenFilters}
+          className="relative flex items-center gap-1.5 self-start rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+        >
+          <SlidersHorizontal size={14} />
+          Filters
+          {activeFilterCount > 0 && (
+            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
+              {activeFilterCount}
+            </span>
+          )}
+        </button>
 
         {filtersActive && (
           <div className="flex items-center gap-2 text-xs text-slate-400">

@@ -64,6 +64,19 @@ export function predict({ slope, intercept }, x) {
 // consistently with the existing, already-reviewed relative differences
 // rather than invented from scratch. See docs/DATA_SOURCES.md for the
 // narrative explanation.
+//
+// KNOWN LIMITATION (found and manually corrected post-launch): CHICAGO_FIT
+// .rent2BR is a single straight line across Chicago's entire ~$95k-$922k
+// home-price range, so it necessarily flattens out at the high end and
+// under-predicts rent for mid-to-high-value neighborhoods, and it can't
+// capture rental-stock-heavy areas (Rogers Park, Edgewater, Uptown, Albany
+// Park) whose real rents run well above what their home price alone would
+// suggest. `src/data/housing.json`'s medianRent2BR was manually corrected
+// for ~39 Chicago community areas after this was caught (see
+// docs/DATA_SOURCES.md) — that correction lives only in the committed JSON,
+// not in this formula, so re-running generate-dataset.mjs is safe (it only
+// ever adds new ids, never overwrites existing ones) but this FIT should
+// not be trusted as accurate for rent if it's ever reused for something new.
 // ---------------------------------------------------------------------------
 export const CHICAGO_FIT = {
   rent2BR: { slope: 0.002393854180682773, intercept: 797.6968433931455 },
