@@ -1,14 +1,12 @@
-import { SlidersHorizontal, X } from 'lucide-react'
+import { SlidersHorizontal } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { rankNeighborhoods } from '../calculations/ranking'
 import { ChicagolandMap } from '../map/ChicagolandMap'
 import { MapMetricSelector } from '../map/MapMetricSelector'
-import { EmptyState } from '../components/common/EmptyState'
 import { SlideOver } from '../components/common/SlideOver'
 import { ToolsPanel, type PanelTab } from '../components/panel/ToolsPanel'
 import type { UserProfile, MapMetric } from '../types'
 import type { UseCompareSelectionResult } from '../hooks/useCompareSelection'
-import { applyFilters, countActiveFilters, DEFAULT_FILTERS, isFiltersActive, type FilterState } from '../utils/filters'
 import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 
 interface ExplorePageProps {
@@ -40,26 +38,22 @@ export function ExplorePage({
   profileExpanded,
   onProfileExpandedChange,
 }: ExplorePageProps) {
-  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [metric, setMetric] = useState<MapMetric>('disposableIncome')
   const [tab, setTab] = useState<PanelTab>('list')
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false)
 
-  const filteredEntries = useMemo(() => applyFilters(entries, filters), [entries, filters])
   const metricConfig = getMetricConfig(metric)
-  const activeFilterCount = countActiveFilters(filters)
-  const filtersActive = isFiltersActive(filters)
 
   const ranked = useMemo(
-    () => rankNeighborhoods(profile, filteredEntries.map((e) => e.neighborhood.id)),
-    [profile, filteredEntries],
+    () => rankNeighborhoods(profile, entries.map((e) => e.neighborhood.id)),
+    [profile, entries],
   )
 
   const { min, max } = useMemo(() => {
-    if (filteredEntries.length === 0) return { min: 0, max: 0 }
-    const values = filteredEntries.map((e) => metricConfig.getValue(e))
+    if (entries.length === 0) return { min: 0, max: 0 }
+    const values = entries.map((e) => metricConfig.getValue(e))
     return { min: Math.min(...values), max: Math.max(...values) }
-  }, [filteredEntries, metricConfig])
+  }, [entries, metricConfig])
 
   function handleOpenDetail(id: string) {
     setMobilePanelOpen(false)
@@ -75,15 +69,9 @@ export function ExplorePage({
     metricConfig,
     min,
     max,
-    filters,
-    onFiltersChange: setFilters,
-    activeFilterCount,
-    filtersActive,
-    onResetFilters: () => setFilters(DEFAULT_FILTERS),
     tab,
     onTabChange: setTab,
-    filteredEntries,
-    totalCount: entries.length,
+    entries,
     ranked,
     onOpenDetail: handleOpenDetail,
     compare,
@@ -97,33 +85,12 @@ export function ExplorePage({
           (Leaflet assigns them z-index values in the hundreds) from leaking
           out and rendering above these overlay controls. */}
       <ChicagolandMap
-        entries={filteredEntries}
+        entries={entries}
         metric={metric}
         selectedNeighborhoodId={selectedNeighborhoodId}
         compareIds={compare.selectedIds}
         onSelectNeighborhood={onSelectNeighborhood}
       />
-
-      {filteredEntries.length === 0 && (
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-4 lg:pl-[420px]">
-          <div className="pointer-events-auto">
-            <EmptyState
-              icon={X}
-              title="No neighborhoods match your filters"
-              description="Try relaxing your rent, commute, or tax criteria to see more options."
-              action={
-                <button
-                  type="button"
-                  onClick={() => setFilters(DEFAULT_FILTERS)}
-                  className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
-                >
-                  Reset filters
-                </button>
-              }
-            />
-          </div>
-        </div>
-      )}
 
       {/* Desktop: persistent sidebar overlaid on the map's left edge. */}
       <aside className="absolute inset-y-0 left-0 z-10 hidden w-[380px] flex-col border-r border-slate-200 bg-white shadow-xl lg:flex xl:w-[420px]">
@@ -144,11 +111,6 @@ export function ExplorePage({
       >
         <SlidersHorizontal size={15} />
         Explore
-        {activeFilterCount > 0 && (
-          <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
-            {activeFilterCount}
-          </span>
-        )}
       </button>
 
       <div className="lg:hidden">

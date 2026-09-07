@@ -1,12 +1,8 @@
-import { ChevronDown, List, RotateCcw, SlidersHorizontal, Sparkles, X } from 'lucide-react'
-import { useState } from 'react'
-import { EmptyState } from '../common/EmptyState'
-import { FilterFields } from '../filters/FilterFields'
+import { ChevronDown, List, Sparkles } from 'lucide-react'
 import { NeighborhoodCard } from '../neighborhood/NeighborhoodCard'
 import { ProfileChips } from '../profile/ProfileChips'
 import { RankedList } from '../ranking/RankedList'
 import { DIVERGING_STEPS, NO_DATA_COLOR } from '../../utils/colorScale'
-import type { FilterState } from '../../utils/filters'
 import type { MetricConfig, NeighborhoodEntry } from '../../utils/metrics'
 import type { RankedNeighborhood } from '../../calculations/ranking'
 import type { MaritalStatus, UserProfile } from '../../types'
@@ -24,15 +20,9 @@ interface ToolsPanelProps {
   metricConfig: MetricConfig
   min: number
   max: number
-  filters: FilterState
-  onFiltersChange: (filters: FilterState) => void
-  activeFilterCount: number
-  filtersActive: boolean
-  onResetFilters: () => void
   tab: PanelTab
   onTabChange: (tab: PanelTab) => void
-  filteredEntries: NeighborhoodEntry[]
-  totalCount: number
+  entries: NeighborhoodEntry[]
   ranked: RankedNeighborhood[]
   onOpenDetail: (id: string) => void
   compare: UseCompareSelectionResult
@@ -50,13 +40,12 @@ function FieldLabel({ children }: { children: string }) {
 
 /**
  * The consolidated "tools and info" surface — a live income/rent editor,
- * the full profile, filters, the metric legend, and the neighborhood
- * list/ranking — rendered once and reused both as a persistent desktop
- * sidebar and as the mobile slide-over's content. Everything here is either
- * always visible or expands in place; nothing opens a separate overlay that
- * covers the map or hides the rest of the panel. The whole panel scrolls as
- * one column so it has room to grow (more filters, etc.) without needing a
- * fixed-height section of its own.
+ * the full profile, the metric legend, and the neighborhood list/ranking —
+ * rendered once and reused both as a persistent desktop sidebar and as the
+ * mobile slide-over's content. Everything here is either always visible or
+ * expands in place; nothing opens a separate overlay that covers the map or
+ * hides the rest of the panel. The whole panel scrolls as one column so it
+ * has room to grow without needing a fixed-height section of its own.
  */
 export function ToolsPanel({
   profile,
@@ -67,20 +56,13 @@ export function ToolsPanel({
   metricConfig,
   min,
   max,
-  filters,
-  onFiltersChange,
-  activeFilterCount,
-  filtersActive,
-  onResetFilters,
   tab,
   onTabChange,
-  filteredEntries,
-  totalCount,
+  entries,
   ranked,
   onOpenDetail,
   compare,
 }: ToolsPanelProps) {
-  const [filtersExpanded, setFiltersExpanded] = useState(false)
   const worstValue = metricConfig.goodDirection === 'high' ? min : max
   const bestValue = metricConfig.goodDirection === 'high' ? max : min
 
@@ -252,46 +234,6 @@ export function ToolsPanel({
           )}
         </div>
 
-        <div>
-          <button
-            type="button"
-            onClick={() => setFiltersExpanded((v) => !v)}
-            className="relative flex w-full items-center justify-between gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
-          >
-            <span className="flex items-center gap-1.5">
-              <SlidersHorizontal size={14} />
-              Filters
-              {activeFilterCount > 0 && (
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
-                  {activeFilterCount}
-                </span>
-              )}
-            </span>
-            <ChevronDown size={15} className={`text-slate-400 transition-transform ${filtersExpanded ? 'rotate-180' : ''}`} />
-          </button>
-
-          {filtersActive && (
-            <div className="mt-2 flex items-center gap-2 text-xs text-slate-400">
-              <span>
-                {filteredEntries.length} of {totalCount} neighborhoods
-              </span>
-              <button
-                type="button"
-                onClick={onResetFilters}
-                className="flex items-center gap-1 font-medium text-slate-500 transition hover:text-slate-700"
-              >
-                <RotateCcw size={11} /> Clear filters
-              </button>
-            </div>
-          )}
-
-          {filtersExpanded && (
-            <div className="mt-3 border-t border-slate-100 pt-3">
-              <FilterFields filters={filters} onChange={onFiltersChange} />
-            </div>
-          )}
-        </div>
-
         <div className="flex items-center gap-1.5 rounded-xl bg-slate-100 p-1">
           <button
             type="button"
@@ -317,15 +259,9 @@ export function ToolsPanel({
       </div>
 
       <div className="px-4 py-4">
-        {filteredEntries.length === 0 ? (
-          <EmptyState
-            icon={X}
-            title="No neighborhoods match your filters"
-            description="Try relaxing your rent, commute, or tax criteria to see more options."
-          />
-        ) : tab === 'list' ? (
+        {tab === 'list' ? (
           <div className="grid grid-cols-1 gap-3">
-            {filteredEntries.map((entry) => (
+            {entries.map((entry) => (
               <NeighborhoodCard
                 key={entry.neighborhood.id}
                 entry={entry}

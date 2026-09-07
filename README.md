@@ -17,12 +17,10 @@ locations against each other — **not tax, legal, or financial advice.**
   plus 102 surrounding suburbs across 6 counties (Cook, DuPage, Lake, Will, Kane, McHenry),
   all using real municipal boundary geometry (U.S. Census TIGER/Line) — color-coded by any
   of 9 selectable metrics on a blue (better for you) to red (worse for you) diverging scale
-- A simple onboarding profile (income, family, rent/own, car, commute, spending) that
-  drives every calculation, saved locally in your browser
+- A live profile editor (income, rent, family, car, commute, spending) in the side panel —
+  every number drives the map's calculations in real time, saved locally in your browser
 - A neighborhood detail panel breaking down Housing / Taxes / Transportation / Cost of
   Living / Lifestyle for any area, with every estimate's assumptions surfaced in plain language
-- Filters (max rent, max home price, min disposable income, max commute, car/transit
-  preference, walkability, family-friendliness, property tax, neighborhood type)
 - Side-by-side comparison of up to 3 neighborhoods
 - A "Best places for you" ranked list with a plain-language reason for each match
 
@@ -63,11 +61,11 @@ required.
 
 ```
 src/
-  components/     UI components (layout, profile, filters, compare, neighborhood, common)
-  pages/          Top-level views (LandingPage, ExplorePage)
-  map/            Leaflet map, choropleth, legend, GeoJSON loading
+  components/     UI components (layout, profile, panel, compare, neighborhood, common)
+  pages/          Top-level view (ExplorePage — the app opens directly onto the map)
+  map/            Leaflet map, metric picker, GeoJSON loading
   hooks/          React hooks (profile persistence, compare selection, derived entries)
-  utils/          UI-only helpers (formatting, filtering, color scales, derived metrics)
+  utils/          UI-only helpers (formatting, color scales, derived metrics)
   types/          Shared TypeScript contracts (geography, data, profile, finance)
   data/           Static datasets (JSON) + geo/ (GeoJSON) + index.ts (accessor functions)
   calculations/   calculateTaxes, calculateFinancialSummary, rankNeighborhoods
