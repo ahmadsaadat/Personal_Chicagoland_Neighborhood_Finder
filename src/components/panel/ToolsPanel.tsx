@@ -135,7 +135,7 @@ export function ToolsPanel({
           </div>
         </div>
 
-        <ProfileChips profile={profile} onProfileChange={onProfileChange} onEditFamily={() => onProfileExpandedChange(true)} />
+        <ProfileChips profile={profile} onProfileChange={onProfileChange} />
 
         <div>
           <button
@@ -207,9 +207,19 @@ export function ToolsPanel({
                 </div>
               </div>
 
-              <p className="text-[11px] leading-snug text-slate-400">
-                Car ownership and annual mileage are set from the "Car" chip above.
-              </p>
+              {profile.ownsCar && (
+                <div>
+                  <FieldLabel>Annual miles driven</FieldLabel>
+                  <input
+                    type="number"
+                    min={0}
+                    step={500}
+                    value={profile.annualMilesDriven}
+                    onChange={(e) => set('annualMilesDriven', Number(e.target.value))}
+                    className={inputClass()}
+                  />
+                </div>
+              )}
 
               <div>
                 <FieldLabel>Monthly spending (non-housing)</FieldLabel>

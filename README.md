@@ -13,11 +13,10 @@ locations against each other — **not tax, legal, or financial advice.**
 
 ## What's inside
 
-- A full-viewport interactive map covering all of Chicagoland edge-to-edge — all 77
-  official Chicago community areas plus 102 surrounding suburbs across 6 counties (Cook,
-  DuPage, Lake, Will, Kane, McHenry), tiled with no gaps via a Voronoi tessellation outside
-  Chicago proper — color-coded by any of 9 selectable metrics on a blue (better for you) to
-  red (worse for you) diverging scale
+- A full-viewport interactive map of Chicagoland — all 77 official Chicago community areas
+  plus 102 surrounding suburbs across 6 counties (Cook, DuPage, Lake, Will, Kane, McHenry),
+  all using real municipal boundary geometry (U.S. Census TIGER/Line) — color-coded by any
+  of 9 selectable metrics on a blue (better for you) to red (worse for you) diverging scale
 - A simple onboarding profile (income, family, rent/own, car, commute, spending) that
   drives every calculation, saved locally in your browser
 - A neighborhood detail panel breaking down Housing / Taxes / Transportation / Cost of
@@ -76,14 +75,13 @@ docs/
   CONTRACT.md       Internal team contract: file ownership + data interfaces
   DATA_SOURCES.md   Full data provenance catalogue + "add a neighborhood" walkthrough
 scripts/
-  generate-dataset.mjs       One-time data-authoring script (`npm run data:generate`)
-  generate-tessellation.mjs  One-time Voronoi tessellation script (`npm run geo:generate`)
+  generate-dataset.mjs   One-time data-authoring script (`npm run data:generate`)
+  generate-geometry.mjs  One-time boundary-fetching script (`npm run geo:generate`)
 ```
 
 The two `scripts/*.mjs` files are dev-only tooling that produce the static files in
 `src/data/**` — they never run as part of `npm run dev`/`npm run build`, and their
-geometry libraries (`d3-delaunay`, `@turf/turf`) are devDependencies only, never shipped
-to the browser.
+geometry library (`@turf/turf`) is a devDependency only, never shipped to the browser.
 
 The app only ever touches data through the functions exported from `src/data/index.ts`
 and `src/calculations/*` — no component hardcodes neighborhood data, so the dataset can
@@ -128,7 +126,7 @@ catalogue. Summary:
 
 | Category | Real / actual | Estimated (MVP placeholder) |
 |---|---|---|
-| Geography | All 77 official Chicago community-area boundaries (City of Chicago Data Portal), real centroids, county/municipality assignments, real 6-county outer extent (Census TIGERweb) | 102 suburb "territory" shapes — a computed Voronoi tessellation anchored on real town centroids, not real municipal boundaries |
+| Geography | All 77 official Chicago community-area boundaries (City of Chicago Data Portal) and all 102 suburb municipal boundaries (Census TIGER/Line "Places"), real centroids, county/municipality assignments | — |
 | Taxes | IL flat 4.95% income tax, no local income tax, 2024 federal bracket structure | Combined sales tax rates, federal bracket *vintage* (drifts yearly), vehicle fees |
 | Transportation | CTA/Metra lines actually serving each area | Transit/walk scores, commute times, parking cost |
 | Housing | — | Median rent/home price, effective property tax rate |
@@ -145,22 +143,18 @@ Revenue rate tables, Census TIGER/Line).
 - **179 neighborhoods modeled** (all 77 official Chicago community areas + 102 suburbs
   across 6 counties) — a large but still finite slice of Chicagoland, not literally every
   town in the metro area.
-- **Suburb map shapes are a computed Voronoi tessellation**, not real municipal boundaries —
-  each suburb's real town-center coordinate is used to carve out a "nearest neighbor"
-  territory so the whole region reads as tiled with no gaps, the way hoodmaps-style maps
-  do, but a real town's actual shape can differ substantially from its Voronoi cell. This
-  is disclosed in the GeoJSON (`properties.geometrySource: "voronoi-illustrative"`) and in
-  `docs/DATA_SOURCES.md`. Chicago's 77 community-area boundaries are real, simplified only
-  for file size.
+- **Real boundaries don't tile edge-to-edge.** Both Chicago's 77 community areas and all
+  102 suburbs now use real municipal boundary geometry, simplified only for file size. That
+  means the map shows genuine gaps where unincorporated land sits between towns (and along
+  parts of Chicago's own edge) — that's geographically accurate, not a bug, and it's
+  explained in `docs/DATA_SOURCES.md`.
 - **One tax jurisdiction per municipality** — real Illinois sales tax can vary by special
   taxing district within a municipality; this MVP doesn't model that granularity.
 - **Federal tax brackets are pinned to 2024** and will drift from the current tax year
   over time; Illinois' January 2026 grocery-tax repeal is only partially modeled (see
   `src/calculations/taxes.ts`).
-- **Home purchase price is applied uniformly** across neighborhoods when you choose
-  "own," to keep property-tax-rate comparisons apples-to-apples — it does not scale to
-  each area's typical home price. The app discloses this directly in the neighborhood
-  detail panel and in the tax assumptions.
+- **The profile assumes renting.** There's no "buy" option in the UI — every estimate is
+  built around a monthly rent figure you enter yourself.
 - This is **not** a tax filing tool, mortgage calculator, or financial advisory product.
 
 ## How to add new neighborhoods
@@ -169,9 +163,9 @@ Full step-by-step walkthrough (which files to touch, in what order) is in
 [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md#how-to-add-a-new-neighborhood). In short:
 add entries to `src/data/counties.json` → `municipalities.json` → `taxJurisdictions.json`
 → `neighborhoods.json` → the four per-category dataset files, then either add a GeoJSON
-feature by hand or — for a new suburb — just re-run `npm run geo:generate` to
-re-tessellate the map with the new town included as a Voronoi seed. Run `npm run build`
-afterward to confirm nothing broke.
+feature by hand or — for a new suburb — just re-run `npm run geo:generate` to fetch its
+real municipal boundary from the Census TIGERweb service. Run `npm run build` afterward
+to confirm nothing broke.
 
 ## How this was built
 
