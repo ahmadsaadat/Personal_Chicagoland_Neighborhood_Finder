@@ -148,8 +148,8 @@ export function ToolsPanel({
           </button>
 
           {profileExpanded && (
-            <div className="mt-3 space-y-4 border-t border-slate-100 pt-3">
-              <div className="grid grid-cols-2 gap-3">
+            <div className="mt-3 space-y-3 border-t border-slate-100 pt-3">
+              <div className="grid grid-cols-2 gap-2">
                 <div>
                   <FieldLabel>Marital status</FieldLabel>
                   <select
@@ -174,72 +174,74 @@ export function ToolsPanel({
                 </div>
               </div>
 
-              <div>
-                <FieldLabel>Bedrooms</FieldLabel>
-                <select
-                  value={profile.bedrooms}
-                  onChange={(e) => set('bedrooms', Number(e.target.value))}
-                  className={inputClass()}
-                >
-                  {[0, 1, 2, 3, 4, 5].map((n) => (
-                    <option key={n} value={n}>
-                      {n === 0 ? 'Studio' : `${n} bedroom${n > 1 ? 's' : ''}`}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <FieldLabel>Do you own a car?</FieldLabel>
-                <div className="grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1">
-                  {[true, false].map((val) => (
-                    <button
-                      key={String(val)}
-                      type="button"
-                      onClick={() => set('ownsCar', val)}
-                      className={`rounded-lg py-2 text-sm font-medium transition ${
-                        profile.ownsCar === val ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
-                      }`}
-                    >
-                      {val ? 'Yes' : 'No, I use transit'}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {profile.ownsCar && (
+              <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <FieldLabel>Annual miles driven</FieldLabel>
-                  <input
-                    type="number"
-                    min={0}
-                    step={500}
-                    value={profile.annualMilesDriven}
-                    onChange={(e) => set('annualMilesDriven', Number(e.target.value))}
+                  <FieldLabel>Bedrooms</FieldLabel>
+                  <select
+                    value={profile.bedrooms}
+                    onChange={(e) => set('bedrooms', Number(e.target.value))}
                     className={inputClass()}
-                  />
+                  >
+                    {[0, 1, 2, 3, 4, 5].map((n) => (
+                      <option key={n} value={n}>
+                        {n === 0 ? 'Studio' : `${n} BR`}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-              )}
+                <div>
+                  <FieldLabel>Car?</FieldLabel>
+                  <div className="grid grid-cols-2 gap-1 rounded-lg bg-slate-100 p-1">
+                    {[true, false].map((val) => (
+                      <button
+                        key={String(val)}
+                        type="button"
+                        onClick={() => set('ownsCar', val)}
+                        className={`rounded-md py-1.5 text-xs font-medium transition ${
+                          profile.ownsCar === val ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+                        }`}
+                      >
+                        {val ? 'Yes' : 'No'}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
-              <div>
-                <FieldLabel>Commute destination</FieldLabel>
-                <input
-                  type="text"
-                  list="commute-presets"
-                  value={profile.commuteDestination}
-                  onChange={(e) => set('commuteDestination', e.target.value)}
-                  className={inputClass()}
-                  placeholder="Chicago Loop"
-                />
-                <datalist id="commute-presets">
-                  {COMMUTE_PRESETS.map((preset) => (
-                    <option key={preset} value={preset} />
-                  ))}
-                </datalist>
+              <div className="grid grid-cols-2 gap-2">
+                {profile.ownsCar && (
+                  <div>
+                    <FieldLabel>Miles/yr</FieldLabel>
+                    <input
+                      type="number"
+                      min={0}
+                      step={500}
+                      value={profile.annualMilesDriven}
+                      onChange={(e) => set('annualMilesDriven', Number(e.target.value))}
+                      className={inputClass()}
+                    />
+                  </div>
+                )}
+                <div className={profile.ownsCar ? '' : 'col-span-2'}>
+                  <FieldLabel>Commute to</FieldLabel>
+                  <input
+                    type="text"
+                    list="commute-presets"
+                    value={profile.commuteDestination}
+                    onChange={(e) => set('commuteDestination', e.target.value)}
+                    className={inputClass()}
+                    placeholder="Chicago Loop"
+                  />
+                  <datalist id="commute-presets">
+                    {COMMUTE_PRESETS.map((preset) => (
+                      <option key={preset} value={preset} />
+                    ))}
+                  </datalist>
+                </div>
               </div>
 
               <div>
-                <FieldLabel>Approximate monthly spending (non-housing)</FieldLabel>
+                <FieldLabel>Monthly spending (non-housing)</FieldLabel>
                 <div className="relative">
                   <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">$</span>
                   <input
@@ -251,19 +253,20 @@ export function ToolsPanel({
                     className={inputClass('pl-6')}
                   />
                 </div>
-                <p className="mt-1.5 text-xs text-slate-400">
-                  General discretionary spending used to estimate sales tax — groceries, restaurants, and utilities
-                  are already accounted for per neighborhood.
-                </p>
               </div>
 
-              <button
-                type="button"
-                onClick={onResetProfile}
-                className="text-xs font-medium text-slate-400 transition hover:text-slate-600"
-              >
-                Reset to defaults
-              </button>
+              <div className="flex items-center justify-between">
+                <p className="text-[11px] leading-snug text-slate-400">
+                  Spending drives the sales-tax estimate; groceries/restaurants/utilities are per-neighborhood.
+                </p>
+                <button
+                  type="button"
+                  onClick={onResetProfile}
+                  className="shrink-0 whitespace-nowrap pl-3 text-xs font-medium text-slate-400 transition hover:text-slate-600"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
           )}
         </div>
