@@ -17,8 +17,9 @@ locations against each other — **not tax, legal, or financial advice.**
   plus 102 surrounding suburbs across 6 counties (Cook, DuPage, Lake, Will, Kane, McHenry),
   all using real municipal boundary geometry (U.S. Census TIGER/Line) — color-coded by any
   of 9 selectable metrics on a blue (better for you) to red (worse for you) diverging scale
-- A live profile editor (income, rent, family, car, commute, spending) in the side panel —
-  every number drives the map's calculations in real time, saved locally in your browser
+- A live profile editor in the side panel — income (salary or hourly), housing (rent or
+  own), family, car, commute, and spending — every number drives the map's calculations
+  in real time, saved locally in your browser
 - A neighborhood detail panel breaking down Housing / Taxes / Transportation / Cost of
   Living / Lifestyle for any area, with every estimate's assumptions surfaced in plain language
 - Side-by-side comparison of up to 3 neighborhoods
@@ -151,8 +152,10 @@ Revenue rate tables, Census TIGER/Line).
 - **Federal tax brackets are pinned to 2024** and will drift from the current tax year
   over time; Illinois' January 2026 grocery-tax repeal is only partially modeled (see
   `src/calculations/taxes.ts`).
-- **The profile assumes renting.** There's no "buy" option in the UI — every estimate is
-  built around a monthly rent figure you enter yourself.
+- **Home purchase price is applied uniformly** across neighborhoods when you choose
+  "own" (via the housing field's popover), to keep property-tax-rate comparisons
+  apples-to-apples — it does not scale to each area's typical home price. The app
+  discloses this directly in the neighborhood detail panel and in the tax assumptions.
 - This is **not** a tax filing tool, mortgage calculator, or financial advisory product.
 
 ## How to add new neighborhoods

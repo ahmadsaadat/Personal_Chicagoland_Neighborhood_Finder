@@ -1,4 +1,6 @@
 import { ChevronDown, List, Sparkles } from 'lucide-react'
+import { HousingField } from './HousingField'
+import { IncomeField } from './IncomeField'
 import { NeighborhoodCard } from '../neighborhood/NeighborhoodCard'
 import { ProfileChips } from '../profile/ProfileChips'
 import { RankedList } from '../ranking/RankedList'
@@ -81,40 +83,8 @@ export function ToolsPanel({
         </div>
 
         <div className="grid grid-cols-2 gap-2">
-          <div>
-            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="quick-income">
-              Annual income
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
-              <input
-                id="quick-income"
-                type="number"
-                min={0}
-                step={1000}
-                value={profile.annualIncome}
-                onChange={(e) => set('annualIncome', Number(e.target.value))}
-                className={inputClass('pl-5')}
-              />
-            </div>
-          </div>
-          <div>
-            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="quick-rent">
-              Monthly rent
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
-              <input
-                id="quick-rent"
-                type="number"
-                min={0}
-                step={50}
-                value={profile.monthlyRent}
-                onChange={(e) => set('monthlyRent', Number(e.target.value))}
-                className={inputClass('pl-5')}
-              />
-            </div>
-          </div>
+          <IncomeField profile={profile} onProfileChange={onProfileChange} />
+          <HousingField profile={profile} onProfileChange={onProfileChange} />
         </div>
 
         <ProfileChips profile={profile} onProfileChange={onProfileChange} />

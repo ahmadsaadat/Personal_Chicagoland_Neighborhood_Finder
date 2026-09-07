@@ -3,6 +3,12 @@ import { DEFAULT_PROFILE, type UserProfile } from '../types'
 const STORAGE_KEY = 'chicagoland.userProfile.v1'
 const ONBOARDED_KEY = 'chicagoland.hasOnboarded.v1'
 
+/**
+ * Only validates the fields that predate the salary/hourly split — a
+ * profile saved before that change won't have incomeType/hourlyRate/
+ * hoursPerWeek, and the merge with DEFAULT_PROFILE below fills those in
+ * rather than rejecting the whole saved profile over missing new fields.
+ */
 function isUserProfile(value: unknown): value is UserProfile {
   if (!value || typeof value !== 'object') return false
   const v = value as Record<string, unknown>
@@ -26,10 +32,7 @@ export function loadProfile(): UserProfile {
     const raw = window.localStorage.getItem(STORAGE_KEY)
     if (!raw) return DEFAULT_PROFILE
     const parsed: unknown = JSON.parse(raw)
-    // The profile UI is rent-only — coerce any profile saved before that
-    // change (or otherwise set to "own") so it isn't stuck showing a home
-    // purchase price the UI no longer has a field for.
-    if (isUserProfile(parsed)) return { ...DEFAULT_PROFILE, ...parsed, housingChoice: 'rent' }
+    if (isUserProfile(parsed)) return { ...DEFAULT_PROFILE, ...parsed }
   } catch {
     // Corrupt or inaccessible storage — fall back to defaults silently.
   }
