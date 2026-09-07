@@ -42,10 +42,11 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
       </button>
 
       {open && (
-        // Anchored to the right edge (not left, like IncomeField) because this
-        // chip sits further right in the row — opening left-0 here would push
-        // the popover past the sidebar's right edge and onto the map.
-        <div className="absolute right-0 top-full z-20 mt-2 w-60 rounded-xl border border-slate-200 bg-white p-3 shadow-lg">
+        // Fine for this to visually extend past the sidebar and over the
+        // map — z-20 (see ChicagolandMap's `isolate`, which keeps Leaflet's
+        // own panes from ever competing with this) guarantees it renders on
+        // top of the map rather than under it.
+        <div className="absolute left-0 top-full z-20 mt-2 w-60 rounded-xl border border-slate-200 bg-white p-3 shadow-lg">
           <div className="text-xs font-medium text-slate-500">Rent or own?</div>
           <div className="mt-2 grid grid-cols-2 gap-1.5 rounded-lg bg-slate-100 p-1">
             {(['rent', 'own'] as HousingChoice[]).map((choice) => (
