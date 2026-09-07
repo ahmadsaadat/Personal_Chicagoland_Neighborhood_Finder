@@ -1,5 +1,5 @@
 import { getMunicipality, getNeighborhood, getNeighborhoodProfile, getTaxJurisdiction } from '../data'
-import type { FinancialSummary, UserProfile } from '../types'
+import { yourMonthlyRentShare, type FinancialSummary, type UserProfile } from '../types'
 import { calculateTaxes } from './taxes'
 
 const DEFAULT_MONTHLY_SPENDING = 1200
@@ -56,7 +56,7 @@ export function calculateFinancialSummary(
 
   const housingAnnualCost =
     profile.housingChoice === 'rent'
-      ? profile.monthlyRent * 12
+      ? yourMonthlyRentShare(profile) * 12
       : (monthlyMortgagePayment(profile.homePurchasePrice) +
           (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12) *
         12
