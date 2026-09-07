@@ -26,7 +26,10 @@ export function loadProfile(): UserProfile {
     const raw = window.localStorage.getItem(STORAGE_KEY)
     if (!raw) return DEFAULT_PROFILE
     const parsed: unknown = JSON.parse(raw)
-    if (isUserProfile(parsed)) return { ...DEFAULT_PROFILE, ...parsed }
+    // The profile UI is rent-only — coerce any profile saved before that
+    // change (or otherwise set to "own") so it isn't stuck showing a home
+    // purchase price the UI no longer has a field for.
+    if (isUserProfile(parsed)) return { ...DEFAULT_PROFILE, ...parsed, housingChoice: 'rent' }
   } catch {
     // Corrupt or inaccessible storage — fall back to defaults silently.
   }

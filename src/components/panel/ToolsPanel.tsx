@@ -9,7 +9,7 @@ import { DIVERGING_STEPS, NO_DATA_COLOR } from '../../utils/colorScale'
 import type { FilterState } from '../../utils/filters'
 import type { MetricConfig, NeighborhoodEntry } from '../../utils/metrics'
 import type { RankedNeighborhood } from '../../calculations/ranking'
-import type { HousingChoice, UserProfile } from '../../types'
+import type { UserProfile } from '../../types'
 import { MAX_COMPARE } from '../../hooks/useCompareSelection'
 import type { UseCompareSelectionResult } from '../../hooks/useCompareSelection'
 
@@ -72,10 +72,6 @@ export function ToolsPanel({
   const worstValue = metricConfig.goodDirection === 'high' ? min : max
   const bestValue = metricConfig.goodDirection === 'high' ? max : min
 
-  function setHousingChoice(choice: HousingChoice) {
-    onProfileChange({ ...profile, housingChoice: choice })
-  }
-
   return (
     <div className="flex h-full flex-col">
       <div className="flex flex-col gap-3 border-b border-slate-100 px-4 py-4">
@@ -105,43 +101,22 @@ export function ToolsPanel({
             </div>
           </div>
           <div>
-            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="quick-housing-amount">
-              {profile.housingChoice === 'rent' ? 'Monthly rent' : 'Home price'}
+            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="quick-rent">
+              Monthly rent
             </label>
             <div className="relative">
               <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
               <input
-                id="quick-housing-amount"
+                id="quick-rent"
                 type="number"
                 min={0}
-                step={profile.housingChoice === 'rent' ? 50 : 5000}
-                value={profile.housingChoice === 'rent' ? profile.monthlyRent : profile.homePurchasePrice}
-                onChange={(e) =>
-                  onProfileChange(
-                    profile.housingChoice === 'rent'
-                      ? { ...profile, monthlyRent: Number(e.target.value) }
-                      : { ...profile, homePurchasePrice: Number(e.target.value) },
-                  )
-                }
+                step={50}
+                value={profile.monthlyRent}
+                onChange={(e) => onProfileChange({ ...profile, monthlyRent: Number(e.target.value) })}
                 className={inputClass('pl-5')}
               />
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1">
-          {(['rent', 'own'] as HousingChoice[]).map((choice) => (
-            <button
-              key={choice}
-              type="button"
-              onClick={() => setHousingChoice(choice)}
-              className={`rounded-lg py-1.5 text-xs font-medium capitalize transition ${
-                profile.housingChoice === choice ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
-              }`}
-            >
-              {choice}
-            </button>
-          ))}
         </div>
 
         <ProfileChips profile={profile} onEdit={onOpenProfile} />

@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { SlideOver } from '../common/SlideOver'
-import { DEFAULT_PROFILE, type HousingChoice, type MaritalStatus, type UserProfile } from '../../types'
+import { DEFAULT_PROFILE, type MaritalStatus, type UserProfile } from '../../types'
 
 interface ProfileDrawerProps {
   open: boolean
@@ -121,54 +121,19 @@ export function ProfileDrawer({ open, onClose, profile, onSave, onReset }: Profi
         </section>
 
         <section>
-          <FieldLabel>Rent or own?</FieldLabel>
-          <div className="grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1">
-            {(['rent', 'own'] as HousingChoice[]).map((choice) => (
-              <button
-                key={choice}
-                type="button"
-                onClick={() => set('housingChoice', choice)}
-                className={`rounded-lg py-2 text-sm font-medium capitalize transition ${
-                  draft.housingChoice === choice ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
-                }`}
-              >
-                {choice}
-              </button>
-            ))}
+          <FieldLabel>Monthly rent budget</FieldLabel>
+          <div className="relative">
+            <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">$</span>
+            <input
+              type="number"
+              min={0}
+              step={50}
+              value={draft.monthlyRent}
+              onChange={(e) => set('monthlyRent', Number(e.target.value))}
+              className={inputClass('pl-6')}
+            />
           </div>
         </section>
-
-        {draft.housingChoice === 'rent' ? (
-          <section>
-            <FieldLabel>Monthly rent budget</FieldLabel>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">$</span>
-              <input
-                type="number"
-                min={0}
-                step={50}
-                value={draft.monthlyRent}
-                onChange={(e) => set('monthlyRent', Number(e.target.value))}
-                className={inputClass('pl-6')}
-              />
-            </div>
-          </section>
-        ) : (
-          <section>
-            <FieldLabel>Home purchase price</FieldLabel>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">$</span>
-              <input
-                type="number"
-                min={0}
-                step={5000}
-                value={draft.homePurchasePrice}
-                onChange={(e) => set('homePurchasePrice', Number(e.target.value))}
-                className={inputClass('pl-6')}
-              />
-            </div>
-          </section>
-        )}
 
         <section>
           <FieldLabel>Bedrooms</FieldLabel>
