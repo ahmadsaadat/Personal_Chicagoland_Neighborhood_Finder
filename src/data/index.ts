@@ -74,3 +74,60 @@ export function getAllNeighborhoodProfiles(): Array<{
     })
     .filter((entry): entry is { neighborhood: Neighborhood; profile: NeighborhoodProfile } => Boolean(entry))
 }
+
+// ---------------------------------------------------------------------------
+// Additive accessors below this line (added when the dataset was expanded
+// beyond the 6 seed neighborhoods). None of the functions above were changed.
+// ---------------------------------------------------------------------------
+
+export function getCounties(): County[] {
+  return counties
+}
+
+export function getMunicipalities(): Municipality[] {
+  return municipalities
+}
+
+export function getTaxJurisdictions(): TaxJurisdiction[] {
+  return taxJurisdictions
+}
+
+/** All neighborhoods within a given county (e.g. "cook", "dupage", "lake", "will", "kane"). */
+export function getNeighborhoodsByCounty(countyId: string): Neighborhood[] {
+  return neighborhoods.filter((n) => n.countyId === countyId)
+}
+
+/**
+ * All neighborhoods within a given municipality. For Chicago this returns all
+ * 35 community areas at once; for suburbs it returns the single neighborhood
+ * that represents that town (a suburb IS its own neighborhood in this model).
+ */
+export function getNeighborhoodsByMunicipality(municipalityId: string): Neighborhood[] {
+  return neighborhoods.filter((n) => n.municipalityId === municipalityId)
+}
+
+/** All neighborhoods of a given type ("chicago-community-area" | "suburb"). */
+export function getNeighborhoodsByType(type: Neighborhood['type']): Neighborhood[] {
+  return neighborhoods.filter((n) => n.type === type)
+}
+
+/** All neighborhoods sharing a tax jurisdiction (useful for sales-tax-rate map views). */
+export function getNeighborhoodsByTaxJurisdiction(taxJurisdictionId: string): Neighborhood[] {
+  return neighborhoods.filter((n) => n.taxJurisdictionId === taxJurisdictionId)
+}
+
+/**
+ * Convenience lookup: county -> municipality -> full Neighborhood record, in
+ * one call, for UI breadcrumbs ("Cook County > Evanston > Evanston").
+ */
+export function getNeighborhoodHierarchy(id: string):
+  | { neighborhood: Neighborhood; municipality: Municipality; county: County; taxJurisdiction: TaxJurisdiction }
+  | undefined {
+  const neighborhood = getNeighborhood(id)
+  if (!neighborhood) return undefined
+  const municipality = getMunicipality(neighborhood.municipalityId)
+  const county = getCounty(neighborhood.countyId)
+  const taxJurisdiction = getTaxJurisdiction(neighborhood.taxJurisdictionId)
+  if (!municipality || !county || !taxJurisdiction) return undefined
+  return { neighborhood, municipality, county, taxJurisdiction }
+}

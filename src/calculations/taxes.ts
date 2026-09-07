@@ -15,7 +15,14 @@ interface Bracket {
   rate: number
 }
 
-// 2024 IRS marginal tax brackets (illustrative MVP approximation).
+// IRS marginal tax brackets, standard deduction, and FICA wage base below are
+// pinned to 2024 published figures as an illustrative MVP approximation. The
+// IRS adjusts these for inflation every year (and Congress can change bracket
+// structure via legislation), so these thresholds will drift from the actual
+// current-year numbers over time — good enough for comparing locations
+// relative to each other, not a substitute for current IRS Rev. Proc.
+// figures. Replace with the current tax year's published brackets/deduction/
+// wage base for production use.
 const FEDERAL_BRACKETS_SINGLE: Bracket[] = [
   { upTo: 11_600, rate: 0.1 },
   { upTo: 47_150, rate: 0.12 },
@@ -49,8 +56,13 @@ const FICA_SOCIAL_SECURITY_RATE = 0.062
 const FICA_SOCIAL_SECURITY_WAGE_CAP = 168_600 // 2024 cap
 const FICA_MEDICARE_RATE = 0.0145
 
+// Illinois standard passenger-vehicle registration fee and Chicago's
+// municipal vehicle license ("wheel tax" / city sticker) fee. Both vary by
+// vehicle weight/type and are subject to legislative change; the wheel tax
+// in particular applies only to vehicles registered inside Chicago city
+// limits (isChicago below), never to suburban jurisdictions.
 const IL_VEHICLE_REGISTRATION_ANNUAL = 151
-const CHICAGO_WHEEL_TAX_ANNUAL = 95 // typical passenger vehicle city sticker
+const CHICAGO_WHEEL_TAX_ANNUAL = 95 // typical passenger vehicle city sticker, standard weight class
 
 function applyBrackets(taxableIncome: number, brackets: Bracket[]): number {
   let tax = 0
@@ -92,15 +104,24 @@ function calculateStateTax(profile: UserProfile): number {
 
 /**
  * Rough split of a household's non-housing monthly spending into "general
- * taxable" (subject to the full combined sales tax rate) vs. groceries
- * (Illinois taxes most groceries at a reduced local rate, effectively ~1%).
+ * taxable" (subject to the full combined sales tax rate) vs. groceries.
+ *
+ * Illinois eliminated its statewide 1% grocery tax effective January 1, 2026;
+ * municipalities were given the option to enact their own local 1% grocery
+ * tax to replace the lost revenue (via ordinance ahead of that date), and
+ * many did, but not all. This MVP does not track that per-municipality
+ * decision, so it keeps applying an approximate 1% effective grocery tax
+ * rate as a placeholder — treat it as "verify whether this specific
+ * municipality still taxes groceries locally" rather than a settled fact.
  */
+const GROCERY_TAX_RATE_APPROXIMATION = 0.01
+
 function estimateSalesTax(
   monthlySpending: number,
   groceriesMonthly: number,
   jurisdiction: TaxJurisdiction,
 ): number {
-  const groceryTax = groceriesMonthly * 12 * 0.01
+  const groceryTax = groceriesMonthly * 12 * GROCERY_TAX_RATE_APPROXIMATION
   const generalTaxableAnnual = Math.max(0, monthlySpending - groceriesMonthly) * 12
   const generalTax = generalTaxableAnnual * jurisdiction.combinedSalesTaxRate
   return groceryTax + generalTax
@@ -169,9 +190,9 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
       'Federal tax uses 2024 IRS brackets and standard deduction; includes Social Security and Medicare (FICA) payroll taxes.',
       'Illinois state tax uses the 4.95% flat rate with standard personal exemptions.',
       'Illinois and Chicago do not levy a local personal income tax.',
-      'Sales tax applies the jurisdiction\'s combined state+county+RTA+home-rule rate to non-grocery spending; groceries are taxed at Illinois\' reduced ~1% local rate.',
+      'Sales tax applies the jurisdiction\'s combined state+county+RTA+home-rule rate to non-grocery spending. Illinois eliminated its 1% statewide grocery tax on 1/1/2026; this estimate still applies an approximate 1% effective rate to groceries as a placeholder for a possible local municipal grocery tax and should be verified against the specific municipality\'s current ordinance.',
       'Property tax applies only if you choose "own" and is estimated as home price × the neighborhood\'s effective property tax rate — actual bills vary by assessment, exemptions, and levies.',
-      'Vehicle taxes include IL registration and, in Chicago, the city vehicle sticker fee; they exclude fuel and sales tax paid at purchase.',
+      'Vehicle taxes include IL registration and, only within Chicago city limits, the city vehicle sticker ("wheel tax") fee; they exclude fuel tax and sales tax paid at purchase. Both fees are flat per-vehicle amounts subject to legislative change — verify current amounts before relying on them.',
       'This is a simplified MVP estimate for comparing locations, not a tax filing or professional tax calculation.',
     ],
   }

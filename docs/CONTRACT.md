@@ -68,13 +68,24 @@ estimate. Every result carries an `assumptions: string[]` array meant to be
 shown to the user (e.g. in a tooltip or footnote), never presented as
 authoritative tax advice.
 
-There are currently only 6 seed neighborhoods (Logan Square, Lincoln Park,
-Avondale, Pilsen, Evanston, Oak Park) with clearly-labeled `"estimated"`
-placeholder figures. The Data/Geography engineer's job is to replace these
-with real sourced data and expand coverage significantly (see their brief).
-The Frontend engineer should build entirely against the accessor functions
-above, not against the current 6 IDs, so the UI scales automatically as the
-dataset grows.
+**Update:** the dataset has been expanded from the original 6 seed
+neighborhoods to 57 (35 Chicago community areas + 22 Chicagoland suburbs
+across Cook, DuPage, Lake, Will, and Kane counties). Real, well-known facts
+(official Chicago community area boundaries, county/municipality assignments,
+actual CTA/Metra rail lines, Illinois' flat income tax and lack of local
+income tax) are marked `"actual"`; harder-to-source figures (rents, home
+prices, walk/transit scores, safety/lifestyle indices) remain informed
+`"estimated"` placeholders calibrated to realistic relative differences
+between areas, each with a `source` note naming the real dataset that should
+replace it. See `docs/DATA_SOURCES.md` for the full catalogue and a
+walkthrough for adding more neighborhoods. `src/data/index.ts` also gained
+additive accessors (`getCounties`, `getMunicipalities`, `getTaxJurisdictions`,
+`getNeighborhoodsByCounty`, `getNeighborhoodsByMunicipality`,
+`getNeighborhoodsByType`, `getNeighborhoodsByTaxJurisdiction`,
+`getNeighborhoodHierarchy`) — none of the original 7 exported functions were
+removed or had their signatures changed. The Frontend engineer should
+continue building entirely against the accessor functions, not hardcoded
+IDs, so the UI scales automatically as the dataset grows further.
 
 ## Non-negotiables (from the product spec)
 

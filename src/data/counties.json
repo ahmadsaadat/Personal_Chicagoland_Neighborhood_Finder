@@ -1,4 +1,27 @@
 [
-  { "id": "cook", "name": "Cook County", "state": "IL" },
-  { "id": "dupage", "name": "DuPage County", "state": "IL" }
+  {
+    "id": "cook",
+    "name": "Cook County",
+    "state": "IL"
+  },
+  {
+    "id": "dupage",
+    "name": "DuPage County",
+    "state": "IL"
+  },
+  {
+    "id": "lake",
+    "name": "Lake County",
+    "state": "IL"
+  },
+  {
+    "id": "will",
+    "name": "Will County",
+    "state": "IL"
+  },
+  {
+    "id": "kane",
+    "name": "Kane County",
+    "state": "IL"
+  }
 ]
