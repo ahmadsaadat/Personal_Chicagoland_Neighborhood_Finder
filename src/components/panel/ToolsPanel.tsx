@@ -189,20 +189,6 @@ export function ToolsPanel({
                 </div>
               </div>
 
-              {profile.ownsCar && (
-                <div>
-                  <FieldLabel>Annual miles driven</FieldLabel>
-                  <input
-                    type="number"
-                    min={0}
-                    step={500}
-                    value={profile.annualMilesDriven}
-                    onChange={(e) => set('annualMilesDriven', Number(e.target.value))}
-                    className={inputClass()}
-                  />
-                </div>
-              )}
-
               <div>
                 <FieldLabel>Monthly spending (non-housing)</FieldLabel>
                 <div className="relative">

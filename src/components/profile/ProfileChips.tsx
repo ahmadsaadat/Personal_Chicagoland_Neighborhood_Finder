@@ -1,6 +1,5 @@
 import { Car, User } from 'lucide-react'
 import type { UserProfile } from '../../types'
-import { formatNumber } from '../../utils/format'
 
 interface ProfileChipsProps {
   profile: UserProfile
@@ -32,9 +31,9 @@ function ChipButton({
  * Quick-access chips for the profile fields NOT already covered by the
  * always-visible income/rent editor at the top of the tools panel. Both
  * chips are plain toggles — one click flips car ownership or marital status
- * directly, no popover or drawer in between. Number of children and annual
- * mileage (which aren't simple two-state toggles) stay in the expandable
- * full-profile section below.
+ * directly, no popover or drawer in between. Number of children (not a
+ * simple two-state toggle) stays in the expandable full-profile section
+ * below.
  */
 export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
   const familyLabel =
@@ -48,7 +47,7 @@ export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
     <div className="flex flex-wrap items-center gap-2">
       <ChipButton
         icon={Car}
-        label={profile.ownsCar ? `Car, ${formatNumber(profile.annualMilesDriven)} mi/yr` : 'No car'}
+        label={profile.ownsCar ? 'Car' : 'No car'}
         onClick={() => onProfileChange({ ...profile, ownsCar: !profile.ownsCar })}
       />
       <ChipButton
