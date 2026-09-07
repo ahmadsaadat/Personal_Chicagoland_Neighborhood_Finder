@@ -135,7 +135,7 @@ export function ToolsPanel({
           </div>
         </div>
 
-        <ProfileChips profile={profile} onEdit={() => onProfileExpandedChange(true)} />
+        <ProfileChips profile={profile} onProfileChange={onProfileChange} onEditFamily={() => onProfileExpandedChange(true)} />
 
         <div>
           <button
@@ -190,39 +190,6 @@ export function ToolsPanel({
                   </select>
                 </div>
                 <div>
-                  <FieldLabel>Car?</FieldLabel>
-                  <div className="grid grid-cols-2 gap-1 rounded-lg bg-slate-100 p-1">
-                    {[true, false].map((val) => (
-                      <button
-                        key={String(val)}
-                        type="button"
-                        onClick={() => set('ownsCar', val)}
-                        className={`rounded-md py-1.5 text-xs font-medium transition ${
-                          profile.ownsCar === val ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
-                        }`}
-                      >
-                        {val ? 'Yes' : 'No'}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
-                {profile.ownsCar && (
-                  <div>
-                    <FieldLabel>Miles/yr</FieldLabel>
-                    <input
-                      type="number"
-                      min={0}
-                      step={500}
-                      value={profile.annualMilesDriven}
-                      onChange={(e) => set('annualMilesDriven', Number(e.target.value))}
-                      className={inputClass()}
-                    />
-                  </div>
-                )}
-                <div className={profile.ownsCar ? '' : 'col-span-2'}>
                   <FieldLabel>Commute to</FieldLabel>
                   <input
                     type="text"
@@ -239,6 +206,10 @@ export function ToolsPanel({
                   </datalist>
                 </div>
               </div>
+
+              <p className="text-[11px] leading-snug text-slate-400">
+                Car ownership and annual mileage are set from the "Car" chip above.
+              </p>
 
               <div>
                 <FieldLabel>Monthly spending (non-housing)</FieldLabel>
