@@ -19,9 +19,11 @@ import { StatTile } from '../common/StatTile'
 import { Badge } from '../common/Badge'
 import { formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
 import type { NeighborhoodEntry } from '../../utils/metrics'
+import type { UserProfile } from '../../types'
 
 interface NeighborhoodDetailPanelProps {
   entry: NeighborhoodEntry | null
+  userProfile: UserProfile
   open: boolean
   onClose: () => void
   isCompareSelected: boolean
@@ -49,6 +51,7 @@ function Row({ label, value }: { label: string; value: string }) {
 
 export function NeighborhoodDetailPanel({
   entry,
+  userProfile,
   open,
   onClose,
   isCompareSelected,
@@ -141,6 +144,17 @@ export function NeighborhoodDetailPanel({
             <Row label="Effective property tax rate" value={formatPercent(profile.housing.effectivePropertyTaxRate, 2)} />
             <Row label="Your est. annual housing cost" value={formatCurrency(Math.round(summary.housingAnnualCost))} />
           </div>
+          {userProfile.housingChoice === 'own' && (
+            <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
+              <Info size={13} className="mt-0.5 shrink-0" />
+              <span>
+                Your entered purchase price ({formatCurrency(userProfile.homePurchasePrice)}) is applied here to
+                compare property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical
+                home price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying
+                your stated price at this rate, not the cost of buying a typical home here.
+              </span>
+            </div>
+          )}
         </section>
 
         {/* Taxes */}

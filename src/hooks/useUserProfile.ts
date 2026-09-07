@@ -25,6 +25,7 @@ export function useUserProfile(): UseUserProfileResult {
   const resetProfile = useCallback(() => {
     setProfile(DEFAULT_PROFILE)
     saveProfile(DEFAULT_PROFILE)
+    setIsOnboarded(false)
   }, [])
 
   return { profile, updateProfile, resetProfile, isOnboarded }

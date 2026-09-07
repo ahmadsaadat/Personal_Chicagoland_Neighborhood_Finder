@@ -1,12 +1,13 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { SlideOver } from '../common/SlideOver'
-import type { HousingChoice, MaritalStatus, UserProfile } from '../../types'
+import { DEFAULT_PROFILE, type HousingChoice, type MaritalStatus, type UserProfile } from '../../types'
 
 interface ProfileDrawerProps {
   open: boolean
   onClose: () => void
   profile: UserProfile
   onSave: (profile: UserProfile) => void
+  onReset: () => void
 }
 
 const COMMUTE_PRESETS = ['Chicago Loop', 'The West Loop', "O'Hare Airport", 'Downtown Evanston', 'Remote / Work from home']
@@ -19,7 +20,7 @@ function inputClass(extra = '') {
   return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
 }
 
-export function ProfileDrawer({ open, onClose, profile, onSave }: ProfileDrawerProps) {
+export function ProfileDrawer({ open, onClose, profile, onSave, onReset }: ProfileDrawerProps) {
   const [draft, setDraft] = useState<UserProfile>(profile)
 
   // Re-sync the draft with the latest saved profile each time the drawer
@@ -39,6 +40,11 @@ export function ProfileDrawer({ open, onClose, profile, onSave }: ProfileDrawerP
     onClose()
   }
 
+  function handleReset() {
+    setDraft(DEFAULT_PROFILE)
+    onReset()
+  }
+
   return (
     <SlideOver
       open={open}
@@ -46,20 +52,29 @@ export function ProfileDrawer({ open, onClose, profile, onSave }: ProfileDrawerP
       title="Your profile"
       subtitle="This powers every estimate in the app — it's saved on this device only."
       footer={
-        <div className="flex gap-2">
+        <div className="space-y-2">
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex-1 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              form="profile-form"
+              className="flex-1 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+            >
+              Save profile
+            </button>
+          </div>
           <button
             type="button"
-            onClick={onClose}
-            className="flex-1 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+            onClick={handleReset}
+            className="w-full rounded-lg px-2 py-1.5 text-xs font-medium text-slate-400 transition hover:text-slate-600"
           >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            form="profile-form"
-            className="flex-1 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
-          >
-            Save profile
+            Reset to defaults
           </button>
         </div>
       }

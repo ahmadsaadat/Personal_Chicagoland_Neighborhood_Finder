@@ -13,7 +13,7 @@ import { LandingPage } from './pages/LandingPage'
 type View = 'landing' | 'explore'
 
 function App() {
-  const { profile, updateProfile, isOnboarded } = useUserProfile()
+  const { profile, updateProfile, resetProfile, isOnboarded } = useUserProfile()
   const entries = useNeighborhoodEntries(profile)
 
   const [view, setView] = useState<View>('landing')
@@ -71,10 +71,17 @@ function App() {
         />
       )}
 
-      <ProfileDrawer open={profileOpen} onClose={() => setProfileOpen(false)} profile={profile} onSave={updateProfile} />
+      <ProfileDrawer
+        open={profileOpen}
+        onClose={() => setProfileOpen(false)}
+        profile={profile}
+        onSave={updateProfile}
+        onReset={resetProfile}
+      />
 
       <NeighborhoodDetailPanel
         entry={selectedEntry}
+        userProfile={profile}
         open={selectedEntry !== null}
         onClose={() => setSelectedNeighborhoodId(null)}
         isCompareSelected={selectedNeighborhoodId ? compare.isSelected(selectedNeighborhoodId) : false}
