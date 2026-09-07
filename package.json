@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "data:generate": "node scripts/generate-dataset.mjs",
-    "geo:generate": "node scripts/generate-tessellation.mjs"
+    "geo:generate": "node scripts/generate-geometry.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -28,7 +28,6 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.1.0",
-    "d3-delaunay": "^6.0.4",
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",

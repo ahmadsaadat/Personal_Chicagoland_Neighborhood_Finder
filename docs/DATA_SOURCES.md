@@ -26,87 +26,107 @@ directly into the project README.
 |---|---|---|---|---|
 | 77 Chicago community-area boundary polygons (complete set) | City of Chicago Data Portal, "Boundaries – Community Areas (current)" (resource `igwz-8jzy`) | neighborhood | 2024/2025 dataset pulls | **actual** (geometry), simplified for file size — see notes below |
 | Chicago community-area centroids | Computed (area-weighted polygon centroid, via `@turf/turf`'s `centerOfMass`) directly from the above real boundary data | neighborhood | 2024/2025 dataset pulls | **calculated** from an actual source |
-| 102 suburb "territory" polygons | Computed Voronoi tessellation of suburb centroids, clipped to a real county-boundary extent and to the real Chicago boundary — see "How the suburb shapes are generated" below | municipality | 2025 | **estimated** (explicitly labeled `geometrySource: "voronoi-illustrative"` in the GeoJSON) — NOT real municipal boundaries |
+| 102 suburb municipal boundary polygons | U.S. Census Bureau **TIGER/Line "Places"** geography (incorporated municipalities), fetched via the Census TIGERweb ArcGIS REST service — see "How the suburb shapes are generated" below | municipality | 2024 vintage | **actual** (geometry) — real, surveyed municipal boundaries, simplified for file size |
 | Suburb centroids | Real, well-known town-center coordinates (general public geographic knowledge) | municipality | — | **actual** |
-| Chicagoland extent (outer boundary of the tessellated region) | U.S. Census Bureau cartographic (1:500,000, shoreline-clipped) county boundaries for Cook, DuPage, Kane, Lake, Will, and McHenry counties, via the Census TIGERweb `Generalized_ACS2024/State_County` service | county (dissolved to one region) | 2024 vintage | **actual** boundary, used as a **calculated** clip extent — see caveat below |
 | County → municipality → tax-jurisdiction → neighborhood hierarchy | `src/types/geo.ts` (already in place before round 1); real county/municipality assignments per neighborhood | structural | — | **actual** |
 
-### How the suburb shapes are generated (Voronoi tessellation)
+### How the suburb shapes are generated (real Census Place boundaries)
 
-Round 1 gave the 22 suburbs illustrative squares, which left huge visual gaps
-between them and Chicago on the map. Round 2 replaces those squares with a
-**Voronoi tessellation** — here's what that means in plain terms:
+**Round 2 history, and why it changed:** round 2 gave the 102 suburbs a
+computed **Voronoi tessellation** instead of real boundaries — every suburb's
+real town-center coordinate was treated as a "seed" point, and each seed's
+"territory" was every location on the map closer to it than to any other
+seed. That produced a fully gap-free, edge-to-edge tiled map, but a Voronoi
+cell is just "closest centroid wins" — it is not a real municipal boundary,
+and it was always labeled `geometrySource: "voronoi-illustrative"` for
+exactly that reason.
 
-Take every suburb's real town-center coordinate as a "seed" point. For every
-location on the map, ask "which seed point is closest?" — the set of
-locations whose answer is "this seed" forms that seed's Voronoi cell. Doing
-this for every seed at once produces a set of polygons that share edges and
-tile the whole map with **no gaps and no overlaps**, like cutting a sheet of
-dough into pieces, one per town, where each piece's edge sits exactly halfway
-between it and its nearest neighboring town.
+**A user comparing the shipped map against Google Maps confirmed the real
+Chicago community-area polygons looked correct, but caught that the Voronoi
+suburb shapes clearly didn't match reality — specifically calling out Cicero
+and Berwyn.** Both are narrow, elongated towns along the Ogden Ave/Cicero Ave
+corridor immediately west of Chicago; a Voronoi cell ("closest centroid
+wins") has no way to produce that shape, since it only knows about the
+distance between town centers, not any town's actual footprint.
 
-**This produces a visually reasonable, fully-tiled map — it does NOT produce
-real municipal boundaries.** A real town's actual shape can look nothing like
-its Voronoi cell. Every suburb feature is tagged
-`properties.geometrySource: "voronoi-illustrative"` in the GeoJSON precisely
-so this is never confused with a surveyed boundary.
+**Round 3 replaces all 102 Voronoi cells with real municipal boundary
+geometry** from the U.S. Census Bureau's **TIGER/Line "Places"** dataset —
+the standard free public source for incorporated-municipality boundaries.
+`properties.geometrySource` is now `"official"` for every one of the 102
+suburbs, matching Chicago's convention, since it's real surveyed boundary
+data rather than a computed illustrative shape.
 
-The generation pipeline (`scripts/generate-tessellation.mjs`, run via
+The generation pipeline (`scripts/generate-geometry.mjs`, run via
 `npm run geo:generate`):
 
 1. Takes the 77 real Chicago community-area polygons as fixed, authoritative
    input — this script never modifies them.
-2. Computes the Voronoi diagram of all 102 suburb centroids with
-   **`d3-delaunay`** (the 77 Chicago community-area centroids are also fed in
-   as auxiliary seed points purely so the triangulation doesn't "reach
-   across" the Chicago-shaped hole in the suburb point set — their own cells
-   are discarded, never emitted; Chicago's shape always comes from step 1).
-3. Clips every suburb's cell to the Chicagoland county extent, and separately
-   subtracts the real Chicago union out of it, using **`@turf/turf`**
-   (`intersect`/`difference`/`union`).
-4. Runs two cleanup passes: a **gap-fill** pass that merges any sliver left
-   outside every cell (mostly along Chicago's real, jagged edges, which are
-   far more irregular than a straight Voronoi edge) into its nearest
-   touching neighbor, and a **defragment** pass that keeps each town's
-   largest contiguous lobe as its feature and reassigns smaller detached
-   lobes to whichever neighboring town's cell actually touches them, so a
-   single town doesn't end up rendered as two disconnected shapes.
-5. Rounds coordinates to 4 decimal places (~11m) and writes the merged
-   `FeatureCollection` to `src/data/geo/neighborhoods.geojson`.
+2. Fetches every Illinois incorporated place from the Census **TIGERweb**
+   ArcGIS REST service (`Generalized_ACS2024/Places_CouSub_ConCity_SubMCD`,
+   the "Incorporated Places 500K" layer — the same generalized/cartographic
+   tier the previous round's county-extent fetch used), queried with
+   `STATE=17`, `f=geojson`. This is one live HTTP fetch for all ~1,300 IL
+   places at once (falling back to a bundled cache at
+   `scripts/data/cache/illinois-places.raw.geojson` if the live fetch fails,
+   same pattern as the community-area and (former) county-extent fetches).
+3. Matches each of the 102 suburbs to its Census Place by name. Census
+   `BASENAME` already has the incorporation-type suffix stripped (e.g.
+   "Cicero town" → `BASENAME` "Cicero"), so this is mostly a direct
+   case-insensitive match; the one recurring quirk handled explicitly is
+   "St. X" → Census's spelled-out "Saint X" (e.g. St. Charles). All 102
+   suburb names matched a Census Place on the first attempt.
+4. Disambiguates by real centroid where a name isn't unique statewide. Some
+   Illinois place names repeat outside Chicagoland — for example there are
+   two "Wilmington"s in the Census Places list, the Will County city near
+   Joliet this dataset means, and an unrelated downstate village. Since
+   every suburb already carries a real, well-known centroid coordinate, the
+   script prefers whichever same-named candidate's polygon actually contains
+   that point (falling back to nearest-centroid distance if none does).
+5. Simplifies each matched polygon the same way the Chicago polygons already
+   are: a Ramer–Douglas–Peucker pass (~65–80m tolerance), reduced to its
+   largest ring (multi-part geometries, e.g. small annexation exclaves, are
+   dropped), and rounded to 4 decimal places (~11m).
+6. Writes the merged 179-feature `FeatureCollection` to
+   `src/data/geo/neighborhoods.geojson`, compact (no pretty-print
+   indentation) — real municipal boundaries carry far more vertices per ring
+   than the old Voronoi cells did, and indentation alone would roughly
+   quadruple a coordinate-heavy file's size. Nothing hand-edits this
+   generated file, so the format tradeoff costs nothing.
 
-Both `d3-delaunay` and `@turf/turf` are **devDependencies only** — this
-script runs once, by hand, at data-authoring time (`npm run geo:generate`),
-never as part of `npm run dev` or `npm run build`. Neither library is ever
-imported anywhere under `src/`; the app only ever loads the static generated
-GeoJSON file, exactly like round 1.
+**Fallback, if a future suburb can't be matched:** a frozen snapshot of the
+pre-round-3 Voronoi cells is kept at
+`scripts/data/cache/suburb-voronoi-fallback.geojson` purely as a last resort.
+If a suburb is ever added whose name can't be matched to a real Census Place,
+the script falls back to that suburb's old Voronoi cell and tags **only**
+that one feature `geometrySource: "voronoi-illustrative"`, logging a warning,
+rather than dropping it from the map. As of this round that fallback path is
+not exercised — all 102 current suburbs matched a real boundary.
 
-**Coverage math, if you want to check it yourself:** unioning every feature
-in the generated file covers ~9,697 km² against a real extent (the six
-counties' union) of ~9,696 km² — the two remaining gap fragments after
-cleanup total well under 1 km² (numerical-precision noise, not a real
-missing area), and the sum of every feature's individual area matches the
-union area to within the same rounding tolerance (i.e., no meaningful
-overlap either).
+**Honest caveat — real boundaries do not tile edge-to-edge.** This is the
+core behavioral difference from the old Voronoi tessellation, and it's
+expected and correct, not a bug: there is real unincorporated land between
+many Chicagoland towns (and along parts of Chicago's own edge) that belongs
+to no modeled municipality. The map will now show gaps in places it
+previously didn't — those gaps are more geographically honest than the old
+fully-tiled illustration was, not a regression. This script does not attempt
+to force those gaps closed, pad boundaries to close them, or otherwise
+fabricate coverage.
 
-**Caveat on the extent:** the choice of which 6 counties to model as
-"Chicagoland" is this project's own scope decision — there is no single
-official definition of "Chicagoland." If the live Census fetch or the
-bundled cache is ever unavailable when `npm run geo:generate` runs, the
-script falls back to a padded convex hull around all included neighborhood
-centroids instead, and marks `metadata.extentBasis` accordingly so that
-fallback is never silently presented as a real boundary.
+`@turf/turf` remains a **devDependency only** (used here for polygon
+simplification, area comparison, point-in-polygon disambiguation, and
+distance calculations) — this script runs once, by hand, at data-authoring
+time (`npm run geo:generate`), never as part of `npm run dev` or
+`npm run build`, and is never imported anywhere under `src/`; the app only
+ever loads the static generated GeoJSON file. `d3-delaunay` (used only for
+the old Voronoi computation) is no longer a dependency at all, since nothing
+in the new pipeline computes a Voronoi diagram.
 
-The official Chicago polygons were simplified with a Ramer–Douglas–Peucker
-pass (~65–80m tolerance) and rounded to 4 decimal places (~11m) to keep the
-file small (~250 KB for all 179 features, well under the ~1MB budget);
-multi-part polygons were reduced to their largest ring, so small detached
-exclaves are dropped. **Not survey-accurate — do not use for anything
-requiring precise parcel-level boundaries.**
-
-To get real suburb boundaries later (replacing the Voronoi cells entirely):
-U.S. Census Bureau **TIGER/Line "Places"** shapefiles
-(https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html),
-converted to GeoJSON and simplified the same way as the Chicago polygons.
+The official Chicago polygons continue to be simplified with the same
+Ramer–Douglas–Peucker pass (~65–80m tolerance) and rounded to 4 decimal
+places (~11m); multi-part polygons were reduced to their largest ring, so
+small detached exclaves are dropped. **Not survey-accurate — do not use for
+anything requiring precise parcel-level boundaries**, for Chicago or for the
+suburbs.
 
 ## Taxes
 
@@ -271,24 +291,32 @@ left half-wired:
    make this mechanical: pick a relative home-price anchor by comparing the
    new area to a similar one already in the dataset, and derive the rest.
 6. **Regenerate the geometry — do not hand-edit
-   `src/data/geo/neighborhoods.geojson` directly.** Since round 2, suburb
-   shapes are a computed Voronoi tessellation, not hand-drawn shapes,
-   because adding a hand-drawn polygon would create exactly the
-   overlaps/gaps this round eliminated. Instead:
+   `src/data/geo/neighborhoods.geojson` directly.** Since round 3, suburb
+   shapes are fetched real Census Place boundaries, not hand-drawn or
+   computed shapes. Instead:
    - If you added a new **Chicago community area** (shouldn't happen now
      that all 77 are covered, but if the Data Portal's community-area
      boundaries are ever redrawn): add it to
      `scripts/data/community-areas-new.mjs` and rerun
      `npm run data:generate` to fetch + simplify its real polygon into
      `scripts/data/cache/chicago-77-official.geojson`.
-   - If you added a new **suburb**: nothing further needed here — its
-     centroid in `neighborhoods.json` is all `generate-tessellation.mjs`
-     needs.
+   - If you added a new **suburb**: nothing further needed here as long as
+     its `name` in `neighborhoods.json` matches (or closely resembles) its
+     real Census Place name — `generate-geometry.mjs` matches by name
+     automatically. If the new suburb's name happens to repeat elsewhere in
+     Illinois, double-check its `centroid` is accurate, since that's what
+     disambiguates same-named candidates (see "How the suburb shapes are
+     generated" above).
    - Then run `npm run geo:generate` to rebuild
-     `src/data/geo/neighborhoods.geojson` from scratch with the new
-     centroid included as a Voronoi seed. This will also reshape the Voronoi
-     cells of the new suburb's immediate neighbors, since they now share a
-     border with it — that's expected and correct.
+     `src/data/geo/neighborhoods.geojson` from scratch. If the new suburb's
+     name can't be matched to any real Census Place, the script throws
+     rather than silently dropping it: the Voronoi fallback cache
+     (`scripts/data/cache/suburb-voronoi-fallback.geojson`) only covers the
+     102 suburbs that existed as of round 3, so a brand-new suburb has no
+     fallback geometry available yet. In that case, fix the name/spelling to
+     match the real Census Place first; only hand-supply a fallback entry in
+     that cache file as a last resort if no real boundary can be found at
+     all.
 7. Run `npx tsc -b --noEmit` and `npm run build` to catch shape mismatches,
    then sanity-check the new neighborhood shows up via
    `getAllNeighborhoodProfiles()` and produces a sane
