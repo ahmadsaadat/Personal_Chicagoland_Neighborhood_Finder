@@ -10,8 +10,8 @@ interface HeaderProps {
 
 export function Header({ onSelectNeighborhood, onOpenProfile, onGoHome, hasCustomProfile }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-100 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="relative z-20 shrink-0 border-b border-slate-100 bg-white/90 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
         <button type="button" onClick={onGoHome} className="flex shrink-0 items-center gap-2 transition hover:opacity-80">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-white">
             <MapPinned size={16} strokeWidth={2.25} />

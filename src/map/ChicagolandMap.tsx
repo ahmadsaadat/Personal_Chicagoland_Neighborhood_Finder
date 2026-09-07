@@ -5,7 +5,7 @@ import { AlertTriangle, Loader2 } from 'lucide-react'
 import { useMemo } from 'react'
 import { GeoJSON, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { formatCurrency } from '../utils/format'
-import { sequentialColor } from '../utils/colorScale'
+import { divergingColor, NO_DATA_COLOR } from '../utils/colorScale'
 import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 import type { MapMetric } from '../types'
 import { fixLeafletDefaultIcon } from './leafletIconFix'
@@ -63,7 +63,9 @@ export function ChicagolandMap({
   function styleFeature(feature?: Feature<Geometry, NeighborhoodFeatureProps>): PathOptions {
     const id = feature?.properties.id
     const entry = id ? entriesById.get(id) : undefined
-    const fillColor = entry ? sequentialColor(metricConfig.getValue(entry), min, max) : '#e1e0d9'
+    const fillColor = entry
+      ? divergingColor(metricConfig.getValue(entry), min, max, metricConfig.goodDirection)
+      : NO_DATA_COLOR
     const isSelected = entry?.neighborhood.id === selectedNeighborhoodId
     const isCompared = entry ? compareIds.includes(entry.neighborhood.id) : false
 
@@ -103,7 +105,7 @@ export function ChicagolandMap({
   }
 
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
+    <div className="relative h-full w-full overflow-hidden bg-slate-100">
       <MapContainer
         center={[41.86, -87.68]}
         zoom={10}
