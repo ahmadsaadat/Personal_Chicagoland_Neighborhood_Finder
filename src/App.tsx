@@ -42,12 +42,12 @@ function App() {
       <div className="relative flex-1 overflow-hidden">
         <ExplorePage
           profile={profile}
+          onProfileChange={updateProfile}
           entries={entries}
           selectedNeighborhoodId={selectedNeighborhoodId}
           onSelectNeighborhood={setSelectedNeighborhoodId}
           compare={compare}
           onOpenProfile={() => setProfileOpen(true)}
-          isOnboarded={isOnboarded}
         />
       </div>
 

@@ -1,12 +1,15 @@
-import { List, RotateCcw, SlidersHorizontal, Sparkles, X } from 'lucide-react'
+import { ChevronDown, List, RotateCcw, SlidersHorizontal, Sparkles, X } from 'lucide-react'
+import { useState } from 'react'
 import { EmptyState } from '../common/EmptyState'
+import { FilterFields } from '../filters/FilterFields'
 import { NeighborhoodCard } from '../neighborhood/NeighborhoodCard'
 import { ProfileChips } from '../profile/ProfileChips'
 import { RankedList } from '../ranking/RankedList'
 import { DIVERGING_STEPS, NO_DATA_COLOR } from '../../utils/colorScale'
+import type { FilterState } from '../../utils/filters'
 import type { MetricConfig, NeighborhoodEntry } from '../../utils/metrics'
 import type { RankedNeighborhood } from '../../calculations/ranking'
-import type { UserProfile } from '../../types'
+import type { HousingChoice, UserProfile } from '../../types'
 import { MAX_COMPARE } from '../../hooks/useCompareSelection'
 import type { UseCompareSelectionResult } from '../../hooks/useCompareSelection'
 
@@ -14,14 +17,15 @@ export type PanelTab = 'list' | 'best'
 
 interface ToolsPanelProps {
   profile: UserProfile
+  onProfileChange: (next: UserProfile) => void
   onOpenProfile: () => void
-  isOnboarded: boolean
   metricConfig: MetricConfig
   min: number
   max: number
+  filters: FilterState
+  onFiltersChange: (filters: FilterState) => void
   activeFilterCount: number
   filtersActive: boolean
-  onOpenFilters: () => void
   onResetFilters: () => void
   tab: PanelTab
   onTabChange: (tab: PanelTab) => void
@@ -32,22 +36,29 @@ interface ToolsPanelProps {
   compare: UseCompareSelectionResult
 }
 
+function inputClass(extra = '') {
+  return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
+}
+
 /**
- * The consolidated "tools and info" surface — profile, metric, filters, and
- * the neighborhood list/ranking — rendered once and reused both as a
- * persistent desktop sidebar and as the mobile slide-over's content, so the
- * map itself is never replaced, only overlaid on one side.
+ * The consolidated "tools and info" surface — a live income/rent editor,
+ * metric legend, filters, and the neighborhood list/ranking — rendered once
+ * and reused both as a persistent desktop sidebar and as the mobile
+ * slide-over's content. Everything here is either always visible or expands
+ * in place; nothing opens a separate overlay that covers the map or hides
+ * the rest of the panel.
  */
 export function ToolsPanel({
   profile,
+  onProfileChange,
   onOpenProfile,
-  isOnboarded,
   metricConfig,
   min,
   max,
+  filters,
+  onFiltersChange,
   activeFilterCount,
   filtersActive,
-  onOpenFilters,
   onResetFilters,
   tab,
   onTabChange,
@@ -57,55 +68,130 @@ export function ToolsPanel({
   onOpenDetail,
   compare,
 }: ToolsPanelProps) {
+  const [filtersExpanded, setFiltersExpanded] = useState(false)
   const worstValue = metricConfig.goodDirection === 'high' ? min : max
   const bestValue = metricConfig.goodDirection === 'high' ? max : min
+
+  function setHousingChoice(choice: HousingChoice) {
+    onProfileChange({ ...profile, housingChoice: choice })
+  }
 
   return (
     <div className="flex h-full flex-col">
       <div className="flex flex-col gap-3 border-b border-slate-100 px-4 py-4">
-        {!isOnboarded && (
-          <div className="flex items-center justify-between gap-3 rounded-xl border border-blue-100 bg-blue-50 px-3 py-2 text-xs text-blue-800">
-            <span>Seeing estimates for a default profile.</span>
-            <button
-              type="button"
-              onClick={onOpenProfile}
-              className="shrink-0 rounded-full bg-blue-600 px-3 py-1 text-[11px] font-semibold text-white transition hover:bg-blue-700"
-            >
-              Set up yours
-            </button>
+        <div>
+          <div className="text-sm font-semibold text-slate-900">Your numbers</div>
+          <p className="text-xs text-slate-400">
+            Drives every disposable-income estimate on the map — edit anytime.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2">
+          <div>
+            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="quick-income">
+              Annual income
+            </label>
+            <div className="relative">
+              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+              <input
+                id="quick-income"
+                type="number"
+                min={0}
+                step={1000}
+                value={profile.annualIncome}
+                onChange={(e) => onProfileChange({ ...profile, annualIncome: Number(e.target.value) })}
+                className={inputClass('pl-5')}
+              />
+            </div>
           </div>
-        )}
+          <div>
+            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="quick-housing-amount">
+              {profile.housingChoice === 'rent' ? 'Monthly rent' : 'Home price'}
+            </label>
+            <div className="relative">
+              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+              <input
+                id="quick-housing-amount"
+                type="number"
+                min={0}
+                step={profile.housingChoice === 'rent' ? 50 : 5000}
+                value={profile.housingChoice === 'rent' ? profile.monthlyRent : profile.homePurchasePrice}
+                onChange={(e) =>
+                  onProfileChange(
+                    profile.housingChoice === 'rent'
+                      ? { ...profile, monthlyRent: Number(e.target.value) }
+                      : { ...profile, homePurchasePrice: Number(e.target.value) },
+                  )
+                }
+                className={inputClass('pl-5')}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1">
+          {(['rent', 'own'] as HousingChoice[]).map((choice) => (
+            <button
+              key={choice}
+              type="button"
+              onClick={() => setHousingChoice(choice)}
+              className={`rounded-lg py-1.5 text-xs font-medium capitalize transition ${
+                profile.housingChoice === choice ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              {choice}
+            </button>
+          ))}
+        </div>
 
         <ProfileChips profile={profile} onEdit={onOpenProfile} />
-
         <button
           type="button"
-          onClick={onOpenFilters}
-          className="relative flex items-center gap-1.5 self-start rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+          onClick={onOpenProfile}
+          className="self-start text-xs font-medium text-slate-400 transition hover:text-slate-600"
         >
-          <SlidersHorizontal size={14} />
-          Filters
-          {activeFilterCount > 0 && (
-            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
-              {activeFilterCount}
-            </span>
-          )}
+          Full profile &amp; assumptions →
         </button>
 
-        {filtersActive && (
-          <div className="flex items-center gap-2 text-xs text-slate-400">
-            <span>
-              {filteredEntries.length} of {totalCount} neighborhoods
+        <div>
+          <button
+            type="button"
+            onClick={() => setFiltersExpanded((v) => !v)}
+            className="relative flex w-full items-center justify-between gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+          >
+            <span className="flex items-center gap-1.5">
+              <SlidersHorizontal size={14} />
+              Filters
+              {activeFilterCount > 0 && (
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
+                  {activeFilterCount}
+                </span>
+              )}
             </span>
-            <button
-              type="button"
-              onClick={onResetFilters}
-              className="flex items-center gap-1 font-medium text-slate-500 transition hover:text-slate-700"
-            >
-              <RotateCcw size={11} /> Clear filters
-            </button>
-          </div>
-        )}
+            <ChevronDown size={15} className={`text-slate-400 transition-transform ${filtersExpanded ? 'rotate-180' : ''}`} />
+          </button>
+
+          {filtersActive && (
+            <div className="mt-2 flex items-center gap-2 text-xs text-slate-400">
+              <span>
+                {filteredEntries.length} of {totalCount} neighborhoods
+              </span>
+              <button
+                type="button"
+                onClick={onResetFilters}
+                className="flex items-center gap-1 font-medium text-slate-500 transition hover:text-slate-700"
+              >
+                <RotateCcw size={11} /> Clear filters
+              </button>
+            </div>
+          )}
+
+          {filtersExpanded && (
+            <div className="mt-3 border-t border-slate-100 pt-3">
+              <FilterFields filters={filters} onChange={onFiltersChange} />
+            </div>
+          )}
+        </div>
 
         <div className="flex items-center gap-1.5 rounded-xl bg-slate-100 p-1">
           <button

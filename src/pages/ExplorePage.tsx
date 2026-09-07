@@ -3,7 +3,6 @@ import { useMemo, useState } from 'react'
 import { rankNeighborhoods } from '../calculations/ranking'
 import { ChicagolandMap } from '../map/ChicagolandMap'
 import { MapMetricSelector } from '../map/MapMetricSelector'
-import { FilterDrawer } from '../components/filters/FilterDrawer'
 import { EmptyState } from '../components/common/EmptyState'
 import { SlideOver } from '../components/common/SlideOver'
 import { ToolsPanel, type PanelTab } from '../components/panel/ToolsPanel'
@@ -14,12 +13,12 @@ import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 
 interface ExplorePageProps {
   profile: UserProfile
+  onProfileChange: (next: UserProfile) => void
   entries: NeighborhoodEntry[]
   selectedNeighborhoodId: string | null
   onSelectNeighborhood: (id: string) => void
   compare: UseCompareSelectionResult
   onOpenProfile: () => void
-  isOnboarded: boolean
 }
 
 /**
@@ -30,15 +29,14 @@ interface ExplorePageProps {
  */
 export function ExplorePage({
   profile,
+  onProfileChange,
   entries,
   selectedNeighborhoodId,
   onSelectNeighborhood,
   compare,
   onOpenProfile,
-  isOnboarded,
 }: ExplorePageProps) {
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
-  const [filterDrawerOpen, setFilterDrawerOpen] = useState(false)
   const [metric, setMetric] = useState<MapMetric>('disposableIncome')
   const [tab, setTab] = useState<PanelTab>('list')
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false)
@@ -66,14 +64,15 @@ export function ExplorePage({
 
   const panelProps = {
     profile,
+    onProfileChange,
     onOpenProfile,
-    isOnboarded,
     metricConfig,
     min,
     max,
+    filters,
+    onFiltersChange: setFilters,
     activeFilterCount,
     filtersActive,
-    onOpenFilters: () => setFilterDrawerOpen(true),
     onResetFilters: () => setFilters(DEFAULT_FILTERS),
     tab,
     onTabChange: setTab,
@@ -157,14 +156,6 @@ export function ExplorePage({
           <ToolsPanel {...panelProps} />
         </SlideOver>
       </div>
-
-      <FilterDrawer
-        open={filterDrawerOpen}
-        onClose={() => setFilterDrawerOpen(false)}
-        filters={filters}
-        onChange={setFilters}
-        resultCount={filteredEntries.length}
-      />
     </div>
   )
 }
