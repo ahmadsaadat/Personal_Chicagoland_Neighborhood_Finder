@@ -1,0 +1,98 @@
+{
+  "logan-square": {
+    "neighborhoodId": "logan-square",
+    "walkability": 90,
+    "transitAccess": 85,
+    "restaurantDensity": 88,
+    "parksAccess": 75,
+    "safetyIndicator": 65,
+    "familyFriendliness": 60,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Walk Score, Chicago Data Portal crime/park data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "safetyIndicator is an illustrative relative index, not an official crime statistic"
+    }
+  },
+  "lincoln-park": {
+    "neighborhoodId": "lincoln-park",
+    "walkability": 92,
+    "transitAccess": 82,
+    "restaurantDensity": 90,
+    "parksAccess": 85,
+    "safetyIndicator": 80,
+    "familyFriendliness": 75,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Walk Score, Chicago Data Portal crime/park data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "safetyIndicator is an illustrative relative index, not an official crime statistic"
+    }
+  },
+  "avondale": {
+    "neighborhoodId": "avondale",
+    "walkability": 78,
+    "transitAccess": 72,
+    "restaurantDensity": 65,
+    "parksAccess": 60,
+    "safetyIndicator": 68,
+    "familyFriendliness": 70,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Walk Score, Chicago Data Portal crime/park data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "safetyIndicator is an illustrative relative index, not an official crime statistic"
+    }
+  },
+  "pilsen": {
+    "neighborhoodId": "pilsen",
+    "walkability": 82,
+    "transitAccess": 75,
+    "restaurantDensity": 80,
+    "parksAccess": 55,
+    "safetyIndicator": 60,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Walk Score, Chicago Data Portal crime/park data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "safetyIndicator is an illustrative relative index, not an official crime statistic"
+    }
+  },
+  "evanston": {
+    "neighborhoodId": "evanston",
+    "walkability": 80,
+    "transitAccess": 72,
+    "restaurantDensity": 70,
+    "parksAccess": 80,
+    "safetyIndicator": 78,
+    "familyFriendliness": 85,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Walk Score, Chicago Data Portal crime/park data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "safetyIndicator is an illustrative relative index, not an official crime statistic"
+    }
+  },
+  "oak-park": {
+    "neighborhoodId": "oak-park",
+    "walkability": 83,
+    "transitAccess": 74,
+    "restaurantDensity": 68,
+    "parksAccess": 82,
+    "safetyIndicator": 80,
+    "familyFriendliness": 88,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Walk Score, Chicago Data Portal crime/park data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "safetyIndicator is an illustrative relative index, not an official crime statistic"
+    }
+  }
+}

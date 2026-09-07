@@ -1,0 +1,92 @@
+{
+  "logan-square": {
+    "neighborhoodId": "logan-square",
+    "transitScore": 85,
+    "walkScore": 90,
+    "hasRailAccess": true,
+    "transitLines": ["CTA Blue Line"],
+    "avgCommuteMinutesToLoop": 22,
+    "parkingMonthlyEstimate": 150,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with CTA/Walk Score/Census commute data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "lincoln-park": {
+    "neighborhoodId": "lincoln-park",
+    "transitScore": 80,
+    "walkScore": 92,
+    "hasRailAccess": true,
+    "transitLines": ["CTA Red Line", "CTA Brown Line"],
+    "avgCommuteMinutesToLoop": 20,
+    "parkingMonthlyEstimate": 200,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with CTA/Walk Score/Census commute data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "avondale": {
+    "neighborhoodId": "avondale",
+    "transitScore": 70,
+    "walkScore": 78,
+    "hasRailAccess": true,
+    "transitLines": ["CTA Blue Line"],
+    "avgCommuteMinutesToLoop": 28,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with CTA/Walk Score/Census commute data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "pilsen": {
+    "neighborhoodId": "pilsen",
+    "transitScore": 75,
+    "walkScore": 82,
+    "hasRailAccess": true,
+    "transitLines": ["CTA Pink Line"],
+    "avgCommuteMinutesToLoop": 25,
+    "parkingMonthlyEstimate": 90,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with CTA/Walk Score/Census commute data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "evanston": {
+    "neighborhoodId": "evanston",
+    "transitScore": 72,
+    "walkScore": 80,
+    "hasRailAccess": true,
+    "transitLines": ["CTA Purple Line", "Metra UP-N"],
+    "avgCommuteMinutesToLoop": 35,
+    "parkingMonthlyEstimate": 120,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with CTA/Metra/Walk Score/Census commute data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "oak-park": {
+    "neighborhoodId": "oak-park",
+    "transitScore": 74,
+    "walkScore": 83,
+    "hasRailAccess": true,
+    "transitLines": ["CTA Green Line", "CTA Blue Line", "Metra UP-W"],
+    "avgCommuteMinutesToLoop": 30,
+    "parkingMonthlyEstimate": 100,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with CTA/Metra/Walk Score/Census commute data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  }
+}

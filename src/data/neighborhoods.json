@@ -1,0 +1,68 @@
+[
+  {
+    "id": "logan-square",
+    "name": "Logan Square",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [-87.7073, 41.9227],
+    "settlementPattern": "urban",
+    "geoFeatureId": "logan-square"
+  },
+  {
+    "id": "lincoln-park",
+    "name": "Lincoln Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [-87.6538, 41.9214],
+    "settlementPattern": "urban-core",
+    "geoFeatureId": "lincoln-park"
+  },
+  {
+    "id": "avondale",
+    "name": "Avondale",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [-87.7115, 41.9386],
+    "settlementPattern": "urban",
+    "geoFeatureId": "avondale"
+  },
+  {
+    "id": "pilsen",
+    "name": "Pilsen",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [-87.6564, 41.8563],
+    "settlementPattern": "urban",
+    "geoFeatureId": "pilsen"
+  },
+  {
+    "id": "evanston",
+    "name": "Evanston",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "evanston",
+    "taxJurisdictionId": "evanston-jurisdiction",
+    "centroid": [-87.6877, 42.0451],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "evanston"
+  },
+  {
+    "id": "oak-park",
+    "name": "Oak Park",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "oak-park",
+    "taxJurisdictionId": "oak-park-jurisdiction",
+    "centroid": [-87.7845, 41.885],
+    "settlementPattern": "streetcar-suburb",
+    "geoFeatureId": "oak-park"
+  }
+]

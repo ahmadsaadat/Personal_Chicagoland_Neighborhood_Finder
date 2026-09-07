@@ -1,0 +1,86 @@
+{
+  "logan-square": {
+    "neighborhoodId": "logan-square",
+    "groceriesMonthly": 380,
+    "utilitiesMonthly": 150,
+    "restaurantsMonthly": 250,
+    "healthcareMonthly": 200,
+    "otherMonthly": 200,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with BLS Consumer Expenditure Survey / Numbeo-style regional data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "lincoln-park": {
+    "neighborhoodId": "lincoln-park",
+    "groceriesMonthly": 420,
+    "utilitiesMonthly": 160,
+    "restaurantsMonthly": 350,
+    "healthcareMonthly": 220,
+    "otherMonthly": 250,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with BLS Consumer Expenditure Survey / Numbeo-style regional data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "avondale": {
+    "neighborhoodId": "avondale",
+    "groceriesMonthly": 360,
+    "utilitiesMonthly": 145,
+    "restaurantsMonthly": 180,
+    "healthcareMonthly": 190,
+    "otherMonthly": 170,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with BLS Consumer Expenditure Survey / Numbeo-style regional data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "pilsen": {
+    "neighborhoodId": "pilsen",
+    "groceriesMonthly": 340,
+    "utilitiesMonthly": 140,
+    "restaurantsMonthly": 150,
+    "healthcareMonthly": 180,
+    "otherMonthly": 150,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with BLS Consumer Expenditure Survey / Numbeo-style regional data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "evanston": {
+    "neighborhoodId": "evanston",
+    "groceriesMonthly": 400,
+    "utilitiesMonthly": 155,
+    "restaurantsMonthly": 220,
+    "healthcareMonthly": 210,
+    "otherMonthly": 200,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with BLS Consumer Expenditure Survey / Numbeo-style regional data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "oak-park": {
+    "neighborhoodId": "oak-park",
+    "groceriesMonthly": 390,
+    "utilitiesMonthly": 150,
+    "restaurantsMonthly": 210,
+    "healthcareMonthly": 205,
+    "otherMonthly": 190,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with BLS Consumer Expenditure Survey / Numbeo-style regional data",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  }
+}

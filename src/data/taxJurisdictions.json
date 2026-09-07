@@ -1,0 +1,41 @@
+[
+  {
+    "id": "chicago-jurisdiction",
+    "name": "City of Chicago",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1025,
+    "restaurantTaxRate": 0.01,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED PLACEHOLDER — verify against current IDOR publication)",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2024,
+      "valueType": "estimated",
+      "notes": "Chicago's combined rate stacks state (6.25%) + Cook County + RTA + city home-rule tax. Restaurant tax approximates the additional city/MPEA food & beverage tax layered on qualifying sales."
+    }
+  },
+  {
+    "id": "evanston-jurisdiction",
+    "name": "Evanston",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1,
+    "restaurantTaxRate": 0.01,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED PLACEHOLDER — verify against current IDOR publication)",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  {
+    "id": "oak-park-jurisdiction",
+    "name": "Oak Park",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED PLACEHOLDER — verify against current IDOR publication)",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  }
+]

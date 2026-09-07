@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source": "SEED PLACEHOLDER geometry — replace with real boundaries (e.g. Chicago Data Portal 'Boundaries - Community Areas' and Census TIGER/Line Places for suburbs)",
+    "valueType": "estimated",
+    "notes": "Simplified square footprints centered on each neighborhood's approximate centroid so the map has something real to render immediately. Not survey-accurate."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "logan-square", "name": "Logan Square" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-87.723, 41.913], [-87.691, 41.913], [-87.691, 41.933], [-87.723, 41.933], [-87.723, 41.913]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "lincoln-park", "name": "Lincoln Park" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-87.668, 41.911], [-87.638, 41.911], [-87.638, 41.932], [-87.668, 41.932], [-87.668, 41.911]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "avondale", "name": "Avondale" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-87.727, 41.929], [-87.696, 41.929], [-87.696, 41.949], [-87.727, 41.949], [-87.727, 41.929]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "pilsen", "name": "Pilsen" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-87.672, 41.846], [-87.641, 41.846], [-87.641, 41.866], [-87.672, 41.866], [-87.672, 41.846]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "evanston", "name": "Evanston" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-87.717, 42.03], [-87.665, 42.03], [-87.665, 42.065], [-87.717, 42.065], [-87.717, 42.03]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "oak-park", "name": "Oak Park" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-87.805, 41.87], [-87.765, 41.87], [-87.765, 41.9], [-87.805, 41.9], [-87.805, 41.87]
+        ]]
+      }
+    }
+  ]
+}

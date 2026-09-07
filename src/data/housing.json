@@ -1,0 +1,86 @@
+{
+  "logan-square": {
+    "neighborhoodId": "logan-square",
+    "medianRent1BR": 1950,
+    "medianRent2BR": 2450,
+    "medianRent3BR": 3100,
+    "medianHomePrice": 480000,
+    "effectivePropertyTaxRate": 0.017,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Zillow ZORI/ZHVI or Cook County Assessor figures",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "lincoln-park": {
+    "neighborhoodId": "lincoln-park",
+    "medianRent1BR": 2400,
+    "medianRent2BR": 3200,
+    "medianRent3BR": 4200,
+    "medianHomePrice": 650000,
+    "effectivePropertyTaxRate": 0.016,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Zillow ZORI/ZHVI or Cook County Assessor figures",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "avondale": {
+    "neighborhoodId": "avondale",
+    "medianRent1BR": 1650,
+    "medianRent2BR": 2100,
+    "medianRent3BR": 2700,
+    "medianHomePrice": 400000,
+    "effectivePropertyTaxRate": 0.017,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Zillow ZORI/ZHVI or Cook County Assessor figures",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "pilsen": {
+    "neighborhoodId": "pilsen",
+    "medianRent1BR": 1350,
+    "medianRent2BR": 1750,
+    "medianRent3BR": 2200,
+    "medianHomePrice": 320000,
+    "effectivePropertyTaxRate": 0.017,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Zillow ZORI/ZHVI or Cook County Assessor figures",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "evanston": {
+    "neighborhoodId": "evanston",
+    "medianRent1BR": 1800,
+    "medianRent2BR": 2300,
+    "medianRent3BR": 3000,
+    "medianHomePrice": 420000,
+    "effectivePropertyTaxRate": 0.021,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Zillow ZORI/ZHVI or Cook County Assessor figures",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  },
+  "oak-park": {
+    "neighborhoodId": "oak-park",
+    "medianRent1BR": 1650,
+    "medianRent2BR": 2100,
+    "medianRent3BR": 2650,
+    "medianHomePrice": 430000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "SEED PLACEHOLDER — replace with Zillow ZORI/ZHVI or Cook County Assessor figures",
+      "geographicLevel": "neighborhood",
+      "year": 2024,
+      "valueType": "estimated"
+    }
+  }
+}

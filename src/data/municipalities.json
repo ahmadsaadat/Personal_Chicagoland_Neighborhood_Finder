@@ -1,0 +1,5 @@
+[
+  { "id": "chicago", "name": "Chicago", "countyId": "cook", "isChicago": true },
+  { "id": "evanston", "name": "Evanston", "countyId": "cook", "isChicago": false },
+  { "id": "oak-park", "name": "Oak Park", "countyId": "cook", "isChicago": false }
+]
