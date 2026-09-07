@@ -1,5 +1,140 @@
 [
-  { "id": "chicago", "name": "Chicago", "countyId": "cook", "isChicago": true },
-  { "id": "evanston", "name": "Evanston", "countyId": "cook", "isChicago": false },
-  { "id": "oak-park", "name": "Oak Park", "countyId": "cook", "isChicago": false }
+  {
+    "id": "chicago",
+    "name": "Chicago",
+    "countyId": "cook",
+    "isChicago": true
+  },
+  {
+    "id": "evanston",
+    "name": "Evanston",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "oak-park",
+    "name": "Oak Park",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "skokie",
+    "name": "Skokie",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "cicero",
+    "name": "Cicero",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "berwyn",
+    "name": "Berwyn",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "arlington-heights",
+    "name": "Arlington Heights",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "wilmette",
+    "name": "Wilmette",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "des-plaines",
+    "name": "Des Plaines",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "park-ridge",
+    "name": "Park Ridge",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "orland-park",
+    "name": "Orland Park",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "tinley-park",
+    "name": "Tinley Park",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "schaumburg",
+    "name": "Schaumburg",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "hoffman-estates",
+    "name": "Hoffman Estates",
+    "countyId": "cook",
+    "isChicago": false
+  },
+  {
+    "id": "naperville",
+    "name": "Naperville",
+    "countyId": "dupage",
+    "isChicago": false
+  },
+  {
+    "id": "elmhurst",
+    "name": "Elmhurst",
+    "countyId": "dupage",
+    "isChicago": false
+  },
+  {
+    "id": "downers-grove",
+    "name": "Downers Grove",
+    "countyId": "dupage",
+    "isChicago": false
+  },
+  {
+    "id": "wheaton",
+    "name": "Wheaton",
+    "countyId": "dupage",
+    "isChicago": false
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora",
+    "countyId": "kane",
+    "isChicago": false
+  },
+  {
+    "id": "elgin",
+    "name": "Elgin",
+    "countyId": "kane",
+    "isChicago": false
+  },
+  {
+    "id": "waukegan",
+    "name": "Waukegan",
+    "countyId": "lake",
+    "isChicago": false
+  },
+  {
+    "id": "highland-park",
+    "name": "Highland Park",
+    "countyId": "lake",
+    "isChicago": false
+  },
+  {
+    "id": "joliet",
+    "name": "Joliet",
+    "countyId": "will",
+    "isChicago": false
+  }
 ]
