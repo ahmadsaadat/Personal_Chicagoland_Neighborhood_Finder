@@ -13,7 +13,7 @@
  *   - Writes scripts/data/cache/chicago-77-official.geojson: the 77 real
  *     Chicago community-area polygons (35 carried over unchanged from the
  *     current neighborhoods.geojson + 42 newly fetched/simplified), which
- *     scripts/generate-tessellation.mjs then treats as fixed/authoritative
+ *     scripts/generate-geometry.mjs then treats as fixed/authoritative
  *     input.
  *
  * Run with: node scripts/generate-dataset.mjs

@@ -1,9 +1,13 @@
 // 80 additional Chicagoland suburbs/towns beyond the round-1 set of 22,
 // spanning Cook, DuPage, Lake, Will, Kane, and (new this round) McHenry
 // counties. Selected for even geographic spread across the region (not just
-// the biggest/most famous towns) since these centroids become Voronoi seeds
-// for scripts/generate-tessellation.mjs — density and distribution matter
-// more than fame for that purpose.
+// the biggest/most famous towns). Originally these centroids were also used
+// as Voronoi seeds for the old scripts/generate-tessellation.mjs; that
+// script was replaced by scripts/generate-geometry.mjs, which fetches each
+// suburb's real municipal boundary from the Census TIGER/Line "Places"
+// dataset instead — the centroid is now used only as the real, well-known
+// town-center fact it always was (map marker placement, and disambiguating
+// same-named Illinois places when matching to a Census Place).
 //
 // - `centroid` is a real, well-known town-center coordinate (general public
 //   geographic knowledge), same methodology as the round-1 suburbs.
