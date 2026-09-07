@@ -7,11 +7,12 @@ interface ModalProps {
   title: string
   subtitle?: string
   children: ReactNode
+  footer?: ReactNode
   widthClassName?: string
 }
 
-/** Centered dialog used for the neighborhood comparison table. */
-export function Modal({ open, onClose, title, subtitle, children, widthClassName = 'max-w-4xl' }: ModalProps) {
+/** Centered dialog used for the neighborhood comparison table and detail panel. */
+export function Modal({ open, onClose, title, subtitle, children, footer, widthClassName = 'max-w-4xl' }: ModalProps) {
   useEffect(() => {
     if (!open) return
     const onKeyDown = (e: KeyboardEvent) => {
@@ -55,6 +56,7 @@ export function Modal({ open, onClose, title, subtitle, children, widthClassName
           </button>
         </div>
         <div className="flex-1 overflow-auto px-6 py-5">{children}</div>
+        {footer && <div className="border-t border-slate-100 px-6 py-4">{footer}</div>}
       </div>
     </div>
   )

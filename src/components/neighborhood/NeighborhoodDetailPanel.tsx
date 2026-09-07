@@ -14,7 +14,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { useState } from 'react'
-import { SlideOver } from '../common/SlideOver'
+import { Modal } from '../common/Modal'
 import { StatTile } from '../common/StatTile'
 import { Badge } from '../common/Badge'
 import { formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
@@ -65,7 +65,7 @@ export function NeighborhoodDetailPanel({
   const isNegative = summary.estimatedDisposableIncome < 0
 
   return (
-    <SlideOver
+    <Modal
       open={open}
       onClose={onClose}
       title={neighborhood.name}
@@ -254,6 +254,6 @@ export function NeighborhoodDetailPanel({
           <span>All figures are MVP estimates for comparing locations, not financial or tax advice.</span>
         </div>
       </div>
-    </SlideOver>
+    </Modal>
   )
 }
