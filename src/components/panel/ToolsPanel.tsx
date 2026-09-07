@@ -82,12 +82,11 @@ export function ToolsPanel({
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <IncomeField profile={profile} onProfileChange={onProfileChange} />
           <HousingField profile={profile} onProfileChange={onProfileChange} />
+          <ProfileChips profile={profile} onProfileChange={onProfileChange} />
         </div>
-
-        <ProfileChips profile={profile} onProfileChange={onProfileChange} />
 
         <div>
           <button

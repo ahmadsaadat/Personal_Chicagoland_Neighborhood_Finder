@@ -28,12 +28,12 @@ function ChipButton({
 }
 
 /**
- * Quick-access chips for the profile fields NOT already covered by the
- * always-visible income/rent editor at the top of the tools panel. Both
- * chips are plain toggles — one click flips car ownership or marital status
- * directly, no popover or drawer in between. Number of children (not a
- * simple two-state toggle) stays in the expandable full-profile section
- * below.
+ * Car and marital-status chips, meant to sit alongside IncomeField/
+ * HousingField in one chip row. Unlike those two, these are plain
+ * toggles — one click flips car ownership or marital status directly, no
+ * popover. Number of children (not a simple two-state toggle) stays in the
+ * expandable full-profile section below. Returns a fragment (not a wrapping
+ * div) so both chips participate directly in the parent's flex-wrap layout.
  */
 export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
   const familyLabel =
@@ -44,7 +44,7 @@ export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
         : 'Single'
 
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <>
       <ChipButton
         icon={Car}
         label={profile.ownsCar ? 'Car' : 'No car'}
@@ -57,6 +57,6 @@ export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
           onProfileChange({ ...profile, maritalStatus: profile.maritalStatus === 'married' ? 'single' : 'married' })
         }
       />
-    </div>
+    </>
   )
 }

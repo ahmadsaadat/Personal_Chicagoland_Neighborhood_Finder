@@ -1,7 +1,7 @@
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Wallet } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { annualFromHourly, type IncomeType, type UserProfile } from '../../types'
-import { formatCurrency } from '../../utils/format'
+import { formatCurrency, formatCurrencyCompact } from '../../utils/format'
 
 interface IncomeFieldProps {
   profile: UserProfile
@@ -12,7 +12,7 @@ function inputClass(extra = '') {
   return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
 }
 
-/** The "Annual income" field: a popover lets you choose salary vs. hourly pay. */
+/** The "Annual income" chip: a popover lets you choose salary vs. hourly pay. */
 export function IncomeField({ profile, onProfileChange }: IncomeFieldProps) {
   const [open, setOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -40,16 +40,14 @@ export function IncomeField({ profile, onProfileChange }: IncomeFieldProps) {
 
   return (
     <div ref={containerRef} className="relative">
-      <label className="mb-1 block text-xs font-medium text-slate-500">Annual income</label>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-1 rounded-lg border border-slate-200 px-3 py-2 text-left text-sm text-slate-800 transition hover:border-slate-300"
+        className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
       >
-        <span>
-          <span className="text-slate-400">$</span> {profile.annualIncome.toLocaleString()}
-        </span>
-        <ChevronDown size={14} className={`shrink-0 text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
+        <Wallet size={13} className="text-slate-400" />
+        {formatCurrencyCompact(profile.annualIncome)}/yr
+        <ChevronDown size={12} className={`text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {open && (

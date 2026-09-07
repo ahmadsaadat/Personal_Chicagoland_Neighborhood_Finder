@@ -1,6 +1,7 @@
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Home } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import type { HousingChoice, UserProfile } from '../../types'
+import { formatCurrencyCompact } from '../../utils/format'
 
 interface HousingFieldProps {
   profile: UserProfile
@@ -11,7 +12,7 @@ function inputClass(extra = '') {
   return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
 }
 
-/** The rent/home-price field: a popover lets you choose renting vs. owning. */
+/** The rent/home-price chip: a popover lets you choose renting vs. owning. */
 export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
   const [open, setOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -29,16 +30,15 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
 
   return (
     <div ref={containerRef} className="relative">
-      <label className="mb-1 block text-xs font-medium text-slate-500">{isRent ? 'Monthly rent' : 'Home price'}</label>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-1 rounded-lg border border-slate-200 px-3 py-2 text-left text-sm text-slate-800 transition hover:border-slate-300"
+        className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
       >
-        <span>
-          <span className="text-slate-400">$</span> {amount.toLocaleString()}
-        </span>
-        <ChevronDown size={14} className={`shrink-0 text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
+        <Home size={13} className="text-slate-400" />
+        {formatCurrencyCompact(amount)}
+        {isRent ? '/mo' : ''}
+        <ChevronDown size={12} className={`text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {open && (
