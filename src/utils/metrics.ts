@@ -1,3 +1,15 @@
+import {
+  Banknote,
+  Building2,
+  Car,
+  Footprints,
+  Gauge,
+  Home,
+  Landmark,
+  Receipt,
+  Wallet,
+  type LucideIcon,
+} from 'lucide-react'
 import type { FinancialSummary, MapMetric, Neighborhood, NeighborhoodProfile } from '../types'
 import { formatCurrency, formatPercent } from './format'
 
@@ -10,6 +22,8 @@ export interface NeighborhoodEntry {
 export interface MetricConfig {
   key: MapMetric
   label: string
+  /** Icon shown on the map's layer-style metric picker. */
+  icon: LucideIcon
   /** Short form for compact UI like the map legend caption. */
   goodDirection: 'high' | 'low'
   /** One-line explanation of what "better" means for this metric, shown near the legend. */
@@ -34,6 +48,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'disposableIncome',
     label: 'Disposable Income',
+    icon: Wallet,
     goodDirection: 'high',
     helpText: 'Estimated cash left over per year after taxes, housing, transportation, and everyday costs. Darker = more left over.',
     getValue: (e) => e.summary.estimatedDisposableIncome,
@@ -42,6 +57,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'medianRent2BR',
     label: 'Median 2BR Rent',
+    icon: Home,
     goodDirection: 'low',
     helpText: 'Typical monthly rent for a 2-bedroom unit. Darker = more expensive.',
     getValue: (e) => e.profile.housing.medianRent2BR,
@@ -50,6 +66,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'medianHomePrice',
     label: 'Median Home Price',
+    icon: Building2,
     goodDirection: 'low',
     helpText: 'Typical purchase price for a home. Darker = more expensive.',
     getValue: (e) => e.profile.housing.medianHomePrice,
@@ -58,6 +75,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'propertyTaxRate',
     label: 'Property Tax Rate',
+    icon: Landmark,
     goodDirection: 'low',
     helpText: 'Effective annual property tax as a share of home value. Darker = higher rate.',
     getValue: (e) => e.profile.housing.effectivePropertyTaxRate,
@@ -66,6 +84,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'totalAnnualTax',
     label: 'Total Annual Tax',
+    icon: Receipt,
     goodDirection: 'low',
     helpText: 'Estimated federal, state, sales, property, and vehicle taxes combined for your profile. Darker = higher tax burden.',
     getValue: (e) => e.summary.taxes.totalTax,
@@ -74,6 +93,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'housingAnnualCost',
     label: 'Housing Cost',
+    icon: Banknote,
     goodDirection: 'low',
     helpText: 'Estimated annual rent or homeownership carrying cost for your profile. Darker = more expensive.',
     getValue: (e) => e.summary.housingAnnualCost,
@@ -82,6 +102,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'transportationAnnualCost',
     label: 'Transportation Cost',
+    icon: Car,
     goodDirection: 'low',
     helpText: 'Estimated annual commuting cost (car or transit) for your profile. Darker = more expensive.',
     getValue: (e) => e.summary.transportationAnnualCost,
@@ -90,6 +111,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'walkability',
     label: 'Walkability',
+    icon: Footprints,
     goodDirection: 'high',
     helpText: 'Walk Score-style index, 0-100. Darker = more walkable.',
     getValue: (e) => e.profile.lifestyle.walkability,
@@ -98,6 +120,7 @@ export const MAP_METRICS: MetricConfig[] = [
   {
     key: 'affordabilityIndex',
     label: 'Affordability Index',
+    icon: Gauge,
     goodDirection: 'high',
     helpText: 'Share of your income left over after core costs, 0-100 (UI-derived from disposable income ÷ gross income). Darker = more affordable for you.',
     getValue: affordabilityIndex,
