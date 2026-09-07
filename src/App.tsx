@@ -1,34 +1,97 @@
-import { getAllNeighborhoodProfiles } from './data'
-import { calculateFinancialSummary } from './calculations/financial'
-import { DEFAULT_PROFILE } from './types'
+import { useMemo, useState } from 'react'
+import { CompareModal } from './components/compare/CompareModal'
+import { CompareTray } from './components/compare/CompareTray'
+import { Header } from './components/layout/Header'
+import { NeighborhoodDetailPanel } from './components/neighborhood/NeighborhoodDetailPanel'
+import { ProfileDrawer } from './components/profile/ProfileDrawer'
+import { useCompareSelection } from './hooks/useCompareSelection'
+import { useNeighborhoodEntries } from './hooks/useNeighborhoodEntries'
+import { useUserProfile } from './hooks/useUserProfile'
+import { ExplorePage, type ExploreTab } from './pages/ExplorePage'
+import { LandingPage } from './pages/LandingPage'
 
-// Placeholder root component — replaced by the Frontend/UX engineer with the
-// full landing page, map, profile form, and neighborhood exploration UI.
+type View = 'landing' | 'explore'
+
 function App() {
-  const entries = getAllNeighborhoodProfiles()
+  const { profile, updateProfile, isOnboarded } = useUserProfile()
+  const entries = useNeighborhoodEntries(profile)
+
+  const [view, setView] = useState<View>('landing')
+  const [exploreTab, setExploreTab] = useState<ExploreTab>('map')
+  const [profileOpen, setProfileOpen] = useState(false)
+  const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | null>(null)
+  const [compareModalOpen, setCompareModalOpen] = useState(false)
+  const compare = useCompareSelection()
+
+  function goExplore(tab: ExploreTab) {
+    setExploreTab(tab)
+    setView('explore')
+  }
+
+  function handleSelectFromHeader(id: string) {
+    setSelectedNeighborhoodId(id)
+    setView('explore')
+  }
+
+  const selectedEntry = useMemo(
+    () => entries.find((e) => e.neighborhood.id === selectedNeighborhoodId) ?? null,
+    [entries, selectedNeighborhoodId],
+  )
+
+  const compareEntries = useMemo(
+    () =>
+      compare.selectedIds
+        .map((id) => entries.find((e) => e.neighborhood.id === id))
+        .filter((e): e is NonNullable<typeof e> => Boolean(e)),
+    [compare.selectedIds, entries],
+  )
 
   return (
-    <div className="min-h-screen bg-slate-50 p-8 font-sans text-slate-900">
-      <h1 className="text-2xl font-semibold">Chicagoland — scaffold sanity check</h1>
-      <p className="mt-1 text-slate-500">
-        This placeholder proves the data + calculations pipeline works end to end. It will be
-        replaced with the full product UI.
-      </p>
-      <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-        {entries.map(({ neighborhood }) => {
-          const summary = calculateFinancialSummary(DEFAULT_PROFILE, neighborhood.id)
-          return (
-            <li key={neighborhood.id} className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-              <div className="font-medium">{neighborhood.name}</div>
-              <div className="text-sm text-slate-500">
-                Est. disposable income: $
-                {summary ? Math.round(summary.estimatedDisposableIncome).toLocaleString() : '—'}
-                /yr
-              </div>
-            </li>
-          )
-        })}
-      </ul>
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      <Header
+        onSelectNeighborhood={handleSelectFromHeader}
+        onOpenProfile={() => setProfileOpen(true)}
+        onGoHome={() => setView('landing')}
+        hasCustomProfile={isOnboarded}
+      />
+
+      {view === 'landing' ? (
+        <LandingPage onExplore={() => goExplore('map')} onFindBestMatch={() => goExplore('best')} />
+      ) : (
+        <ExplorePage
+          profile={profile}
+          entries={entries}
+          activeTab={exploreTab}
+          onTabChange={setExploreTab}
+          selectedNeighborhoodId={selectedNeighborhoodId}
+          onSelectNeighborhood={setSelectedNeighborhoodId}
+          compare={compare}
+          onOpenProfile={() => setProfileOpen(true)}
+          isOnboarded={isOnboarded}
+        />
+      )}
+
+      <ProfileDrawer open={profileOpen} onClose={() => setProfileOpen(false)} profile={profile} onSave={updateProfile} />
+
+      <NeighborhoodDetailPanel
+        entry={selectedEntry}
+        open={selectedEntry !== null}
+        onClose={() => setSelectedNeighborhoodId(null)}
+        isCompareSelected={selectedNeighborhoodId ? compare.isSelected(selectedNeighborhoodId) : false}
+        compareDisabled={compare.isFull}
+        onToggleCompare={compare.toggle}
+      />
+
+      <CompareModal open={compareModalOpen} onClose={() => setCompareModalOpen(false)} entries={compareEntries} />
+
+      {!compareModalOpen && (
+        <CompareTray
+          entries={compareEntries}
+          onRemove={compare.remove}
+          onClear={compare.clear}
+          onCompare={() => setCompareModalOpen(true)}
+        />
+      )}
     </div>
   )
 }
