@@ -7,31 +7,16 @@ import { ProfileDrawer } from './components/profile/ProfileDrawer'
 import { useCompareSelection } from './hooks/useCompareSelection'
 import { useNeighborhoodEntries } from './hooks/useNeighborhoodEntries'
 import { useUserProfile } from './hooks/useUserProfile'
-import { ExplorePage, type ExplorePanel } from './pages/ExplorePage'
-import { LandingPage } from './pages/LandingPage'
-
-type View = 'landing' | 'explore'
+import { ExplorePage } from './pages/ExplorePage'
 
 function App() {
   const { profile, updateProfile, resetProfile, isOnboarded } = useUserProfile()
   const entries = useNeighborhoodEntries(profile)
 
-  const [view, setView] = useState<View>('landing')
-  const [explorePanel, setExplorePanel] = useState<ExplorePanel>(null)
   const [profileOpen, setProfileOpen] = useState(false)
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | null>(null)
   const [compareModalOpen, setCompareModalOpen] = useState(false)
   const compare = useCompareSelection()
-
-  function goExplore(panel: ExplorePanel) {
-    setExplorePanel(panel)
-    setView('explore')
-  }
-
-  function handleSelectFromHeader(id: string) {
-    setSelectedNeighborhoodId(id)
-    setView('explore')
-  }
 
   const selectedEntry = useMemo(
     () => entries.find((e) => e.neighborhood.id === selectedNeighborhoodId) ?? null,
@@ -49,31 +34,22 @@ function App() {
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-slate-50 font-sans text-slate-900">
       <Header
-        onSelectNeighborhood={handleSelectFromHeader}
+        onSelectNeighborhood={setSelectedNeighborhoodId}
         onOpenProfile={() => setProfileOpen(true)}
-        onGoHome={() => setView('landing')}
         hasCustomProfile={isOnboarded}
       />
 
-      {view === 'landing' ? (
-        <div className="flex-1 overflow-y-auto">
-          <LandingPage onExplore={() => goExplore(null)} onFindBestMatch={() => goExplore('best')} />
-        </div>
-      ) : (
-        <div className="relative flex-1 overflow-hidden">
-          <ExplorePage
-            profile={profile}
-            entries={entries}
-            activePanel={explorePanel}
-            onPanelChange={setExplorePanel}
-            selectedNeighborhoodId={selectedNeighborhoodId}
-            onSelectNeighborhood={setSelectedNeighborhoodId}
-            compare={compare}
-            onOpenProfile={() => setProfileOpen(true)}
-            isOnboarded={isOnboarded}
-          />
-        </div>
-      )}
+      <div className="relative flex-1 overflow-hidden">
+        <ExplorePage
+          profile={profile}
+          entries={entries}
+          selectedNeighborhoodId={selectedNeighborhoodId}
+          onSelectNeighborhood={setSelectedNeighborhoodId}
+          compare={compare}
+          onOpenProfile={() => setProfileOpen(true)}
+          isOnboarded={isOnboarded}
+        />
+      </div>
 
       <ProfileDrawer
         open={profileOpen}

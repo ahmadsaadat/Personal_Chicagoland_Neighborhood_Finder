@@ -13,7 +13,7 @@ export function CompareTray({ entries, onRemove, onCompare, onClear }: CompareTr
   if (entries.length === 0) return null
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center px-4 pb-4 animate-[riseIn_200ms_ease-out]">
+    <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center px-4 pb-4 animate-[riseIn_200ms_ease-out] lg:pl-[420px]">
       <div className="flex w-full max-w-2xl items-center gap-3 rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 shadow-2xl backdrop-blur">
         <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
           <Scale size={16} />

@@ -105,7 +105,11 @@ export function ChicagolandMap({
   }
 
   return (
-    <div className="relative h-full w-full overflow-hidden bg-slate-100">
+    // `isolate` creates a new stacking context so Leaflet's internal panes
+    // (it assigns them z-index values in the hundreds — e.g. the tooltip and
+    // popup panes) are contained here and can never render above sibling
+    // overlay UI like the tools panel or drawers, no matter their z-index.
+    <div className="relative isolate h-full w-full overflow-hidden bg-slate-100">
       <MapContainer
         center={[41.86, -87.68]}
         zoom={10}

@@ -9,10 +9,21 @@ interface SlideOverProps {
   children: ReactNode
   footer?: ReactNode
   widthClassName?: string
+  /** Skip the default body padding for content that manages its own layout (e.g. a full-bleed panel). */
+  noBodyPadding?: boolean
 }
 
 /** Right-side slide-over panel used for the profile editor, filters, and neighborhood detail. */
-export function SlideOver({ open, onClose, title, subtitle, children, footer, widthClassName = 'max-w-md' }: SlideOverProps) {
+export function SlideOver({
+  open,
+  onClose,
+  title,
+  subtitle,
+  children,
+  footer,
+  widthClassName = 'max-w-md',
+  noBodyPadding = false,
+}: SlideOverProps) {
   useEffect(() => {
     if (!open) return
     const onKeyDown = (e: KeyboardEvent) => {
@@ -55,7 +66,7 @@ export function SlideOver({ open, onClose, title, subtitle, children, footer, wi
             <X size={20} />
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto px-6 py-5">{children}</div>
+        <div className={`flex-1 overflow-y-auto ${noBodyPadding ? '' : 'px-6 py-5'}`}>{children}</div>
         {footer && <div className="border-t border-slate-100 px-6 py-4">{footer}</div>}
       </div>
     </div>
