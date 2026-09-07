@@ -853,5 +853,1755 @@
       "year": 2025,
       "valueType": "estimated"
     }
+  },
+  "edison-park": {
+    "neighborhoodId": "edison-park",
+    "medianRentStudio": 1008,
+    "medianRent1BR": 1299,
+    "medianRent2BR": 1624,
+    "medianRent3BR": 2134,
+    "medianHomePrice": 345000,
+    "effectivePropertyTaxRate": 0.0218,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "norwood-park": {
+    "neighborhoodId": "norwood-park",
+    "medianRentStudio": 993,
+    "medianRent1BR": 1279,
+    "medianRent2BR": 1600,
+    "medianRent3BR": 2102,
+    "medianHomePrice": 335000,
+    "effectivePropertyTaxRate": 0.0218,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "forest-glen": {
+    "neighborhoodId": "forest-glen",
+    "medianRentStudio": 1119,
+    "medianRent1BR": 1442,
+    "medianRent2BR": 1803,
+    "medianRent3BR": 2369,
+    "medianHomePrice": 420000,
+    "effectivePropertyTaxRate": 0.0213,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "north-park": {
+    "neighborhoodId": "north-park",
+    "medianRentStudio": 956,
+    "medianRent1BR": 1232,
+    "medianRent2BR": 1540,
+    "medianRent3BR": 2024,
+    "medianHomePrice": 310000,
+    "effectivePropertyTaxRate": 0.022,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "dunning": {
+    "neighborhoodId": "dunning",
+    "medianRentStudio": 941,
+    "medianRent1BR": 1212,
+    "medianRent2BR": 1516,
+    "medianRent3BR": 1992,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0221,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "montclare": {
+    "neighborhoodId": "montclare",
+    "medianRentStudio": 896,
+    "medianRent1BR": 1155,
+    "medianRent2BR": 1444,
+    "medianRent3BR": 1897,
+    "medianHomePrice": 270000,
+    "effectivePropertyTaxRate": 0.0222,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "belmont-cragin": {
+    "neighborhoodId": "belmont-cragin",
+    "medianRentStudio": 852,
+    "medianRent1BR": 1097,
+    "medianRent2BR": 1372,
+    "medianRent3BR": 1803,
+    "medianHomePrice": 240000,
+    "effectivePropertyTaxRate": 0.0224,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "hermosa": {
+    "neighborhoodId": "hermosa",
+    "medianRentStudio": 822,
+    "medianRent1BR": 1059,
+    "medianRent2BR": 1324,
+    "medianRent3BR": 1740,
+    "medianHomePrice": 220000,
+    "effectivePropertyTaxRate": 0.0226,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-garfield-park": {
+    "neighborhoodId": "west-garfield-park",
+    "medianRentStudio": 726,
+    "medianRent1BR": 935,
+    "medianRent2BR": 1169,
+    "medianRent3BR": 1536,
+    "medianHomePrice": 155000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "east-garfield-park": {
+    "neighborhoodId": "east-garfield-park",
+    "medianRentStudio": 756,
+    "medianRent1BR": 973,
+    "medianRent2BR": 1217,
+    "medianRent3BR": 1599,
+    "medianHomePrice": 175000,
+    "effectivePropertyTaxRate": 0.0228,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "armour-square": {
+    "neighborhoodId": "armour-square",
+    "medianRentStudio": 941,
+    "medianRent1BR": 1212,
+    "medianRent2BR": 1516,
+    "medianRent3BR": 1992,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0221,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "douglas": {
+    "neighborhoodId": "douglas",
+    "medianRentStudio": 882,
+    "medianRent1BR": 1136,
+    "medianRent2BR": 1420,
+    "medianRent3BR": 1866,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0223,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "oakland": {
+    "neighborhoodId": "oakland",
+    "medianRentStudio": 807,
+    "medianRent1BR": 1040,
+    "medianRent2BR": 1300,
+    "medianRent3BR": 1708,
+    "medianHomePrice": 210000,
+    "effectivePropertyTaxRate": 0.0226,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "fuller-park": {
+    "neighborhoodId": "fuller-park",
+    "medianRentStudio": 674,
+    "medianRent1BR": 868,
+    "medianRent2BR": 1085,
+    "medianRent3BR": 1426,
+    "medianHomePrice": 120000,
+    "effectivePropertyTaxRate": 0.0232,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "grand-boulevard": {
+    "neighborhoodId": "grand-boulevard",
+    "medianRentStudio": 867,
+    "medianRent1BR": 1116,
+    "medianRent2BR": 1396,
+    "medianRent3BR": 1834,
+    "medianHomePrice": 250000,
+    "effectivePropertyTaxRate": 0.0224,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "washington-park": {
+    "neighborhoodId": "washington-park",
+    "medianRentStudio": 741,
+    "medianRent1BR": 954,
+    "medianRent2BR": 1193,
+    "medianRent3BR": 1568,
+    "medianHomePrice": 165000,
+    "effectivePropertyTaxRate": 0.0229,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "avalon-park": {
+    "neighborhoodId": "avalon-park",
+    "medianRentStudio": 807,
+    "medianRent1BR": 1040,
+    "medianRent2BR": 1300,
+    "medianRent3BR": 1708,
+    "medianHomePrice": 210000,
+    "effectivePropertyTaxRate": 0.0226,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "south-chicago": {
+    "neighborhoodId": "south-chicago",
+    "medianRentStudio": 718,
+    "medianRent1BR": 925,
+    "medianRent2BR": 1157,
+    "medianRent3BR": 1520,
+    "medianHomePrice": 150000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "burnside": {
+    "neighborhoodId": "burnside",
+    "medianRentStudio": 689,
+    "medianRent1BR": 887,
+    "medianRent2BR": 1109,
+    "medianRent3BR": 1457,
+    "medianHomePrice": 130000,
+    "effectivePropertyTaxRate": 0.0231,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "calumet-heights": {
+    "neighborhoodId": "calumet-heights",
+    "medianRentStudio": 837,
+    "medianRent1BR": 1078,
+    "medianRent2BR": 1348,
+    "medianRent3BR": 1771,
+    "medianHomePrice": 230000,
+    "effectivePropertyTaxRate": 0.0225,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "roseland": {
+    "neighborhoodId": "roseland",
+    "medianRentStudio": 726,
+    "medianRent1BR": 935,
+    "medianRent2BR": 1169,
+    "medianRent3BR": 1536,
+    "medianHomePrice": 155000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "south-deering": {
+    "neighborhoodId": "south-deering",
+    "medianRentStudio": 681,
+    "medianRent1BR": 877,
+    "medianRent2BR": 1097,
+    "medianRent3BR": 1441,
+    "medianHomePrice": 125000,
+    "effectivePropertyTaxRate": 0.0232,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "east-side": {
+    "neighborhoodId": "east-side",
+    "medianRentStudio": 741,
+    "medianRent1BR": 954,
+    "medianRent2BR": 1193,
+    "medianRent3BR": 1568,
+    "medianHomePrice": 165000,
+    "effectivePropertyTaxRate": 0.0229,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-pullman": {
+    "neighborhoodId": "west-pullman",
+    "medianRentStudio": 711,
+    "medianRent1BR": 916,
+    "medianRent2BR": 1145,
+    "medianRent3BR": 1505,
+    "medianHomePrice": 145000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "riverdale": {
+    "neighborhoodId": "riverdale",
+    "medianRentStudio": 636,
+    "medianRent1BR": 820,
+    "medianRent2BR": 1025,
+    "medianRent3BR": 1347,
+    "medianHomePrice": 95000,
+    "effectivePropertyTaxRate": 0.0234,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "hegewisch": {
+    "neighborhoodId": "hegewisch",
+    "medianRentStudio": 756,
+    "medianRent1BR": 973,
+    "medianRent2BR": 1217,
+    "medianRent3BR": 1599,
+    "medianHomePrice": 175000,
+    "effectivePropertyTaxRate": 0.0228,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "garfield-ridge": {
+    "neighborhoodId": "garfield-ridge",
+    "medianRentStudio": 882,
+    "medianRent1BR": 1136,
+    "medianRent2BR": 1420,
+    "medianRent3BR": 1866,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0223,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "archer-heights": {
+    "neighborhoodId": "archer-heights",
+    "medianRentStudio": 844,
+    "medianRent1BR": 1088,
+    "medianRent2BR": 1360,
+    "medianRent3BR": 1787,
+    "medianHomePrice": 235000,
+    "effectivePropertyTaxRate": 0.0225,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "brighton-park": {
+    "neighborhoodId": "brighton-park",
+    "medianRentStudio": 829,
+    "medianRent1BR": 1068,
+    "medianRent2BR": 1336,
+    "medianRent3BR": 1755,
+    "medianHomePrice": 225000,
+    "effectivePropertyTaxRate": 0.0225,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mckinley-park": {
+    "neighborhoodId": "mckinley-park",
+    "medianRentStudio": 852,
+    "medianRent1BR": 1097,
+    "medianRent2BR": 1372,
+    "medianRent3BR": 1803,
+    "medianHomePrice": 240000,
+    "effectivePropertyTaxRate": 0.0224,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "new-city": {
+    "neighborhoodId": "new-city",
+    "medianRentStudio": 792,
+    "medianRent1BR": 1020,
+    "medianRent2BR": 1276,
+    "medianRent3BR": 1677,
+    "medianHomePrice": 200000,
+    "effectivePropertyTaxRate": 0.0227,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-elsdon": {
+    "neighborhoodId": "west-elsdon",
+    "medianRentStudio": 844,
+    "medianRent1BR": 1088,
+    "medianRent2BR": 1360,
+    "medianRent3BR": 1787,
+    "medianHomePrice": 235000,
+    "effectivePropertyTaxRate": 0.0225,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "gage-park": {
+    "neighborhoodId": "gage-park",
+    "medianRentStudio": 807,
+    "medianRent1BR": 1040,
+    "medianRent2BR": 1300,
+    "medianRent3BR": 1708,
+    "medianHomePrice": 210000,
+    "effectivePropertyTaxRate": 0.0226,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "clearing": {
+    "neighborhoodId": "clearing",
+    "medianRentStudio": 874,
+    "medianRent1BR": 1126,
+    "medianRent2BR": 1408,
+    "medianRent3BR": 1850,
+    "medianHomePrice": 255000,
+    "effectivePropertyTaxRate": 0.0223,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-lawn": {
+    "neighborhoodId": "west-lawn",
+    "medianRentStudio": 837,
+    "medianRent1BR": 1078,
+    "medianRent2BR": 1348,
+    "medianRent3BR": 1771,
+    "medianHomePrice": 230000,
+    "effectivePropertyTaxRate": 0.0225,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "chicago-lawn": {
+    "neighborhoodId": "chicago-lawn",
+    "medianRentStudio": 785,
+    "medianRent1BR": 1011,
+    "medianRent2BR": 1264,
+    "medianRent3BR": 1661,
+    "medianHomePrice": 195000,
+    "effectivePropertyTaxRate": 0.0227,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-englewood": {
+    "neighborhoodId": "west-englewood",
+    "medianRentStudio": 689,
+    "medianRent1BR": 887,
+    "medianRent2BR": 1109,
+    "medianRent3BR": 1457,
+    "medianHomePrice": 130000,
+    "effectivePropertyTaxRate": 0.0231,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "greater-grand-crossing": {
+    "neighborhoodId": "greater-grand-crossing",
+    "medianRentStudio": 726,
+    "medianRent1BR": 935,
+    "medianRent2BR": 1169,
+    "medianRent3BR": 1536,
+    "medianHomePrice": 155000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "ashburn": {
+    "neighborhoodId": "ashburn",
+    "medianRentStudio": 822,
+    "medianRent1BR": 1059,
+    "medianRent2BR": 1324,
+    "medianRent3BR": 1740,
+    "medianHomePrice": 220000,
+    "effectivePropertyTaxRate": 0.0226,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "washington-heights": {
+    "neighborhoodId": "washington-heights",
+    "medianRentStudio": 756,
+    "medianRent1BR": 973,
+    "medianRent2BR": 1217,
+    "medianRent3BR": 1599,
+    "medianHomePrice": 175000,
+    "effectivePropertyTaxRate": 0.0228,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mount-greenwood": {
+    "neighborhoodId": "mount-greenwood",
+    "medianRentStudio": 971,
+    "medianRent1BR": 1251,
+    "medianRent2BR": 1564,
+    "medianRent3BR": 2055,
+    "medianHomePrice": 320000,
+    "effectivePropertyTaxRate": 0.0219,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "ohare": {
+    "neighborhoodId": "ohare",
+    "medianRentStudio": 911,
+    "medianRent1BR": 1174,
+    "medianRent2BR": 1468,
+    "medianRent3BR": 1929,
+    "medianHomePrice": 280000,
+    "effectivePropertyTaxRate": 0.0222,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "winnetka": {
+    "neighborhoodId": "winnetka",
+    "medianRent2BR": 3265,
+    "medianRent1BR": 2611,
+    "medianRent3BR": 4335,
+    "medianHomePrice": 1050000,
+    "effectivePropertyTaxRate": 0.0182,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "glencoe": {
+    "neighborhoodId": "glencoe",
+    "medianRent2BR": 3104,
+    "medianRent1BR": 2483,
+    "medianRent3BR": 4121,
+    "medianHomePrice": 980000,
+    "effectivePropertyTaxRate": 0.0195,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "northbrook": {
+    "neighborhoodId": "northbrook",
+    "medianRent2BR": 2346,
+    "medianRent1BR": 1876,
+    "medianRent3BR": 3115,
+    "medianHomePrice": 650000,
+    "effectivePropertyTaxRate": 0.0199,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "glenview": {
+    "neighborhoodId": "glenview",
+    "medianRent2BR": 2139,
+    "medianRent1BR": 1711,
+    "medianRent3BR": 2840,
+    "medianHomePrice": 560000,
+    "effectivePropertyTaxRate": 0.0176,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "morton-grove": {
+    "neighborhoodId": "morton-grove",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0178,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "niles": {
+    "neighborhoodId": "niles",
+    "medianRent2BR": 1565,
+    "medianRent1BR": 1252,
+    "medianRent3BR": 2078,
+    "medianHomePrice": 310000,
+    "effectivePropertyTaxRate": 0.0178,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lincolnwood": {
+    "neighborhoodId": "lincolnwood",
+    "medianRent2BR": 1841,
+    "medianRent1BR": 1472,
+    "medianRent3BR": 2444,
+    "medianHomePrice": 430000,
+    "effectivePropertyTaxRate": 0.0203,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "palatine": {
+    "neighborhoodId": "palatine",
+    "medianRent2BR": 1611,
+    "medianRent1BR": 1288,
+    "medianRent3BR": 2139,
+    "medianHomePrice": 330000,
+    "effectivePropertyTaxRate": 0.0199,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mount-prospect": {
+    "neighborhoodId": "mount-prospect",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0181,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "rolling-meadows": {
+    "neighborhoodId": "rolling-meadows",
+    "medianRent2BR": 1496,
+    "medianRent1BR": 1196,
+    "medianRent3BR": 1986,
+    "medianHomePrice": 280000,
+    "effectivePropertyTaxRate": 0.0182,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "wheeling": {
+    "neighborhoodId": "wheeling",
+    "medianRent2BR": 1519,
+    "medianRent1BR": 1215,
+    "medianRent3BR": 2017,
+    "medianHomePrice": 290000,
+    "effectivePropertyTaxRate": 0.0194,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "elk-grove-village": {
+    "neighborhoodId": "elk-grove-village",
+    "medianRent2BR": 1588,
+    "medianRent1BR": 1270,
+    "medianRent3BR": 2108,
+    "medianHomePrice": 320000,
+    "effectivePropertyTaxRate": 0.0202,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "rosemont": {
+    "neighborhoodId": "rosemont",
+    "medianRent2BR": 1450,
+    "medianRent1BR": 1160,
+    "medianRent3BR": 1925,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0191,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "norridge": {
+    "neighborhoodId": "norridge",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0192,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "melrose-park": {
+    "neighborhoodId": "melrose-park",
+    "medianRent2BR": 1404,
+    "medianRent1BR": 1123,
+    "medianRent3BR": 1864,
+    "medianHomePrice": 240000,
+    "effectivePropertyTaxRate": 0.0184,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "river-forest": {
+    "neighborhoodId": "river-forest",
+    "medianRent2BR": 1979,
+    "medianRent1BR": 1583,
+    "medianRent3BR": 2628,
+    "medianHomePrice": 490000,
+    "effectivePropertyTaxRate": 0.0204,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "forest-park": {
+    "neighborhoodId": "forest-park",
+    "medianRent2BR": 1611,
+    "medianRent1BR": 1288,
+    "medianRent3BR": 2139,
+    "medianHomePrice": 330000,
+    "effectivePropertyTaxRate": 0.0183,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "maywood": {
+    "neighborhoodId": "maywood",
+    "medianRent2BR": 1347,
+    "medianRent1BR": 1077,
+    "medianRent3BR": 1788,
+    "medianHomePrice": 215000,
+    "effectivePropertyTaxRate": 0.0196,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bellwood": {
+    "neighborhoodId": "bellwood",
+    "medianRent2BR": 1335,
+    "medianRent1BR": 1068,
+    "medianRent3BR": 1773,
+    "medianHomePrice": 210000,
+    "effectivePropertyTaxRate": 0.0192,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "westchester": {
+    "neighborhoodId": "westchester",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0176,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "la-grange": {
+    "neighborhoodId": "la-grange",
+    "medianRent2BR": 2047,
+    "medianRent1BR": 1637,
+    "medianRent3BR": 2718,
+    "medianHomePrice": 520000,
+    "effectivePropertyTaxRate": 0.0194,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "oak-lawn": {
+    "neighborhoodId": "oak-lawn",
+    "medianRent2BR": 1508,
+    "medianRent1BR": 1206,
+    "medianRent3BR": 2002,
+    "medianHomePrice": 285000,
+    "effectivePropertyTaxRate": 0.0183,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "evergreen-park": {
+    "neighborhoodId": "evergreen-park",
+    "medianRent2BR": 1404,
+    "medianRent1BR": 1123,
+    "medianRent3BR": 1864,
+    "medianHomePrice": 240000,
+    "effectivePropertyTaxRate": 0.018,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "palos-heights": {
+    "neighborhoodId": "palos-heights",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0187,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "palos-park": {
+    "neighborhoodId": "palos-park",
+    "medianRent2BR": 1933,
+    "medianRent1BR": 1546,
+    "medianRent3BR": 2567,
+    "medianHomePrice": 470000,
+    "effectivePropertyTaxRate": 0.0182,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "worth": {
+    "neighborhoodId": "worth",
+    "medianRent2BR": 1381,
+    "medianRent1BR": 1105,
+    "medianRent3BR": 1834,
+    "medianHomePrice": 230000,
+    "effectivePropertyTaxRate": 0.0183,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "homewood": {
+    "neighborhoodId": "homewood",
+    "medianRent2BR": 1450,
+    "medianRent1BR": 1160,
+    "medianRent3BR": 1925,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0184,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "flossmoor": {
+    "neighborhoodId": "flossmoor",
+    "medianRent2BR": 1703,
+    "medianRent1BR": 1362,
+    "medianRent3BR": 2261,
+    "medianHomePrice": 370000,
+    "effectivePropertyTaxRate": 0.0177,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "chicago-heights": {
+    "neighborhoodId": "chicago-heights",
+    "medianRent2BR": 1209,
+    "medianRent1BR": 967,
+    "medianRent3BR": 1605,
+    "medianHomePrice": 155000,
+    "effectivePropertyTaxRate": 0.0181,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "calumet-city": {
+    "neighborhoodId": "calumet-city",
+    "medianRent2BR": 1151,
+    "medianRent1BR": 921,
+    "medianRent3BR": 1528,
+    "medianHomePrice": 130000,
+    "effectivePropertyTaxRate": 0.0203,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "harvey": {
+    "neighborhoodId": "harvey",
+    "medianRent2BR": 1094,
+    "medianRent1BR": 875,
+    "medianRent3BR": 1453,
+    "medianHomePrice": 105000,
+    "effectivePropertyTaxRate": 0.0183,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "matteson": {
+    "neighborhoodId": "matteson",
+    "medianRent2BR": 1347,
+    "medianRent1BR": 1077,
+    "medianRent3BR": 1788,
+    "medianHomePrice": 215000,
+    "effectivePropertyTaxRate": 0.0185,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lombard": {
+    "neighborhoodId": "lombard",
+    "medianRent2BR": 1611,
+    "medianRent1BR": 1288,
+    "medianRent3BR": 2139,
+    "medianHomePrice": 330000,
+    "effectivePropertyTaxRate": 0.0215,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "villa-park": {
+    "neighborhoodId": "villa-park",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0197,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "glen-ellyn": {
+    "neighborhoodId": "glen-ellyn",
+    "medianRent2BR": 1956,
+    "medianRent1BR": 1564,
+    "medianRent3BR": 2597,
+    "medianHomePrice": 480000,
+    "effectivePropertyTaxRate": 0.0207,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "carol-stream": {
+    "neighborhoodId": "carol-stream",
+    "medianRent2BR": 1565,
+    "medianRent1BR": 1252,
+    "medianRent3BR": 2078,
+    "medianHomePrice": 310000,
+    "effectivePropertyTaxRate": 0.0222,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bloomingdale": {
+    "neighborhoodId": "bloomingdale",
+    "medianRent2BR": 1611,
+    "medianRent1BR": 1288,
+    "medianRent3BR": 2139,
+    "medianHomePrice": 330000,
+    "effectivePropertyTaxRate": 0.0218,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "addison": {
+    "neighborhoodId": "addison",
+    "medianRent2BR": 1519,
+    "medianRent1BR": 1215,
+    "medianRent3BR": 2017,
+    "medianHomePrice": 290000,
+    "effectivePropertyTaxRate": 0.0197,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bensenville": {
+    "neighborhoodId": "bensenville",
+    "medianRent2BR": 1519,
+    "medianRent1BR": 1215,
+    "medianRent3BR": 2017,
+    "medianHomePrice": 290000,
+    "effectivePropertyTaxRate": 0.0208,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "itasca": {
+    "neighborhoodId": "itasca",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0206,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "oak-brook": {
+    "neighborhoodId": "oak-brook",
+    "medianRent2BR": 2737,
+    "medianRent1BR": 2189,
+    "medianRent3BR": 3634,
+    "medianHomePrice": 820000,
+    "effectivePropertyTaxRate": 0.0203,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "hinsdale": {
+    "neighborhoodId": "hinsdale",
+    "medianRent2BR": 3104,
+    "medianRent1BR": 2483,
+    "medianRent3BR": 4121,
+    "medianHomePrice": 980000,
+    "effectivePropertyTaxRate": 0.0218,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "westmont": {
+    "neighborhoodId": "westmont",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0215,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lisle": {
+    "neighborhoodId": "lisle",
+    "medianRent2BR": 1703,
+    "medianRent1BR": 1362,
+    "medianRent3BR": 2261,
+    "medianHomePrice": 370000,
+    "effectivePropertyTaxRate": 0.0224,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "woodridge": {
+    "neighborhoodId": "woodridge",
+    "medianRent2BR": 1565,
+    "medianRent1BR": 1252,
+    "medianRent3BR": 2078,
+    "medianHomePrice": 310000,
+    "effectivePropertyTaxRate": 0.0217,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "west-chicago": {
+    "neighborhoodId": "west-chicago",
+    "medianRent2BR": 1450,
+    "medianRent1BR": 1160,
+    "medianRent3BR": 1925,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0209,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "north-chicago": {
+    "neighborhoodId": "north-chicago",
+    "medianRent2BR": 1128,
+    "medianRent1BR": 902,
+    "medianRent3BR": 1498,
+    "medianHomePrice": 120000,
+    "effectivePropertyTaxRate": 0.0253,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "gurnee": {
+    "neighborhoodId": "gurnee",
+    "medianRent2BR": 1496,
+    "medianRent1BR": 1196,
+    "medianRent3BR": 1986,
+    "medianHomePrice": 280000,
+    "effectivePropertyTaxRate": 0.0249,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "zion": {
+    "neighborhoodId": "zion",
+    "medianRent2BR": 1197,
+    "medianRent1BR": 957,
+    "medianRent3BR": 1589,
+    "medianHomePrice": 150000,
+    "effectivePropertyTaxRate": 0.0248,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lake-forest": {
+    "neighborhoodId": "lake-forest",
+    "medianRent2BR": 2920,
+    "medianRent1BR": 2335,
+    "medianRent3BR": 3877,
+    "medianHomePrice": 900000,
+    "effectivePropertyTaxRate": 0.0247,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "deerfield": {
+    "neighborhoodId": "deerfield",
+    "medianRent2BR": 2415,
+    "medianRent1BR": 1931,
+    "medianRent3BR": 3206,
+    "medianHomePrice": 680000,
+    "effectivePropertyTaxRate": 0.0247,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "libertyville": {
+    "neighborhoodId": "libertyville",
+    "medianRent2BR": 1956,
+    "medianRent1BR": 1564,
+    "medianRent3BR": 2597,
+    "medianHomePrice": 480000,
+    "effectivePropertyTaxRate": 0.0247,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mundelein": {
+    "neighborhoodId": "mundelein",
+    "medianRent2BR": 1588,
+    "medianRent1BR": 1270,
+    "medianRent3BR": 2108,
+    "medianHomePrice": 320000,
+    "effectivePropertyTaxRate": 0.0267,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "vernon-hills": {
+    "neighborhoodId": "vernon-hills",
+    "medianRent2BR": 1749,
+    "medianRent1BR": 1399,
+    "medianRent3BR": 2322,
+    "medianHomePrice": 390000,
+    "effectivePropertyTaxRate": 0.0275,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "grayslake": {
+    "neighborhoodId": "grayslake",
+    "medianRent2BR": 1611,
+    "medianRent1BR": 1288,
+    "medianRent3BR": 2139,
+    "medianHomePrice": 330000,
+    "effectivePropertyTaxRate": 0.0249,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "antioch": {
+    "neighborhoodId": "antioch",
+    "medianRent2BR": 1450,
+    "medianRent1BR": 1160,
+    "medianRent3BR": 1925,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0246,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lake-zurich": {
+    "neighborhoodId": "lake-zurich",
+    "medianRent2BR": 1772,
+    "medianRent1BR": 1417,
+    "medianRent3BR": 2353,
+    "medianHomePrice": 400000,
+    "effectivePropertyTaxRate": 0.0259,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "round-lake-beach": {
+    "neighborhoodId": "round-lake-beach",
+    "medianRent2BR": 1335,
+    "medianRent1BR": 1068,
+    "medianRent3BR": 1773,
+    "medianHomePrice": 210000,
+    "effectivePropertyTaxRate": 0.0274,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "bolingbrook": {
+    "neighborhoodId": "bolingbrook",
+    "medianRent2BR": 1519,
+    "medianRent1BR": 1215,
+    "medianRent3BR": 2017,
+    "medianHomePrice": 290000,
+    "effectivePropertyTaxRate": 0.0274,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "plainfield": {
+    "neighborhoodId": "plainfield",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0279,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "romeoville": {
+    "neighborhoodId": "romeoville",
+    "medianRent2BR": 1450,
+    "medianRent1BR": 1160,
+    "medianRent3BR": 1925,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0266,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "new-lenox": {
+    "neighborhoodId": "new-lenox",
+    "medianRent2BR": 1611,
+    "medianRent1BR": 1288,
+    "medianRent3BR": 2139,
+    "medianHomePrice": 330000,
+    "effectivePropertyTaxRate": 0.0269,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "frankfort": {
+    "neighborhoodId": "frankfort",
+    "medianRent2BR": 1749,
+    "medianRent1BR": 1399,
+    "medianRent3BR": 2322,
+    "medianHomePrice": 390000,
+    "effectivePropertyTaxRate": 0.0281,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mokena": {
+    "neighborhoodId": "mokena",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0267,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "lockport": {
+    "neighborhoodId": "lockport",
+    "medianRent2BR": 1473,
+    "medianRent1BR": 1178,
+    "medianRent3BR": 1956,
+    "medianHomePrice": 270000,
+    "effectivePropertyTaxRate": 0.0286,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "shorewood": {
+    "neighborhoodId": "shorewood",
+    "medianRent2BR": 1519,
+    "medianRent1BR": 1215,
+    "medianRent3BR": 2017,
+    "medianHomePrice": 290000,
+    "effectivePropertyTaxRate": 0.0273,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "homer-glen": {
+    "neighborhoodId": "homer-glen",
+    "medianRent2BR": 1772,
+    "medianRent1BR": 1417,
+    "medianRent3BR": 2353,
+    "medianHomePrice": 400000,
+    "effectivePropertyTaxRate": 0.0283,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "wilmington": {
+    "neighborhoodId": "wilmington",
+    "medianRent2BR": 1335,
+    "medianRent1BR": 1068,
+    "medianRent3BR": 1773,
+    "medianHomePrice": 210000,
+    "effectivePropertyTaxRate": 0.0289,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "st-charles": {
+    "neighborhoodId": "st-charles",
+    "medianRent2BR": 1772,
+    "medianRent1BR": 1417,
+    "medianRent3BR": 2353,
+    "medianHomePrice": 400000,
+    "effectivePropertyTaxRate": 0.0243,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "geneva": {
+    "neighborhoodId": "geneva",
+    "medianRent2BR": 1841,
+    "medianRent1BR": 1472,
+    "medianRent3BR": 2444,
+    "medianHomePrice": 430000,
+    "effectivePropertyTaxRate": 0.0241,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "batavia": {
+    "neighborhoodId": "batavia",
+    "medianRent2BR": 1634,
+    "medianRent1BR": 1307,
+    "medianRent3BR": 2170,
+    "medianHomePrice": 340000,
+    "effectivePropertyTaxRate": 0.0254,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "south-elgin": {
+    "neighborhoodId": "south-elgin",
+    "medianRent2BR": 1473,
+    "medianRent1BR": 1178,
+    "medianRent3BR": 1956,
+    "medianHomePrice": 270000,
+    "effectivePropertyTaxRate": 0.0241,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "carpentersville": {
+    "neighborhoodId": "carpentersville",
+    "medianRent2BR": 1358,
+    "medianRent1BR": 1086,
+    "medianRent3BR": 1803,
+    "medianHomePrice": 220000,
+    "effectivePropertyTaxRate": 0.0248,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "north-aurora": {
+    "neighborhoodId": "north-aurora",
+    "medianRent2BR": 1473,
+    "medianRent1BR": 1178,
+    "medianRent3BR": 1956,
+    "medianHomePrice": 270000,
+    "effectivePropertyTaxRate": 0.0233,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "sugar-grove": {
+    "neighborhoodId": "sugar-grove",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.023,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "crystal-lake": {
+    "neighborhoodId": "crystal-lake",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0278,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "woodstock": {
+    "neighborhoodId": "woodstock",
+    "medianRent2BR": 1450,
+    "medianRent1BR": 1160,
+    "medianRent3BR": 1925,
+    "medianHomePrice": 260000,
+    "effectivePropertyTaxRate": 0.0296,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "mchenry": {
+    "neighborhoodId": "mchenry",
+    "medianRent2BR": 1427,
+    "medianRent1BR": 1141,
+    "medianRent3BR": 1895,
+    "medianHomePrice": 250000,
+    "effectivePropertyTaxRate": 0.0276,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "algonquin": {
+    "neighborhoodId": "algonquin",
+    "medianRent2BR": 1565,
+    "medianRent1BR": 1252,
+    "medianRent3BR": 2078,
+    "medianHomePrice": 310000,
+    "effectivePropertyTaxRate": 0.0292,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
+  },
+  "huntley": {
+    "neighborhoodId": "huntley",
+    "medianRent2BR": 1542,
+    "medianRent1BR": 1233,
+    "medianRent3BR": 2047,
+    "medianHomePrice": 300000,
+    "effectivePropertyTaxRate": 0.0278,
+    "meta": {
+      "source": "Informed MVP estimate calibrated to well-known relative Chicagoland rent/price patterns — replace with Zillow ZORI (rent index) / ZHVI (home value index) and the Cook/DuPage/Lake/Will/Kane/McHenry County Assessor offices for production figures.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated"
+    }
   }
 }

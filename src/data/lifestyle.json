@@ -910,5 +910,1957 @@
       "valueType": "estimated",
       "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
     }
+  },
+  "edison-park": {
+    "neighborhoodId": "edison-park",
+    "walkability": 78,
+    "transitAccess": 74,
+    "restaurantDensity": 54,
+    "parksAccess": 43,
+    "safetyIndicator": 53,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "norwood-park": {
+    "neighborhoodId": "norwood-park",
+    "walkability": 78,
+    "transitAccess": 74,
+    "restaurantDensity": 53,
+    "parksAccess": 43,
+    "safetyIndicator": 52,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "forest-glen": {
+    "neighborhoodId": "forest-glen",
+    "walkability": 81,
+    "transitAccess": 77,
+    "restaurantDensity": 59,
+    "parksAccess": 43,
+    "safetyIndicator": 56,
+    "familyFriendliness": 59,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "north-park": {
+    "neighborhoodId": "north-park",
+    "walkability": 70,
+    "transitAccess": 59,
+    "restaurantDensity": 52,
+    "parksAccess": 43,
+    "safetyIndicator": 51,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "dunning": {
+    "neighborhoodId": "dunning",
+    "walkability": 77,
+    "transitAccess": 72,
+    "restaurantDensity": 51,
+    "parksAccess": 43,
+    "safetyIndicator": 51,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "montclare": {
+    "neighborhoodId": "montclare",
+    "walkability": 75,
+    "transitAccess": 71,
+    "restaurantDensity": 49,
+    "parksAccess": 42,
+    "safetyIndicator": 50,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "belmont-cragin": {
+    "neighborhoodId": "belmont-cragin",
+    "walkability": 67,
+    "transitAccess": 56,
+    "restaurantDensity": 47,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "hermosa": {
+    "neighborhoodId": "hermosa",
+    "walkability": 67,
+    "transitAccess": 55,
+    "restaurantDensity": 46,
+    "parksAccess": 42,
+    "safetyIndicator": 47,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "west-garfield-park": {
+    "neighborhoodId": "west-garfield-park",
+    "walkability": 71,
+    "transitAccess": 67,
+    "restaurantDensity": 42,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "east-garfield-park": {
+    "neighborhoodId": "east-garfield-park",
+    "walkability": 72,
+    "transitAccess": 68,
+    "restaurantDensity": 43,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "armour-square": {
+    "neighborhoodId": "armour-square",
+    "walkability": 77,
+    "transitAccess": 72,
+    "restaurantDensity": 51,
+    "parksAccess": 43,
+    "safetyIndicator": 51,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "douglas": {
+    "neighborhoodId": "douglas",
+    "walkability": 75,
+    "transitAccess": 71,
+    "restaurantDensity": 48,
+    "parksAccess": 42,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "oakland": {
+    "neighborhoodId": "oakland",
+    "walkability": 73,
+    "transitAccess": 69,
+    "restaurantDensity": 45,
+    "parksAccess": 42,
+    "safetyIndicator": 47,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "fuller-park": {
+    "neighborhoodId": "fuller-park",
+    "walkability": 70,
+    "transitAccess": 65,
+    "restaurantDensity": 39,
+    "parksAccess": 42,
+    "safetyIndicator": 38,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "grand-boulevard": {
+    "neighborhoodId": "grand-boulevard",
+    "walkability": 75,
+    "transitAccess": 70,
+    "restaurantDensity": 48,
+    "parksAccess": 42,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "washington-park": {
+    "neighborhoodId": "washington-park",
+    "walkability": 72,
+    "transitAccess": 67,
+    "restaurantDensity": 42,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "avalon-park": {
+    "neighborhoodId": "avalon-park",
+    "walkability": 73,
+    "transitAccess": 69,
+    "restaurantDensity": 45,
+    "parksAccess": 42,
+    "safetyIndicator": 47,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "south-chicago": {
+    "neighborhoodId": "south-chicago",
+    "walkability": 71,
+    "transitAccess": 67,
+    "restaurantDensity": 41,
+    "parksAccess": 42,
+    "safetyIndicator": 44,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "burnside": {
+    "neighborhoodId": "burnside",
+    "walkability": 70,
+    "transitAccess": 66,
+    "restaurantDensity": 40,
+    "parksAccess": 42,
+    "safetyIndicator": 43,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "calumet-heights": {
+    "neighborhoodId": "calumet-heights",
+    "walkability": 74,
+    "transitAccess": 70,
+    "restaurantDensity": 46,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "roseland": {
+    "neighborhoodId": "roseland",
+    "walkability": 71,
+    "transitAccess": 67,
+    "restaurantDensity": 42,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "south-deering": {
+    "neighborhoodId": "south-deering",
+    "walkability": 63,
+    "transitAccess": 52,
+    "restaurantDensity": 40,
+    "parksAccess": 42,
+    "safetyIndicator": 43,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "east-side": {
+    "neighborhoodId": "east-side",
+    "walkability": 72,
+    "transitAccess": 67,
+    "restaurantDensity": 42,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "west-pullman": {
+    "neighborhoodId": "west-pullman",
+    "walkability": 71,
+    "transitAccess": 66,
+    "restaurantDensity": 41,
+    "parksAccess": 42,
+    "safetyIndicator": 44,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "riverdale": {
+    "neighborhoodId": "riverdale",
+    "walkability": 69,
+    "transitAccess": 64,
+    "restaurantDensity": 38,
+    "parksAccess": 42,
+    "safetyIndicator": 34,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density). Well-documented as the lowest-income community area in Chicago; anchored below Englewood."
+    }
+  },
+  "hegewisch": {
+    "neighborhoodId": "hegewisch",
+    "walkability": 72,
+    "transitAccess": 68,
+    "restaurantDensity": 43,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "garfield-ridge": {
+    "neighborhoodId": "garfield-ridge",
+    "walkability": 75,
+    "transitAccess": 71,
+    "restaurantDensity": 48,
+    "parksAccess": 42,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "archer-heights": {
+    "neighborhoodId": "archer-heights",
+    "walkability": 74,
+    "transitAccess": 70,
+    "restaurantDensity": 47,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "brighton-park": {
+    "neighborhoodId": "brighton-park",
+    "walkability": 74,
+    "transitAccess": 69,
+    "restaurantDensity": 46,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "mckinley-park": {
+    "neighborhoodId": "mckinley-park",
+    "walkability": 74,
+    "transitAccess": 70,
+    "restaurantDensity": 47,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "new-city": {
+    "neighborhoodId": "new-city",
+    "walkability": 66,
+    "transitAccess": 55,
+    "restaurantDensity": 44,
+    "parksAccess": 42,
+    "safetyIndicator": 47,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "west-elsdon": {
+    "neighborhoodId": "west-elsdon",
+    "walkability": 74,
+    "transitAccess": 70,
+    "restaurantDensity": 47,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "gage-park": {
+    "neighborhoodId": "gage-park",
+    "walkability": 66,
+    "transitAccess": 55,
+    "restaurantDensity": 45,
+    "parksAccess": 42,
+    "safetyIndicator": 47,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "clearing": {
+    "neighborhoodId": "clearing",
+    "walkability": 75,
+    "transitAccess": 71,
+    "restaurantDensity": 48,
+    "parksAccess": 42,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "west-lawn": {
+    "neighborhoodId": "west-lawn",
+    "walkability": 74,
+    "transitAccess": 70,
+    "restaurantDensity": 46,
+    "parksAccess": 42,
+    "safetyIndicator": 48,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "chicago-lawn": {
+    "neighborhoodId": "chicago-lawn",
+    "walkability": 66,
+    "transitAccess": 54,
+    "restaurantDensity": 44,
+    "parksAccess": 42,
+    "safetyIndicator": 46,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "west-englewood": {
+    "neighborhoodId": "west-englewood",
+    "walkability": 70,
+    "transitAccess": 66,
+    "restaurantDensity": 40,
+    "parksAccess": 42,
+    "safetyIndicator": 43,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "greater-grand-crossing": {
+    "neighborhoodId": "greater-grand-crossing",
+    "walkability": 71,
+    "transitAccess": 67,
+    "restaurantDensity": 42,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 57,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "ashburn": {
+    "neighborhoodId": "ashburn",
+    "walkability": 67,
+    "transitAccess": 55,
+    "restaurantDensity": 46,
+    "parksAccess": 42,
+    "safetyIndicator": 47,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "washington-heights": {
+    "neighborhoodId": "washington-heights",
+    "walkability": 72,
+    "transitAccess": 68,
+    "restaurantDensity": 43,
+    "parksAccess": 42,
+    "safetyIndicator": 45,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "mount-greenwood": {
+    "neighborhoodId": "mount-greenwood",
+    "walkability": 70,
+    "transitAccess": 59,
+    "restaurantDensity": 52,
+    "parksAccess": 43,
+    "safetyIndicator": 64,
+    "familyFriendliness": 70,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density). Well-documented as one of the more stable, higher-homeownership, family-oriented community areas on the far southwest side; nudged above the pure price regression to reflect that reputation, similar in character to Beverly (already in the round-1 dataset)."
+    }
+  },
+  "ohare": {
+    "neighborhoodId": "ohare",
+    "walkability": 76,
+    "transitAccess": 72,
+    "restaurantDensity": 40,
+    "parksAccess": 33,
+    "safetyIndicator": 50,
+    "familyFriendliness": 43,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density). Dominated by O'Hare International Airport; residential population is small and concentrated in a few pockets (e.g. Schorsch Village), so family/lifestyle composites are nudged down relative to the price regression."
+    }
+  },
+  "winnetka": {
+    "neighborhoodId": "winnetka",
+    "walkability": 70,
+    "transitAccess": 86,
+    "restaurantDensity": 86,
+    "parksAccess": 75,
+    "safetyIndicator": 99,
+    "familyFriendliness": 99,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "glencoe": {
+    "neighborhoodId": "glencoe",
+    "walkability": 69,
+    "transitAccess": 84,
+    "restaurantDensity": 82,
+    "parksAccess": 73,
+    "safetyIndicator": 99,
+    "familyFriendliness": 99,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "northbrook": {
+    "neighborhoodId": "northbrook",
+    "walkability": 63,
+    "transitAccess": 76,
+    "restaurantDensity": 61,
+    "parksAccess": 62,
+    "safetyIndicator": 83,
+    "familyFriendliness": 82,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "glenview": {
+    "neighborhoodId": "glenview",
+    "walkability": 62,
+    "transitAccess": 74,
+    "restaurantDensity": 56,
+    "parksAccess": 59,
+    "safetyIndicator": 76,
+    "familyFriendliness": 78,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "morton-grove": {
+    "neighborhoodId": "morton-grove",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "niles": {
+    "neighborhoodId": "niles",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 40,
+    "parksAccess": 51,
+    "safetyIndicator": 57,
+    "familyFriendliness": 64,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "lincolnwood": {
+    "neighborhoodId": "lincolnwood",
+    "walkability": 54,
+    "transitAccess": 57,
+    "restaurantDensity": 48,
+    "parksAccess": 55,
+    "safetyIndicator": 66,
+    "familyFriendliness": 70,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "palatine": {
+    "neighborhoodId": "palatine",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 58,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "mount-prospect": {
+    "neighborhoodId": "mount-prospect",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "rolling-meadows": {
+    "neighborhoodId": "rolling-meadows",
+    "walkability": 51,
+    "transitAccess": 54,
+    "restaurantDensity": 38,
+    "parksAccess": 50,
+    "safetyIndicator": 54,
+    "familyFriendliness": 62,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "wheeling": {
+    "neighborhoodId": "wheeling",
+    "walkability": 57,
+    "transitAccess": 68,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 55,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "elk-grove-village": {
+    "neighborhoodId": "elk-grove-village",
+    "walkability": 52,
+    "transitAccess": 55,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 57,
+    "familyFriendliness": 64,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "rosemont": {
+    "neighborhoodId": "rosemont",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 37,
+    "parksAccess": 50,
+    "safetyIndicator": 53,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "norridge": {
+    "neighborhoodId": "norridge",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "melrose-park": {
+    "neighborhoodId": "melrose-park",
+    "walkability": 56,
+    "transitAccess": 67,
+    "restaurantDensity": 36,
+    "parksAccess": 49,
+    "safetyIndicator": 51,
+    "familyFriendliness": 60,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "river-forest": {
+    "neighborhoodId": "river-forest",
+    "walkability": 61,
+    "transitAccess": 73,
+    "restaurantDensity": 51,
+    "parksAccess": 57,
+    "safetyIndicator": 71,
+    "familyFriendliness": 74,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "forest-park": {
+    "neighborhoodId": "forest-park",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 58,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "maywood": {
+    "neighborhoodId": "maywood",
+    "walkability": 56,
+    "transitAccess": 66,
+    "restaurantDensity": 34,
+    "parksAccess": 48,
+    "safetyIndicator": 49,
+    "familyFriendliness": 59,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "bellwood": {
+    "neighborhoodId": "bellwood",
+    "walkability": 56,
+    "transitAccess": 66,
+    "restaurantDensity": 34,
+    "parksAccess": 48,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "westchester": {
+    "neighborhoodId": "westchester",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "la-grange": {
+    "neighborhoodId": "la-grange",
+    "walkability": 61,
+    "transitAccess": 73,
+    "restaurantDensity": 53,
+    "parksAccess": 58,
+    "safetyIndicator": 73,
+    "familyFriendliness": 75,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "oak-lawn": {
+    "neighborhoodId": "oak-lawn",
+    "walkability": 57,
+    "transitAccess": 68,
+    "restaurantDensity": 39,
+    "parksAccess": 50,
+    "safetyIndicator": 55,
+    "familyFriendliness": 62,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "evergreen-park": {
+    "neighborhoodId": "evergreen-park",
+    "walkability": 51,
+    "transitAccess": 53,
+    "restaurantDensity": 36,
+    "parksAccess": 49,
+    "safetyIndicator": 51,
+    "familyFriendliness": 60,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "palos-heights": {
+    "neighborhoodId": "palos-heights",
+    "walkability": 52,
+    "transitAccess": 55,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "palos-park": {
+    "neighborhoodId": "palos-park",
+    "walkability": 60,
+    "transitAccess": 72,
+    "restaurantDensity": 50,
+    "parksAccess": 56,
+    "safetyIndicator": 69,
+    "familyFriendliness": 73,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "worth": {
+    "neighborhoodId": "worth",
+    "walkability": 50,
+    "transitAccess": 53,
+    "restaurantDensity": 35,
+    "parksAccess": 49,
+    "safetyIndicator": 50,
+    "familyFriendliness": 59,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "homewood": {
+    "neighborhoodId": "homewood",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 37,
+    "parksAccess": 50,
+    "safetyIndicator": 53,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "flossmoor": {
+    "neighborhoodId": "flossmoor",
+    "walkability": 58,
+    "transitAccess": 70,
+    "restaurantDensity": 44,
+    "parksAccess": 53,
+    "safetyIndicator": 61,
+    "familyFriendliness": 67,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "chicago-heights": {
+    "neighborhoodId": "chicago-heights",
+    "walkability": 55,
+    "transitAccess": 65,
+    "restaurantDensity": 30,
+    "parksAccess": 46,
+    "safetyIndicator": 45,
+    "familyFriendliness": 55,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "calumet-city": {
+    "neighborhoodId": "calumet-city",
+    "walkability": 49,
+    "transitAccess": 50,
+    "restaurantDensity": 29,
+    "parksAccess": 45,
+    "safetyIndicator": 43,
+    "familyFriendliness": 54,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "harvey": {
+    "neighborhoodId": "harvey",
+    "walkability": 54,
+    "transitAccess": 64,
+    "restaurantDensity": 27,
+    "parksAccess": 45,
+    "safetyIndicator": 41,
+    "familyFriendliness": 53,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "matteson": {
+    "neighborhoodId": "matteson",
+    "walkability": 56,
+    "transitAccess": 66,
+    "restaurantDensity": 34,
+    "parksAccess": 48,
+    "safetyIndicator": 49,
+    "familyFriendliness": 59,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "lombard": {
+    "neighborhoodId": "lombard",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 58,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "villa-park": {
+    "neighborhoodId": "villa-park",
+    "walkability": 57,
+    "transitAccess": 68,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "glen-ellyn": {
+    "neighborhoodId": "glen-ellyn",
+    "walkability": 60,
+    "transitAccess": 72,
+    "restaurantDensity": 51,
+    "parksAccess": 57,
+    "safetyIndicator": 70,
+    "familyFriendliness": 73,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "carol-stream": {
+    "neighborhoodId": "carol-stream",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 40,
+    "parksAccess": 51,
+    "safetyIndicator": 57,
+    "familyFriendliness": 64,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "bloomingdale": {
+    "neighborhoodId": "bloomingdale",
+    "walkability": 52,
+    "transitAccess": 55,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 58,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "addison": {
+    "neighborhoodId": "addison",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 55,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "bensenville": {
+    "neighborhoodId": "bensenville",
+    "walkability": 57,
+    "transitAccess": 68,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 55,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "itasca": {
+    "neighborhoodId": "itasca",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "oak-brook": {
+    "neighborhoodId": "oak-brook",
+    "walkability": 61,
+    "transitAccess": 66,
+    "restaurantDensity": 72,
+    "parksAccess": 68,
+    "safetyIndicator": 96,
+    "familyFriendliness": 92,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "hinsdale": {
+    "neighborhoodId": "hinsdale",
+    "walkability": 69,
+    "transitAccess": 84,
+    "restaurantDensity": 82,
+    "parksAccess": 73,
+    "safetyIndicator": 99,
+    "familyFriendliness": 99,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "westmont": {
+    "neighborhoodId": "westmont",
+    "walkability": 57,
+    "transitAccess": 68,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "lisle": {
+    "neighborhoodId": "lisle",
+    "walkability": 58,
+    "transitAccess": 70,
+    "restaurantDensity": 44,
+    "parksAccess": 53,
+    "safetyIndicator": 61,
+    "familyFriendliness": 67,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "woodridge": {
+    "neighborhoodId": "woodridge",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 40,
+    "parksAccess": 51,
+    "safetyIndicator": 57,
+    "familyFriendliness": 64,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "west-chicago": {
+    "neighborhoodId": "west-chicago",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 37,
+    "parksAccess": 50,
+    "safetyIndicator": 53,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "north-chicago": {
+    "neighborhoodId": "north-chicago",
+    "walkability": 54,
+    "transitAccess": 64,
+    "restaurantDensity": 28,
+    "parksAccess": 45,
+    "safetyIndicator": 42,
+    "familyFriendliness": 53,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "gurnee": {
+    "neighborhoodId": "gurnee",
+    "walkability": 51,
+    "transitAccess": 54,
+    "restaurantDensity": 38,
+    "parksAccess": 50,
+    "safetyIndicator": 54,
+    "familyFriendliness": 62,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "zion": {
+    "neighborhoodId": "zion",
+    "walkability": 55,
+    "transitAccess": 65,
+    "restaurantDensity": 30,
+    "parksAccess": 46,
+    "safetyIndicator": 44,
+    "familyFriendliness": 55,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "lake-forest": {
+    "neighborhoodId": "lake-forest",
+    "walkability": 68,
+    "transitAccess": 82,
+    "restaurantDensity": 77,
+    "parksAccess": 70,
+    "safetyIndicator": 99,
+    "familyFriendliness": 96,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "deerfield": {
+    "neighborhoodId": "deerfield",
+    "walkability": 64,
+    "transitAccess": 77,
+    "restaurantDensity": 63,
+    "parksAccess": 63,
+    "safetyIndicator": 85,
+    "familyFriendliness": 84,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "libertyville": {
+    "neighborhoodId": "libertyville",
+    "walkability": 60,
+    "transitAccess": 72,
+    "restaurantDensity": 51,
+    "parksAccess": 57,
+    "safetyIndicator": 70,
+    "familyFriendliness": 73,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "mundelein": {
+    "neighborhoodId": "mundelein",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 57,
+    "familyFriendliness": 64,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "vernon-hills": {
+    "neighborhoodId": "vernon-hills",
+    "walkability": 59,
+    "transitAccess": 70,
+    "restaurantDensity": 45,
+    "parksAccess": 54,
+    "safetyIndicator": 63,
+    "familyFriendliness": 68,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "grayslake": {
+    "neighborhoodId": "grayslake",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 58,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "antioch": {
+    "neighborhoodId": "antioch",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 37,
+    "parksAccess": 50,
+    "safetyIndicator": 53,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "lake-zurich": {
+    "neighborhoodId": "lake-zurich",
+    "walkability": 53,
+    "transitAccess": 56,
+    "restaurantDensity": 46,
+    "parksAccess": 54,
+    "safetyIndicator": 64,
+    "familyFriendliness": 69,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "round-lake-beach": {
+    "neighborhoodId": "round-lake-beach",
+    "walkability": 56,
+    "transitAccess": 66,
+    "restaurantDensity": 34,
+    "parksAccess": 48,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "bolingbrook": {
+    "neighborhoodId": "bolingbrook",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 55,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "plainfield": {
+    "neighborhoodId": "plainfield",
+    "walkability": 52,
+    "transitAccess": 55,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "romeoville": {
+    "neighborhoodId": "romeoville",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 37,
+    "parksAccess": 50,
+    "safetyIndicator": 53,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "new-lenox": {
+    "neighborhoodId": "new-lenox",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 41,
+    "parksAccess": 52,
+    "safetyIndicator": 58,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "frankfort": {
+    "neighborhoodId": "frankfort",
+    "walkability": 53,
+    "transitAccess": 56,
+    "restaurantDensity": 45,
+    "parksAccess": 54,
+    "safetyIndicator": 63,
+    "familyFriendliness": 68,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "mokena": {
+    "neighborhoodId": "mokena",
+    "walkability": 58,
+    "transitAccess": 69,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "lockport": {
+    "neighborhoodId": "lockport",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 38,
+    "parksAccess": 50,
+    "safetyIndicator": 54,
+    "familyFriendliness": 62,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "shorewood": {
+    "neighborhoodId": "shorewood",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 55,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "homer-glen": {
+    "neighborhoodId": "homer-glen",
+    "walkability": 53,
+    "transitAccess": 56,
+    "restaurantDensity": 46,
+    "parksAccess": 54,
+    "safetyIndicator": 64,
+    "familyFriendliness": 69,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "wilmington": {
+    "neighborhoodId": "wilmington",
+    "walkability": 50,
+    "transitAccess": 52,
+    "restaurantDensity": 34,
+    "parksAccess": 48,
+    "safetyIndicator": 49,
+    "familyFriendliness": 58,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "st-charles": {
+    "neighborhoodId": "st-charles",
+    "walkability": 53,
+    "transitAccess": 56,
+    "restaurantDensity": 46,
+    "parksAccess": 54,
+    "safetyIndicator": 64,
+    "familyFriendliness": 69,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "geneva": {
+    "neighborhoodId": "geneva",
+    "walkability": 60,
+    "transitAccess": 71,
+    "restaurantDensity": 48,
+    "parksAccess": 55,
+    "safetyIndicator": 66,
+    "familyFriendliness": 70,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "batavia": {
+    "neighborhoodId": "batavia",
+    "walkability": 52,
+    "transitAccess": 55,
+    "restaurantDensity": 42,
+    "parksAccess": 52,
+    "safetyIndicator": 59,
+    "familyFriendliness": 65,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "south-elgin": {
+    "neighborhoodId": "south-elgin",
+    "walkability": 51,
+    "transitAccess": 53,
+    "restaurantDensity": 38,
+    "parksAccess": 50,
+    "safetyIndicator": 54,
+    "familyFriendliness": 62,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "carpentersville": {
+    "neighborhoodId": "carpentersville",
+    "walkability": 50,
+    "transitAccess": 52,
+    "restaurantDensity": 35,
+    "parksAccess": 48,
+    "safetyIndicator": 50,
+    "familyFriendliness": 59,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "north-aurora": {
+    "neighborhoodId": "north-aurora",
+    "walkability": 51,
+    "transitAccess": 53,
+    "restaurantDensity": 38,
+    "parksAccess": 50,
+    "safetyIndicator": 54,
+    "familyFriendliness": 62,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "sugar-grove": {
+    "neighborhoodId": "sugar-grove",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "crystal-lake": {
+    "neighborhoodId": "crystal-lake",
+    "walkability": 57,
+    "transitAccess": 68,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "woodstock": {
+    "neighborhoodId": "woodstock",
+    "walkability": 57,
+    "transitAccess": 67,
+    "restaurantDensity": 37,
+    "parksAccess": 50,
+    "safetyIndicator": 53,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "mchenry": {
+    "neighborhoodId": "mchenry",
+    "walkability": 56,
+    "transitAccess": 67,
+    "restaurantDensity": 36,
+    "parksAccess": 49,
+    "safetyIndicator": 52,
+    "familyFriendliness": 61,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "algonquin": {
+    "neighborhoodId": "algonquin",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 40,
+    "parksAccess": 51,
+    "safetyIndicator": 57,
+    "familyFriendliness": 64,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
+  },
+  "huntley": {
+    "neighborhoodId": "huntley",
+    "walkability": 52,
+    "transitAccess": 54,
+    "restaurantDensity": 39,
+    "parksAccess": 51,
+    "safetyIndicator": 56,
+    "familyFriendliness": 63,
+    "meta": {
+      "source": "Informed MVP composite index; see notes for what a production replacement dataset would be.",
+      "geographicLevel": "neighborhood",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "walkability/transitAccess mirror the transportation estimates above; restaurantDensity and parksAccess are informed MVP estimates (replace with Chicago/municipal open-data park layers and a business-density source such as the Chicago Data Portal business license dataset); safetyIndicator is an illustrative relative index only, NOT an official crime statistic (replace with Chicago Data Portal / municipal police crime data); familyFriendliness is a qualitative MVP composite (replace with GreatSchools/state report-card data plus park/school-district density)."
+    }
   }
 }

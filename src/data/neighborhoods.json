@@ -796,5 +796,1713 @@
     ],
     "settlementPattern": "transit-suburb",
     "geoFeatureId": "joliet"
+  },
+  {
+    "id": "edison-park",
+    "name": "Edison Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.8138,
+      42.0076
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "edison-park"
+  },
+  {
+    "id": "norwood-park",
+    "name": "Norwood Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.803,
+      41.9849
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "norwood-park"
+  },
+  {
+    "id": "forest-glen",
+    "name": "Forest Glen",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7585,
+      41.994
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "forest-glen"
+  },
+  {
+    "id": "north-park",
+    "name": "North Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7235,
+      41.9836
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "north-park"
+  },
+  {
+    "id": "dunning",
+    "name": "Dunning",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.806,
+      41.9465
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "dunning"
+  },
+  {
+    "id": "montclare",
+    "name": "Montclare",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.798,
+      41.9293
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "montclare"
+  },
+  {
+    "id": "belmont-cragin",
+    "name": "Belmont Cragin",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7655,
+      41.9273
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "belmont-cragin"
+  },
+  {
+    "id": "hermosa",
+    "name": "Hermosa",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7348,
+      41.9245
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "hermosa"
+  },
+  {
+    "id": "west-garfield-park",
+    "name": "West Garfield Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7303,
+      41.8786
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "west-garfield-park"
+  },
+  {
+    "id": "east-garfield-park",
+    "name": "East Garfield Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.706,
+      41.8789
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "east-garfield-park"
+  },
+  {
+    "id": "armour-square",
+    "name": "Armour Square",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.634,
+      41.8421
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "armour-square"
+  },
+  {
+    "id": "douglas",
+    "name": "Douglas (Bronzeville)",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6187,
+      41.8349
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "douglas"
+  },
+  {
+    "id": "oakland",
+    "name": "Oakland",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6032,
+      41.8238
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "oakland"
+  },
+  {
+    "id": "fuller-park",
+    "name": "Fuller Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6324,
+      41.809
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "fuller-park"
+  },
+  {
+    "id": "grand-boulevard",
+    "name": "Grand Boulevard (Bronzeville)",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6179,
+      41.813
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "grand-boulevard"
+  },
+  {
+    "id": "washington-park",
+    "name": "Washington Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6179,
+      41.7924
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "washington-park"
+  },
+  {
+    "id": "avalon-park",
+    "name": "Avalon Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.5863,
+      41.7442
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "avalon-park"
+  },
+  {
+    "id": "south-chicago",
+    "name": "South Chicago",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.5515,
+      41.7412
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "south-chicago"
+  },
+  {
+    "id": "burnside",
+    "name": "Burnside",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.5965,
+      41.7281
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "burnside"
+  },
+  {
+    "id": "calumet-heights",
+    "name": "Calumet Heights",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.5728,
+      41.7297
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "calumet-heights"
+  },
+  {
+    "id": "roseland",
+    "name": "Roseland",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6233,
+      41.7065
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "roseland"
+  },
+  {
+    "id": "south-deering",
+    "name": "South Deering",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.57,
+      41.6907
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "south-deering"
+  },
+  {
+    "id": "east-side",
+    "name": "East Side",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.5349,
+      41.7074
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "east-side"
+  },
+  {
+    "id": "west-pullman",
+    "name": "West Pullman",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6357,
+      41.6738
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "west-pullman"
+  },
+  {
+    "id": "riverdale",
+    "name": "Riverdale",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6028,
+      41.6603
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "riverdale"
+  },
+  {
+    "id": "hegewisch",
+    "name": "Hegewisch",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.5466,
+      41.6605
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "hegewisch"
+  },
+  {
+    "id": "garfield-ridge",
+    "name": "Garfield Ridge",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7642,
+      41.7962
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "garfield-ridge"
+  },
+  {
+    "id": "archer-heights",
+    "name": "Archer Heights",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7266,
+      41.8108
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "archer-heights"
+  },
+  {
+    "id": "brighton-park",
+    "name": "Brighton Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6989,
+      41.8172
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "brighton-park"
+  },
+  {
+    "id": "mckinley-park",
+    "name": "McKinley Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6724,
+      41.83
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "mckinley-park"
+  },
+  {
+    "id": "new-city",
+    "name": "New City (Back of the Yards)",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6592,
+      41.8091
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "new-city"
+  },
+  {
+    "id": "west-elsdon",
+    "name": "West Elsdon",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7243,
+      41.793
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "west-elsdon"
+  },
+  {
+    "id": "gage-park",
+    "name": "Gage Park",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6963,
+      41.7954
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "gage-park"
+  },
+  {
+    "id": "clearing",
+    "name": "Clearing",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7685,
+      41.7796
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "clearing"
+  },
+  {
+    "id": "west-lawn",
+    "name": "West Lawn",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7269,
+      41.7699
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "west-lawn"
+  },
+  {
+    "id": "chicago-lawn",
+    "name": "Chicago Lawn",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6957,
+      41.7719
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "chicago-lawn"
+  },
+  {
+    "id": "west-englewood",
+    "name": "West Englewood",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6666,
+      41.7759
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "west-englewood"
+  },
+  {
+    "id": "greater-grand-crossing",
+    "name": "Greater Grand Crossing",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6161,
+      41.7633
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "greater-grand-crossing"
+  },
+  {
+    "id": "ashburn",
+    "name": "Ashburn",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7084,
+      41.7458
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "ashburn"
+  },
+  {
+    "id": "washington-heights",
+    "name": "Washington Heights",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.6488,
+      41.7175
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "washington-heights"
+  },
+  {
+    "id": "mount-greenwood",
+    "name": "Mount Greenwood",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.7132,
+      41.6949
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "mount-greenwood"
+  },
+  {
+    "id": "ohare",
+    "name": "O'Hare",
+    "type": "chicago-community-area",
+    "countyId": "cook",
+    "municipalityId": "chicago",
+    "taxJurisdictionId": "chicago-jurisdiction",
+    "centroid": [
+      -87.8935,
+      41.9755
+    ],
+    "settlementPattern": "urban",
+    "geoFeatureId": "ohare"
+  },
+  {
+    "id": "winnetka",
+    "name": "Winnetka",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "winnetka",
+    "taxJurisdictionId": "winnetka-jurisdiction",
+    "centroid": [
+      -87.7362,
+      42.1082
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "winnetka"
+  },
+  {
+    "id": "glencoe",
+    "name": "Glencoe",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "glencoe",
+    "taxJurisdictionId": "glencoe-jurisdiction",
+    "centroid": [
+      -87.757,
+      42.1358
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "glencoe"
+  },
+  {
+    "id": "northbrook",
+    "name": "Northbrook",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "northbrook",
+    "taxJurisdictionId": "northbrook-jurisdiction",
+    "centroid": [
+      -87.8256,
+      42.1275
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "northbrook"
+  },
+  {
+    "id": "glenview",
+    "name": "Glenview",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "glenview",
+    "taxJurisdictionId": "glenview-jurisdiction",
+    "centroid": [
+      -87.7878,
+      42.0769
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "glenview"
+  },
+  {
+    "id": "morton-grove",
+    "name": "Morton Grove",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "morton-grove",
+    "taxJurisdictionId": "morton-grove-jurisdiction",
+    "centroid": [
+      -87.7828,
+      42.0401
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "morton-grove"
+  },
+  {
+    "id": "niles",
+    "name": "Niles",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "niles",
+    "taxJurisdictionId": "niles-jurisdiction",
+    "centroid": [
+      -87.802,
+      42.0189
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "niles"
+  },
+  {
+    "id": "lincolnwood",
+    "name": "Lincolnwood",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "lincolnwood",
+    "taxJurisdictionId": "lincolnwood-jurisdiction",
+    "centroid": [
+      -87.7326,
+      42.0058
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "lincolnwood"
+  },
+  {
+    "id": "palatine",
+    "name": "Palatine",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "palatine",
+    "taxJurisdictionId": "palatine-jurisdiction",
+    "centroid": [
+      -88.0342,
+      42.1103
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "palatine"
+  },
+  {
+    "id": "mount-prospect",
+    "name": "Mount Prospect",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "mount-prospect",
+    "taxJurisdictionId": "mount-prospect-jurisdiction",
+    "centroid": [
+      -87.937,
+      42.0664
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "mount-prospect"
+  },
+  {
+    "id": "rolling-meadows",
+    "name": "Rolling Meadows",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "rolling-meadows",
+    "taxJurisdictionId": "rolling-meadows-jurisdiction",
+    "centroid": [
+      -88.0134,
+      42.0842
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "rolling-meadows"
+  },
+  {
+    "id": "wheeling",
+    "name": "Wheeling",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "wheeling",
+    "taxJurisdictionId": "wheeling-jurisdiction",
+    "centroid": [
+      -87.9287,
+      42.1392
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "wheeling"
+  },
+  {
+    "id": "elk-grove-village",
+    "name": "Elk Grove Village",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "elk-grove-village",
+    "taxJurisdictionId": "elk-grove-village-jurisdiction",
+    "centroid": [
+      -87.9773,
+      42.0034
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "elk-grove-village"
+  },
+  {
+    "id": "rosemont",
+    "name": "Rosemont",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "rosemont",
+    "taxJurisdictionId": "rosemont-jurisdiction",
+    "centroid": [
+      -87.885,
+      41.9865
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "rosemont"
+  },
+  {
+    "id": "norridge",
+    "name": "Norridge",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "norridge",
+    "taxJurisdictionId": "norridge-jurisdiction",
+    "centroid": [
+      -87.8281,
+      41.9647
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "norridge"
+  },
+  {
+    "id": "melrose-park",
+    "name": "Melrose Park",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "melrose-park",
+    "taxJurisdictionId": "melrose-park-jurisdiction",
+    "centroid": [
+      -87.8564,
+      41.9092
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "melrose-park"
+  },
+  {
+    "id": "river-forest",
+    "name": "River Forest",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "river-forest",
+    "taxJurisdictionId": "river-forest-jurisdiction",
+    "centroid": [
+      -87.8134,
+      41.8951
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "river-forest"
+  },
+  {
+    "id": "forest-park",
+    "name": "Forest Park",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "forest-park",
+    "taxJurisdictionId": "forest-park-jurisdiction",
+    "centroid": [
+      -87.8134,
+      41.8744
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "forest-park"
+  },
+  {
+    "id": "maywood",
+    "name": "Maywood",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "maywood",
+    "taxJurisdictionId": "maywood-jurisdiction",
+    "centroid": [
+      -87.8406,
+      41.8792
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "maywood"
+  },
+  {
+    "id": "bellwood",
+    "name": "Bellwood",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "bellwood",
+    "taxJurisdictionId": "bellwood-jurisdiction",
+    "centroid": [
+      -87.8814,
+      41.8842
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "bellwood"
+  },
+  {
+    "id": "westchester",
+    "name": "Westchester",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "westchester",
+    "taxJurisdictionId": "westchester-jurisdiction",
+    "centroid": [
+      -87.8814,
+      41.8503
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "westchester"
+  },
+  {
+    "id": "la-grange",
+    "name": "La Grange",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "la-grange",
+    "taxJurisdictionId": "la-grange-jurisdiction",
+    "centroid": [
+      -87.8687,
+      41.8117
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "la-grange"
+  },
+  {
+    "id": "oak-lawn",
+    "name": "Oak Lawn",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "oak-lawn",
+    "taxJurisdictionId": "oak-lawn-jurisdiction",
+    "centroid": [
+      -87.7581,
+      41.72
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "oak-lawn"
+  },
+  {
+    "id": "evergreen-park",
+    "name": "Evergreen Park",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "evergreen-park",
+    "taxJurisdictionId": "evergreen-park-jurisdiction",
+    "centroid": [
+      -87.702,
+      41.7228
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "evergreen-park"
+  },
+  {
+    "id": "palos-heights",
+    "name": "Palos Heights",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "palos-heights",
+    "taxJurisdictionId": "palos-heights-jurisdiction",
+    "centroid": [
+      -87.797,
+      41.6673
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "palos-heights"
+  },
+  {
+    "id": "palos-park",
+    "name": "Palos Park",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "palos-park",
+    "taxJurisdictionId": "palos-park-jurisdiction",
+    "centroid": [
+      -87.832,
+      41.6606
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "palos-park"
+  },
+  {
+    "id": "worth",
+    "name": "Worth",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "worth",
+    "taxJurisdictionId": "worth-jurisdiction",
+    "centroid": [
+      -87.7942,
+      41.6889
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "worth"
+  },
+  {
+    "id": "homewood",
+    "name": "Homewood",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "homewood",
+    "taxJurisdictionId": "homewood-jurisdiction",
+    "centroid": [
+      -87.6653,
+      41.5581
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "homewood"
+  },
+  {
+    "id": "flossmoor",
+    "name": "Flossmoor",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "flossmoor",
+    "taxJurisdictionId": "flossmoor-jurisdiction",
+    "centroid": [
+      -87.6845,
+      41.5411
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "flossmoor"
+  },
+  {
+    "id": "chicago-heights",
+    "name": "Chicago Heights",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "chicago-heights",
+    "taxJurisdictionId": "chicago-heights-jurisdiction",
+    "centroid": [
+      -87.6353,
+      41.5064
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "chicago-heights"
+  },
+  {
+    "id": "calumet-city",
+    "name": "Calumet City",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "calumet-city",
+    "taxJurisdictionId": "calumet-city-jurisdiction",
+    "centroid": [
+      -87.5292,
+      41.6156
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "calumet-city"
+  },
+  {
+    "id": "harvey",
+    "name": "Harvey",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "harvey",
+    "taxJurisdictionId": "harvey-jurisdiction",
+    "centroid": [
+      -87.6459,
+      41.6086
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "harvey"
+  },
+  {
+    "id": "matteson",
+    "name": "Matteson",
+    "type": "suburb",
+    "countyId": "cook",
+    "municipalityId": "matteson",
+    "taxJurisdictionId": "matteson-jurisdiction",
+    "centroid": [
+      -87.7392,
+      41.5045
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "matteson"
+  },
+  {
+    "id": "lombard",
+    "name": "Lombard",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "lombard",
+    "taxJurisdictionId": "lombard-jurisdiction",
+    "centroid": [
+      -88.0084,
+      41.88
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "lombard"
+  },
+  {
+    "id": "villa-park",
+    "name": "Villa Park",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "villa-park",
+    "taxJurisdictionId": "villa-park-jurisdiction",
+    "centroid": [
+      -87.9797,
+      41.8895
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "villa-park"
+  },
+  {
+    "id": "glen-ellyn",
+    "name": "Glen Ellyn",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "glen-ellyn",
+    "taxJurisdictionId": "glen-ellyn-jurisdiction",
+    "centroid": [
+      -88.0673,
+      41.8776
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "glen-ellyn"
+  },
+  {
+    "id": "carol-stream",
+    "name": "Carol Stream",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "carol-stream",
+    "taxJurisdictionId": "carol-stream-jurisdiction",
+    "centroid": [
+      -88.1339,
+      41.9114
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "carol-stream"
+  },
+  {
+    "id": "bloomingdale",
+    "name": "Bloomingdale",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "bloomingdale",
+    "taxJurisdictionId": "bloomingdale-jurisdiction",
+    "centroid": [
+      -88.0806,
+      41.955
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "bloomingdale"
+  },
+  {
+    "id": "addison",
+    "name": "Addison",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "addison",
+    "taxJurisdictionId": "addison-jurisdiction",
+    "centroid": [
+      -88.0006,
+      41.9314
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "addison"
+  },
+  {
+    "id": "bensenville",
+    "name": "Bensenville",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "bensenville",
+    "taxJurisdictionId": "bensenville-jurisdiction",
+    "centroid": [
+      -87.9401,
+      41.9556
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "bensenville"
+  },
+  {
+    "id": "itasca",
+    "name": "Itasca",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "itasca",
+    "taxJurisdictionId": "itasca-jurisdiction",
+    "centroid": [
+      -88.0056,
+      41.9739
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "itasca"
+  },
+  {
+    "id": "oak-brook",
+    "name": "Oak Brook",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "oak-brook",
+    "taxJurisdictionId": "oak-brook-jurisdiction",
+    "centroid": [
+      -87.9298,
+      41.84
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "oak-brook"
+  },
+  {
+    "id": "hinsdale",
+    "name": "Hinsdale",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "hinsdale",
+    "taxJurisdictionId": "hinsdale-jurisdiction",
+    "centroid": [
+      -87.9295,
+      41.802
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "hinsdale"
+  },
+  {
+    "id": "westmont",
+    "name": "Westmont",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "westmont",
+    "taxJurisdictionId": "westmont-jurisdiction",
+    "centroid": [
+      -87.9773,
+      41.7961
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "westmont"
+  },
+  {
+    "id": "lisle",
+    "name": "Lisle",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "lisle",
+    "taxJurisdictionId": "lisle-jurisdiction",
+    "centroid": [
+      -88.0748,
+      41.8011
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "lisle"
+  },
+  {
+    "id": "woodridge",
+    "name": "Woodridge",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "woodridge",
+    "taxJurisdictionId": "woodridge-jurisdiction",
+    "centroid": [
+      -88.0723,
+      41.7508
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "woodridge"
+  },
+  {
+    "id": "west-chicago",
+    "name": "West Chicago",
+    "type": "suburb",
+    "countyId": "dupage",
+    "municipalityId": "west-chicago",
+    "taxJurisdictionId": "west-chicago-jurisdiction",
+    "centroid": [
+      -88.2073,
+      41.885
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "west-chicago"
+  },
+  {
+    "id": "north-chicago",
+    "name": "North Chicago",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "north-chicago",
+    "taxJurisdictionId": "north-chicago-jurisdiction",
+    "centroid": [
+      -87.8412,
+      42.3253
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "north-chicago"
+  },
+  {
+    "id": "gurnee",
+    "name": "Gurnee",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "gurnee",
+    "taxJurisdictionId": "gurnee-jurisdiction",
+    "centroid": [
+      -87.902,
+      42.3706
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "gurnee"
+  },
+  {
+    "id": "zion",
+    "name": "Zion",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "zion",
+    "taxJurisdictionId": "zion-jurisdiction",
+    "centroid": [
+      -87.8323,
+      42.4467
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "zion"
+  },
+  {
+    "id": "lake-forest",
+    "name": "Lake Forest",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "lake-forest",
+    "taxJurisdictionId": "lake-forest-jurisdiction",
+    "centroid": [
+      -87.8406,
+      42.2411
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "lake-forest"
+  },
+  {
+    "id": "deerfield",
+    "name": "Deerfield",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "deerfield",
+    "taxJurisdictionId": "deerfield-jurisdiction",
+    "centroid": [
+      -87.8445,
+      42.1711
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "deerfield"
+  },
+  {
+    "id": "libertyville",
+    "name": "Libertyville",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "libertyville",
+    "taxJurisdictionId": "libertyville-jurisdiction",
+    "centroid": [
+      -87.9581,
+      42.2839
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "libertyville"
+  },
+  {
+    "id": "mundelein",
+    "name": "Mundelein",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "mundelein",
+    "taxJurisdictionId": "mundelein-jurisdiction",
+    "centroid": [
+      -88.0031,
+      42.2731
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "mundelein"
+  },
+  {
+    "id": "vernon-hills",
+    "name": "Vernon Hills",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "vernon-hills",
+    "taxJurisdictionId": "vernon-hills-jurisdiction",
+    "centroid": [
+      -87.9756,
+      42.214
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "vernon-hills"
+  },
+  {
+    "id": "grayslake",
+    "name": "Grayslake",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "grayslake",
+    "taxJurisdictionId": "grayslake-jurisdiction",
+    "centroid": [
+      -88.0434,
+      42.3453
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "grayslake"
+  },
+  {
+    "id": "antioch",
+    "name": "Antioch",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "antioch",
+    "taxJurisdictionId": "antioch-jurisdiction",
+    "centroid": [
+      -88.0942,
+      42.4753
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "antioch"
+  },
+  {
+    "id": "lake-zurich",
+    "name": "Lake Zurich",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "lake-zurich",
+    "taxJurisdictionId": "lake-zurich-jurisdiction",
+    "centroid": [
+      -88.0934,
+      42.197
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "lake-zurich"
+  },
+  {
+    "id": "round-lake-beach",
+    "name": "Round Lake Beach",
+    "type": "suburb",
+    "countyId": "lake",
+    "municipalityId": "round-lake-beach",
+    "taxJurisdictionId": "round-lake-beach-jurisdiction",
+    "centroid": [
+      -88.0787,
+      42.3717
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "round-lake-beach"
+  },
+  {
+    "id": "bolingbrook",
+    "name": "Bolingbrook",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "bolingbrook",
+    "taxJurisdictionId": "bolingbrook-jurisdiction",
+    "centroid": [
+      -88.0687,
+      41.6987
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "bolingbrook"
+  },
+  {
+    "id": "plainfield",
+    "name": "Plainfield",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "plainfield",
+    "taxJurisdictionId": "plainfield-jurisdiction",
+    "centroid": [
+      -88.2073,
+      41.6273
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "plainfield"
+  },
+  {
+    "id": "romeoville",
+    "name": "Romeoville",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "romeoville",
+    "taxJurisdictionId": "romeoville-jurisdiction",
+    "centroid": [
+      -88.0895,
+      41.6475
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "romeoville"
+  },
+  {
+    "id": "new-lenox",
+    "name": "New Lenox",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "new-lenox",
+    "taxJurisdictionId": "new-lenox-jurisdiction",
+    "centroid": [
+      -87.9648,
+      41.5084
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "new-lenox"
+  },
+  {
+    "id": "frankfort",
+    "name": "Frankfort",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "frankfort",
+    "taxJurisdictionId": "frankfort-jurisdiction",
+    "centroid": [
+      -87.8501,
+      41.4956
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "frankfort"
+  },
+  {
+    "id": "mokena",
+    "name": "Mokena",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "mokena",
+    "taxJurisdictionId": "mokena-jurisdiction",
+    "centroid": [
+      -87.8887,
+      41.5262
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "mokena"
+  },
+  {
+    "id": "lockport",
+    "name": "Lockport",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "lockport",
+    "taxJurisdictionId": "lockport-jurisdiction",
+    "centroid": [
+      -88.0559,
+      41.5895
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "lockport"
+  },
+  {
+    "id": "shorewood",
+    "name": "Shorewood",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "shorewood",
+    "taxJurisdictionId": "shorewood-jurisdiction",
+    "centroid": [
+      -88.2151,
+      41.5231
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "shorewood"
+  },
+  {
+    "id": "homer-glen",
+    "name": "Homer Glen",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "homer-glen",
+    "taxJurisdictionId": "homer-glen-jurisdiction",
+    "centroid": [
+      -87.9448,
+      41.6034
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "homer-glen"
+  },
+  {
+    "id": "wilmington",
+    "name": "Wilmington",
+    "type": "suburb",
+    "countyId": "will",
+    "municipalityId": "wilmington",
+    "taxJurisdictionId": "wilmington-jurisdiction",
+    "centroid": [
+      -88.147,
+      41.3081
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "wilmington"
+  },
+  {
+    "id": "st-charles",
+    "name": "St. Charles",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "st-charles",
+    "taxJurisdictionId": "st-charles-jurisdiction",
+    "centroid": [
+      -88.3126,
+      41.9142
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "st-charles"
+  },
+  {
+    "id": "geneva",
+    "name": "Geneva",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "geneva",
+    "taxJurisdictionId": "geneva-jurisdiction",
+    "centroid": [
+      -88.3051,
+      41.8878
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "geneva"
+  },
+  {
+    "id": "batavia",
+    "name": "Batavia",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "batavia",
+    "taxJurisdictionId": "batavia-jurisdiction",
+    "centroid": [
+      -88.3126,
+      41.85
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "batavia"
+  },
+  {
+    "id": "south-elgin",
+    "name": "South Elgin",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "south-elgin",
+    "taxJurisdictionId": "south-elgin-jurisdiction",
+    "centroid": [
+      -88.2892,
+      41.9942
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "south-elgin"
+  },
+  {
+    "id": "carpentersville",
+    "name": "Carpentersville",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "carpentersville",
+    "taxJurisdictionId": "carpentersville-jurisdiction",
+    "centroid": [
+      -88.257,
+      42.1211
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "carpentersville"
+  },
+  {
+    "id": "north-aurora",
+    "name": "North Aurora",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "north-aurora",
+    "taxJurisdictionId": "north-aurora-jurisdiction",
+    "centroid": [
+      -88.3559,
+      41.79
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "north-aurora"
+  },
+  {
+    "id": "sugar-grove",
+    "name": "Sugar Grove",
+    "type": "suburb",
+    "countyId": "kane",
+    "municipalityId": "sugar-grove",
+    "taxJurisdictionId": "sugar-grove-jurisdiction",
+    "centroid": [
+      -88.4487,
+      41.7594
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "sugar-grove"
+  },
+  {
+    "id": "crystal-lake",
+    "name": "Crystal Lake",
+    "type": "suburb",
+    "countyId": "mchenry",
+    "municipalityId": "crystal-lake",
+    "taxJurisdictionId": "crystal-lake-jurisdiction",
+    "centroid": [
+      -88.3162,
+      42.2411
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "crystal-lake"
+  },
+  {
+    "id": "woodstock",
+    "name": "Woodstock",
+    "type": "suburb",
+    "countyId": "mchenry",
+    "municipalityId": "woodstock",
+    "taxJurisdictionId": "woodstock-jurisdiction",
+    "centroid": [
+      -88.4487,
+      42.3147
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "woodstock"
+  },
+  {
+    "id": "mchenry",
+    "name": "McHenry",
+    "type": "suburb",
+    "countyId": "mchenry",
+    "municipalityId": "mchenry",
+    "taxJurisdictionId": "mchenry-jurisdiction",
+    "centroid": [
+      -88.2662,
+      42.3334
+    ],
+    "settlementPattern": "transit-suburb",
+    "geoFeatureId": "mchenry"
+  },
+  {
+    "id": "algonquin",
+    "name": "Algonquin",
+    "type": "suburb",
+    "countyId": "mchenry",
+    "municipalityId": "algonquin",
+    "taxJurisdictionId": "algonquin-jurisdiction",
+    "centroid": [
+      -88.2942,
+      42.1656
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "algonquin"
+  },
+  {
+    "id": "huntley",
+    "name": "Huntley",
+    "type": "suburb",
+    "countyId": "mchenry",
+    "municipalityId": "huntley",
+    "taxJurisdictionId": "huntley-jurisdiction",
+    "centroid": [
+      -88.4287,
+      42.1681
+    ],
+    "settlementPattern": "suburban",
+    "geoFeatureId": "huntley"
   }
 ]

@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "data:generate": "node scripts/generate-dataset.mjs",
+    "geo:generate": "node scripts/generate-tessellation.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -20,11 +22,13 @@
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@tailwindcss/vite": "^4.0.0",
+    "@turf/turf": "^7.4.0",
     "@types/leaflet": "^1.9.12",
     "@types/node": "^24.0.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.1.0",
+    "d3-delaunay": "^6.0.4",
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",

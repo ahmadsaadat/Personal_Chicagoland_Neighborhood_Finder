@@ -324,5 +324,1125 @@
       "valueType": "estimated",
       "notes": "Approximates Joliet's combined state + Will County + RTA + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
     }
+  },
+  {
+    "id": "winnetka-jurisdiction",
+    "name": "Winnetka",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0922,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Winnetka's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "glencoe-jurisdiction",
+    "name": "Glencoe",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0813,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Glencoe's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "northbrook-jurisdiction",
+    "name": "Northbrook",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.095,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Northbrook's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "glenview-jurisdiction",
+    "name": "Glenview",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0892,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Glenview's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "morton-grove-jurisdiction",
+    "name": "Morton Grove",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0927,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Morton Grove's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "niles-jurisdiction",
+    "name": "Niles",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0921,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Niles's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "lincolnwood-jurisdiction",
+    "name": "Lincolnwood",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0822,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Lincolnwood's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "palatine-jurisdiction",
+    "name": "Palatine",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.09,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Palatine's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "mount-prospect-jurisdiction",
+    "name": "Mount Prospect",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0944,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Mount Prospect's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "rolling-meadows-jurisdiction",
+    "name": "Rolling Meadows",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0874,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Rolling Meadows's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "wheeling-jurisdiction",
+    "name": "Wheeling",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0809,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Wheeling's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "elk-grove-village-jurisdiction",
+    "name": "Elk Grove Village",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0809,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Elk Grove Village's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "rosemont-jurisdiction",
+    "name": "Rosemont",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.096,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Rosemont's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "norridge-jurisdiction",
+    "name": "Norridge",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1018,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Norridge's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "melrose-park-jurisdiction",
+    "name": "Melrose Park",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0956,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Melrose Park's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "river-forest-jurisdiction",
+    "name": "River Forest",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0843,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates River Forest's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "forest-park-jurisdiction",
+    "name": "Forest Park",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0823,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Forest Park's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "maywood-jurisdiction",
+    "name": "Maywood",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.082,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Maywood's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "bellwood-jurisdiction",
+    "name": "Bellwood",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0948,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Bellwood's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "westchester-jurisdiction",
+    "name": "Westchester",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1001,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Westchester's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "la-grange-jurisdiction",
+    "name": "La Grange",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1005,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates La Grange's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "oak-lawn-jurisdiction",
+    "name": "Oak Lawn",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0822,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Oak Lawn's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "evergreen-park-jurisdiction",
+    "name": "Evergreen Park",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0896,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Evergreen Park's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "palos-heights-jurisdiction",
+    "name": "Palos Heights",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1029,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Palos Heights's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "palos-park-jurisdiction",
+    "name": "Palos Park",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0968,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Palos Park's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "worth-jurisdiction",
+    "name": "Worth",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0818,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Worth's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "homewood-jurisdiction",
+    "name": "Homewood",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1043,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Homewood's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "flossmoor-jurisdiction",
+    "name": "Flossmoor",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0815,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Flossmoor's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "chicago-heights-jurisdiction",
+    "name": "Chicago Heights",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0947,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Chicago Heights's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "calumet-city-jurisdiction",
+    "name": "Calumet City",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.0967,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Calumet City's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "harvey-jurisdiction",
+    "name": "Harvey",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.102,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Harvey's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "matteson-jurisdiction",
+    "name": "Matteson",
+    "countyId": "cook",
+    "combinedSalesTaxRate": 0.1019,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Matteson's combined state + cook County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "lombard-jurisdiction",
+    "name": "Lombard",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0825,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Lombard's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "villa-park-jurisdiction",
+    "name": "Villa Park",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0938,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Villa Park's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "glen-ellyn-jurisdiction",
+    "name": "Glen Ellyn",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0845,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Glen Ellyn's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "carol-stream-jurisdiction",
+    "name": "Carol Stream",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0802,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Carol Stream's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "bloomingdale-jurisdiction",
+    "name": "Bloomingdale",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0813,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Bloomingdale's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "addison-jurisdiction",
+    "name": "Addison",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0889,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Addison's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "bensenville-jurisdiction",
+    "name": "Bensenville",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0998,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Bensenville's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "itasca-jurisdiction",
+    "name": "Itasca",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.086,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Itasca's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "oak-brook-jurisdiction",
+    "name": "Oak Brook",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0948,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Oak Brook's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "hinsdale-jurisdiction",
+    "name": "Hinsdale",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0952,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Hinsdale's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "westmont-jurisdiction",
+    "name": "Westmont",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.1011,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Westmont's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "lisle-jurisdiction",
+    "name": "Lisle",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0863,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Lisle's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "woodridge-jurisdiction",
+    "name": "Woodridge",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0907,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Woodridge's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "west-chicago-jurisdiction",
+    "name": "West Chicago",
+    "countyId": "dupage",
+    "combinedSalesTaxRate": 0.0853,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates West Chicago's combined state + dupage County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "north-chicago-jurisdiction",
+    "name": "North Chicago",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0811,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates North Chicago's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "gurnee-jurisdiction",
+    "name": "Gurnee",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0859,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Gurnee's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "zion-jurisdiction",
+    "name": "Zion",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0934,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Zion's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "lake-forest-jurisdiction",
+    "name": "Lake Forest",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.1038,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Lake Forest's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "deerfield-jurisdiction",
+    "name": "Deerfield",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0915,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Deerfield's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "libertyville-jurisdiction",
+    "name": "Libertyville",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0912,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Libertyville's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "mundelein-jurisdiction",
+    "name": "Mundelein",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0914,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Mundelein's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "vernon-hills-jurisdiction",
+    "name": "Vernon Hills",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0963,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Vernon Hills's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "grayslake-jurisdiction",
+    "name": "Grayslake",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0942,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Grayslake's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "antioch-jurisdiction",
+    "name": "Antioch",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0827,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Antioch's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "lake-zurich-jurisdiction",
+    "name": "Lake Zurich",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.087,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Lake Zurich's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "round-lake-beach-jurisdiction",
+    "name": "Round Lake Beach",
+    "countyId": "lake",
+    "combinedSalesTaxRate": 0.0805,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Round Lake Beach's combined state + lake County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "bolingbrook-jurisdiction",
+    "name": "Bolingbrook",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0876,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Bolingbrook's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "plainfield-jurisdiction",
+    "name": "Plainfield",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0973,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Plainfield's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "romeoville-jurisdiction",
+    "name": "Romeoville",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.1025,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Romeoville's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "new-lenox-jurisdiction",
+    "name": "New Lenox",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0847,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates New Lenox's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "frankfort-jurisdiction",
+    "name": "Frankfort",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0979,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Frankfort's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "mokena-jurisdiction",
+    "name": "Mokena",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0852,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Mokena's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "lockport-jurisdiction",
+    "name": "Lockport",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0903,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Lockport's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "shorewood-jurisdiction",
+    "name": "Shorewood",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0938,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Shorewood's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "homer-glen-jurisdiction",
+    "name": "Homer Glen",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0899,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Homer Glen's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "wilmington-jurisdiction",
+    "name": "Wilmington",
+    "countyId": "will",
+    "combinedSalesTaxRate": 0.0911,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Wilmington's combined state + will County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "st-charles-jurisdiction",
+    "name": "St. Charles",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.0865,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates St. Charles's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "geneva-jurisdiction",
+    "name": "Geneva",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.1029,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Geneva's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "batavia-jurisdiction",
+    "name": "Batavia",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.095,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Batavia's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "south-elgin-jurisdiction",
+    "name": "South Elgin",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.0815,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates South Elgin's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "carpentersville-jurisdiction",
+    "name": "Carpentersville",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.0834,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Carpentersville's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "north-aurora-jurisdiction",
+    "name": "North Aurora",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.0924,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates North Aurora's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "sugar-grove-jurisdiction",
+    "name": "Sugar Grove",
+    "countyId": "kane",
+    "combinedSalesTaxRate": 0.0966,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Sugar Grove's combined state + kane County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "crystal-lake-jurisdiction",
+    "name": "Crystal Lake",
+    "countyId": "mchenry",
+    "combinedSalesTaxRate": 0.1005,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Crystal Lake's combined state + mchenry County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "woodstock-jurisdiction",
+    "name": "Woodstock",
+    "countyId": "mchenry",
+    "combinedSalesTaxRate": 0.1009,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Woodstock's combined state + mchenry County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "mchenry-jurisdiction",
+    "name": "McHenry",
+    "countyId": "mchenry",
+    "combinedSalesTaxRate": 0.0919,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates McHenry's combined state + mchenry County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "algonquin-jurisdiction",
+    "name": "Algonquin",
+    "countyId": "mchenry",
+    "combinedSalesTaxRate": 0.0989,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Algonquin's combined state + mchenry County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
+  },
+  {
+    "id": "huntley-jurisdiction",
+    "name": "Huntley",
+    "countyId": "mchenry",
+    "combinedSalesTaxRate": 0.0971,
+    "meta": {
+      "source": "Illinois Department of Revenue, combined sales tax rate tables (SEED-STYLE ESTIMATE — verify against current IDOR publication before production use)",
+      "sourceUrl": "https://tax.illinois.gov/research/taxrates/sales-use.html",
+      "geographicLevel": "tax-jurisdiction",
+      "year": 2025,
+      "valueType": "estimated",
+      "notes": "Approximates Huntley's combined state + mchenry County + RTA/local + home-rule municipal sales tax rate based on the jurisdiction's known general rate tier; exact basis points not independently verified against the current IDOR table for this MVP."
+    }
   }
 ]
