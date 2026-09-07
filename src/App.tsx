@@ -3,7 +3,6 @@ import { CompareModal } from './components/compare/CompareModal'
 import { CompareTray } from './components/compare/CompareTray'
 import { Header } from './components/layout/Header'
 import { NeighborhoodDetailPanel } from './components/neighborhood/NeighborhoodDetailPanel'
-import { ProfileDrawer } from './components/profile/ProfileDrawer'
 import { useCompareSelection } from './hooks/useCompareSelection'
 import { useNeighborhoodEntries } from './hooks/useNeighborhoodEntries'
 import { useUserProfile } from './hooks/useUserProfile'
@@ -13,7 +12,7 @@ function App() {
   const { profile, updateProfile, resetProfile, isOnboarded } = useUserProfile()
   const entries = useNeighborhoodEntries(profile)
 
-  const [profileOpen, setProfileOpen] = useState(false)
+  const [profileExpanded, setProfileExpanded] = useState(false)
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | null>(null)
   const [compareModalOpen, setCompareModalOpen] = useState(false)
   const compare = useCompareSelection()
@@ -35,7 +34,7 @@ function App() {
     <div className="flex h-screen flex-col overflow-hidden bg-slate-50 font-sans text-slate-900">
       <Header
         onSelectNeighborhood={setSelectedNeighborhoodId}
-        onOpenProfile={() => setProfileOpen(true)}
+        onOpenProfile={() => setProfileExpanded(true)}
         hasCustomProfile={isOnboarded}
       />
 
@@ -43,21 +42,15 @@ function App() {
         <ExplorePage
           profile={profile}
           onProfileChange={updateProfile}
+          onResetProfile={resetProfile}
           entries={entries}
           selectedNeighborhoodId={selectedNeighborhoodId}
           onSelectNeighborhood={setSelectedNeighborhoodId}
           compare={compare}
-          onOpenProfile={() => setProfileOpen(true)}
+          profileExpanded={profileExpanded}
+          onProfileExpandedChange={setProfileExpanded}
         />
       </div>
-
-      <ProfileDrawer
-        open={profileOpen}
-        onClose={() => setProfileOpen(false)}
-        profile={profile}
-        onSave={updateProfile}
-        onReset={resetProfile}
-      />
 
       <NeighborhoodDetailPanel
         entry={selectedEntry}

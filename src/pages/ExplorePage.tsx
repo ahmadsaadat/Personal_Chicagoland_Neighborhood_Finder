@@ -14,11 +14,13 @@ import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 interface ExplorePageProps {
   profile: UserProfile
   onProfileChange: (next: UserProfile) => void
+  onResetProfile: () => void
   entries: NeighborhoodEntry[]
   selectedNeighborhoodId: string | null
   onSelectNeighborhood: (id: string) => void
   compare: UseCompareSelectionResult
-  onOpenProfile: () => void
+  profileExpanded: boolean
+  onProfileExpandedChange: (expanded: boolean) => void
 }
 
 /**
@@ -30,11 +32,13 @@ interface ExplorePageProps {
 export function ExplorePage({
   profile,
   onProfileChange,
+  onResetProfile,
   entries,
   selectedNeighborhoodId,
   onSelectNeighborhood,
   compare,
-  onOpenProfile,
+  profileExpanded,
+  onProfileExpandedChange,
 }: ExplorePageProps) {
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [metric, setMetric] = useState<MapMetric>('disposableIncome')
@@ -65,7 +69,9 @@ export function ExplorePage({
   const panelProps = {
     profile,
     onProfileChange,
-    onOpenProfile,
+    onResetProfile,
+    profileExpanded,
+    onProfileExpandedChange,
     metricConfig,
     min,
     max,
