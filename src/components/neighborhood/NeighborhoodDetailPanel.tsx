@@ -1,5 +1,4 @@
 import {
-  Car,
   Check as CheckIcon,
   ChevronDown,
   Heart,
@@ -7,7 +6,6 @@ import {
   Info,
   Landmark,
   Plus,
-  Receipt,
   ShieldCheck,
   ShoppingBasket,
   TrainFront,
@@ -15,9 +13,7 @@ import {
 } from 'lucide-react'
 import { useState } from 'react'
 import { Modal } from '../common/Modal'
-import { StatTile } from '../common/StatTile'
 import { Badge } from '../common/Badge'
-import { getRentForBedrooms } from '../../data'
 import { formatBedrooms, formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
 import { disposableIncomeColor } from '../../utils/incomeColor'
 import type { NeighborhoodEntry } from '../../utils/metrics'
@@ -65,10 +61,6 @@ export function NeighborhoodDetailPanel({
   if (!entry) return null
   const { neighborhood, profile, summary } = entry
   const isNegative = summary.estimatedDisposableIncome < 0
-  // Match the benchmark rent to the bedroom size the user actually picked —
-  // always showing the 2BR figure regardless of their selection would be
-  // misleading (e.g. showing 2BR rent for someone who chose a studio).
-  const bedroomRent = getRentForBedrooms(profile.housing, userProfile.bedrooms)
   const bedroomLabel = formatBedrooms(userProfile.bedrooms)
 
   return (
@@ -127,25 +119,6 @@ export function NeighborhoodDetailPanel({
                 For this profile, estimated costs exceed income here.
               </p>
             )}
-          </div>
-
-          <div className="mt-3 grid grid-cols-2 gap-2.5">
-            {userProfile.housingChoice === 'rent' ? (
-              <StatTile icon={Home} label={`${bedroomLabel} Rent`} value={`${formatCurrency(bedroomRent)}/mo`} />
-            ) : (
-              <StatTile
-                icon={Home}
-                label="Housing Payment"
-                value={`${formatCurrency(Math.round(summary.monthlyHousingPayment))}/mo`}
-              />
-            )}
-            <StatTile icon={Receipt} label="Est. Annual Cost" value={formatCurrency(Math.round(summary.totalAnnualCost))} />
-            <StatTile icon={Landmark} label="Est. Annual Taxes" value={formatCurrency(Math.round(summary.taxes.totalTax))} />
-            <StatTile
-              icon={Car}
-              label="Transportation/yr"
-              value={formatCurrency(Math.round(summary.transportationAnnualCost))}
-            />
           </div>
         </div>
 
