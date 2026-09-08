@@ -183,17 +183,22 @@ export function calculateFinancialSummary(
   const groceriesFactor = spendingFactor(profile.monthlyGroceriesSpending, DEFAULT_GROCERIES_SPENDING)
   const restaurantsFactor = spendingFactor(profile.monthlyRestaurantsSpending, DEFAULT_RESTAURANTS_SPENDING)
   const otherFactor = spendingFactor(profile.monthlyOtherSpending, DEFAULT_OTHER_SPENDING)
-  // Utilities are intentionally excluded here — see monthlyUtilitiesShare
-  // above, folded into housingAnnualCost instead, to avoid double counting.
+  // Each category's neighborhood estimate scaled by its personalization
+  // factor and family size — exposed per-category (rather than only as one
+  // combined everydayExpensesAnnual figure) so a UI breakdown can show
+  // exactly what you'd actually pay for each one, and have those four
+  // numbers sum to the same total shown elsewhere. Multiplication
+  // distributes over the sum, so summing these four already-scaled monthly
+  // figures gives the identical annual total as computing it the other way
+  // (scale-then-sum-then-multiply-by-familyFactor).
   // Healthcare has no user-entered spending level, so it isn't personalized —
-  // it always uses the neighborhood's own estimate as-is.
+  // it always uses the neighborhood's own estimate as-is (family-scaled only).
+  const groceriesMonthlyActual = costOfLiving.groceriesMonthly * groceriesFactor * familyFactor
+  const restaurantsMonthlyActual = costOfLiving.restaurantsMonthly * restaurantsFactor * familyFactor
+  const healthcareMonthlyActual = costOfLiving.healthcareMonthly * familyFactor
+  const otherMonthlyActual = costOfLiving.otherMonthly * otherFactor * familyFactor
   const everydayExpensesAnnual =
-    (costOfLiving.groceriesMonthly * groceriesFactor +
-      costOfLiving.restaurantsMonthly * restaurantsFactor +
-      costOfLiving.healthcareMonthly +
-      costOfLiving.otherMonthly * otherFactor) *
-    12 *
-    familyFactor
+    (groceriesMonthlyActual + restaurantsMonthlyActual + healthcareMonthlyActual + otherMonthlyActual) * 12
 
   // Property tax is already embedded in a renter's rent by the landlord, so
   // for renters we exclude the separate `propertyTaxEstimate` line from the
@@ -216,6 +221,10 @@ export function calculateFinancialSummary(
     estimatedHomeValue: homePriceForPropertyTax,
     housingAnnualCost,
     transportationAnnualCost,
+    groceriesMonthlyActual,
+    restaurantsMonthlyActual,
+    healthcareMonthlyActual,
+    otherMonthlyActual,
     everydayExpensesAnnual,
     totalAnnualCost,
     estimatedDisposableIncome,

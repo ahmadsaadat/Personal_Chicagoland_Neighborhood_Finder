@@ -33,6 +33,14 @@ export interface FinancialSummary {
   estimatedHomeValue: number
   housingAnnualCost: number
   transportationAnnualCost: number
+  /** Your actual monthly grocery cost — this neighborhood's estimate scaled by your entered spending level and family size. Sums with the other three *MonthlyActual fields (×12) to everydayExpensesAnnual. */
+  groceriesMonthlyActual: number
+  /** Your actual monthly restaurant cost, same scaling treatment as groceries. */
+  restaurantsMonthlyActual: number
+  /** Your actual monthly healthcare cost — not personalized by spending level (no such input exists), only by family size. */
+  healthcareMonthlyActual: number
+  /** Your actual monthly "other" cost, same scaling treatment as groceries. */
+  otherMonthlyActual: number
   everydayExpensesAnnual: number
   totalAnnualCost: number
   estimatedDisposableIncome: number
