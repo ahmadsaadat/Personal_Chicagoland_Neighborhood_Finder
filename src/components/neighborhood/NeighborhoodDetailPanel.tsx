@@ -72,7 +72,7 @@ export function NeighborhoodDetailPanel({
       onClose={onClose}
       title={neighborhood.name}
       subtitle={neighborhood.type === 'chicago-community-area' ? 'Chicago community area' : 'Suburb'}
-      widthClassName="max-w-lg"
+      widthClassName="max-w-xl"
       footer={
         <button
           type="button"
@@ -134,7 +134,7 @@ export function NeighborhoodDetailPanel({
             ) : (
               <>
                 <Row
-                  label="Mortgage payment"
+                  label="Mortgage"
                   labelSuffix={
                     userProfile.ownHomeSizing === 'median'
                       ? `(${bedroomLabel} Median Home Price: ${formatCurrency(Math.round(summary.estimatedHomeValue))})`
@@ -142,17 +142,17 @@ export function NeighborhoodDetailPanel({
                   }
                   value={`${formatCurrency(Math.round(summary.monthlyMortgagePaymentAmount))}/mo`}
                 />
-                <Row label="Monthly home insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
+                <Row label="Home Insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
                 <Row
-                  label="Property tax rate & monthly due"
+                  label="Property Tax"
                   labelSuffix={`(${formatPercent(profile.housing.effectivePropertyTaxRate, 2)})`}
                   value={`${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
                 />
               </>
             )}
-            <Row label="Your monthly utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
+            <Row label="Utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
             <Row
-              label="Estimated monthly housing cost"
+              label="Total Monthly Cost"
               value={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
             />
           </div>
