@@ -92,12 +92,14 @@ function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: strin
 function CollapsibleSectionHeader({
   icon: Icon,
   title,
+  titleSuffix,
   summaryValue,
   expanded,
   onToggle,
 }: {
   icon: LucideIcon
   title: string
+  titleSuffix?: string
   summaryValue: string
   expanded: boolean
   onToggle: () => void
@@ -110,7 +112,10 @@ function CollapsibleSectionHeader({
     >
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
-        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+          {title}
+          {titleSuffix && <span className="ml-1 normal-case tracking-normal text-slate-400">{titleSuffix}</span>}
+        </span>
       </span>
       <span className="flex items-center gap-1.5">
         <AmountBadge value={summaryValue} variant="expense" />
@@ -137,6 +142,13 @@ export function NeighborhoodDetailPanel({
   const { neighborhood, profile, summary } = entry
   const isNegative = summary.estimatedDisposableIncome < 0
   const bedroomLabel = formatBedrooms(userProfile.bedrooms)
+  // "Taxes" here means income tax only (federal + state) — sales, restaurant,
+  // property, and vehicle taxes are surfaced elsewhere rather than folded
+  // into this section's total, so it stays a clean "what does my paycheck
+  // lose to income tax" figure.
+  const incomeTaxAnnual = summary.taxes.federalIncomeTax + summary.taxes.stateIncomeTax
+  const incomeTaxRatePercent =
+    summary.grossIncome > 0 ? Math.round((incomeTaxAnnual / summary.grossIncome) * 100) : 0
 
   return (
     <Modal
@@ -211,8 +223,9 @@ export function NeighborhoodDetailPanel({
           <div className="overflow-hidden rounded-xl border border-slate-100">
             <CollapsibleSectionHeader
               icon={Landmark}
-              title="Taxes"
-              summaryValue={`${formatCurrency(Math.round(summary.taxes.totalTax / 12))}/mo`}
+              title="Income Taxes"
+              titleSuffix={`(${incomeTaxRatePercent}%)`}
+              summaryValue={`${formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo`}
               expanded={taxesExpanded}
               onToggle={() => setTaxesExpanded((v) => !v)}
             />
@@ -229,7 +242,7 @@ export function NeighborhoodDetailPanel({
                 <div className="flex items-center justify-between py-2 text-sm font-semibold">
                   <span className="text-slate-700">Total</span>
                   <span className="tabular-nums text-slate-900">
-                    {formatCurrency(Math.round(summary.taxes.totalTax / 12))}/mo
+                    {formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo
                   </span>
                 </div>
               </div>
