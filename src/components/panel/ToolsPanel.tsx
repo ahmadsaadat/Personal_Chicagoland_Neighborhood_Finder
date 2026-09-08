@@ -250,8 +250,8 @@ export function ToolsPanel({
           <span>{metricConfig.format(bestValue)}</span>
         </div>
         <div className="mt-0.5 flex justify-between text-[10px] font-medium uppercase tracking-wide">
-          <span className="text-[color:var(--color-div-red-700)]">Less for you</span>
-          <span className="text-[color:var(--color-div-blue-700)]">More for you</span>
+          <span className="text-[color:var(--color-scale-worst)]">Less for you</span>
+          <span className="text-[color:var(--color-scale-best)]">More for you</span>
         </div>
         <div className="mt-1.5 flex items-center gap-1.5 text-[10px] text-slate-400">
           <span className="h-2.5 w-2.5 shrink-0 rounded-sm" style={{ backgroundColor: NO_DATA_COLOR }} />
