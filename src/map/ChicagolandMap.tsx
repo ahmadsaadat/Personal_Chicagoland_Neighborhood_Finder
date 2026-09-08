@@ -4,7 +4,8 @@ import 'leaflet/dist/leaflet.css'
 import { AlertTriangle, Loader2 } from 'lucide-react'
 import { useMemo } from 'react'
 import { GeoJSON, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import { formatCurrency } from '../utils/format'
+import { getRentForBedrooms } from '../data'
+import { formatBedrooms, formatCurrency } from '../utils/format'
 import { divergingColor, NO_DATA_COLOR } from '../utils/colorScale'
 import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 import type { MapMetric } from '../types'
@@ -18,6 +19,7 @@ const CHICAGO_LOOP: [number, number] = [41.8786, -87.6251]
 interface ChicagolandMapProps {
   entries: NeighborhoodEntry[]
   metric: MapMetric
+  bedrooms: number
   selectedNeighborhoodId: string | null
   compareIds: string[]
   onSelectNeighborhood: (id: string) => void
@@ -31,6 +33,7 @@ interface NeighborhoodFeatureProps {
 export function ChicagolandMap({
   entries,
   metric,
+  bedrooms,
   selectedNeighborhoodId,
   compareIds,
   onSelectNeighborhood,
@@ -58,7 +61,7 @@ export function ChicagolandMap({
   // remount the layer whenever anything that should change its appearance
   // changes (metric, selection, compare set, or the underlying values for the
   // current user profile).
-  const layerKey = `${metric}-${selectedNeighborhoodId ?? ''}-${compareIds.join(',')}-${valuesSum.toFixed(2)}`
+  const layerKey = `${metric}-${bedrooms}-${selectedNeighborhoodId ?? ''}-${compareIds.join(',')}-${valuesSum.toFixed(2)}`
 
   function styleFeature(feature?: Feature<Geometry, NeighborhoodFeatureProps>): PathOptions {
     const id = feature?.properties.id
@@ -85,10 +88,12 @@ export function ChicagolandMap({
     const entry = entriesById.get(feature.properties.id)
     if (entry) {
       const { neighborhood, profile, summary } = entry
+      const rent = getRentForBedrooms(profile.housing, bedrooms)
+      const rentLabel = formatBedrooms(bedrooms)
       layer.bindTooltip(
         `<div style="font-family:var(--font-sans);min-width:170px">
           <div style="font-weight:600;font-size:13px;color:#0b0b0b;margin-bottom:4px">${neighborhood.name}</div>
-          <div style="font-size:12px;color:#52514e">2BR rent: <strong>${formatCurrency(profile.housing.medianRent2BR)}/mo</strong></div>
+          <div style="font-size:12px;color:#52514e">${rentLabel} rent: <strong>${formatCurrency(rent)}/mo</strong></div>
           <div style="font-size:12px;color:#52514e">Est. disposable income: <strong>${formatCurrency(Math.round(summary.estimatedDisposableIncome))}/yr</strong></div>
         </div>`,
         { sticky: true, direction: 'top', opacity: 0.97, className: 'chicagoland-tooltip' },

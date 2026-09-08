@@ -204,6 +204,7 @@ export function ToolsPanel({
               <NeighborhoodCard
                 key={entry.neighborhood.id}
                 entry={entry}
+                bedrooms={profile.bedrooms}
                 isCompareSelected={compare.isSelected(entry.neighborhood.id)}
                 compareDisabled={compare.isFull}
                 onOpenDetail={onOpenDetail}

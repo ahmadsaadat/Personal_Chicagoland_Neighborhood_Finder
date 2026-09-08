@@ -1,10 +1,12 @@
 import { Check, Clock, DollarSign, Home, Plus, Train } from 'lucide-react'
 import { Badge } from '../common/Badge'
-import { formatCurrency, formatMinutes } from '../../utils/format'
+import { getRentForBedrooms } from '../../data'
+import { formatBedrooms, formatCurrency, formatMinutes } from '../../utils/format'
 import type { NeighborhoodEntry } from '../../utils/metrics'
 
 interface NeighborhoodCardProps {
   entry: NeighborhoodEntry
+  bedrooms: number
   isCompareSelected: boolean
   compareDisabled: boolean
   onOpenDetail: (id: string) => void
@@ -13,6 +15,7 @@ interface NeighborhoodCardProps {
 
 export function NeighborhoodCard({
   entry,
+  bedrooms,
   isCompareSelected,
   compareDisabled,
   onOpenDetail,
@@ -20,6 +23,8 @@ export function NeighborhoodCard({
 }: NeighborhoodCardProps) {
   const { neighborhood, profile, summary } = entry
   const isNegative = summary.estimatedDisposableIncome < 0
+  const rent = getRentForBedrooms(profile.housing, bedrooms)
+  const rentLabel = formatBedrooms(bedrooms)
 
   return (
     <div className="group relative rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md">
@@ -44,9 +49,9 @@ export function NeighborhoodCard({
         </div>
 
         <div className="mt-3 grid grid-cols-3 gap-2 border-t border-slate-100 pt-3 text-xs text-slate-500">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1" title={`Median ${rentLabel} rent`}>
             <Home size={13} />
-            <span>{formatCurrency(profile.housing.medianRent2BR)}/mo</span>
+            <span>{formatCurrency(rent)}/mo {rentLabel}</span>
           </div>
           <div className="flex items-center gap-1">
             <Clock size={13} />

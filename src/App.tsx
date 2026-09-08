@@ -62,7 +62,12 @@ function App() {
         onToggleCompare={compare.toggle}
       />
 
-      <CompareModal open={compareModalOpen} onClose={() => setCompareModalOpen(false)} entries={compareEntries} />
+      <CompareModal
+        open={compareModalOpen}
+        onClose={() => setCompareModalOpen(false)}
+        entries={compareEntries}
+        bedrooms={profile.bedrooms}
+      />
 
       {!compareModalOpen && (
         <CompareTray

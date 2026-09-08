@@ -87,6 +87,7 @@ export function ExplorePage({
       <ChicagolandMap
         entries={entries}
         metric={metric}
+        bedrooms={profile.bedrooms}
         selectedNeighborhoodId={selectedNeighborhoodId}
         compareIds={compare.selectedIds}
         onSelectNeighborhood={onSelectNeighborhood}

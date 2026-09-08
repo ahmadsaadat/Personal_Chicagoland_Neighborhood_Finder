@@ -1,11 +1,13 @@
 import { Modal } from '../common/Modal'
-import { formatCurrency } from '../../utils/format'
+import { getRentForBedrooms } from '../../data'
+import { formatBedrooms, formatCurrency } from '../../utils/format'
 import type { NeighborhoodEntry } from '../../utils/metrics'
 
 interface CompareModalProps {
   open: boolean
   onClose: () => void
   entries: NeighborhoodEntry[]
+  bedrooms: number
 }
 
 interface CompareRow {
@@ -14,22 +16,30 @@ interface CompareRow {
   betterWhenHigh: boolean
 }
 
-const ROWS: CompareRow[] = [
-  { label: 'Median 2BR rent /mo', getValue: (e) => e.profile.housing.medianRent2BR, betterWhenHigh: false },
-  { label: 'Median home price', getValue: (e) => e.profile.housing.medianHomePrice, betterWhenHigh: false },
-  { label: 'Property tax /yr', getValue: (e) => e.summary.taxes.propertyTaxEstimate, betterWhenHigh: false },
-  {
-    label: 'Income tax /yr (fed + state + local)',
-    getValue: (e) => e.summary.taxes.federalIncomeTax + e.summary.taxes.stateIncomeTax + e.summary.taxes.localIncomeTax,
-    betterWhenHigh: false,
-  },
-  { label: 'Transportation /yr', getValue: (e) => e.summary.transportationAnnualCost, betterWhenHigh: false },
-  { label: 'Total annual cost', getValue: (e) => e.summary.totalAnnualCost, betterWhenHigh: false },
-  { label: 'Est. disposable income /yr', getValue: (e) => e.summary.estimatedDisposableIncome, betterWhenHigh: true },
-]
+function buildRows(bedrooms: number): CompareRow[] {
+  const rentLabel = formatBedrooms(bedrooms)
+  return [
+    {
+      label: `Median ${rentLabel} rent /mo`,
+      getValue: (e) => getRentForBedrooms(e.profile.housing, bedrooms),
+      betterWhenHigh: false,
+    },
+    { label: 'Median home price', getValue: (e) => e.profile.housing.medianHomePrice, betterWhenHigh: false },
+    { label: 'Property tax /yr', getValue: (e) => e.summary.taxes.propertyTaxEstimate, betterWhenHigh: false },
+    {
+      label: 'Income tax /yr (fed + state + local)',
+      getValue: (e) => e.summary.taxes.federalIncomeTax + e.summary.taxes.stateIncomeTax + e.summary.taxes.localIncomeTax,
+      betterWhenHigh: false,
+    },
+    { label: 'Transportation /yr', getValue: (e) => e.summary.transportationAnnualCost, betterWhenHigh: false },
+    { label: 'Total annual cost', getValue: (e) => e.summary.totalAnnualCost, betterWhenHigh: false },
+    { label: 'Est. disposable income /yr', getValue: (e) => e.summary.estimatedDisposableIncome, betterWhenHigh: true },
+  ]
+}
 
-export function CompareModal({ open, onClose, entries }: CompareModalProps) {
+export function CompareModal({ open, onClose, entries, bedrooms }: CompareModalProps) {
   if (entries.length === 0) return null
+  const rows = buildRows(bedrooms)
 
   return (
     <Modal open={open} onClose={onClose} title="Compare neighborhoods" subtitle="Best value in each row is highlighted.">
@@ -49,7 +59,7 @@ export function CompareModal({ open, onClose, entries }: CompareModalProps) {
             </tr>
           </thead>
           <tbody>
-            {ROWS.map((row) => {
+            {rows.map((row) => {
               const values = entries.map((entry) => row.getValue(entry))
               const best = row.betterWhenHigh ? Math.max(...values) : Math.min(...values)
               const allTied = values.every((v) => v === values[0])
