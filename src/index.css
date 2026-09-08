@@ -17,6 +17,19 @@
   --color-status-warning: #fab219;
   --color-status-serious: #ec835a;
   --color-status-critical: #d03b3b;
+
+  /* "Added to comparison" accent — a single muted sage green used everywhere
+     that state shows up (map outline, neighborhood cards, detail panel),
+     replacing what used to be an inconsistent mix of blue and orange across
+     those three places. Kept as its own hue, distinct from both the warm
+     choropleth scale and the status palette, so it always reads as its own
+     thing: a rare, deliberate accent, not a data value or a status.
+     NOTE: ChicagolandMap.tsx styles Leaflet polygons via inline JS (SVG
+     attributes, not CSS classes), where var() support is unreliable, so it
+     hardcodes this same hex value directly rather than referencing this
+     token — keep the two in sync if this ever changes. */
+  --color-compare-accent: #5a8a6a;
+  --color-compare-accent-soft: #e6efe8;
 }
 
 html,

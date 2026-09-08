@@ -78,7 +78,7 @@ export function NeighborhoodDetailPanel({
           disabled={compareDisabled && !isCompareSelected}
           className={`flex w-full items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
             isCompareSelected
-              ? 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+              ? 'bg-[color:var(--color-compare-accent-soft)] text-[color:var(--color-compare-accent)] hover:brightness-95'
               : compareDisabled
                 ? 'cursor-not-allowed bg-slate-100 text-slate-400'
                 : 'bg-slate-900 text-white hover:bg-slate-800'

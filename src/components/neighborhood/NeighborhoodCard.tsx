@@ -72,10 +72,10 @@ export function NeighborhoodCard({
         }
         className={`absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border text-xs font-medium transition ${
           isCompareSelected
-            ? 'border-blue-500 bg-blue-500 text-white'
+            ? 'border-[color:var(--color-compare-accent)] bg-[color:var(--color-compare-accent)] text-white'
             : compareDisabled
               ? 'cursor-not-allowed border-slate-100 bg-slate-50 text-slate-300'
-              : 'border-slate-200 bg-white text-slate-400 opacity-0 group-hover:opacity-100 hover:border-blue-300 hover:text-blue-500'
+              : 'border-slate-200 bg-white text-slate-400 opacity-0 group-hover:opacity-100 hover:border-[color:var(--color-compare-accent)] hover:text-[color:var(--color-compare-accent)]'
         }`}
       >
         {isCompareSelected ? <Check size={14} /> : <Plus size={14} />}

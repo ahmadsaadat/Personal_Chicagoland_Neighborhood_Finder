@@ -72,7 +72,10 @@ export function ChicagolandMap({
     return {
       fillColor,
       fillOpacity: entry ? 0.75 : 0.2,
-      color: isSelected ? '#0b0b0b' : isCompared ? '#eb6834' : '#ffffff',
+      // '#5a8a6a' must match --color-compare-accent in src/index.css — Leaflet
+      // styles polygons via inline SVG attributes, where CSS var() support is
+      // unreliable, so this is hardcoded rather than referencing the token.
+      color: isSelected ? '#0b0b0b' : isCompared ? '#5a8a6a' : '#ffffff',
       weight: isSelected ? 2.5 : isCompared ? 2.5 : 1,
       dashArray: isCompared && !isSelected ? '4 3' : undefined,
     }
