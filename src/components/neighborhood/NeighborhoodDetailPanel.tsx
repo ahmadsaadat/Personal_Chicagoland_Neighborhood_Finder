@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   ShoppingBasket,
   TrainFront,
+  Wallet,
   type LucideIcon,
 } from 'lucide-react'
 import { useState } from 'react'
@@ -50,6 +51,38 @@ function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: strin
   )
 }
 
+/**
+ * A section header that's also the toggle for a collapsible section (Taxes,
+ * Housing) — shows the section's total up front so it's useful collapsed,
+ * and expands into the full line-item breakdown on click.
+ */
+function CollapsibleSectionHeader({
+  icon: Icon,
+  title,
+  summaryValue,
+  expanded,
+  onToggle,
+}: {
+  icon: LucideIcon
+  title: string
+  summaryValue: string
+  expanded: boolean
+  onToggle: () => void
+}) {
+  return (
+    <button type="button" onClick={onToggle} className="mb-3 flex w-full items-center justify-between gap-2">
+      <span className="flex items-center gap-2">
+        <Icon size={15} className="text-slate-400" />
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
+      </span>
+      <span className="flex items-center gap-1.5">
+        <span className="text-sm font-semibold tabular-nums text-slate-800">{summaryValue}</span>
+        <ChevronDown size={14} className={`text-slate-400 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+      </span>
+    </button>
+  )
+}
+
 export function NeighborhoodDetailPanel({
   entry,
   userProfile,
@@ -60,6 +93,8 @@ export function NeighborhoodDetailPanel({
   onToggleCompare,
 }: NeighborhoodDetailPanelProps) {
   const [showAssumptions, setShowAssumptions] = useState(false)
+  const [taxesExpanded, setTaxesExpanded] = useState(false)
+  const [housingExpanded, setHousingExpanded] = useState(false)
 
   if (!entry) return null
   const { neighborhood, profile, summary } = entry
@@ -125,86 +160,114 @@ export function NeighborhoodDetailPanel({
           </div>
         </div>
 
-        {/* Housing */}
+        {/* Income */}
         <section>
-          <SectionHeader icon={Home} title="Housing" />
-          <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-            {userProfile.housingChoice === 'rent' ? (
-              <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
-            ) : (
-              <>
-                <Row
-                  label="Mortgage"
-                  labelSuffix={
-                    userProfile.ownHomeSizing === 'median'
-                      ? `(${bedroomLabel} Median Home Price: ${formatCurrency(Math.round(summary.estimatedHomeValue))})`
-                      : undefined
-                  }
-                  value={`${formatCurrency(Math.round(summary.monthlyMortgagePaymentAmount))}/mo`}
-                />
-                <Row label="Home Insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
-                <Row
-                  label="Property Tax"
-                  labelSuffix={`(${formatPercent(profile.housing.effectivePropertyTaxRate, 2)})`}
-                  value={`${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
-                />
-              </>
-            )}
-            <Row label="Utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
-            <Row
-              label="Total Monthly Cost"
-              value={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
-            />
+          <SectionHeader icon={Wallet} title="Income" />
+          <div className="rounded-xl border border-slate-100 px-3">
+            <Row label="Annual income" value={`${formatCurrency(summary.grossIncome)}/yr`} />
           </div>
-          {userProfile.housingChoice === 'own' && userProfile.ownHomeSizing === 'custom' && (
-            <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
-              <Info size={13} className="mt-0.5 shrink-0" />
-              <span>
-                Your entered monthly mortgage payment implies a home value of about{' '}
-                {formatCurrency(Math.round(summary.estimatedHomeValue))}, applied uniformly here to compare
-                property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical home
-                price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying your
-                stated payment at this rate, not the cost of buying a typical home here.
-              </span>
-            </div>
-          )}
         </section>
 
         {/* Taxes */}
         <section>
-          <SectionHeader icon={Landmark} title="Taxes (estimated)" />
-          <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-            <Row label="Federal income tax" value={formatCurrency(Math.round(summary.taxes.federalIncomeTax))} />
-            <Row label="Illinois state income tax" value={formatCurrency(Math.round(summary.taxes.stateIncomeTax))} />
-            <Row label="Local income tax" value={formatCurrency(summary.taxes.localIncomeTax)} />
-            <Row label="Sales tax" value={formatCurrency(Math.round(summary.taxes.salesTaxEstimate))} />
-            <Row label="Restaurant / food tax" value={formatCurrency(Math.round(summary.taxes.restaurantTaxEstimate))} />
-            <Row label="Property tax" value={formatCurrency(Math.round(summary.taxes.propertyTaxEstimate))} />
-            <Row label="Vehicle tax & fees" value={formatCurrency(Math.round(summary.taxes.vehicleTaxEstimate))} />
-            <div className="flex items-center justify-between py-2 text-sm font-semibold">
-              <span className="text-slate-700">Total</span>
-              <span className="tabular-nums text-slate-900">{formatCurrency(Math.round(summary.taxes.totalTax))}</span>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={() => setShowAssumptions((v) => !v)}
-            className="mt-2 flex w-full items-center justify-between rounded-lg px-1 py-1.5 text-xs font-medium text-slate-500 transition hover:text-slate-700"
-          >
-            <span className="flex items-center gap-1.5">
-              <Info size={13} /> How we estimate this
-            </span>
-            <ChevronDown size={14} className={`transition-transform ${showAssumptions ? 'rotate-180' : ''}`} />
-          </button>
-          {showAssumptions && (
-            <ul className="mt-1 space-y-1.5 rounded-xl bg-slate-50 p-3 text-xs leading-relaxed text-slate-500">
-              {summary.taxes.assumptions.map((assumption) => (
-                <li key={assumption} className="flex gap-1.5">
-                  <span className="text-slate-300">•</span>
-                  <span>{assumption}</span>
-                </li>
-              ))}
-            </ul>
+          <CollapsibleSectionHeader
+            icon={Landmark}
+            title="Taxes (estimated)"
+            summaryValue={formatCurrency(Math.round(summary.taxes.totalTax))}
+            expanded={taxesExpanded}
+            onToggle={() => setTaxesExpanded((v) => !v)}
+          />
+          {taxesExpanded && (
+            <>
+              <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
+                <Row label="Federal income tax" value={formatCurrency(Math.round(summary.taxes.federalIncomeTax))} />
+                <Row label="Illinois state income tax" value={formatCurrency(Math.round(summary.taxes.stateIncomeTax))} />
+                <Row label="Local income tax" value={formatCurrency(summary.taxes.localIncomeTax)} />
+                <Row label="Sales tax" value={formatCurrency(Math.round(summary.taxes.salesTaxEstimate))} />
+                <Row label="Restaurant / food tax" value={formatCurrency(Math.round(summary.taxes.restaurantTaxEstimate))} />
+                <Row label="Property tax" value={formatCurrency(Math.round(summary.taxes.propertyTaxEstimate))} />
+                <Row label="Vehicle tax & fees" value={formatCurrency(Math.round(summary.taxes.vehicleTaxEstimate))} />
+                <div className="flex items-center justify-between py-2 text-sm font-semibold">
+                  <span className="text-slate-700">Total</span>
+                  <span className="tabular-nums text-slate-900">{formatCurrency(Math.round(summary.taxes.totalTax))}</span>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowAssumptions((v) => !v)}
+                className="mt-2 flex w-full items-center justify-between rounded-lg px-1 py-1.5 text-xs font-medium text-slate-500 transition hover:text-slate-700"
+              >
+                <span className="flex items-center gap-1.5">
+                  <Info size={13} /> How we estimate this
+                </span>
+                <ChevronDown size={14} className={`transition-transform ${showAssumptions ? 'rotate-180' : ''}`} />
+              </button>
+              {showAssumptions && (
+                <ul className="mt-1 space-y-1.5 rounded-xl bg-slate-50 p-3 text-xs leading-relaxed text-slate-500">
+                  {summary.taxes.assumptions.map((assumption) => (
+                    <li key={assumption} className="flex gap-1.5">
+                      <span className="text-slate-300">•</span>
+                      <span>{assumption}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+        </section>
+
+        {/* Housing */}
+        <section>
+          <CollapsibleSectionHeader
+            icon={Home}
+            title="Housing"
+            summaryValue={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
+            expanded={housingExpanded}
+            onToggle={() => setHousingExpanded((v) => !v)}
+          />
+          {housingExpanded && (
+            <>
+              <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
+                {userProfile.housingChoice === 'rent' ? (
+                  <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
+                ) : (
+                  <>
+                    <Row
+                      label="Mortgage"
+                      labelSuffix={
+                        userProfile.ownHomeSizing === 'median'
+                          ? `(${bedroomLabel} Median Home Price: ${formatCurrency(Math.round(summary.estimatedHomeValue))})`
+                          : undefined
+                      }
+                      value={`${formatCurrency(Math.round(summary.monthlyMortgagePaymentAmount))}/mo`}
+                    />
+                    <Row label="Home Insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
+                    <Row
+                      label="Property Tax"
+                      labelSuffix={`(${formatPercent(profile.housing.effectivePropertyTaxRate, 2)})`}
+                      value={`${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
+                    />
+                  </>
+                )}
+                <Row label="Utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
+                <Row
+                  label="Total Monthly Cost"
+                  value={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
+                />
+              </div>
+              {userProfile.housingChoice === 'own' && userProfile.ownHomeSizing === 'custom' && (
+                <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
+                  <Info size={13} className="mt-0.5 shrink-0" />
+                  <span>
+                    Your entered monthly mortgage payment implies a home value of about{' '}
+                    {formatCurrency(Math.round(summary.estimatedHomeValue))}, applied uniformly here to compare
+                    property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical home
+                    price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying
+                    your stated payment at this rate, not the cost of buying a typical home here.
+                  </span>
+                </div>
+              )}
+            </>
           )}
         </section>
 
