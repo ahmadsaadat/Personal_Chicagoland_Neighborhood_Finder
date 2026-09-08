@@ -38,11 +38,14 @@ function SectionHeader({ icon: Icon, title }: { icon: LucideIcon; title: string 
   )
 }
 
-function Row({ label, value, valueAlign = 'right' }: { label: string; value: string; valueAlign?: 'left' | 'right' }) {
+function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: string; value: string }) {
   return (
-    <div className={`flex items-center py-1.5 text-sm ${valueAlign === 'right' ? 'justify-between' : 'gap-2'}`}>
-      <span className="text-slate-500">{label}</span>
-      <span className="font-medium tabular-nums text-slate-800">{value}</span>
+    <div className="flex items-center justify-between gap-2 py-1.5 text-sm">
+      <span className="text-slate-500">
+        {label}
+        {labelSuffix && <span className="ml-1.5 font-medium tabular-nums text-slate-800">{labelSuffix}</span>}
+      </span>
+      <span className="shrink-0 font-medium tabular-nums text-slate-800">{value}</span>
     </div>
   )
 }
@@ -137,8 +140,8 @@ export function NeighborhoodDetailPanel({
                 <Row label="Monthly home insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
                 <Row
                   label="Property tax rate & monthly due"
-                  value={`${formatPercent(profile.housing.effectivePropertyTaxRate, 2)} · ${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
-                  valueAlign="left"
+                  labelSuffix={`(${formatPercent(profile.housing.effectivePropertyTaxRate, 2)})`}
+                  value={`${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
                 />
               </>
             )}
