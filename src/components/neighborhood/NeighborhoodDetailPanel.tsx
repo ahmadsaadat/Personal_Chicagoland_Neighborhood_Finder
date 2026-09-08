@@ -38,9 +38,9 @@ function SectionHeader({ icon: Icon, title }: { icon: LucideIcon; title: string 
   )
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Row({ label, value, valueAlign = 'right' }: { label: string; value: string; valueAlign?: 'left' | 'right' }) {
   return (
-    <div className="flex items-center justify-between py-1.5 text-sm">
+    <div className={`flex items-center py-1.5 text-sm ${valueAlign === 'right' ? 'justify-between' : 'gap-2'}`}>
       <span className="text-slate-500">{label}</span>
       <span className="font-medium tabular-nums text-slate-800">{value}</span>
     </div>
@@ -131,18 +131,22 @@ export function NeighborhoodDetailPanel({
             ) : (
               <>
                 <Row
-                  label="Estimated monthly payment"
+                  label="Mortgage payment"
                   value={`${formatCurrency(Math.round(summary.monthlyMortgagePaymentAmount))}/mo`}
                 />
                 <Row label="Monthly home insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
                 <Row
                   label="Property tax rate & monthly due"
                   value={`${formatPercent(profile.housing.effectivePropertyTaxRate, 2)} · ${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
+                  valueAlign="left"
                 />
               </>
             )}
             <Row label="Your monthly utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
-            <Row label="Your est. annual housing cost" value={formatCurrency(Math.round(summary.housingAnnualCost))} />
+            <Row
+              label="Estimated monthly housing cost"
+              value={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
+            />
           </div>
           {userProfile.housingChoice === 'own' && (
             <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
