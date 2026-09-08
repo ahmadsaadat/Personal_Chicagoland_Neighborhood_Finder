@@ -18,7 +18,11 @@ export interface FinancialSummary {
   monthlyRentShare: number
   /** Your monthly utilities share, using the neighborhood's cost-of-living estimate and (if renting with roommates) a fair-usage split. */
   monthlyUtilitiesShare: number
-  /** Monthly mortgage principal & interest plus insurance/maintenance, for owners. 0 if renting. */
+  /** Monthly mortgage principal & interest only, for owners. 0 if renting. */
+  monthlyMortgagePaymentAmount: number
+  /** Monthly home insurance estimate, for owners. 0 if renting. */
+  monthlyHomeInsurance: number
+  /** Monthly mortgage principal & interest plus home insurance, for owners. 0 if renting. */
   monthlyHousingPayment: number
   /** Home value used as the property-tax basis for owners — either this neighborhood's own estimate at the chosen bedroom size, or implied from a custom monthly mortgage payment, depending on ownHomeSizing. 0 if renting. */
   estimatedHomeValue: number

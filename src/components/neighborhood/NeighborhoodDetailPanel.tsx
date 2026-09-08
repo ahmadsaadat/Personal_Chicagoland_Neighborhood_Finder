@@ -130,7 +130,11 @@ export function NeighborhoodDetailPanel({
               <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
             ) : (
               <>
-                <Row label="Housing payment" value={`${formatCurrency(Math.round(summary.monthlyHousingPayment))}/mo`} />
+                <Row
+                  label="Estimated monthly payment"
+                  value={`${formatCurrency(Math.round(summary.monthlyMortgagePaymentAmount))}/mo`}
+                />
+                <Row label="Monthly home insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
                 <Row
                   label="Property tax rate & monthly due"
                   value={`${formatPercent(profile.housing.effectivePropertyTaxRate, 2)} · ${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}

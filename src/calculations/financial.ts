@@ -22,7 +22,11 @@ const TRANSIT_MONTHLY_PASS = 105 // CTA full-fare monthly pass
 const MORTGAGE_DOWN_PAYMENT_PCT = 0.2
 const MORTGAGE_ANNUAL_RATE = 0.065
 const MORTGAGE_TERM_YEARS = 30
-const HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE = 0.01
+// Approximates homeowners insurance as a percent of home value per year —
+// in practice this also absorbs routine maintenance, since the two aren't
+// modeled separately, but it's surfaced to the user simply as "home
+// insurance" since that's the dominant, more universal cost of the two.
+const HOME_INSURANCE_PCT_OF_VALUE = 0.01
 
 // Utilities don't split like rent does: rent is a fixed cost no matter who's
 // home, but utilities usage (showers, laundry, electricity) genuinely grows
@@ -150,13 +154,17 @@ export function calculateFinancialSummary(
   // counting — this is the one figure used for them.
   const monthlyUtilitiesShare = fairUtilitiesShare(costOfLiving.utilitiesMonthly, profile)
 
-  const monthlyHousingPayment =
+  const monthlyMortgagePaymentAmount =
     profile.housingChoice === 'own'
-      ? (profile.ownHomeSizing === 'median'
-          ? monthlyMortgagePaymentFromPrice(homePriceForPropertyTax)
-          : profile.monthlyMortgagePayment) +
-        (homePriceForPropertyTax * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12
+      ? profile.ownHomeSizing === 'median'
+        ? monthlyMortgagePaymentFromPrice(homePriceForPropertyTax)
+        : profile.monthlyMortgagePayment
       : 0
+
+  const monthlyHomeInsurance =
+    profile.housingChoice === 'own' ? (homePriceForPropertyTax * HOME_INSURANCE_PCT_OF_VALUE) / 12 : 0
+
+  const monthlyHousingPayment = monthlyMortgagePaymentAmount + monthlyHomeInsurance
 
   const housingAnnualCost =
     profile.housingChoice === 'rent'
@@ -202,6 +210,8 @@ export function calculateFinancialSummary(
     taxes,
     monthlyRentShare,
     monthlyUtilitiesShare,
+    monthlyMortgagePaymentAmount,
+    monthlyHomeInsurance,
     monthlyHousingPayment,
     estimatedHomeValue: homePriceForPropertyTax,
     housingAnnualCost,
