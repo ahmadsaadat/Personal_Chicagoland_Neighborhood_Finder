@@ -19,6 +19,7 @@ import { StatTile } from '../common/StatTile'
 import { Badge } from '../common/Badge'
 import { getRentForBedrooms } from '../../data'
 import { formatBedrooms, formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
+import { disposableIncomeColor } from '../../utils/incomeColor'
 import type { NeighborhoodEntry } from '../../utils/metrics'
 import type { UserProfile } from '../../types'
 
@@ -115,9 +116,8 @@ export function NeighborhoodDetailPanel({
               Estimated disposable income
             </div>
             <div
-              className={`mt-1 text-3xl font-bold tabular-nums ${
-                isNegative ? 'text-[color:var(--color-status-critical)]' : 'text-slate-900'
-              }`}
+              className="mt-1 text-3xl font-bold tabular-nums"
+              style={{ color: disposableIncomeColor(summary.estimatedDisposableIncome, summary.grossIncome) }}
             >
               {formatCurrency(Math.round(summary.estimatedDisposableIncome))}
               <span className="ml-1 text-base font-medium text-slate-400">/yr</span>

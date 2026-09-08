@@ -2,13 +2,15 @@ import { Clock, Home, Sparkles, Wallet } from 'lucide-react'
 import type { RankedNeighborhood } from '../../calculations/ranking'
 import { getNeighborhood } from '../../data'
 import { formatCurrency, formatMinutes } from '../../utils/format'
+import { disposableIncomeColor } from '../../utils/incomeColor'
 
 interface RankedListProps {
   ranked: RankedNeighborhood[]
+  annualIncome: number
   onOpenDetail: (id: string) => void
 }
 
-export function RankedList({ ranked, onOpenDetail }: RankedListProps) {
+export function RankedList({ ranked, annualIncome, onOpenDetail }: RankedListProps) {
   return (
     <div className="space-y-3">
       {ranked.map((item, index) => (
@@ -26,7 +28,10 @@ export function RankedList({ ranked, onOpenDetail }: RankedListProps) {
               <h3 className="text-base font-semibold text-slate-900">
                 {getNeighborhood(item.neighborhoodId)?.name ?? item.neighborhoodId}
               </h3>
-              <div className="flex items-center gap-1 text-sm font-bold text-slate-900">
+              <div
+                className="flex items-center gap-1 text-sm font-bold"
+                style={{ color: disposableIncomeColor(item.disposableIncome, annualIncome) }}
+              >
                 <Wallet size={14} className="text-slate-400" />
                 {formatCurrency(Math.round(item.disposableIncome))}/yr
               </div>

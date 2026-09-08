@@ -218,7 +218,7 @@ export function ToolsPanel({
               Ranked using your profile: disposable income matters most, then commute time, then overall lifestyle
               fit. Select up to {MAX_COMPARE} to compare side by side.
             </p>
-            <RankedList ranked={ranked} onOpenDetail={onOpenDetail} />
+            <RankedList ranked={ranked} annualIncome={profile.annualIncome} onOpenDetail={onOpenDetail} />
           </div>
         )}
       </div>

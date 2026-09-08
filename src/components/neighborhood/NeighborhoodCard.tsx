@@ -2,6 +2,7 @@ import { Check, Clock, DollarSign, Home, Plus, Train } from 'lucide-react'
 import { Badge } from '../common/Badge'
 import { getRentForBedrooms } from '../../data'
 import { formatBedrooms, formatCurrency, formatMinutes } from '../../utils/format'
+import { disposableIncomeColor } from '../../utils/incomeColor'
 import type { NeighborhoodEntry } from '../../utils/metrics'
 
 interface NeighborhoodCardProps {
@@ -41,7 +42,10 @@ export function NeighborhoodCard({
             </Badge>
           </div>
           <div className="text-right">
-            <div className={`text-lg font-bold tabular-nums ${isNegative ? 'text-[color:var(--color-status-critical)]' : 'text-slate-900'}`}>
+            <div
+              className="text-lg font-bold tabular-nums"
+              style={{ color: disposableIncomeColor(summary.estimatedDisposableIncome, summary.grossIncome) }}
+            >
               {formatCurrency(Math.round(summary.estimatedDisposableIncome))}
             </div>
             <div className="text-[11px] text-slate-400">est. disposable income/yr</div>
