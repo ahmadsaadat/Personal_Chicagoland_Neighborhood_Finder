@@ -70,46 +70,45 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
           ))}
         </div>
 
-        <div className="mt-3 grid grid-cols-2 gap-2">
-          <div>
-            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
-              {isRent ? 'Monthly rent (total)' : 'Home purchase price'}
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
-              <input
-                id="housing-amount"
-                type="number"
-                min={0}
-                step={isRent ? 50 : 5000}
-                value={isRent ? profile.monthlyRent : profile.homePurchasePrice}
-                onChange={(e) =>
-                  onProfileChange(
-                    isRent
-                      ? { ...profile, monthlyRent: Number(e.target.value) }
-                      : { ...profile, homePurchasePrice: Number(e.target.value) },
-                  )
-                }
-                className={inputClass('pl-5')}
-              />
-            </div>
+        <div className="mt-3">
+          <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
+            {isRent ? 'Monthly rent' : 'Home purchase price'}
+          </label>
+          <div className="relative">
+            <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+            <input
+              id="housing-amount"
+              type="number"
+              min={0}
+              step={isRent ? 50 : 5000}
+              value={isRent ? profile.monthlyRent : profile.homePurchasePrice}
+              onChange={(e) =>
+                onProfileChange(
+                  isRent
+                    ? { ...profile, monthlyRent: Number(e.target.value) }
+                    : { ...profile, homePurchasePrice: Number(e.target.value) },
+                )
+              }
+              className={inputClass('pl-5')}
+            />
           </div>
-          <div>
-            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-utilities">
-              Utilities (total)
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
-              <input
-                id="housing-utilities"
-                type="number"
-                min={0}
-                step={10}
-                value={profile.monthlyUtilities}
-                onChange={(e) => onProfileChange({ ...profile, monthlyUtilities: Number(e.target.value) })}
-                className={inputClass('pl-5')}
-              />
-            </div>
+        </div>
+
+        <div className="mt-3">
+          <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-utilities">
+            Utilities
+          </label>
+          <div className="relative">
+            <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+            <input
+              id="housing-utilities"
+              type="number"
+              min={0}
+              step={10}
+              value={profile.monthlyUtilities}
+              onChange={(e) => onProfileChange({ ...profile, monthlyUtilities: Number(e.target.value) })}
+              className={inputClass('pl-5')}
+            />
           </div>
         </div>
 
