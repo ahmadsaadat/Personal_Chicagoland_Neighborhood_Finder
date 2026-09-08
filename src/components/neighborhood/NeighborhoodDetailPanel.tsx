@@ -67,15 +67,18 @@ function StaticSectionHeader({
   value: string
 }) {
   return (
-    <div className="flex items-center justify-between gap-2 rounded-xl border border-green-400 px-3 py-2.5">
+    <div className="flex items-center justify-between gap-2 rounded-xl border border-green-700/40 px-3 py-2.5">
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
-        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-          {title}
-          {titleSuffix && <span className="ml-1 normal-case tracking-normal text-slate-400">{titleSuffix}</span>}
-        </span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
       </span>
       <span className="flex items-center gap-1.5">
+        {titleSuffix && (
+          <>
+            <span className="text-xs font-medium normal-case tracking-normal text-slate-400">{titleSuffix}</span>
+            <span className="text-xs text-slate-300">•</span>
+          </>
+        )}
         <AmountBadge value={value} variant="income" />
         <ChevronDown size={14} className="invisible" />
       </span>
@@ -83,14 +86,33 @@ function StaticSectionHeader({
   )
 }
 
-function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: string; value: string }) {
+function Row({
+  label,
+  labelSuffix,
+  valueSuffix,
+  value,
+}: {
+  label: string
+  labelSuffix?: string
+  /** A short note (e.g. a percentage) shown right before the value, separated by a bullet — for things measured against this row's own number, as opposed to labelSuffix's longer annotations tied to the label. */
+  valueSuffix?: string
+  value: string
+}) {
   return (
     <div className="flex items-center justify-between gap-2 py-1.5 text-sm">
       <span className="text-slate-500">
         {label}
         {labelSuffix && <span className="ml-1.5 font-medium tabular-nums text-slate-400">{labelSuffix}</span>}
       </span>
-      <span className="shrink-0 font-medium tabular-nums text-slate-800">{value}</span>
+      <span className="flex shrink-0 items-center gap-1.5">
+        {valueSuffix && (
+          <>
+            <span className="text-xs font-medium tabular-nums text-slate-400">{valueSuffix}</span>
+            <span className="text-xs text-slate-300">•</span>
+          </>
+        )}
+        <span className="font-medium tabular-nums text-slate-800">{value}</span>
+      </span>
     </div>
   )
 }
@@ -125,12 +147,15 @@ function CollapsibleSectionHeader({
     >
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
-        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-          {title}
-          {titleSuffix && <span className="ml-1 normal-case tracking-normal text-slate-400">{titleSuffix}</span>}
-        </span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
       </span>
       <span className="flex items-center gap-1.5">
+        {titleSuffix && (
+          <>
+            <span className="text-xs font-medium normal-case tracking-normal text-slate-400">{titleSuffix}</span>
+            <span className="text-xs text-slate-300">•</span>
+          </>
+        )}
         <AmountBadge value={summaryValue} variant="expense" />
         <ChevronDown size={14} className={`text-slate-400 transition-transform ${expanded ? 'rotate-180' : ''}`} />
       </span>
@@ -232,7 +257,7 @@ export function NeighborhoodDetailPanel({
           <StaticSectionHeader
             icon={Wallet}
             title="Income"
-            titleSuffix="(100%)"
+            titleSuffix="100%"
             value={`${formatCurrency(Math.round(summary.grossIncome / 12))}/mo`}
           />
         </section>
@@ -243,7 +268,7 @@ export function NeighborhoodDetailPanel({
             <CollapsibleSectionHeader
               icon={Landmark}
               title="Income Tax"
-              titleSuffix={`(${incomeTaxRatePercent}%)`}
+              titleSuffix={`${incomeTaxRatePercent}%`}
               summaryValue={`${formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo`}
               expanded={taxesExpanded}
               onToggle={() => setTaxesExpanded((v) => !v)}
@@ -252,30 +277,32 @@ export function NeighborhoodDetailPanel({
               <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
                 <Row
                   label="Federal income tax"
-                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.federalIncomeTax)}%)`}
+                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.federalIncomeTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.federalIncomeTax / 12))}/mo`}
                 />
                 <Row
+                  label="Illinois state income tax"
+                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.stateIncomeTax)}%`}
+                  value={`${formatCurrency(Math.round(summary.taxes.stateIncomeTax / 12))}/mo`}
+                />
+                <Row
                   label="Social Security"
-                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.socialSecurityTax)}%)`}
+                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.socialSecurityTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.socialSecurityTax / 12))}/mo`}
                 />
                 <Row
                   label="Medicare"
-                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.medicareTax)}%)`}
+                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.medicareTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.medicareTax / 12))}/mo`}
                 />
-                <Row
-                  label="Illinois state income tax"
-                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.stateIncomeTax)}%)`}
-                  value={`${formatCurrency(Math.round(summary.taxes.stateIncomeTax / 12))}/mo`}
-                />
                 <div className="flex items-center justify-between py-2 text-sm font-semibold">
-                  <span className="text-slate-700">
-                    Total <span className="font-medium text-slate-400">({incomeTaxRatePercent}%)</span>
-                  </span>
-                  <span className="tabular-nums text-slate-900">
-                    {formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo
+                  <span className="text-slate-700">Total</span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="text-xs font-medium tabular-nums text-slate-400">{incomeTaxRatePercent}%</span>
+                    <span className="text-xs text-slate-300">•</span>
+                    <span className="tabular-nums text-slate-900">
+                      {formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo
+                    </span>
                   </span>
                 </div>
               </div>
@@ -335,7 +362,7 @@ export function NeighborhoodDetailPanel({
                     <Row label="Home Insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
                     <Row
                       label="Property Tax"
-                      labelSuffix={`(${formatPercent(profile.housing.effectivePropertyTaxRate, 2)})`}
+                      valueSuffix={formatPercent(profile.housing.effectivePropertyTaxRate, 2)}
                       value={`${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
                     />
                   </>
