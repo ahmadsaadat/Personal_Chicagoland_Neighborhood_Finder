@@ -74,12 +74,9 @@ function StaticSectionHeader({
       </span>
       <span className="flex items-center gap-1.5">
         {titleSuffix && (
-          <>
-            <span className="w-9 shrink-0 text-right text-xs font-medium normal-case tracking-normal text-slate-400">
-              {titleSuffix}
-            </span>
-            <span className="text-xs text-slate-300">•</span>
-          </>
+          <span className="w-9 shrink-0 text-right text-xs font-medium normal-case tracking-normal text-slate-400">
+            {titleSuffix}
+          </span>
         )}
         <span className="w-24 shrink-0 text-right">
           <AmountBadge value={value} variant="income" />
@@ -110,15 +107,12 @@ function Row({
       </span>
       <span className="flex shrink-0 items-center gap-1.5">
         {valueSuffix && (
-          <>
-            {/* Fixed-width, right-aligned so this percentage's digits sit
-                directly under the header's percentage regardless of how many
-                digits either one has. */}
-            <span className="w-9 shrink-0 text-right text-xs font-medium tabular-nums text-slate-400">
-              {valueSuffix}
-            </span>
-            <span className="text-xs text-slate-300">•</span>
-          </>
+          // Fixed-width, right-aligned so this percentage's digits sit
+          // directly under the header's percentage regardless of how many
+          // digits either one has.
+          <span className="w-9 shrink-0 text-right text-xs font-medium tabular-nums text-slate-400">
+            {valueSuffix}
+          </span>
         )}
         {/* Same fixed width as the header's value column, so dollar amounts
             line up under the header's dollar amount too. */}
@@ -165,12 +159,9 @@ function CollapsibleSectionHeader({
       </span>
       <span className="flex items-center gap-1.5">
         {titleSuffix && (
-          <>
-            <span className="w-9 shrink-0 text-right text-xs font-medium normal-case tracking-normal text-slate-400">
-              {titleSuffix}
-            </span>
-            <span className="text-xs text-slate-300">•</span>
-          </>
+          <span className="w-9 shrink-0 text-right text-xs font-medium normal-case tracking-normal text-slate-400">
+            {titleSuffix}
+          </span>
         )}
         <span className="w-24 shrink-0 text-right">
           <AmountBadge value={summaryValue} variant="expense" />
@@ -320,12 +311,14 @@ export function NeighborhoodDetailPanel({
                 />
                 <div className="flex items-center justify-between py-2 text-sm font-semibold">
                   <span className="text-slate-700">Total</span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="text-xs font-medium tabular-nums text-slate-400">{incomeTaxRatePercent}%</span>
-                    <span className="text-xs text-slate-300">•</span>
-                    <span className="tabular-nums text-slate-900">
+                  <span className="flex shrink-0 items-center gap-1.5">
+                    <span className="w-9 shrink-0 text-right text-xs font-medium tabular-nums text-slate-400">
+                      {incomeTaxRatePercent}%
+                    </span>
+                    <span className="w-24 shrink-0 text-right tabular-nums text-slate-900">
                       {formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo
                     </span>
+                    <ChevronDown size={14} className="invisible" />
                   </span>
                 </div>
               </div>
