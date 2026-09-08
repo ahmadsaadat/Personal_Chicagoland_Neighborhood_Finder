@@ -39,6 +39,19 @@ function SectionHeader({ icon: Icon, title }: { icon: LucideIcon; title: string 
   )
 }
 
+/** A section header with a value inline on the right, like CollapsibleSectionHeader but static (no toggle/chevron) — for a section with nothing to expand. */
+function StaticSectionHeader({ icon: Icon, title, value }: { icon: LucideIcon; title: string; value: string }) {
+  return (
+    <div className="flex items-center justify-between gap-2">
+      <span className="flex items-center gap-2">
+        <Icon size={15} className="text-slate-400" />
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
+      </span>
+      <span className="text-sm font-semibold tabular-nums text-slate-800">{value}</span>
+    </div>
+  )
+}
+
 function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: string; value: string }) {
   return (
     <div className="flex items-center justify-between gap-2 py-1.5 text-sm">
@@ -162,17 +175,14 @@ export function NeighborhoodDetailPanel({
 
         {/* Income */}
         <section>
-          <SectionHeader icon={Wallet} title="Income" />
-          <div className="rounded-xl border border-slate-100 px-3">
-            <Row label="Annual income" value={`${formatCurrency(summary.grossIncome)}/yr`} />
-          </div>
+          <StaticSectionHeader icon={Wallet} title="Income" value={`${formatCurrency(summary.grossIncome)}/yr`} />
         </section>
 
         {/* Taxes */}
         <section>
           <CollapsibleSectionHeader
             icon={Landmark}
-            title="Taxes (estimated)"
+            title="Taxes"
             summaryValue={formatCurrency(Math.round(summary.taxes.totalTax))}
             expanded={taxesExpanded}
             onToggle={() => setTaxesExpanded((v) => !v)}
