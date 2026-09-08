@@ -50,9 +50,9 @@ export const MAP_METRICS: MetricConfig[] = [
     label: 'Disposable Income',
     icon: Wallet,
     goodDirection: 'high',
-    helpText: 'Estimated cash left over per year after taxes, housing, transportation, and everyday costs. Darker = more left over.',
-    getValue: (e) => e.summary.estimatedDisposableIncome,
-    format: (v) => `${formatCurrency(v)}/yr`,
+    helpText: 'Estimated cash left over per month after taxes, housing, transportation, and everyday costs. Darker = more left over.',
+    getValue: (e) => e.summary.estimatedDisposableIncome / 12,
+    format: (v) => `${formatCurrency(v)}/mo`,
   },
   {
     key: 'medianRent2BR',

@@ -33,7 +33,11 @@ function buildRows(bedrooms: number): CompareRow[] {
     },
     { label: 'Transportation /yr', getValue: (e) => e.summary.transportationAnnualCost, betterWhenHigh: false },
     { label: 'Total annual cost', getValue: (e) => e.summary.totalAnnualCost, betterWhenHigh: false },
-    { label: 'Est. disposable income /yr', getValue: (e) => e.summary.estimatedDisposableIncome, betterWhenHigh: true },
+    {
+      label: 'Est. disposable income /mo',
+      getValue: (e) => e.summary.estimatedDisposableIncome / 12,
+      betterWhenHigh: true,
+    },
   ]
 }
 

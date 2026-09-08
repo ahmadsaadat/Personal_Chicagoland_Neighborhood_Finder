@@ -46,9 +46,9 @@ export function NeighborhoodCard({
               className="text-lg font-bold tabular-nums"
               style={{ color: disposableIncomeColor(summary.estimatedDisposableIncome, summary.grossIncome) }}
             >
-              {formatCurrency(Math.round(summary.estimatedDisposableIncome))}
+              {formatCurrency(Math.round(summary.estimatedDisposableIncome / 12))}
             </div>
-            <div className="text-[11px] text-slate-400">est. disposable income/yr</div>
+            <div className="text-[11px] text-slate-400">est. disposable income/mo</div>
           </div>
         </div>
 

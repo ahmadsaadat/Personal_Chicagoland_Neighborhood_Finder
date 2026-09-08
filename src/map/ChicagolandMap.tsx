@@ -4,11 +4,10 @@ import 'leaflet/dist/leaflet.css'
 import { AlertTriangle, Loader2 } from 'lucide-react'
 import { useMemo } from 'react'
 import { GeoJSON, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import { getRentForBedrooms } from '../data'
 import { formatBedrooms, formatCurrency } from '../utils/format'
 import { divergingColor, NO_DATA_COLOR } from '../utils/colorScale'
 import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
-import type { MapMetric } from '../types'
+import type { HousingChoice, MapMetric } from '../types'
 import { fixLeafletDefaultIcon } from './leafletIconFix'
 import { useNeighborhoodGeoJson } from './useNeighborhoodGeoJson'
 
@@ -20,6 +19,7 @@ interface ChicagolandMapProps {
   entries: NeighborhoodEntry[]
   metric: MapMetric
   bedrooms: number
+  housingChoice: HousingChoice
   selectedNeighborhoodId: string | null
   compareIds: string[]
   onSelectNeighborhood: (id: string) => void
@@ -34,6 +34,7 @@ export function ChicagolandMap({
   entries,
   metric,
   bedrooms,
+  housingChoice,
   selectedNeighborhoodId,
   compareIds,
   onSelectNeighborhood,
@@ -61,7 +62,7 @@ export function ChicagolandMap({
   // remount the layer whenever anything that should change its appearance
   // changes (metric, selection, compare set, or the underlying values for the
   // current user profile).
-  const layerKey = `${metric}-${bedrooms}-${selectedNeighborhoodId ?? ''}-${compareIds.join(',')}-${valuesSum.toFixed(2)}`
+  const layerKey = `${metric}-${bedrooms}-${housingChoice}-${selectedNeighborhoodId ?? ''}-${compareIds.join(',')}-${valuesSum.toFixed(2)}`
 
   function styleFeature(feature?: Feature<Geometry, NeighborhoodFeatureProps>): PathOptions {
     const id = feature?.properties.id
@@ -87,14 +88,16 @@ export function ChicagolandMap({
   function onEachFeature(feature: Feature<Geometry, NeighborhoodFeatureProps>, layer: Layer) {
     const entry = entriesById.get(feature.properties.id)
     if (entry) {
-      const { neighborhood, profile, summary } = entry
-      const rent = getRentForBedrooms(profile.housing, bedrooms)
-      const rentLabel = formatBedrooms(bedrooms)
+      const { neighborhood, summary } = entry
+      const housingLine =
+        housingChoice === 'rent'
+          ? `${formatBedrooms(bedrooms)} rent: <strong>${formatCurrency(Math.round(summary.monthlyRentShare))}/mo</strong>`
+          : `Housing payment: <strong>${formatCurrency(Math.round(summary.monthlyHousingPayment))}/mo</strong>`
       layer.bindTooltip(
         `<div style="font-family:var(--font-sans);min-width:170px">
           <div style="font-weight:600;font-size:13px;color:#0b0b0b;margin-bottom:4px">${neighborhood.name}</div>
-          <div style="font-size:12px;color:#52514e">${rentLabel} rent: <strong>${formatCurrency(rent)}/mo</strong></div>
-          <div style="font-size:12px;color:#52514e">Est. disposable income: <strong>${formatCurrency(Math.round(summary.estimatedDisposableIncome))}/yr</strong></div>
+          <div style="font-size:12px;color:#52514e">${housingLine}</div>
+          <div style="font-size:12px;color:#52514e">Est. disposable income: <strong>${formatCurrency(Math.round(summary.estimatedDisposableIncome / 12))}/mo</strong></div>
         </div>`,
         { sticky: true, direction: 'top', opacity: 0.97, className: 'chicagoland-tooltip' },
       )

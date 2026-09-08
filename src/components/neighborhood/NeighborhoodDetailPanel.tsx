@@ -119,8 +119,8 @@ export function NeighborhoodDetailPanel({
               className="mt-1 text-3xl font-bold tabular-nums"
               style={{ color: disposableIncomeColor(summary.estimatedDisposableIncome, summary.grossIncome) }}
             >
-              {formatCurrency(Math.round(summary.estimatedDisposableIncome))}
-              <span className="ml-1 text-base font-medium text-slate-400">/yr</span>
+              {formatCurrency(Math.round(summary.estimatedDisposableIncome / 12))}
+              <span className="ml-1 text-base font-medium text-slate-400">/mo</span>
             </div>
             {isNegative && (
               <p className="mt-1 text-xs font-medium text-[color:var(--color-status-critical)]">
@@ -130,7 +130,15 @@ export function NeighborhoodDetailPanel({
           </div>
 
           <div className="mt-3 grid grid-cols-2 gap-2.5">
-            <StatTile icon={Home} label={`${bedroomLabel} Rent`} value={`${formatCurrency(bedroomRent)}/mo`} />
+            {userProfile.housingChoice === 'rent' ? (
+              <StatTile icon={Home} label={`${bedroomLabel} Rent`} value={`${formatCurrency(bedroomRent)}/mo`} />
+            ) : (
+              <StatTile
+                icon={Home}
+                label="Housing Payment"
+                value={`${formatCurrency(Math.round(summary.monthlyHousingPayment))}/mo`}
+              />
+            )}
             <StatTile icon={Receipt} label="Est. Annual Cost" value={formatCurrency(Math.round(summary.totalAnnualCost))} />
             <StatTile icon={Landmark} label="Est. Annual Taxes" value={formatCurrency(Math.round(summary.taxes.totalTax))} />
             <StatTile

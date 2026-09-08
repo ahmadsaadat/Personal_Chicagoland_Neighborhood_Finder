@@ -88,6 +88,7 @@ export function ExplorePage({
         entries={entries}
         metric={metric}
         bedrooms={profile.bedrooms}
+        housingChoice={profile.housingChoice}
         selectedNeighborhoodId={selectedNeighborhoodId}
         compareIds={compare.selectedIds}
         onSelectNeighborhood={onSelectNeighborhood}

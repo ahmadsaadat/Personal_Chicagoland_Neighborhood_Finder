@@ -33,7 +33,7 @@ export function RankedList({ ranked, annualIncome, onOpenDetail }: RankedListPro
                 style={{ color: disposableIncomeColor(item.disposableIncome, annualIncome) }}
               >
                 <Wallet size={14} className="text-slate-400" />
-                {formatCurrency(Math.round(item.disposableIncome))}/yr
+                {formatCurrency(Math.round(item.disposableIncome / 12))}/mo
               </div>
             </div>
             <p className="mt-1 text-sm leading-relaxed text-slate-500">{item.reason}</p>
