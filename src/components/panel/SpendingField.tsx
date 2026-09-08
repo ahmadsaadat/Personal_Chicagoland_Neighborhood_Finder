@@ -112,10 +112,6 @@ export function SpendingField({ profile, onProfileChange }: SpendingFieldProps) 
             onCommit={(n) => onProfileChange({ ...profile, monthlyOtherSpending: n })}
           />
         </div>
-        <p className="mt-3 text-[11px] text-slate-400">
-          Scales each neighborhood's own cost estimate for these categories up or down from your level — it doesn't
-          replace area price differences with a flat number.
-        </p>
       </PopoverPanel>
     </>
   )
