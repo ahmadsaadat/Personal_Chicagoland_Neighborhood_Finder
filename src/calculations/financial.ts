@@ -1,5 +1,5 @@
-import { getMunicipality, getNeighborhood, getNeighborhoodProfile, getTaxJurisdiction } from '../data'
-import { yourMonthlyRentShare, yourMonthlyUtilitiesShare, type FinancialSummary, type UserProfile } from '../types'
+import { getMunicipality, getNeighborhood, getNeighborhoodProfile, getRentForBedrooms, getTaxJurisdiction } from '../data'
+import { splitAmongRoommates, type FinancialSummary, type UserProfile } from '../types'
 import { calculateTaxes } from './taxes'
 
 const DEFAULT_MONTHLY_SPENDING = 1200
@@ -13,6 +13,16 @@ const MORTGAGE_ANNUAL_RATE = 0.065
 const MORTGAGE_TERM_YEARS = 30
 const HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE = 0.01
 
+// Utilities don't split like rent does: rent is a fixed cost no matter who's
+// home, but utilities usage (showers, laundry, electricity) genuinely grows
+// with headcount — just not linearly, since heating/internet/etc are shared.
+// Each additional roommate is assumed to add this fraction of the baseline
+// single-person estimate to the whole household's total usage; that scaled-up
+// total is then split evenly across everyone (so it's still "divided by the
+// number of roommates," just the numerator isn't the flat single-person
+// figure). Purely an MVP approximation, not measured.
+const UTILITIES_EXTRA_USAGE_PER_PERSON = 0.5
+
 function monthlyMortgagePayment(homePrice: number): number {
   const principal = homePrice * (1 - MORTGAGE_DOWN_PAYMENT_PCT)
   const monthlyRate = MORTGAGE_ANNUAL_RATE / 12
@@ -25,11 +35,32 @@ function monthlyMortgagePayment(homePrice: number): number {
 }
 
 /**
+ * Your fair share of the household's utilities: scales the neighborhood's
+ * baseline (single-person) estimate up by the extra usage each roommate
+ * adds, then divides that household total evenly across everyone.
+ */
+function fairUtilitiesShare(
+  baseMonthlyUtilities: number,
+  profile: Pick<UserProfile, 'hasRoommates' | 'numPeopleSplittingRent'>,
+): number {
+  if (!profile.hasRoommates) return baseMonthlyUtilities
+  const people = Math.max(1, profile.numPeopleSplittingRent)
+  const householdTotal = baseMonthlyUtilities * (1 + UTILITIES_EXTRA_USAGE_PER_PERSON * (people - 1))
+  return householdTotal / people
+}
+
+/**
  * calculateFinancialSummary(profile, neighborhoodId)
  *
  * The single source of truth for "how much money will I have left" math.
  * Combines taxes, housing, transportation, and everyday cost-of-living into
  * one estimated annual disposable income figure per neighborhood.
+ *
+ * Rent and utilities are always pulled from the NEIGHBORHOOD's own data
+ * (median rent at the user's chosen bedroom size; cost-of-living utilities
+ * estimate) rather than a flat number the user types in once — the whole
+ * point of the tool is comparing how those figures differ by neighborhood,
+ * so a single global rent/utilities input would silently defeat that.
  */
 export function calculateFinancialSummary(
   profile: UserProfile,
@@ -54,15 +85,17 @@ export function calculateFinancialSummary(
     restaurantsMonthly: costOfLiving.restaurantsMonthly,
   })
 
-  // The user's own entered utilities figure (split with roommates the same
-  // way rent is) replaces the neighborhood's average utilities estimate —
-  // see the exclusion from everydayExpensesAnnual below to avoid double
-  // counting it.
-  const monthlyUtilitiesShare = yourMonthlyUtilitiesShare(profile)
+  const monthlyRentShare =
+    profile.housingChoice === 'rent'
+      ? splitAmongRoommates(getRentForBedrooms(housing, profile.bedrooms), profile)
+      : 0
+  // Utilities are excluded from everydayExpensesAnnual below to avoid double
+  // counting — this is the one figure used for them.
+  const monthlyUtilitiesShare = fairUtilitiesShare(costOfLiving.utilitiesMonthly, profile)
 
   const housingAnnualCost =
     profile.housingChoice === 'rent'
-      ? (yourMonthlyRentShare(profile) + monthlyUtilitiesShare) * 12
+      ? (monthlyRentShare + monthlyUtilitiesShare) * 12
       : (monthlyMortgagePayment(profile.homePurchasePrice) +
           (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12 +
           monthlyUtilitiesShare) *
@@ -77,9 +110,8 @@ export function calculateFinancialSummary(
     Math.max(0.5, profile.monthlySpending / DEFAULT_MONTHLY_SPENDING),
   )
   const familyFactor = 1 + profile.numChildren * 0.12
-  // Utilities are intentionally excluded here — the user's own entered
-  // figure is used instead (see housingAnnualCost above), not the
-  // neighborhood average, to avoid double counting.
+  // Utilities are intentionally excluded here — see monthlyUtilitiesShare
+  // above, folded into housingAnnualCost instead, to avoid double counting.
   const everydayExpensesAnnual =
     (costOfLiving.groceriesMonthly +
       costOfLiving.restaurantsMonthly +
@@ -102,6 +134,8 @@ export function calculateFinancialSummary(
     neighborhoodId,
     grossIncome: profile.annualIncome,
     taxes,
+    monthlyRentShare,
+    monthlyUtilitiesShare,
     housingAnnualCost,
     transportationAnnualCost,
     everydayExpensesAnnual,

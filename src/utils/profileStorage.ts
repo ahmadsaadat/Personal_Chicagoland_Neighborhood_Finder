@@ -17,7 +17,6 @@ function isUserProfile(value: unknown): value is UserProfile {
     (v.maritalStatus === 'single' || v.maritalStatus === 'married') &&
     typeof v.numChildren === 'number' &&
     (v.housingChoice === 'rent' || v.housingChoice === 'own') &&
-    typeof v.monthlyRent === 'number' &&
     typeof v.homePurchasePrice === 'number' &&
     typeof v.bedrooms === 'number' &&
     typeof v.ownsCar === 'boolean' &&

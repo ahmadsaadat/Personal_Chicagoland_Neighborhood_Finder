@@ -20,7 +20,7 @@ import { Badge } from '../common/Badge'
 import { getRentForBedrooms } from '../../data'
 import { formatBedrooms, formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
 import type { NeighborhoodEntry } from '../../utils/metrics'
-import { yourMonthlyRentShare, yourMonthlyUtilitiesShare, type UserProfile } from '../../types'
+import type { UserProfile } from '../../types'
 
 interface NeighborhoodDetailPanelProps {
   entry: NeighborhoodEntry | null
@@ -149,9 +149,9 @@ export function NeighborhoodDetailPanel({
             <Row label="Median home price" value={formatCurrency(profile.housing.medianHomePrice)} />
             <Row label="Effective property tax rate" value={formatPercent(profile.housing.effectivePropertyTaxRate, 2)} />
             {userProfile.housingChoice === 'rent' && (
-              <Row label="Your monthly rent" value={`${formatCurrency(yourMonthlyRentShare(userProfile))}/mo`} />
+              <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
             )}
-            <Row label="Your monthly utilities" value={`${formatCurrency(yourMonthlyUtilitiesShare(userProfile))}/mo`} />
+            <Row label="Your monthly utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
             <Row label="Your est. annual housing cost" value={formatCurrency(Math.round(summary.housingAnnualCost))} />
           </div>
           {userProfile.housingChoice === 'own' && (

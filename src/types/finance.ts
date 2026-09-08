@@ -14,6 +14,10 @@ export interface FinancialSummary {
   neighborhoodId: string
   grossIncome: number
   taxes: TaxBreakdown
+  /** Your monthly rent for the neighborhood's median rent at your chosen bedroom size, after any roommate split. 0 if owning. */
+  monthlyRentShare: number
+  /** Your monthly utilities share, using the neighborhood's cost-of-living estimate and (if renting with roommates) a fair-usage split. */
+  monthlyUtilitiesShare: number
   housingAnnualCost: number
   transportationAnnualCost: number
   everydayExpensesAnnual: number

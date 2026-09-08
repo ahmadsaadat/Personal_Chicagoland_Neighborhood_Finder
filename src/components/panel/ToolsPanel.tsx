@@ -125,37 +125,21 @@ export function ToolsPanel({
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <FieldLabel>Bedrooms</FieldLabel>
-                  <select
-                    value={profile.bedrooms}
-                    onChange={(e) => set('bedrooms', Number(e.target.value))}
-                    className={inputClass()}
-                  >
-                    {[0, 1, 2, 3, 4, 5].map((n) => (
-                      <option key={n} value={n}>
-                        {n === 0 ? 'Studio' : `${n} BR`}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <FieldLabel>Commute to</FieldLabel>
-                  <input
-                    type="text"
-                    list="commute-presets"
-                    value={profile.commuteDestination}
-                    onChange={(e) => set('commuteDestination', e.target.value)}
-                    className={inputClass()}
-                    placeholder="Chicago Loop"
-                  />
-                  <datalist id="commute-presets">
-                    {COMMUTE_PRESETS.map((preset) => (
-                      <option key={preset} value={preset} />
-                    ))}
-                  </datalist>
-                </div>
+              <div>
+                <FieldLabel>Commute to</FieldLabel>
+                <input
+                  type="text"
+                  list="commute-presets"
+                  value={profile.commuteDestination}
+                  onChange={(e) => set('commuteDestination', e.target.value)}
+                  className={inputClass()}
+                  placeholder="Chicago Loop"
+                />
+                <datalist id="commute-presets">
+                  {COMMUTE_PRESETS.map((preset) => (
+                    <option key={preset} value={preset} />
+                  ))}
+                </datalist>
               </div>
 
               <div>
