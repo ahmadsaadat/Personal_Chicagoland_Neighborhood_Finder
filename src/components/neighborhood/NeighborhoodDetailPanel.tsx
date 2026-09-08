@@ -75,11 +75,15 @@ function StaticSectionHeader({
       <span className="flex items-center gap-1.5">
         {titleSuffix && (
           <>
-            <span className="text-xs font-medium normal-case tracking-normal text-slate-400">{titleSuffix}</span>
+            <span className="w-9 shrink-0 text-right text-xs font-medium normal-case tracking-normal text-slate-400">
+              {titleSuffix}
+            </span>
             <span className="text-xs text-slate-300">•</span>
           </>
         )}
-        <AmountBadge value={value} variant="income" />
+        <span className="w-24 shrink-0 text-right">
+          <AmountBadge value={value} variant="income" />
+        </span>
         <ChevronDown size={14} className="invisible" />
       </span>
     </div>
@@ -107,11 +111,21 @@ function Row({
       <span className="flex shrink-0 items-center gap-1.5">
         {valueSuffix && (
           <>
-            <span className="text-xs font-medium tabular-nums text-slate-400">{valueSuffix}</span>
+            {/* Fixed-width, right-aligned so this percentage's digits sit
+                directly under the header's percentage regardless of how many
+                digits either one has. */}
+            <span className="w-9 shrink-0 text-right text-xs font-medium tabular-nums text-slate-400">
+              {valueSuffix}
+            </span>
             <span className="text-xs text-slate-300">•</span>
           </>
         )}
-        <span className="font-medium tabular-nums text-slate-800">{value}</span>
+        {/* Same fixed width as the header's value column, so dollar amounts
+            line up under the header's dollar amount too. */}
+        <span className="w-24 shrink-0 text-right font-medium tabular-nums text-slate-800">{value}</span>
+        {/* Reserves the same width a header's chevron takes, so this row's
+            value lines up with its section header's value above/below it. */}
+        <ChevronDown size={14} className="invisible" />
       </span>
     </div>
   )
@@ -152,11 +166,15 @@ function CollapsibleSectionHeader({
       <span className="flex items-center gap-1.5">
         {titleSuffix && (
           <>
-            <span className="text-xs font-medium normal-case tracking-normal text-slate-400">{titleSuffix}</span>
+            <span className="w-9 shrink-0 text-right text-xs font-medium normal-case tracking-normal text-slate-400">
+              {titleSuffix}
+            </span>
             <span className="text-xs text-slate-300">•</span>
           </>
         )}
-        <AmountBadge value={summaryValue} variant="expense" />
+        <span className="w-24 shrink-0 text-right">
+          <AmountBadge value={summaryValue} variant="expense" />
+        </span>
         <ChevronDown size={14} className={`text-slate-400 transition-transform ${expanded ? 'rotate-180' : ''}`} />
       </span>
     </button>
@@ -175,6 +193,8 @@ export function NeighborhoodDetailPanel({
   const [showAssumptions, setShowAssumptions] = useState(false)
   const [taxesExpanded, setTaxesExpanded] = useState(false)
   const [housingExpanded, setHousingExpanded] = useState(false)
+  const [transportationExpanded, setTransportationExpanded] = useState(false)
+  const [expensesExpanded, setExpensesExpanded] = useState(false)
 
   if (!entry) return null
   const { neighborhood, profile, summary } = entry
@@ -189,9 +209,12 @@ export function NeighborhoodDetailPanel({
     summary.taxes.socialSecurityTax +
     summary.taxes.medicareTax +
     summary.taxes.stateIncomeTax
-  const incomeTaxPercentOf = (amount: number) =>
+  const percentOfIncome = (amount: number) =>
     summary.grossIncome > 0 ? Math.round((amount / summary.grossIncome) * 100) : 0
-  const incomeTaxRatePercent = incomeTaxPercentOf(incomeTaxAnnual)
+  const incomeTaxRatePercent = percentOfIncome(incomeTaxAnnual)
+  const housingPercent = percentOfIncome(summary.housingAnnualCost)
+  const transportationPercent = percentOfIncome(summary.transportationAnnualCost)
+  const expensesPercent = percentOfIncome(summary.everydayExpensesAnnual)
 
   return (
     <Modal
@@ -277,22 +300,22 @@ export function NeighborhoodDetailPanel({
               <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
                 <Row
                   label="Federal"
-                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.federalIncomeTax)}%`}
+                  valueSuffix={`${percentOfIncome(summary.taxes.federalIncomeTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.federalIncomeTax / 12))}/mo`}
                 />
                 <Row
                   label="Illinois State"
-                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.stateIncomeTax)}%`}
+                  valueSuffix={`${percentOfIncome(summary.taxes.stateIncomeTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.stateIncomeTax / 12))}/mo`}
                 />
                 <Row
                   label="Social Security"
-                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.socialSecurityTax)}%`}
+                  valueSuffix={`${percentOfIncome(summary.taxes.socialSecurityTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.socialSecurityTax / 12))}/mo`}
                 />
                 <Row
                   label="Medicare"
-                  valueSuffix={`${incomeTaxPercentOf(summary.taxes.medicareTax)}%`}
+                  valueSuffix={`${percentOfIncome(summary.taxes.medicareTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.medicareTax / 12))}/mo`}
                 />
                 <div className="flex items-center justify-between py-2 text-sm font-semibold">
@@ -340,6 +363,7 @@ export function NeighborhoodDetailPanel({
             <CollapsibleSectionHeader
               icon={Home}
               title="Housing"
+              titleSuffix={`${housingPercent}%`}
               summaryValue={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
               expanded={housingExpanded}
               onToggle={() => setHousingExpanded((v) => !v)}
@@ -347,7 +371,11 @@ export function NeighborhoodDetailPanel({
             {housingExpanded && (
               <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
                 {userProfile.housingChoice === 'rent' ? (
-                  <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
+                  <Row
+                    label="Rent"
+                    valueSuffix={`${percentOfIncome(summary.monthlyRentShare * 12)}%`}
+                    value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`}
+                  />
                 ) : (
                   <>
                     <Row
@@ -357,19 +385,30 @@ export function NeighborhoodDetailPanel({
                           ? `(${bedroomLabel} Median Home Price: ${formatCurrency(Math.round(summary.estimatedHomeValue))})`
                           : undefined
                       }
+                      valueSuffix={`${percentOfIncome(summary.monthlyMortgagePaymentAmount * 12)}%`}
                       value={`${formatCurrency(Math.round(summary.monthlyMortgagePaymentAmount))}/mo`}
                     />
-                    <Row label="Home Insurance" value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`} />
+                    <Row
+                      label="Home Insurance"
+                      valueSuffix={`${percentOfIncome(summary.monthlyHomeInsurance * 12)}%`}
+                      value={`${formatCurrency(Math.round(summary.monthlyHomeInsurance))}/mo`}
+                    />
                     <Row
                       label="Property Tax"
-                      valueSuffix={formatPercent(profile.housing.effectivePropertyTaxRate, 2)}
+                      labelSuffix={formatPercent(profile.housing.effectivePropertyTaxRate, 2)}
+                      valueSuffix={`${percentOfIncome(summary.taxes.propertyTaxEstimate)}%`}
                       value={`${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
                     />
                   </>
                 )}
-                <Row label="Utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
+                <Row
+                  label="Utilities"
+                  valueSuffix={`${percentOfIncome(summary.monthlyUtilitiesShare * 12)}%`}
+                  value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`}
+                />
                 <Row
                   label="Total Monthly Cost"
+                  valueSuffix={`${housingPercent}%`}
                   value={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
                 />
               </div>
@@ -391,18 +430,59 @@ export function NeighborhoodDetailPanel({
 
         {/* Transportation */}
         <section>
-          <SectionHeader icon={TrainFront} title="Transportation" />
-          <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-            <Row label="Avg. commute to the Loop" value={formatMinutes(profile.transportation.avgCommuteMinutesToLoop)} />
-            <Row label="Transit score" value={`${Math.round(profile.transportation.transitScore)}/100`} />
-            <Row
-              label="Rail access"
-              value={profile.transportation.hasRailAccess ? 'Yes' : 'No'}
+          <div className="overflow-hidden rounded-xl border border-slate-100">
+            <CollapsibleSectionHeader
+              icon={TrainFront}
+              title="Transportation"
+              titleSuffix={`${transportationPercent}%`}
+              summaryValue={`${formatCurrency(Math.round(summary.transportationAnnualCost / 12))}/mo`}
+              expanded={transportationExpanded}
+              onToggle={() => setTransportationExpanded((v) => !v)}
             />
-            <Row label="Monthly parking estimate" value={formatCurrency(profile.transportation.parkingMonthlyEstimate)} />
-            <Row label="Your est. annual transportation cost" value={formatCurrency(Math.round(summary.transportationAnnualCost))} />
+            {transportationExpanded && (
+              <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
+                <Row label="Avg. commute to the Loop" value={formatMinutes(profile.transportation.avgCommuteMinutesToLoop)} />
+                <Row label="Transit score" value={`${Math.round(profile.transportation.transitScore)}/100`} />
+                <Row label="Rail access" value={profile.transportation.hasRailAccess ? 'Yes' : 'No'} />
+                {userProfile.ownsCar ? (
+                  <>
+                    <Row
+                      label="Car note"
+                      valueSuffix={`${percentOfIncome(userProfile.monthlyCarNote * 12)}%`}
+                      value={`${formatCurrency(userProfile.monthlyCarNote)}/mo`}
+                    />
+                    <Row
+                      label="Car insurance"
+                      valueSuffix={`${percentOfIncome(userProfile.monthlyCarInsurance * 12)}%`}
+                      value={`${formatCurrency(userProfile.monthlyCarInsurance)}/mo`}
+                    />
+                    <Row
+                      label="Gas"
+                      valueSuffix={`${percentOfIncome(userProfile.monthlyGasSpending * 12)}%`}
+                      value={`${formatCurrency(userProfile.monthlyGasSpending)}/mo`}
+                    />
+                    <Row
+                      label="Parking"
+                      valueSuffix={`${percentOfIncome(profile.transportation.parkingMonthlyEstimate * 12)}%`}
+                      value={`${formatCurrency(profile.transportation.parkingMonthlyEstimate)}/mo`}
+                    />
+                  </>
+                ) : (
+                  <Row
+                    label="Transit pass"
+                    valueSuffix={`${transportationPercent}%`}
+                    value={`${formatCurrency(Math.round(summary.transportationAnnualCost / 12))}/mo`}
+                  />
+                )}
+                <Row
+                  label="Total Monthly Cost"
+                  valueSuffix={`${transportationPercent}%`}
+                  value={`${formatCurrency(Math.round(summary.transportationAnnualCost / 12))}/mo`}
+                />
+              </div>
+            )}
           </div>
-          {profile.transportation.transitLines.length > 0 && (
+          {transportationExpanded && profile.transportation.transitLines.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1.5">
               {profile.transportation.transitLines.map((line) => (
                 <Badge key={line}>{line}</Badge>
@@ -411,19 +491,47 @@ export function NeighborhoodDetailPanel({
           )}
         </section>
 
-        {/* Cost of living */}
+        {/* Expenses */}
         <section>
-          <SectionHeader icon={ShoppingBasket} title="Cost of living" />
-          <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-            <Row label="Groceries" value={`${formatCurrency(profile.costOfLiving.groceriesMonthly)}/mo`} />
-            <Row label="Restaurants" value={`${formatCurrency(profile.costOfLiving.restaurantsMonthly)}/mo`} />
-            <Row label="Healthcare" value={`${formatCurrency(profile.costOfLiving.healthcareMonthly)}/mo`} />
-            <Row label="Other" value={`${formatCurrency(profile.costOfLiving.otherMonthly)}/mo`} />
+          <div className="overflow-hidden rounded-xl border border-slate-100">
+            <CollapsibleSectionHeader
+              icon={ShoppingBasket}
+              title="Expenses"
+              titleSuffix={`${expensesPercent}%`}
+              summaryValue={`${formatCurrency(Math.round(summary.everydayExpensesAnnual / 12))}/mo`}
+              expanded={expensesExpanded}
+              onToggle={() => setExpensesExpanded((v) => !v)}
+            />
+            {expensesExpanded && (
+              <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
+                <Row
+                  label="Groceries"
+                  valueSuffix={`${percentOfIncome(summary.groceriesMonthlyActual * 12)}%`}
+                  value={`${formatCurrency(Math.round(summary.groceriesMonthlyActual))}/mo`}
+                />
+                <Row
+                  label="Restaurants"
+                  valueSuffix={`${percentOfIncome(summary.restaurantsMonthlyActual * 12)}%`}
+                  value={`${formatCurrency(Math.round(summary.restaurantsMonthlyActual))}/mo`}
+                />
+                <Row
+                  label="Healthcare"
+                  valueSuffix={`${percentOfIncome(summary.healthcareMonthlyActual * 12)}%`}
+                  value={`${formatCurrency(Math.round(summary.healthcareMonthlyActual))}/mo`}
+                />
+                <Row
+                  label="Other"
+                  valueSuffix={`${percentOfIncome(summary.otherMonthlyActual * 12)}%`}
+                  value={`${formatCurrency(Math.round(summary.otherMonthlyActual))}/mo`}
+                />
+                <Row
+                  label="Total Monthly Cost"
+                  valueSuffix={`${expensesPercent}%`}
+                  value={`${formatCurrency(Math.round(summary.everydayExpensesAnnual / 12))}/mo`}
+                />
+              </div>
+            )}
           </div>
-          <p className="mt-1.5 text-[11px] leading-relaxed text-slate-400">
-            Utilities live in the Housing section above — your own entered figure is used there instead of a
-            neighborhood average.
-          </p>
         </section>
 
         {/* Lifestyle */}
