@@ -5,8 +5,7 @@ import { AlertTriangle, Loader2 } from 'lucide-react'
 import { useMemo } from 'react'
 import { GeoJSON, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { formatBedrooms, formatCurrency } from '../utils/format'
-import { divergingColor, NO_DATA_COLOR } from '../utils/colorScale'
-import { disposableIncomeColor } from '../utils/incomeColor'
+import { medianPivotColor, NO_DATA_COLOR } from '../utils/colorScale'
 import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 import type { HousingChoice, MapMetric } from '../types'
 import { fixLeafletDefaultIcon } from './leafletIconFix'
@@ -49,14 +48,9 @@ export function ChicagolandMap({
     return map
   }, [entries])
 
-  const { min, max, valuesSum } = useMemo(() => {
-    if (entries.length === 0) return { min: 0, max: 0, valuesSum: 0 }
+  const { values, valuesSum } = useMemo(() => {
     const values = entries.map((e) => metricConfig.getValue(e))
-    return {
-      min: Math.min(...values),
-      max: Math.max(...values),
-      valuesSum: values.reduce((a, b) => a + b, 0),
-    }
+    return { values, valuesSum: values.reduce((a, b) => a + b, 0) }
   }, [entries, metricConfig])
 
   // GeoJSON style/handlers are captured in closures at layer-creation time, so
@@ -68,17 +62,14 @@ export function ChicagolandMap({
   function styleFeature(feature?: Feature<Geometry, NeighborhoodFeatureProps>): PathOptions {
     const id = feature?.properties.id
     const entry = id ? entriesById.get(id) : undefined
-    // For disposable income specifically, color against the same absolute
-    // income-ratio scale used for the number itself elsewhere in the app
-    // (sidebar cards, detail panel) rather than this metric's min/max among
-    // currently-shown neighborhoods — so a map full of bad options for this
-    // profile reads as uniformly red instead of always having a "best" one
-    // colored as if it were actually good.
-    const fillColor = !entry
-      ? NO_DATA_COLOR
-      : metric === 'disposableIncome'
-        ? disposableIncomeColor(entry.summary.estimatedDisposableIncome, entry.summary.grossIncome)
-        : divergingColor(metricConfig.getValue(entry), min, max, metricConfig.goodDirection)
+    // Pivoted at the dataset's actual median rather than the min/max
+    // midpoint, so a right-skewed metric (a handful of comfortably-positive
+    // outliers stretching the max) doesn't make nearly everything read as
+    // green — "below the pack" stays red, "above the pack" stays green,
+    // regardless of skew.
+    const fillColor = entry
+      ? medianPivotColor(metricConfig.getValue(entry), values, metricConfig.goodDirection)
+      : NO_DATA_COLOR
     const isSelected = entry?.neighborhood.id === selectedNeighborhoodId
     const isCompared = entry ? compareIds.includes(entry.neighborhood.id) : false
 
