@@ -15,7 +15,6 @@ import { calculateTaxes } from './taxes'
 const DEFAULT_GROCERIES_SPENDING = 400
 const DEFAULT_RESTAURANTS_SPENDING = 250
 const DEFAULT_OTHER_SPENDING = 550
-const MILEAGE_COST_PER_MILE = 0.65 // AAA-style all-in cost (gas, maintenance, insurance, depreciation)
 const TRANSIT_MONTHLY_PASS = 105 // CTA full-fare monthly pass
 
 // 30-year fixed mortgage assumptions for turning a home price into a carrying
@@ -165,7 +164,11 @@ export function calculateFinancialSummary(
       : (monthlyHousingPayment + monthlyUtilitiesShare) * 12
 
   const transportationAnnualCost = profile.ownsCar
-    ? profile.annualMilesDriven * MILEAGE_COST_PER_MILE + transportation.parkingMonthlyEstimate * 12
+    ? (profile.monthlyCarNote +
+        profile.monthlyCarInsurance +
+        profile.monthlyGasSpending +
+        transportation.parkingMonthlyEstimate) *
+      12
     : TRANSIT_MONTHLY_PASS * 12
 
   const familyFactor = 1 + profile.numChildren * 0.12

@@ -22,7 +22,12 @@ export interface UserProfile {
   /** Drives which per-bedroom rent figure is pulled from each neighborhood's own housing data when renting (0 = studio), and which per-bedroom home price when owning with ownHomeSizing 'median'. */
   bedrooms: number
   ownsCar: boolean
-  annualMilesDriven: number
+  /** Monthly loan or lease payment. Car-only. */
+  monthlyCarNote: number
+  /** Monthly car insurance premium. Car-only. */
+  monthlyCarInsurance: number
+  /** Monthly gas spending. Car-only. */
+  monthlyGasSpending: number
   commuteDestination: string
   /** Your own typical monthly grocery spending — scales each neighborhood's own grocery cost estimate up/down from a baseline rather than replacing it, so area price differences are preserved. See calculations/financial.ts. */
   monthlyGroceriesSpending: number
@@ -46,7 +51,9 @@ export const DEFAULT_PROFILE: UserProfile = {
   monthlyMortgagePayment: 1800,
   bedrooms: 1,
   ownsCar: true,
-  annualMilesDriven: 8000,
+  monthlyCarNote: 350,
+  monthlyCarInsurance: 140,
+  monthlyGasSpending: 160,
   commuteDestination: 'Chicago Loop',
   monthlyGroceriesSpending: 400,
   monthlyRestaurantsSpending: 250,

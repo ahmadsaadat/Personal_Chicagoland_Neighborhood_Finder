@@ -1,4 +1,4 @@
-import { Car, User } from 'lucide-react'
+import { User } from 'lucide-react'
 import type { UserProfile } from '../../types'
 
 interface ProfileChipsProps {
@@ -11,7 +11,7 @@ function ChipButton({
   label,
   onClick,
 }: {
-  icon: typeof Car
+  icon: typeof User
   label: string
   onClick: () => void
 }) {
@@ -28,12 +28,10 @@ function ChipButton({
 }
 
 /**
- * Car and marital-status chips, meant to sit alongside IncomeField/
- * HousingField in one chip row. Unlike those two, these are plain
- * toggles — one click flips car ownership or marital status directly, no
- * popover. Number of children (not a simple two-state toggle) stays in the
- * expandable full-profile section below. Returns a fragment (not a wrapping
- * div) so both chips participate directly in the parent's flex-wrap layout.
+ * The marital-status chip, meant to sit alongside IncomeField/HousingField/
+ * CarField in one chip row. A plain toggle — one click flips marital status
+ * directly, no popover. Number of children (not a simple two-state toggle)
+ * stays in the expandable full-profile section below.
  */
 export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
   const familyLabel =
@@ -44,19 +42,12 @@ export function ProfileChips({ profile, onProfileChange }: ProfileChipsProps) {
         : 'Single'
 
   return (
-    <>
-      <ChipButton
-        icon={Car}
-        label={profile.ownsCar ? 'Car' : 'No car'}
-        onClick={() => onProfileChange({ ...profile, ownsCar: !profile.ownsCar })}
-      />
-      <ChipButton
-        icon={User}
-        label={familyLabel}
-        onClick={() =>
-          onProfileChange({ ...profile, maritalStatus: profile.maritalStatus === 'married' ? 'single' : 'married' })
-        }
-      />
-    </>
+    <ChipButton
+      icon={User}
+      label={familyLabel}
+      onClick={() =>
+        onProfileChange({ ...profile, maritalStatus: profile.maritalStatus === 'married' ? 'single' : 'married' })
+      }
+    />
   )
 }

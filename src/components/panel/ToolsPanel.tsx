@@ -1,4 +1,5 @@
 import { ChevronDown, List, Sparkles } from 'lucide-react'
+import { CarField } from './CarField'
 import { HousingField } from './HousingField'
 import { IncomeField } from './IncomeField'
 import { SpendingField } from './SpendingField'
@@ -87,6 +88,7 @@ export function ToolsPanel({
           <IncomeField profile={profile} onProfileChange={onProfileChange} />
           <HousingField profile={profile} onProfileChange={onProfileChange} />
           <SpendingField profile={profile} onProfileChange={onProfileChange} />
+          <CarField profile={profile} onProfileChange={onProfileChange} />
           <ProfileChips profile={profile} onProfileChange={onProfileChange} />
         </div>
 
