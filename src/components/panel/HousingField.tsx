@@ -22,10 +22,6 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
   // share after splitting with roommates, not the whole unit's rent.
   const chipAmount = isRent ? yourMonthlyRentShare(profile) : profile.homePurchasePrice
 
-  function setRoommateCount(n: number) {
-    onProfileChange({ ...profile, numRoommates: Math.max(1, n) })
-  }
-
   return (
     <>
       <button
@@ -105,7 +101,7 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
                   max={10}
                   step={1}
                   value={profile.numRoommates}
-                  onChange={(e) => setRoommateCount(Number(e.target.value))}
+                  onChange={(e) => onProfileChange({ ...profile, numRoommates: Number(e.target.value) })}
                   className={inputClass()}
                 />
                 <p className="mt-1.5 text-xs text-slate-400">
