@@ -13,7 +13,7 @@ export function Header({ onSelectNeighborhood }: HeaderProps) {
           <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border border-slate-100">
             <ChicagoFlagIcon size={32} />
           </div>
-          <span className="text-[15px] font-bold tracking-tight text-slate-900">Chicagoland - Neighborhood Finder - βeta</span>
+          <span className="text-[15px] font-bold tracking-tight text-slate-900">Chicagoland - Neighborhood Finder - αlpha</span>
         </div>
 
         <div className="hidden flex-1 justify-center sm:flex">
