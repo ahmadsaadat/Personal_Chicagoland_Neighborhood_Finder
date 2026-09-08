@@ -9,7 +9,7 @@ import { useUserProfile } from './hooks/useUserProfile'
 import { ExplorePage } from './pages/ExplorePage'
 
 function App() {
-  const { profile, updateProfile, resetProfile, isOnboarded } = useUserProfile()
+  const { profile, updateProfile, resetProfile } = useUserProfile()
   const entries = useNeighborhoodEntries(profile)
 
   const [profileExpanded, setProfileExpanded] = useState(false)
@@ -32,11 +32,7 @@ function App() {
 
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-slate-50 font-sans text-slate-900">
-      <Header
-        onSelectNeighborhood={setSelectedNeighborhoodId}
-        onOpenProfile={() => setProfileExpanded(true)}
-        hasCustomProfile={isOnboarded}
-      />
+      <Header onSelectNeighborhood={setSelectedNeighborhoodId} />
 
       <div className="relative flex-1 overflow-hidden">
         <ExplorePage
