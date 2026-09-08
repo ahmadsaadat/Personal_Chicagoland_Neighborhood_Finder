@@ -2,7 +2,7 @@ import { ChevronDown, Home } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { PopoverPanel } from '../common/PopoverPanel'
 import { formatBedrooms, formatCurrencyCompact } from '../../utils/format'
-import type { HousingChoice, UserProfile } from '../../types'
+import type { HousingChoice, OwnHomeSizing, UserProfile } from '../../types'
 
 interface HousingFieldProps {
   profile: UserProfile
@@ -18,6 +18,25 @@ const BEDROOM_OPTIONS = [
 
 function inputClass(extra = '') {
   return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
+}
+
+function BedroomToggle({ bedrooms, onChange }: { bedrooms: number; onChange: (value: number) => void }) {
+  return (
+    <div className="grid grid-cols-4 gap-1.5 rounded-lg bg-slate-100 p-1">
+      {BEDROOM_OPTIONS.map((opt) => (
+        <button
+          key={opt.value}
+          type="button"
+          onClick={() => onChange(opt.value)}
+          className={`rounded-md py-1.5 text-xs font-medium transition ${
+            bedrooms === opt.value ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+          }`}
+        >
+          {opt.label}
+        </button>
+      ))}
+    </div>
+  )
 }
 
 /**
@@ -80,6 +99,8 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             {formatBedrooms(profile.bedrooms)}
             {profile.hasRoommates ? ` · ${Math.max(1, profile.numPeopleSplittingRent)} people` : ''}
           </>
+        ) : profile.ownHomeSizing === 'median' ? (
+          `${formatBedrooms(profile.bedrooms)} home`
         ) : (
           `${formatCurrencyCompact(profile.monthlyMortgagePayment)}/mo`
         )}
@@ -107,20 +128,7 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
           <>
             <div className="mt-3">
               <label className="mb-1 block text-xs font-medium text-slate-500">Bedrooms</label>
-              <div className="grid grid-cols-4 gap-1.5 rounded-lg bg-slate-100 p-1">
-                {BEDROOM_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    type="button"
-                    onClick={() => onProfileChange({ ...profile, bedrooms: opt.value })}
-                    className={`rounded-md py-1.5 text-xs font-medium transition ${
-                      profile.bedrooms === opt.value ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
+              <BedroomToggle bedrooms={profile.bedrooms} onChange={(value) => onProfileChange({ ...profile, bedrooms: value })} />
               <p className="mt-1 text-[11px] text-slate-400">
                 Rent and utilities always use each neighborhood's own numbers for this size — open a neighborhood to
                 see them.
@@ -158,26 +166,60 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             </div>
           </>
         ) : (
-          <div className="mt-3">
-            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
-              Monthly mortgage payment
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
-              <input
-                id="housing-amount"
-                type="number"
-                min={0}
-                step={50}
-                value={mortgageInput}
-                onChange={(e) => handleMortgageInputChange(e.target.value)}
-                className={inputClass('pl-5')}
-              />
+          <>
+            <div className="mt-3">
+              <label className="mb-1 block text-xs font-medium text-slate-500">Home value estimate</label>
+              <div className="grid grid-cols-2 gap-1.5 rounded-lg bg-slate-100 p-1">
+                {(['median', 'custom'] as OwnHomeSizing[]).map((sizing) => (
+                  <button
+                    key={sizing}
+                    type="button"
+                    onClick={() => onProfileChange({ ...profile, ownHomeSizing: sizing })}
+                    className={`rounded-md py-1.5 text-xs font-medium capitalize transition ${
+                      profile.ownHomeSizing === sizing
+                        ? 'bg-white text-slate-900 shadow-sm'
+                        : 'text-slate-500 hover:text-slate-700'
+                    }`}
+                  >
+                    {sizing}
+                  </button>
+                ))}
+              </div>
             </div>
-            <p className="mt-1 text-[11px] text-slate-400">
-              Principal & interest only — property tax is estimated separately from this using each area's own rate.
-            </p>
-          </div>
+
+            {profile.ownHomeSizing === 'median' ? (
+              <div className="mt-3">
+                <label className="mb-1 block text-xs font-medium text-slate-500">Bedrooms</label>
+                <BedroomToggle bedrooms={profile.bedrooms} onChange={(value) => onProfileChange({ ...profile, bedrooms: value })} />
+                <p className="mt-1 text-[11px] text-slate-400">
+                  Uses each neighborhood's own estimated home price for this size — people buying different types of
+                  homes should switch to Custom instead.
+                </p>
+              </div>
+            ) : (
+              <div className="mt-3">
+                <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
+                  Monthly mortgage payment
+                </label>
+                <div className="relative">
+                  <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+                  <input
+                    id="housing-amount"
+                    type="number"
+                    min={0}
+                    step={50}
+                    value={mortgageInput}
+                    onChange={(e) => handleMortgageInputChange(e.target.value)}
+                    className={inputClass('pl-5')}
+                  />
+                </div>
+                <p className="mt-1 text-[11px] text-slate-400">
+                  Principal & interest only — property tax is estimated separately from this using each area's own
+                  rate.
+                </p>
+              </div>
+            )}
+          </>
         )}
       </PopoverPanel>
     </>

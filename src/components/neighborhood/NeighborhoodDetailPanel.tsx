@@ -162,13 +162,22 @@ export function NeighborhoodDetailPanel({
           {userProfile.housingChoice === 'own' && (
             <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
               <Info size={13} className="mt-0.5 shrink-0" />
-              <span>
-                Your entered monthly mortgage payment implies a home value of about{' '}
-                {formatCurrency(Math.round(summary.impliedHomeValue))}, which is applied here to compare
-                property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical home
-                price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying your
-                stated payment at this rate, not the cost of buying a typical home here.
-              </span>
+              {userProfile.ownHomeSizing === 'median' ? (
+                <span>
+                  Using this area's estimated {bedroomLabel} home price of about{' '}
+                  {formatCurrency(Math.round(summary.estimatedHomeValue))} (scaled from its median home price of{' '}
+                  {formatCurrency(profile.housing.medianHomePrice)}) — switch to a custom mortgage payment in the
+                  housing chip if that doesn't match what you're actually planning to spend.
+                </span>
+              ) : (
+                <span>
+                  Your entered monthly mortgage payment implies a home value of about{' '}
+                  {formatCurrency(Math.round(summary.estimatedHomeValue))}, applied uniformly here to compare
+                  property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical home
+                  price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying your
+                  stated payment at this rate, not the cost of buying a typical home here.
+                </span>
+              )}
             </div>
           )}
         </section>

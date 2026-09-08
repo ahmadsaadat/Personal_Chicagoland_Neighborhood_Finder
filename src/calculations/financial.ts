@@ -1,5 +1,12 @@
-import { getMunicipality, getNeighborhood, getNeighborhoodProfile, getRentForBedrooms, getTaxJurisdiction } from '../data'
-import { splitAmongRoommates, type FinancialSummary, type UserProfile } from '../types'
+import {
+  getHomePriceForBedrooms,
+  getMunicipality,
+  getNeighborhood,
+  getNeighborhoodProfile,
+  getRentForBedrooms,
+  getTaxJurisdiction,
+} from '../data'
+import { splitAmongRoommates, type FinancialSummary, type HousingData, type UserProfile } from '../types'
 import { calculateTaxes } from './taxes'
 
 const DEFAULT_MONTHLY_SPENDING = 1200
@@ -23,13 +30,19 @@ const HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE = 0.01
 // figure). Purely an MVP approximation, not measured.
 const UTILITIES_EXTRA_USAGE_PER_PERSON = 0.5
 
-/**
- * The user tells us their monthly mortgage payment directly (rather than a
- * home price) — but property tax still needs a home value to compare
- * neighborhoods' rates on an apples-to-apples basis, so this inverts the
- * standard amortization formula to back out the home price that would
- * produce that payment under the same down-payment/rate/term assumptions.
- */
+/** Standard amortization: turns a home price into a monthly P&I payment. */
+function monthlyMortgagePaymentFromPrice(homePrice: number): number {
+  const principal = homePrice * (1 - MORTGAGE_DOWN_PAYMENT_PCT)
+  const monthlyRate = MORTGAGE_ANNUAL_RATE / 12
+  const numPayments = MORTGAGE_TERM_YEARS * 12
+  if (monthlyRate === 0) return principal / numPayments
+  return (
+    (principal * monthlyRate * Math.pow(1 + monthlyRate, numPayments)) /
+    (Math.pow(1 + monthlyRate, numPayments) - 1)
+  )
+}
+
+/** Inverse of the above: backs out the home price a given payment would buy. */
 function impliedHomePrice(monthlyPayment: number): number {
   const monthlyRate = MORTGAGE_ANNUAL_RATE / 12
   const numPayments = MORTGAGE_TERM_YEARS * 12
@@ -39,6 +52,25 @@ function impliedHomePrice(monthlyPayment: number): number {
       : (monthlyPayment * (Math.pow(1 + monthlyRate, numPayments) - 1)) /
         (monthlyRate * Math.pow(1 + monthlyRate, numPayments))
   return principal / (1 - MORTGAGE_DOWN_PAYMENT_PCT)
+}
+
+/**
+ * The home value used for property tax (and the insurance/maintenance share
+ * of the housing payment). Two modes, since not everyone buys the type of
+ * home a flat estimate implies:
+ *  - 'median': use this neighborhood's own estimated home price at the
+ *    user's chosen bedroom size (see getHomePriceForBedrooms) — the value
+ *    varies by area, same as rent does.
+ *  - 'custom': the user knows their own target monthly mortgage payment, so
+ *    back out an implied home value from that instead, applied uniformly.
+ */
+function ownHomeValue(
+  profile: Pick<UserProfile, 'ownHomeSizing' | 'monthlyMortgagePayment' | 'bedrooms'>,
+  housing: HousingData,
+): number {
+  return profile.ownHomeSizing === 'median'
+    ? getHomePriceForBedrooms(housing, profile.bedrooms)
+    : impliedHomePrice(profile.monthlyMortgagePayment)
 }
 
 /**
@@ -83,10 +115,7 @@ export function calculateFinancialSummary(
 
   const { housing, transportation, costOfLiving } = nProfile
 
-  // Property tax needs a home value, not a monthly payment — see
-  // impliedHomePrice() above for why this is derived rather than entered.
-  const homePriceForPropertyTax =
-    profile.housingChoice === 'own' ? impliedHomePrice(profile.monthlyMortgagePayment) : 0
+  const homePriceForPropertyTax = profile.housingChoice === 'own' ? ownHomeValue(profile, housing) : 0
 
   const taxes = calculateTaxes({
     profile,
@@ -108,7 +137,10 @@ export function calculateFinancialSummary(
 
   const monthlyHousingPayment =
     profile.housingChoice === 'own'
-      ? profile.monthlyMortgagePayment + (homePriceForPropertyTax * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12
+      ? (profile.ownHomeSizing === 'median'
+          ? monthlyMortgagePaymentFromPrice(homePriceForPropertyTax)
+          : profile.monthlyMortgagePayment) +
+        (homePriceForPropertyTax * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12
       : 0
 
   const housingAnnualCost =
@@ -152,7 +184,7 @@ export function calculateFinancialSummary(
     monthlyRentShare,
     monthlyUtilitiesShare,
     monthlyHousingPayment,
-    impliedHomeValue: homePriceForPropertyTax,
+    estimatedHomeValue: homePriceForPropertyTax,
     housingAnnualCost,
     transportationAnnualCost,
     everydayExpensesAnnual,

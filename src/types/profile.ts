@@ -1,6 +1,8 @@
 export type MaritalStatus = 'single' | 'married'
 export type HousingChoice = 'rent' | 'own'
 export type IncomeType = 'salary' | 'hourly'
+/** How to value the home for an owner: 'median' derives it from the neighborhood's own data at the chosen bedroom size; 'custom' lets the user enter their own monthly mortgage payment instead. */
+export type OwnHomeSizing = 'median' | 'custom'
 
 export interface UserProfile {
   annualIncome: number
@@ -13,9 +15,11 @@ export interface UserProfile {
   hasRoommates: boolean
   /** Total people splitting the rent (and utilities), including the user. Rent-only. */
   numPeopleSplittingRent: number
-  /** What you'd actually pay monthly (mortgage principal & interest only) if buying. Own-only; an implied home value is derived from this for property-tax comparisons — see calculations/financial.ts. */
+  /** Own-only. 'median' uses each neighborhood's own home price at `bedrooms` size; 'custom' uses monthlyMortgagePayment instead. */
+  ownHomeSizing: OwnHomeSizing
+  /** Your own monthly mortgage payment (principal & interest only), used when ownHomeSizing is 'custom' — an implied home value is derived from it for property-tax comparisons. See calculations/financial.ts. */
   monthlyMortgagePayment: number
-  /** Drives which per-bedroom rent figure is pulled from each neighborhood's own housing data (0 = studio). */
+  /** Drives which per-bedroom rent figure is pulled from each neighborhood's own housing data when renting (0 = studio), and which per-bedroom home price when owning with ownHomeSizing 'median'. */
   bedrooms: number
   ownsCar: boolean
   annualMilesDriven: number
@@ -33,6 +37,7 @@ export const DEFAULT_PROFILE: UserProfile = {
   housingChoice: 'rent',
   hasRoommates: false,
   numPeopleSplittingRent: 2,
+  ownHomeSizing: 'median',
   monthlyMortgagePayment: 1800,
   bedrooms: 1,
   ownsCar: true,

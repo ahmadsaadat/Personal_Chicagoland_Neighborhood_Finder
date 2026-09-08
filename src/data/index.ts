@@ -161,3 +161,16 @@ export function getTypicalMonthlyRent(bedrooms: number): number {
   const median = sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
   return Math.round(median)
 }
+
+/**
+ * Approximates a per-bedroom home price for a neighborhood, since the
+ * dataset only carries one medianHomePrice per area. Scales that figure by
+ * the same ratio its rent scales by bedroom size (e.g. if 1BR rent here runs
+ * 80% of 2BR rent, the 1BR home price estimate is 80% of the median home
+ * price too) — reusing the bedroom-scaling pattern already established for
+ * rent rather than inventing an unrelated one.
+ */
+export function getHomePriceForBedrooms(housing: HousingData, bedrooms: number): number {
+  const rentRatio = getRentForBedrooms(housing, bedrooms) / housing.medianRent2BR
+  return Math.round(housing.medianHomePrice * rentRatio)
+}
