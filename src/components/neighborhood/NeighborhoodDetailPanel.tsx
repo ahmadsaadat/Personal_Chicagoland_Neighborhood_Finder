@@ -104,7 +104,7 @@ function CollapsibleSectionHeader({
     <button
       type="button"
       onClick={onToggle}
-      className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border border-red-700 px-3 py-2.5 text-left transition hover:border-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-100"
+      className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border border-slate-100 px-3 py-2.5 text-left transition hover:border-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-100"
     >
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
@@ -178,7 +178,7 @@ export function NeighborhoodDetailPanel({
             }`}
           >
             <div className="text-xs font-medium uppercase tracking-wide text-slate-500">
-              Estimated disposable income
+              Disposable income
             </div>
             <div
               className="mt-1 text-3xl font-bold tabular-nums"
@@ -197,7 +197,11 @@ export function NeighborhoodDetailPanel({
 
         {/* Income */}
         <section>
-          <StaticSectionHeader icon={Wallet} title="Income" value={`${formatCurrency(summary.grossIncome)}/yr`} />
+          <StaticSectionHeader
+            icon={Wallet}
+            title="Income"
+            value={`${formatCurrency(Math.round(summary.grossIncome / 12))}/mo`}
+          />
         </section>
 
         {/* Taxes */}
@@ -205,7 +209,7 @@ export function NeighborhoodDetailPanel({
           <CollapsibleSectionHeader
             icon={Landmark}
             title="Taxes"
-            summaryValue={formatCurrency(Math.round(summary.taxes.totalTax))}
+            summaryValue={`${formatCurrency(Math.round(summary.taxes.totalTax / 12))}/mo`}
             expanded={taxesExpanded}
             onToggle={() => setTaxesExpanded((v) => !v)}
           />
