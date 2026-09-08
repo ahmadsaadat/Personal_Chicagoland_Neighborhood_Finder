@@ -276,12 +276,12 @@ export function NeighborhoodDetailPanel({
             {taxesExpanded && (
               <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
                 <Row
-                  label="Federal income tax"
+                  label="Federal"
                   valueSuffix={`${incomeTaxPercentOf(summary.taxes.federalIncomeTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.federalIncomeTax / 12))}/mo`}
                 />
                 <Row
-                  label="Illinois state income tax"
+                  label="Illinois State"
                   valueSuffix={`${incomeTaxPercentOf(summary.taxes.stateIncomeTax)}%`}
                   value={`${formatCurrency(Math.round(summary.taxes.stateIncomeTax / 12))}/mo`}
                 />
