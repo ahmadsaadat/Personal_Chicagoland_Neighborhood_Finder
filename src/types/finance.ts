@@ -1,5 +1,10 @@
 export interface TaxBreakdown {
+  /** Federal income tax only (brackets minus child tax credit) — excludes FICA, which is broken out separately below. */
   federalIncomeTax: number
+  /** Social Security payroll tax (6.2%, capped at the wage base). */
+  socialSecurityTax: number
+  /** Medicare payroll tax (1.45%, uncapped). */
+  medicareTax: number
   stateIncomeTax: number
   localIncomeTax: number
   salesTaxEstimate: number

@@ -76,7 +76,16 @@ function applyBrackets(taxableIncome: number, brackets: Bracket[]): number {
   return Math.max(0, tax)
 }
 
-function calculateFederalTax(profile: UserProfile): number {
+/**
+ * Splits what's commonly lumped together as "federal taxes" into its actual
+ * components: bracket-based federal income tax (after the child tax
+ * credit), and the two FICA payroll taxes — Social Security and Medicare —
+ * which are legally distinct taxes with their own rates, not part of income
+ * tax, and worth showing the user separately.
+ */
+function calculateFederalTax(
+  profile: UserProfile,
+): { federalIncomeTax: number; socialSecurityTax: number; medicareTax: number } {
   const isMarried = profile.maritalStatus === 'married'
   const standardDeduction = isMarried ? STANDARD_DEDUCTION_MARRIED : STANDARD_DEDUCTION_SINGLE
   const taxableIncome = Math.max(0, profile.annualIncome - standardDeduction)
@@ -84,13 +93,13 @@ function calculateFederalTax(profile: UserProfile): number {
   const incomeTax = applyBrackets(taxableIncome, brackets)
 
   const childTaxCredit = profile.numChildren * CHILD_TAX_CREDIT_PER_CHILD
-  const incomeTaxAfterCredits = Math.max(0, incomeTax - childTaxCredit)
+  const federalIncomeTax = Math.max(0, incomeTax - childTaxCredit)
 
-  const socialSecurity =
+  const socialSecurityTax =
     Math.min(profile.annualIncome, FICA_SOCIAL_SECURITY_WAGE_CAP) * FICA_SOCIAL_SECURITY_RATE
-  const medicare = profile.annualIncome * FICA_MEDICARE_RATE
+  const medicareTax = profile.annualIncome * FICA_MEDICARE_RATE
 
-  return incomeTaxAfterCredits + socialSecurity + medicare
+  return { federalIncomeTax, socialSecurityTax, medicareTax }
 }
 
 function calculateStateTax(profile: UserProfile): number {
@@ -152,7 +161,7 @@ export interface CalculateTaxesInput {
 export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
   const { profile, jurisdiction, isChicago, effectivePropertyTaxRate, homePriceForPropertyTax } = input
 
-  const federalIncomeTax = calculateFederalTax(profile)
+  const { federalIncomeTax, socialSecurityTax, medicareTax } = calculateFederalTax(profile)
   const stateIncomeTax = calculateStateTax(profile)
   const localIncomeTax = 0 // Illinois municipalities, including Chicago, do not levy a local income tax.
 
@@ -172,6 +181,8 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
 
   const totalTax =
     federalIncomeTax +
+    socialSecurityTax +
+    medicareTax +
     stateIncomeTax +
     localIncomeTax +
     salesTaxEstimate +
@@ -181,6 +192,8 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
 
   return {
     federalIncomeTax,
+    socialSecurityTax,
+    medicareTax,
     stateIncomeTax,
     localIncomeTax,
     salesTaxEstimate,
@@ -189,7 +202,7 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
     vehicleTaxEstimate,
     totalTax,
     assumptions: [
-      'Federal tax uses 2024 IRS brackets and standard deduction; includes Social Security and Medicare (FICA) payroll taxes.',
+      'Federal income tax uses 2024 IRS brackets and standard deduction. Social Security (6.2%, capped at the wage base) and Medicare (1.45%) are itemized separately as FICA payroll taxes, not income tax.',
       'Illinois state tax uses the 4.95% flat rate with standard personal exemptions.',
       'Illinois and Chicago do not levy a local personal income tax.',
       'Sales tax applies the jurisdiction\'s combined state+county+RTA+home-rule rate to your entered "other spending," and the restaurant tax rate to your entered restaurant spending. Illinois eliminated its 1% statewide grocery tax on 1/1/2026; this estimate still applies an approximate 1% effective rate to your entered grocery spending as a placeholder for a possible local municipal grocery tax and should be verified against the specific municipality\'s current ordinance.',

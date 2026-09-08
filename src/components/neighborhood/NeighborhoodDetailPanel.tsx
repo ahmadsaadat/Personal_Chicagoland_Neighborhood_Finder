@@ -55,12 +55,25 @@ function AmountBadge({ value, variant }: { value: string; variant: 'income' | 'e
  * invisible one) so its value lines up with the collapsible headers' values
  * above/below it instead of extending further right.
  */
-function StaticSectionHeader({ icon: Icon, title, value }: { icon: LucideIcon; title: string; value: string }) {
+function StaticSectionHeader({
+  icon: Icon,
+  title,
+  titleSuffix,
+  value,
+}: {
+  icon: LucideIcon
+  title: string
+  titleSuffix?: string
+  value: string
+}) {
   return (
     <div className="flex items-center justify-between gap-2 rounded-xl border border-green-700 px-3 py-2.5">
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
-        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+          {title}
+          {titleSuffix && <span className="ml-1 normal-case tracking-normal text-slate-400">{titleSuffix}</span>}
+        </span>
       </span>
       <span className="flex items-center gap-1.5">
         <AmountBadge value={value} variant="income" />
@@ -142,13 +155,18 @@ export function NeighborhoodDetailPanel({
   const { neighborhood, profile, summary } = entry
   const isNegative = summary.estimatedDisposableIncome < 0
   const bedroomLabel = formatBedrooms(userProfile.bedrooms)
-  // "Taxes" here means income tax only (federal + state) — sales, restaurant,
-  // property, and vehicle taxes are surfaced elsewhere rather than folded
-  // into this section's total, so it stays a clean "what does my paycheck
-  // lose to income tax" figure.
-  const incomeTaxAnnual = summary.taxes.federalIncomeTax + summary.taxes.stateIncomeTax
-  const incomeTaxRatePercent =
-    summary.grossIncome > 0 ? Math.round((incomeTaxAnnual / summary.grossIncome) * 100) : 0
+  // "Income Tax" here means everything withheld from a paycheck — federal
+  // income tax, the two FICA payroll taxes (Social Security, Medicare), and
+  // state income tax — not sales, restaurant, property, or vehicle taxes,
+  // which are surfaced elsewhere rather than folded into this section.
+  const incomeTaxAnnual =
+    summary.taxes.federalIncomeTax +
+    summary.taxes.socialSecurityTax +
+    summary.taxes.medicareTax +
+    summary.taxes.stateIncomeTax
+  const incomeTaxPercentOf = (amount: number) =>
+    summary.grossIncome > 0 ? Math.round((amount / summary.grossIncome) * 100) : 0
+  const incomeTaxRatePercent = incomeTaxPercentOf(incomeTaxAnnual)
 
   return (
     <Modal
@@ -214,6 +232,7 @@ export function NeighborhoodDetailPanel({
           <StaticSectionHeader
             icon={Wallet}
             title="Income"
+            titleSuffix="(100%)"
             value={`${formatCurrency(Math.round(summary.grossIncome / 12))}/mo`}
           />
         </section>
@@ -223,7 +242,7 @@ export function NeighborhoodDetailPanel({
           <div className="overflow-hidden rounded-xl border border-slate-100">
             <CollapsibleSectionHeader
               icon={Landmark}
-              title="Income Taxes"
+              title="Income Tax"
               titleSuffix={`(${incomeTaxRatePercent}%)`}
               summaryValue={`${formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo`}
               expanded={taxesExpanded}
@@ -233,14 +252,28 @@ export function NeighborhoodDetailPanel({
               <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
                 <Row
                   label="Federal income tax"
+                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.federalIncomeTax)}%)`}
                   value={`${formatCurrency(Math.round(summary.taxes.federalIncomeTax / 12))}/mo`}
                 />
                 <Row
+                  label="Social Security"
+                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.socialSecurityTax)}%)`}
+                  value={`${formatCurrency(Math.round(summary.taxes.socialSecurityTax / 12))}/mo`}
+                />
+                <Row
+                  label="Medicare"
+                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.medicareTax)}%)`}
+                  value={`${formatCurrency(Math.round(summary.taxes.medicareTax / 12))}/mo`}
+                />
+                <Row
                   label="Illinois state income tax"
+                  labelSuffix={`(${incomeTaxPercentOf(summary.taxes.stateIncomeTax)}%)`}
                   value={`${formatCurrency(Math.round(summary.taxes.stateIncomeTax / 12))}/mo`}
                 />
                 <div className="flex items-center justify-between py-2 text-sm font-semibold">
-                  <span className="text-slate-700">Total</span>
+                  <span className="text-slate-700">
+                    Total <span className="font-medium text-slate-400">({incomeTaxRatePercent}%)</span>
+                  </span>
                   <span className="tabular-nums text-slate-900">
                     {formatCurrency(Math.round(incomeTaxAnnual / 12))}/mo
                   </span>
