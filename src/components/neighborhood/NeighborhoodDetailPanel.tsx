@@ -83,9 +83,11 @@ function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: strin
 }
 
 /**
- * A section header that's also the toggle for a collapsible section (Taxes,
- * Housing) — shows the section's total up front so it's useful collapsed,
- * and expands into the full line-item breakdown on click.
+ * The toggle button for a collapsible section (Taxes, Housing) — shows the
+ * section's total up front so it's useful collapsed. Deliberately has no
+ * border/rounding of its own: the caller wraps this together with the
+ * conditionally-rendered details in one shared bordered container, so
+ * expanding never produces two separate boxes stacked with a gap.
  */
 function CollapsibleSectionHeader({
   icon: Icon,
@@ -104,7 +106,7 @@ function CollapsibleSectionHeader({
     <button
       type="button"
       onClick={onToggle}
-      className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border border-slate-100 px-3 py-2.5 text-left transition hover:border-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-100"
+      className="flex w-full items-center justify-between gap-2 px-3 py-2.5 text-left transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-100"
     >
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
@@ -206,28 +208,35 @@ export function NeighborhoodDetailPanel({
 
         {/* Taxes */}
         <section>
-          <CollapsibleSectionHeader
-            icon={Landmark}
-            title="Taxes"
-            summaryValue={`${formatCurrency(Math.round(summary.taxes.totalTax / 12))}/mo`}
-            expanded={taxesExpanded}
-            onToggle={() => setTaxesExpanded((v) => !v)}
-          />
-          {taxesExpanded && (
-            <>
-              <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-                <Row label="Federal income tax" value={formatCurrency(Math.round(summary.taxes.federalIncomeTax))} />
-                <Row label="Illinois state income tax" value={formatCurrency(Math.round(summary.taxes.stateIncomeTax))} />
-                <Row label="Local income tax" value={formatCurrency(summary.taxes.localIncomeTax)} />
-                <Row label="Sales tax" value={formatCurrency(Math.round(summary.taxes.salesTaxEstimate))} />
-                <Row label="Restaurant / food tax" value={formatCurrency(Math.round(summary.taxes.restaurantTaxEstimate))} />
-                <Row label="Property tax" value={formatCurrency(Math.round(summary.taxes.propertyTaxEstimate))} />
-                <Row label="Vehicle tax & fees" value={formatCurrency(Math.round(summary.taxes.vehicleTaxEstimate))} />
+          <div className="overflow-hidden rounded-xl border border-slate-100">
+            <CollapsibleSectionHeader
+              icon={Landmark}
+              title="Taxes"
+              summaryValue={`${formatCurrency(Math.round(summary.taxes.totalTax / 12))}/mo`}
+              expanded={taxesExpanded}
+              onToggle={() => setTaxesExpanded((v) => !v)}
+            />
+            {taxesExpanded && (
+              <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
+                <Row
+                  label="Federal income tax"
+                  value={`${formatCurrency(Math.round(summary.taxes.federalIncomeTax / 12))}/mo`}
+                />
+                <Row
+                  label="Illinois state income tax"
+                  value={`${formatCurrency(Math.round(summary.taxes.stateIncomeTax / 12))}/mo`}
+                />
                 <div className="flex items-center justify-between py-2 text-sm font-semibold">
                   <span className="text-slate-700">Total</span>
-                  <span className="tabular-nums text-slate-900">{formatCurrency(Math.round(summary.taxes.totalTax))}</span>
+                  <span className="tabular-nums text-slate-900">
+                    {formatCurrency(Math.round(summary.taxes.totalTax / 12))}/mo
+                  </span>
                 </div>
               </div>
+            )}
+          </div>
+          {taxesExpanded && (
+            <>
               <button
                 type="button"
                 onClick={() => setShowAssumptions((v) => !v)}
@@ -254,16 +263,16 @@ export function NeighborhoodDetailPanel({
 
         {/* Housing */}
         <section>
-          <CollapsibleSectionHeader
-            icon={Home}
-            title="Housing"
-            summaryValue={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
-            expanded={housingExpanded}
-            onToggle={() => setHousingExpanded((v) => !v)}
-          />
-          {housingExpanded && (
-            <>
-              <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
+          <div className="overflow-hidden rounded-xl border border-slate-100">
+            <CollapsibleSectionHeader
+              icon={Home}
+              title="Housing"
+              summaryValue={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
+              expanded={housingExpanded}
+              onToggle={() => setHousingExpanded((v) => !v)}
+            />
+            {housingExpanded && (
+              <div className="divide-y divide-slate-100 border-t border-slate-100 px-3">
                 {userProfile.housingChoice === 'rent' ? (
                   <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
                 ) : (
@@ -291,19 +300,19 @@ export function NeighborhoodDetailPanel({
                   value={`${formatCurrency(Math.round(summary.housingAnnualCost / 12))}/mo`}
                 />
               </div>
-              {userProfile.housingChoice === 'own' && userProfile.ownHomeSizing === 'custom' && (
-                <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
-                  <Info size={13} className="mt-0.5 shrink-0" />
-                  <span>
-                    Your entered monthly mortgage payment implies a home value of about{' '}
-                    {formatCurrency(Math.round(summary.estimatedHomeValue))}, applied uniformly here to compare
-                    property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical home
-                    price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying
-                    your stated payment at this rate, not the cost of buying a typical home here.
-                  </span>
-                </div>
-              )}
-            </>
+            )}
+          </div>
+          {housingExpanded && userProfile.housingChoice === 'own' && userProfile.ownHomeSizing === 'custom' && (
+            <div className="mt-2 flex items-start gap-1.5 rounded-lg bg-slate-50 px-2.5 py-2 text-xs leading-relaxed text-slate-500">
+              <Info size={13} className="mt-0.5 shrink-0" />
+              <span>
+                Your entered monthly mortgage payment implies a home value of about{' '}
+                {formatCurrency(Math.round(summary.estimatedHomeValue))}, applied uniformly here to compare
+                property-tax rates on an apples-to-apples basis — it isn't adjusted to this area's typical home
+                price ({formatCurrency(profile.housing.medianHomePrice)}), so treat "cost to own" as carrying your
+                stated payment at this rate, not the cost of buying a typical home here.
+              </span>
+            </div>
           )}
         </section>
 
