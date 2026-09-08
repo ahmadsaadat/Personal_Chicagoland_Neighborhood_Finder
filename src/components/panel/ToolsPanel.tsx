@@ -1,6 +1,7 @@
 import { ChevronDown, List, Sparkles } from 'lucide-react'
 import { HousingField } from './HousingField'
 import { IncomeField } from './IncomeField'
+import { SpendingField } from './SpendingField'
 import { NeighborhoodCard } from '../neighborhood/NeighborhoodCard'
 import { ProfileChips } from '../profile/ProfileChips'
 import { RankedList } from '../ranking/RankedList'
@@ -85,6 +86,7 @@ export function ToolsPanel({
         <div className="flex flex-wrap items-center gap-2">
           <IncomeField profile={profile} onProfileChange={onProfileChange} />
           <HousingField profile={profile} onProfileChange={onProfileChange} />
+          <SpendingField profile={profile} onProfileChange={onProfileChange} />
           <ProfileChips profile={profile} onProfileChange={onProfileChange} />
         </div>
 
@@ -142,24 +144,9 @@ export function ToolsPanel({
                 </datalist>
               </div>
 
-              <div>
-                <FieldLabel>Monthly spending (non-housing)</FieldLabel>
-                <div className="relative">
-                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">$</span>
-                  <input
-                    type="number"
-                    min={0}
-                    step={50}
-                    value={profile.monthlySpending}
-                    onChange={(e) => set('monthlySpending', Number(e.target.value))}
-                    className={inputClass('pl-6')}
-                  />
-                </div>
-              </div>
-
               <div className="flex items-center justify-between">
                 <p className="text-[11px] leading-snug text-slate-400">
-                  Spending drives the sales-tax estimate; groceries/restaurants/utilities are per-neighborhood.
+                  Groceries, restaurants, and other spending live in the Spending chip above.
                 </p>
                 <button
                   type="button"

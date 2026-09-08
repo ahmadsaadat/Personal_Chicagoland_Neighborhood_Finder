@@ -20,8 +20,7 @@ function isUserProfile(value: unknown): value is UserProfile {
     typeof v.bedrooms === 'number' &&
     typeof v.ownsCar === 'boolean' &&
     typeof v.annualMilesDriven === 'number' &&
-    typeof v.commuteDestination === 'string' &&
-    typeof v.monthlySpending === 'number'
+    typeof v.commuteDestination === 'string'
   )
 }
 

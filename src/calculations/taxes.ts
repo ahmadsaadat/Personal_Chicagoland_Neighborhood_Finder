@@ -103,8 +103,8 @@ function calculateStateTax(profile: UserProfile): number {
 }
 
 /**
- * Rough split of a household's non-housing monthly spending into "general
- * taxable" (subject to the full combined sales tax rate) vs. groceries.
+ * Sales tax on the user's own entered "other" (general, non-grocery,
+ * non-restaurant) monthly spending, at the jurisdiction's full combined rate.
  *
  * Illinois eliminated its statewide 1% grocery tax effective January 1, 2026;
  * municipalities were given the option to enact their own local 1% grocery
@@ -117,19 +117,18 @@ function calculateStateTax(profile: UserProfile): number {
 const GROCERY_TAX_RATE_APPROXIMATION = 0.01
 
 function estimateSalesTax(
-  monthlySpending: number,
-  groceriesMonthly: number,
+  otherSpendingMonthly: number,
+  groceriesSpendingMonthly: number,
   jurisdiction: TaxJurisdiction,
 ): number {
-  const groceryTax = groceriesMonthly * 12 * GROCERY_TAX_RATE_APPROXIMATION
-  const generalTaxableAnnual = Math.max(0, monthlySpending - groceriesMonthly) * 12
-  const generalTax = generalTaxableAnnual * jurisdiction.combinedSalesTaxRate
+  const groceryTax = groceriesSpendingMonthly * 12 * GROCERY_TAX_RATE_APPROXIMATION
+  const generalTax = otherSpendingMonthly * 12 * jurisdiction.combinedSalesTaxRate
   return groceryTax + generalTax
 }
 
-function estimateRestaurantTax(restaurantsMonthly: number, jurisdiction: TaxJurisdiction): number {
+function estimateRestaurantTax(restaurantsSpendingMonthly: number, jurisdiction: TaxJurisdiction): number {
   const rate = jurisdiction.combinedSalesTaxRate + (jurisdiction.restaurantTaxRate ?? 0)
-  return restaurantsMonthly * 12 * rate
+  return restaurantsSpendingMonthly * 12 * rate
 }
 
 export interface CalculateTaxesInput {
@@ -139,8 +138,6 @@ export interface CalculateTaxesInput {
   effectivePropertyTaxRate: number
   /** Home value backing the property-tax estimate for owners (0 for renters) — derived from the user's entered monthly mortgage payment, not entered directly. See impliedHomePrice() in calculations/financial.ts. */
   homePriceForPropertyTax: number
-  groceriesMonthly: number
-  restaurantsMonthly: number
 }
 
 /**
@@ -153,22 +150,18 @@ export interface CalculateTaxesInput {
  * `buildTaxInputForNeighborhood` in `src/calculations/financial.ts`.
  */
 export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
-  const {
-    profile,
-    jurisdiction,
-    isChicago,
-    effectivePropertyTaxRate,
-    homePriceForPropertyTax,
-    groceriesMonthly,
-    restaurantsMonthly,
-  } = input
+  const { profile, jurisdiction, isChicago, effectivePropertyTaxRate, homePriceForPropertyTax } = input
 
   const federalIncomeTax = calculateFederalTax(profile)
   const stateIncomeTax = calculateStateTax(profile)
   const localIncomeTax = 0 // Illinois municipalities, including Chicago, do not levy a local income tax.
 
-  const salesTaxEstimate = estimateSalesTax(profile.monthlySpending, groceriesMonthly, jurisdiction)
-  const restaurantTaxEstimate = estimateRestaurantTax(restaurantsMonthly, jurisdiction)
+  const salesTaxEstimate = estimateSalesTax(
+    profile.monthlyOtherSpending,
+    profile.monthlyGroceriesSpending,
+    jurisdiction,
+  )
+  const restaurantTaxEstimate = estimateRestaurantTax(profile.monthlyRestaurantsSpending, jurisdiction)
 
   const propertyTaxEstimate =
     profile.housingChoice === 'own' ? homePriceForPropertyTax * effectivePropertyTaxRate : 0
@@ -199,7 +192,7 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
       'Federal tax uses 2024 IRS brackets and standard deduction; includes Social Security and Medicare (FICA) payroll taxes.',
       'Illinois state tax uses the 4.95% flat rate with standard personal exemptions.',
       'Illinois and Chicago do not levy a local personal income tax.',
-      'Sales tax applies the jurisdiction\'s combined state+county+RTA+home-rule rate to non-grocery spending. Illinois eliminated its 1% statewide grocery tax on 1/1/2026; this estimate still applies an approximate 1% effective rate to groceries as a placeholder for a possible local municipal grocery tax and should be verified against the specific municipality\'s current ordinance.',
+      'Sales tax applies the jurisdiction\'s combined state+county+RTA+home-rule rate to your entered "other spending," and the restaurant tax rate to your entered restaurant spending. Illinois eliminated its 1% statewide grocery tax on 1/1/2026; this estimate still applies an approximate 1% effective rate to your entered grocery spending as a placeholder for a possible local municipal grocery tax and should be verified against the specific municipality\'s current ordinance.',
       'Property tax applies only if you choose "own" and is estimated as an implied home value × the neighborhood\'s effective property tax rate — actual bills vary by assessment, exemptions, and levies.',
       'The implied home value comes from your entered monthly mortgage payment (assuming a 20% down payment, 6.5% rate, 30-year term) and is applied uniformly across every neighborhood so property-tax rates compare on an apples-to-apples basis. It does not adjust to each area\'s typical home price, so treat "cost to own" as the cost of carrying your stated payment at each area\'s rate, not the cost of buying a typical home there — compare the implied value against that neighborhood\'s median home price for a realism check.',
       'Vehicle taxes include IL registration and, only within Chicago city limits, the city vehicle sticker ("wheel tax") fee; they exclude fuel tax and sales tax paid at purchase. Both fees are flat per-vehicle amounts subject to legislative change — verify current amounts before relying on them.',

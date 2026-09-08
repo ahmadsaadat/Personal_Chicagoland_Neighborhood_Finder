@@ -9,7 +9,12 @@ import {
 import { splitAmongRoommates, type FinancialSummary, type HousingData, type UserProfile } from '../types'
 import { calculateTaxes } from './taxes'
 
-const DEFAULT_MONTHLY_SPENDING = 1200
+// Baselines each spending category's personalization factor is measured
+// against (see spendingFactor below) — chosen to sum to the old flat
+// $1,200/mo default this replaced.
+const DEFAULT_GROCERIES_SPENDING = 400
+const DEFAULT_RESTAURANTS_SPENDING = 250
+const DEFAULT_OTHER_SPENDING = 550
 const MILEAGE_COST_PER_MILE = 0.65 // AAA-style all-in cost (gas, maintenance, insurance, depreciation)
 const TRANSIT_MONTHLY_PASS = 105 // CTA full-fare monthly pass
 
@@ -89,6 +94,19 @@ function fairUtilitiesShare(
 }
 
 /**
+ * How much more or less than a typical household this profile spends in one
+ * category, as a multiplier on that neighborhood's own cost-of-living
+ * estimate for the same category — e.g. someone who enters $800/mo groceries
+ * against a $400 baseline gets a 2x multiplier applied to whatever this
+ * specific neighborhood's grocery estimate is, preserving area-to-area price
+ * differences instead of replacing them with a flat number. Clamped to
+ * [0.5x, 2x] so an extreme entry doesn't dominate the total.
+ */
+function spendingFactor(userMonthlySpending: number, baseline: number): number {
+  return Math.min(2, Math.max(0.5, userMonthlySpending / baseline))
+}
+
+/**
  * calculateFinancialSummary(profile, neighborhoodId)
  *
  * The single source of truth for "how much money will I have left" math.
@@ -123,8 +141,6 @@ export function calculateFinancialSummary(
     isChicago: municipality.isChicago,
     effectivePropertyTaxRate: housing.effectivePropertyTaxRate,
     homePriceForPropertyTax,
-    groceriesMonthly: costOfLiving.groceriesMonthly,
-    restaurantsMonthly: costOfLiving.restaurantsMonthly,
   })
 
   const monthlyRentShare =
@@ -152,20 +168,20 @@ export function calculateFinancialSummary(
     ? profile.annualMilesDriven * MILEAGE_COST_PER_MILE + transportation.parkingMonthlyEstimate * 12
     : TRANSIT_MONTHLY_PASS * 12
 
-  const personalizationFactor = Math.min(
-    2,
-    Math.max(0.5, profile.monthlySpending / DEFAULT_MONTHLY_SPENDING),
-  )
   const familyFactor = 1 + profile.numChildren * 0.12
+  const groceriesFactor = spendingFactor(profile.monthlyGroceriesSpending, DEFAULT_GROCERIES_SPENDING)
+  const restaurantsFactor = spendingFactor(profile.monthlyRestaurantsSpending, DEFAULT_RESTAURANTS_SPENDING)
+  const otherFactor = spendingFactor(profile.monthlyOtherSpending, DEFAULT_OTHER_SPENDING)
   // Utilities are intentionally excluded here — see monthlyUtilitiesShare
   // above, folded into housingAnnualCost instead, to avoid double counting.
+  // Healthcare has no user-entered spending level, so it isn't personalized —
+  // it always uses the neighborhood's own estimate as-is.
   const everydayExpensesAnnual =
-    (costOfLiving.groceriesMonthly +
-      costOfLiving.restaurantsMonthly +
+    (costOfLiving.groceriesMonthly * groceriesFactor +
+      costOfLiving.restaurantsMonthly * restaurantsFactor +
       costOfLiving.healthcareMonthly +
-      costOfLiving.otherMonthly) *
+      costOfLiving.otherMonthly * otherFactor) *
     12 *
-    personalizationFactor *
     familyFactor
 
   // Property tax is already embedded in a renter's rent by the landlord, so

@@ -24,7 +24,12 @@ export interface UserProfile {
   ownsCar: boolean
   annualMilesDriven: number
   commuteDestination: string
-  monthlySpending: number
+  /** Your own typical monthly grocery spending — scales each neighborhood's own grocery cost estimate up/down from a baseline rather than replacing it, so area price differences are preserved. See calculations/financial.ts. */
+  monthlyGroceriesSpending: number
+  /** Your own typical monthly restaurant/dining spending — same scaling treatment as groceries. */
+  monthlyRestaurantsSpending: number
+  /** Your own typical monthly spending on everything else non-housing (shopping, entertainment, etc.) — same scaling treatment as groceries. */
+  monthlyOtherSpending: number
 }
 
 export const DEFAULT_PROFILE: UserProfile = {
@@ -43,7 +48,9 @@ export const DEFAULT_PROFILE: UserProfile = {
   ownsCar: true,
   annualMilesDriven: 8000,
   commuteDestination: 'Chicago Loop',
-  monthlySpending: 1200,
+  monthlyGroceriesSpending: 400,
+  monthlyRestaurantsSpending: 250,
+  monthlyOtherSpending: 550,
 }
 
 /** Annual income implied by an hourly rate and hours/week, assuming 52 paid weeks/year. */
