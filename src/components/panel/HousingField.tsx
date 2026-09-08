@@ -129,10 +129,6 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             <div className="mt-3">
               <label className="mb-1 block text-xs font-medium text-slate-500">Bedrooms</label>
               <BedroomToggle bedrooms={profile.bedrooms} onChange={(value) => onProfileChange({ ...profile, bedrooms: value })} />
-              <p className="mt-1 text-[11px] text-slate-400">
-                Rent and utilities always use each neighborhood's own numbers for this size — open a neighborhood to
-                see them.
-              </p>
             </div>
 
             <div className="mt-3 border-t border-slate-100 pt-3">
