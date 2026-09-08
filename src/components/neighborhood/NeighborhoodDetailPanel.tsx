@@ -67,7 +67,7 @@ function StaticSectionHeader({
   value: string
 }) {
   return (
-    <div className="flex items-center justify-between gap-2 rounded-xl border border-green-700 px-3 py-2.5">
+    <div className="flex items-center justify-between gap-2 rounded-xl border border-green-400 px-3 py-2.5">
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
         <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
@@ -88,7 +88,7 @@ function Row({ label, labelSuffix, value }: { label: string; labelSuffix?: strin
     <div className="flex items-center justify-between gap-2 py-1.5 text-sm">
       <span className="text-slate-500">
         {label}
-        {labelSuffix && <span className="ml-1.5 font-medium tabular-nums text-slate-800">{labelSuffix}</span>}
+        {labelSuffix && <span className="ml-1.5 font-medium tabular-nums text-slate-400">{labelSuffix}</span>}
       </span>
       <span className="shrink-0 font-medium tabular-nums text-slate-800">{value}</span>
     </div>
