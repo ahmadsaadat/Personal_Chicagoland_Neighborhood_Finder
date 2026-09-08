@@ -1,5 +1,5 @@
 import { getMunicipality, getNeighborhood, getNeighborhoodProfile, getTaxJurisdiction } from '../data'
-import { yourMonthlyRentShare, type FinancialSummary, type UserProfile } from '../types'
+import { yourMonthlyRentShare, yourMonthlyUtilitiesShare, type FinancialSummary, type UserProfile } from '../types'
 import { calculateTaxes } from './taxes'
 
 const DEFAULT_MONTHLY_SPENDING = 1200
@@ -54,11 +54,18 @@ export function calculateFinancialSummary(
     restaurantsMonthly: costOfLiving.restaurantsMonthly,
   })
 
+  // The user's own entered utilities figure (split with roommates the same
+  // way rent is) replaces the neighborhood's average utilities estimate —
+  // see the exclusion from everydayExpensesAnnual below to avoid double
+  // counting it.
+  const monthlyUtilitiesShare = yourMonthlyUtilitiesShare(profile)
+
   const housingAnnualCost =
     profile.housingChoice === 'rent'
-      ? yourMonthlyRentShare(profile) * 12
+      ? (yourMonthlyRentShare(profile) + monthlyUtilitiesShare) * 12
       : (monthlyMortgagePayment(profile.homePurchasePrice) +
-          (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12) *
+          (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12 +
+          monthlyUtilitiesShare) *
         12
 
   const transportationAnnualCost = profile.ownsCar
@@ -70,9 +77,11 @@ export function calculateFinancialSummary(
     Math.max(0.5, profile.monthlySpending / DEFAULT_MONTHLY_SPENDING),
   )
   const familyFactor = 1 + profile.numChildren * 0.12
+  // Utilities are intentionally excluded here — the user's own entered
+  // figure is used instead (see housingAnnualCost above), not the
+  // neighborhood average, to avoid double counting.
   const everydayExpensesAnnual =
     (costOfLiving.groceriesMonthly +
-      costOfLiving.utilitiesMonthly +
       costOfLiving.restaurantsMonthly +
       costOfLiving.healthcareMonthly +
       costOfLiving.otherMonthly) *

@@ -13,7 +13,7 @@ function inputClass(extra = '') {
   return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
 }
 
-/** The rent/home-price chip: a popover lets you choose renting vs. owning, and split rent with roommates. */
+/** The rent/home-price chip: a popover lets you choose renting vs. owning, split rent+utilities with roommates. */
 export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
   const [open, setOpen] = useState(false)
   const anchorRef = useRef<HTMLButtonElement>(null)
@@ -70,27 +70,46 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
           ))}
         </div>
 
-        <div className="mt-3">
-          <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
-            {isRent ? 'Monthly rent (total)' : 'Home purchase price'}
-          </label>
-          <div className="relative">
-            <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
-            <input
-              id="housing-amount"
-              type="number"
-              min={0}
-              step={isRent ? 50 : 5000}
-              value={isRent ? profile.monthlyRent : profile.homePurchasePrice}
-              onChange={(e) =>
-                onProfileChange(
-                  isRent
-                    ? { ...profile, monthlyRent: Number(e.target.value) }
-                    : { ...profile, homePurchasePrice: Number(e.target.value) },
-                )
-              }
-              className={inputClass('pl-5')}
-            />
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <div>
+            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
+              {isRent ? 'Monthly rent (total)' : 'Home purchase price'}
+            </label>
+            <div className="relative">
+              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+              <input
+                id="housing-amount"
+                type="number"
+                min={0}
+                step={isRent ? 50 : 5000}
+                value={isRent ? profile.monthlyRent : profile.homePurchasePrice}
+                onChange={(e) =>
+                  onProfileChange(
+                    isRent
+                      ? { ...profile, monthlyRent: Number(e.target.value) }
+                      : { ...profile, homePurchasePrice: Number(e.target.value) },
+                  )
+                }
+                className={inputClass('pl-5')}
+              />
+            </div>
+          </div>
+          <div>
+            <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-utilities">
+              Utilities (total)
+            </label>
+            <div className="relative">
+              <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
+              <input
+                id="housing-utilities"
+                type="number"
+                min={0}
+                step={10}
+                value={profile.monthlyUtilities}
+                onChange={(e) => onProfileChange({ ...profile, monthlyUtilities: Number(e.target.value) })}
+                className={inputClass('pl-5')}
+              />
+            </div>
           </div>
         </div>
 
@@ -109,7 +128,7 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             {profile.hasRoommates && (
               <div className="mt-2.5">
                 <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-roommates">
-                  Total people splitting rent (including you)
+                  Total people splitting rent
                 </label>
                 <input
                   id="housing-roommates"
@@ -121,10 +140,6 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
                   onChange={(e) => handlePeopleInputChange(e.target.value)}
                   className={inputClass()}
                 />
-                <p className="mt-1.5 text-xs text-slate-400">
-                  Split {Math.max(1, profile.numPeopleSplittingRent)} ways — your share is{' '}
-                  {formatCurrencyCompact(yourMonthlyRentShare(profile))}/mo
-                </p>
               </div>
             )}
           </div>

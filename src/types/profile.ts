@@ -12,8 +12,10 @@ export interface UserProfile {
   housingChoice: HousingChoice
   monthlyRent: number
   hasRoommates: boolean
-  /** Total people splitting the rent, including the user. Rent-only. */
+  /** Total people splitting the rent (and utilities), including the user. Rent-only. */
   numPeopleSplittingRent: number
+  /** Total monthly utilities for the unit — split among roommates the same way rent is. */
+  monthlyUtilities: number
   homePurchasePrice: number
   bedrooms: number
   ownsCar: boolean
@@ -33,6 +35,7 @@ export const DEFAULT_PROFILE: UserProfile = {
   monthlyRent: 1800,
   hasRoommates: false,
   numPeopleSplittingRent: 2,
+  monthlyUtilities: 150,
   homePurchasePrice: 350000,
   bedrooms: 1,
   ownsCar: true,
@@ -47,14 +50,28 @@ export function annualFromHourly(hourlyRate: number, hoursPerWeek: number): numb
 }
 
 /**
- * The user's own out-of-pocket monthly rent after splitting with roommates
- * (numPeopleSplittingRent counts everyone sharing the unit, including the
- * user). Used both for display and for the actual disposable-income
- * calculation, so the two never drift apart.
+ * Splits a shared monthly cost (rent, utilities) evenly across everyone
+ * sharing the unit, including the user — a no-op when there are no
+ * roommates. Shared by rent and utilities so the two never drift apart.
  */
+export function splitAmongRoommates(
+  amount: number,
+  profile: Pick<UserProfile, 'hasRoommates' | 'numPeopleSplittingRent'>,
+): number {
+  if (!profile.hasRoommates) return amount
+  return amount / Math.max(1, profile.numPeopleSplittingRent)
+}
+
+/** The user's own out-of-pocket monthly rent after splitting with roommates. */
 export function yourMonthlyRentShare(
   profile: Pick<UserProfile, 'monthlyRent' | 'hasRoommates' | 'numPeopleSplittingRent'>,
 ): number {
-  if (!profile.hasRoommates) return profile.monthlyRent
-  return profile.monthlyRent / Math.max(1, profile.numPeopleSplittingRent)
+  return splitAmongRoommates(profile.monthlyRent, profile)
+}
+
+/** The user's own out-of-pocket monthly utilities after splitting with roommates. */
+export function yourMonthlyUtilitiesShare(
+  profile: Pick<UserProfile, 'monthlyUtilities' | 'hasRoommates' | 'numPeopleSplittingRent'>,
+): number {
+  return splitAmongRoommates(profile.monthlyUtilities, profile)
 }
