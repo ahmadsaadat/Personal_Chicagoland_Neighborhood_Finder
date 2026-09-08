@@ -20,6 +20,8 @@ export interface FinancialSummary {
   monthlyUtilitiesShare: number
   /** Monthly mortgage principal & interest plus insurance/maintenance, for owners. 0 if renting. */
   monthlyHousingPayment: number
+  /** Home value implied by the user's entered monthly mortgage payment, used as the property-tax basis. 0 if renting. */
+  impliedHomeValue: number
   housingAnnualCost: number
   transportationAnnualCost: number
   everydayExpensesAnnual: number

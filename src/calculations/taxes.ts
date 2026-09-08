@@ -137,6 +137,8 @@ export interface CalculateTaxesInput {
   jurisdiction: TaxJurisdiction
   isChicago: boolean
   effectivePropertyTaxRate: number
+  /** Home value backing the property-tax estimate for owners (0 for renters) — derived from the user's entered monthly mortgage payment, not entered directly. See impliedHomePrice() in calculations/financial.ts. */
+  homePriceForPropertyTax: number
   groceriesMonthly: number
   restaurantsMonthly: number
 }
@@ -151,8 +153,15 @@ export interface CalculateTaxesInput {
  * `buildTaxInputForNeighborhood` in `src/calculations/financial.ts`.
  */
 export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
-  const { profile, jurisdiction, isChicago, effectivePropertyTaxRate, groceriesMonthly, restaurantsMonthly } =
-    input
+  const {
+    profile,
+    jurisdiction,
+    isChicago,
+    effectivePropertyTaxRate,
+    homePriceForPropertyTax,
+    groceriesMonthly,
+    restaurantsMonthly,
+  } = input
 
   const federalIncomeTax = calculateFederalTax(profile)
   const stateIncomeTax = calculateStateTax(profile)
@@ -162,7 +171,7 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
   const restaurantTaxEstimate = estimateRestaurantTax(restaurantsMonthly, jurisdiction)
 
   const propertyTaxEstimate =
-    profile.housingChoice === 'own' ? profile.homePurchasePrice * effectivePropertyTaxRate : 0
+    profile.housingChoice === 'own' ? homePriceForPropertyTax * effectivePropertyTaxRate : 0
 
   const vehicleTaxEstimate = profile.ownsCar
     ? IL_VEHICLE_REGISTRATION_ANNUAL + (isChicago ? CHICAGO_WHEEL_TAX_ANNUAL : 0)
@@ -191,8 +200,8 @@ export function calculateTaxes(input: CalculateTaxesInput): TaxBreakdown {
       'Illinois state tax uses the 4.95% flat rate with standard personal exemptions.',
       'Illinois and Chicago do not levy a local personal income tax.',
       'Sales tax applies the jurisdiction\'s combined state+county+RTA+home-rule rate to non-grocery spending. Illinois eliminated its 1% statewide grocery tax on 1/1/2026; this estimate still applies an approximate 1% effective rate to groceries as a placeholder for a possible local municipal grocery tax and should be verified against the specific municipality\'s current ordinance.',
-      'Property tax applies only if you choose "own" and is estimated as home price × the neighborhood\'s effective property tax rate — actual bills vary by assessment, exemptions, and levies.',
-      'The home purchase price you entered is applied uniformly across every neighborhood so property-tax rates compare on an apples-to-apples basis. It does not adjust to each area\'s typical home price, so treat "cost to own" as the cost of carrying your stated price at each area\'s rate, not the cost of buying a typical home there — compare it against that neighborhood\'s median home price for a realism check.',
+      'Property tax applies only if you choose "own" and is estimated as an implied home value × the neighborhood\'s effective property tax rate — actual bills vary by assessment, exemptions, and levies.',
+      'The implied home value comes from your entered monthly mortgage payment (assuming a 20% down payment, 6.5% rate, 30-year term) and is applied uniformly across every neighborhood so property-tax rates compare on an apples-to-apples basis. It does not adjust to each area\'s typical home price, so treat "cost to own" as the cost of carrying your stated payment at each area\'s rate, not the cost of buying a typical home there — compare the implied value against that neighborhood\'s median home price for a realism check.',
       'Vehicle taxes include IL registration and, only within Chicago city limits, the city vehicle sticker ("wheel tax") fee; they exclude fuel tax and sales tax paid at purchase. Both fees are flat per-vehicle amounts subject to legislative change — verify current amounts before relying on them.',
       'This is a simplified MVP estimate for comparing locations, not a tax filing or professional tax calculation.',
     ],

@@ -23,15 +23,22 @@ const HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE = 0.01
 // figure). Purely an MVP approximation, not measured.
 const UTILITIES_EXTRA_USAGE_PER_PERSON = 0.5
 
-function monthlyMortgagePayment(homePrice: number): number {
-  const principal = homePrice * (1 - MORTGAGE_DOWN_PAYMENT_PCT)
+/**
+ * The user tells us their monthly mortgage payment directly (rather than a
+ * home price) — but property tax still needs a home value to compare
+ * neighborhoods' rates on an apples-to-apples basis, so this inverts the
+ * standard amortization formula to back out the home price that would
+ * produce that payment under the same down-payment/rate/term assumptions.
+ */
+function impliedHomePrice(monthlyPayment: number): number {
   const monthlyRate = MORTGAGE_ANNUAL_RATE / 12
   const numPayments = MORTGAGE_TERM_YEARS * 12
-  if (monthlyRate === 0) return principal / numPayments
-  return (
-    (principal * monthlyRate * Math.pow(1 + monthlyRate, numPayments)) /
-    (Math.pow(1 + monthlyRate, numPayments) - 1)
-  )
+  const principal =
+    monthlyRate === 0
+      ? monthlyPayment * numPayments
+      : (monthlyPayment * (Math.pow(1 + monthlyRate, numPayments) - 1)) /
+        (monthlyRate * Math.pow(1 + monthlyRate, numPayments))
+  return principal / (1 - MORTGAGE_DOWN_PAYMENT_PCT)
 }
 
 /**
@@ -76,11 +83,17 @@ export function calculateFinancialSummary(
 
   const { housing, transportation, costOfLiving } = nProfile
 
+  // Property tax needs a home value, not a monthly payment — see
+  // impliedHomePrice() above for why this is derived rather than entered.
+  const homePriceForPropertyTax =
+    profile.housingChoice === 'own' ? impliedHomePrice(profile.monthlyMortgagePayment) : 0
+
   const taxes = calculateTaxes({
     profile,
     jurisdiction,
     isChicago: municipality.isChicago,
     effectivePropertyTaxRate: housing.effectivePropertyTaxRate,
+    homePriceForPropertyTax,
     groceriesMonthly: costOfLiving.groceriesMonthly,
     restaurantsMonthly: costOfLiving.restaurantsMonthly,
   })
@@ -95,8 +108,7 @@ export function calculateFinancialSummary(
 
   const monthlyHousingPayment =
     profile.housingChoice === 'own'
-      ? monthlyMortgagePayment(profile.homePurchasePrice) +
-        (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12
+      ? profile.monthlyMortgagePayment + (homePriceForPropertyTax * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12
       : 0
 
   const housingAnnualCost =
@@ -140,6 +152,7 @@ export function calculateFinancialSummary(
     monthlyRentShare,
     monthlyUtilitiesShare,
     monthlyHousingPayment,
+    impliedHomeValue: homePriceForPropertyTax,
     housingAnnualCost,
     transportationAnnualCost,
     everydayExpensesAnnual,

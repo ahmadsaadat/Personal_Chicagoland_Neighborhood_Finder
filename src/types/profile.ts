@@ -13,7 +13,8 @@ export interface UserProfile {
   hasRoommates: boolean
   /** Total people splitting the rent (and utilities), including the user. Rent-only. */
   numPeopleSplittingRent: number
-  homePurchasePrice: number
+  /** What you'd actually pay monthly (mortgage principal & interest only) if buying. Own-only; an implied home value is derived from this for property-tax comparisons — see calculations/financial.ts. */
+  monthlyMortgagePayment: number
   /** Drives which per-bedroom rent figure is pulled from each neighborhood's own housing data (0 = studio). */
   bedrooms: number
   ownsCar: boolean
@@ -32,7 +33,7 @@ export const DEFAULT_PROFILE: UserProfile = {
   housingChoice: 'rent',
   hasRoommates: false,
   numPeopleSplittingRent: 2,
-  homePurchasePrice: 350000,
+  monthlyMortgagePayment: 1800,
   bedrooms: 1,
   ownsCar: true,
   annualMilesDriven: 8000,

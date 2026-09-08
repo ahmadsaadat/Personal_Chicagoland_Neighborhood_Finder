@@ -65,7 +65,7 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             {profile.hasRoommates ? ` · ${Math.max(1, profile.numPeopleSplittingRent)} people` : ''}
           </>
         ) : (
-          `${formatCurrencyCompact(profile.homePurchasePrice)}`
+          `${formatCurrencyCompact(profile.monthlyMortgagePayment)}/mo`
         )}
         <ChevronDown size={12} className={`text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
@@ -144,7 +144,7 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
         ) : (
           <div className="mt-3">
             <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">
-              Home purchase price
+              Monthly mortgage payment
             </label>
             <div className="relative">
               <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400">$</span>
@@ -152,12 +152,15 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
                 id="housing-amount"
                 type="number"
                 min={0}
-                step={5000}
-                value={profile.homePurchasePrice}
-                onChange={(e) => onProfileChange({ ...profile, homePurchasePrice: Number(e.target.value) })}
+                step={50}
+                value={profile.monthlyMortgagePayment}
+                onChange={(e) => onProfileChange({ ...profile, monthlyMortgagePayment: Number(e.target.value) })}
                 className={inputClass('pl-5')}
               />
             </div>
+            <p className="mt-1 text-[11px] text-slate-400">
+              Principal & interest only — property tax is estimated separately from this using each area's own rate.
+            </p>
           </div>
         )}
       </PopoverPanel>
