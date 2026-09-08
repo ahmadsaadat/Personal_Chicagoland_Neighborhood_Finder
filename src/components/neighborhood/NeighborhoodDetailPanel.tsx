@@ -57,7 +57,7 @@ function AmountBadge({ value, variant }: { value: string; variant: 'income' | 'e
  */
 function StaticSectionHeader({ icon: Icon, title, value }: { icon: LucideIcon; title: string; value: string }) {
   return (
-    <div className="flex items-center justify-between gap-2 rounded-xl border border-slate-100 px-3 py-2.5">
+    <div className="flex items-center justify-between gap-2 rounded-xl border border-green-700 px-3 py-2.5">
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
         <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
@@ -104,7 +104,7 @@ function CollapsibleSectionHeader({
     <button
       type="button"
       onClick={onToggle}
-      className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border border-slate-100 px-3 py-2.5 text-left transition hover:border-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-100"
+      className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border border-red-700 px-3 py-2.5 text-left transition hover:border-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-100"
     >
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
