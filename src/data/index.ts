@@ -139,16 +139,22 @@ export function getNeighborhoodHierarchy(id: string):
  * the user taps a "2BR" toggle before they've picked where to live) — not a
  * substitute for a specific neighborhood's own median rent.
  */
+/**
+ * Picks the right per-bedroom median rent off one neighborhood's housing
+ * data (studio/1BR/2BR/3BR+), falling back to the guaranteed 2BR figure if
+ * that specific size isn't modeled for this area. Shared by the detail
+ * panel (to show a bedroom-matched benchmark instead of always "2BR") and
+ * by getTypicalMonthlyRent below.
+ */
+export function getRentForBedrooms(housing: HousingData, bedrooms: number): number {
+  if (bedrooms <= 0) return housing.medianRentStudio ?? housing.medianRent2BR
+  if (bedrooms === 1) return housing.medianRent1BR ?? housing.medianRent2BR
+  if (bedrooms === 2) return housing.medianRent2BR
+  return housing.medianRent3BR ?? housing.medianRent2BR
+}
+
 export function getTypicalMonthlyRent(bedrooms: number): number {
-  function pick(h: HousingData): number | undefined {
-    if (bedrooms <= 0) return h.medianRentStudio
-    if (bedrooms === 1) return h.medianRent1BR
-    if (bedrooms === 2) return h.medianRent2BR
-    return h.medianRent3BR ?? h.medianRent2BR
-  }
-  const values = Object.values(housingById)
-    .map(pick)
-    .filter((v): v is number => typeof v === 'number')
+  const values = Object.values(housingById).map((h) => getRentForBedrooms(h, bedrooms))
   if (values.length === 0) return 0
   const sorted = [...values].sort((a, b) => a - b)
   const mid = Math.floor(sorted.length / 2)

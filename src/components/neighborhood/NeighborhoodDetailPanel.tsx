@@ -17,9 +17,10 @@ import { useState } from 'react'
 import { Modal } from '../common/Modal'
 import { StatTile } from '../common/StatTile'
 import { Badge } from '../common/Badge'
-import { formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
+import { getRentForBedrooms } from '../../data'
+import { formatBedrooms, formatCurrency, formatMinutes, formatPercent } from '../../utils/format'
 import type { NeighborhoodEntry } from '../../utils/metrics'
-import type { UserProfile } from '../../types'
+import { yourMonthlyRentShare, yourMonthlyUtilitiesShare, type UserProfile } from '../../types'
 
 interface NeighborhoodDetailPanelProps {
   entry: NeighborhoodEntry | null
@@ -63,6 +64,11 @@ export function NeighborhoodDetailPanel({
   if (!entry) return null
   const { neighborhood, profile, summary } = entry
   const isNegative = summary.estimatedDisposableIncome < 0
+  // Match the benchmark rent to the bedroom size the user actually picked —
+  // always showing the 2BR figure regardless of their selection would be
+  // misleading (e.g. showing 2BR rent for someone who chose a studio).
+  const bedroomRent = getRentForBedrooms(profile.housing, userProfile.bedrooms)
+  const bedroomLabel = formatBedrooms(userProfile.bedrooms)
 
   return (
     <Modal
@@ -124,7 +130,7 @@ export function NeighborhoodDetailPanel({
           </div>
 
           <div className="mt-3 grid grid-cols-2 gap-2.5">
-            <StatTile icon={Home} label="2BR Rent" value={`${formatCurrency(profile.housing.medianRent2BR)}/mo`} />
+            <StatTile icon={Home} label={`${bedroomLabel} Rent`} value={`${formatCurrency(bedroomRent)}/mo`} />
             <StatTile icon={Receipt} label="Est. Annual Cost" value={formatCurrency(Math.round(summary.totalAnnualCost))} />
             <StatTile icon={Landmark} label="Est. Annual Taxes" value={formatCurrency(Math.round(summary.taxes.totalTax))} />
             <StatTile
@@ -139,9 +145,13 @@ export function NeighborhoodDetailPanel({
         <section>
           <SectionHeader icon={Home} title="Housing" />
           <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-            <Row label="Median 2BR rent" value={`${formatCurrency(profile.housing.medianRent2BR)}/mo`} />
+            <Row label={`Median ${bedroomLabel} rent (this area)`} value={`${formatCurrency(bedroomRent)}/mo`} />
             <Row label="Median home price" value={formatCurrency(profile.housing.medianHomePrice)} />
             <Row label="Effective property tax rate" value={formatPercent(profile.housing.effectivePropertyTaxRate, 2)} />
+            {userProfile.housingChoice === 'rent' && (
+              <Row label="Your monthly rent" value={`${formatCurrency(yourMonthlyRentShare(userProfile))}/mo`} />
+            )}
+            <Row label="Your monthly utilities" value={`${formatCurrency(yourMonthlyUtilitiesShare(userProfile))}/mo`} />
             <Row label="Your est. annual housing cost" value={formatCurrency(Math.round(summary.housingAnnualCost))} />
           </div>
           {userProfile.housingChoice === 'own' && (
@@ -222,11 +232,14 @@ export function NeighborhoodDetailPanel({
           <SectionHeader icon={ShoppingBasket} title="Cost of living" />
           <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
             <Row label="Groceries" value={`${formatCurrency(profile.costOfLiving.groceriesMonthly)}/mo`} />
-            <Row label="Utilities" value={`${formatCurrency(profile.costOfLiving.utilitiesMonthly)}/mo`} />
             <Row label="Restaurants" value={`${formatCurrency(profile.costOfLiving.restaurantsMonthly)}/mo`} />
             <Row label="Healthcare" value={`${formatCurrency(profile.costOfLiving.healthcareMonthly)}/mo`} />
             <Row label="Other" value={`${formatCurrency(profile.costOfLiving.otherMonthly)}/mo`} />
           </div>
+          <p className="mt-1.5 text-[11px] leading-relaxed text-slate-400">
+            Utilities live in the Housing section above — your own entered figure is used there instead of a
+            neighborhood average.
+          </p>
         </section>
 
         {/* Lifestyle */}

@@ -37,3 +37,8 @@ export function clamp(value: number, min: number, max: number): number {
 export function pluralize(count: number, singular: string, plural = `${singular}s`): string {
   return count === 1 ? singular : plural
 }
+
+/** "Studio", "1BR", "2BR", "3BR", ... — matches the bedroom toggles in HousingField. */
+export function formatBedrooms(bedrooms: number): string {
+  return bedrooms <= 0 ? 'Studio' : `${bedrooms}BR`
+}
