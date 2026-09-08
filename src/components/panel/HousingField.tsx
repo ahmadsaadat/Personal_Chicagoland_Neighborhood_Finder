@@ -1,6 +1,7 @@
 import { ChevronDown, Home } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { PopoverPanel } from '../common/PopoverPanel'
+import { getTypicalMonthlyRent } from '../../data'
 import { yourMonthlyRentShare, type HousingChoice, type UserProfile } from '../../types'
 import { formatCurrencyCompact } from '../../utils/format'
 
@@ -8,6 +9,13 @@ interface HousingFieldProps {
   profile: UserProfile
   onProfileChange: (next: UserProfile) => void
 }
+
+const BEDROOM_OPTIONS = [
+  { value: 0, label: 'Studio' },
+  { value: 1, label: '1BR' },
+  { value: 2, label: '2BR' },
+  { value: 3, label: '3BR' },
+]
 
 function inputClass(extra = '') {
   return `w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-800 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100 ${extra}`
@@ -69,6 +77,29 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             </button>
           ))}
         </div>
+
+        {isRent && (
+          <div className="mt-3">
+            <label className="mb-1 block text-xs font-medium text-slate-500">Bedrooms</label>
+            <div className="grid grid-cols-4 gap-1.5 rounded-lg bg-slate-100 p-1">
+              {BEDROOM_OPTIONS.map((opt) => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={() =>
+                    onProfileChange({ ...profile, bedrooms: opt.value, monthlyRent: getTypicalMonthlyRent(opt.value) })
+                  }
+                  className={`rounded-md py-1.5 text-xs font-medium transition ${
+                    profile.bedrooms === opt.value ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+            <p className="mt-1 text-[11px] text-slate-400">Picking a size fills in a typical Chicagoland rent below — edit it freely.</p>
+          </div>
+        )}
 
         <div className="mt-3">
           <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-amount">

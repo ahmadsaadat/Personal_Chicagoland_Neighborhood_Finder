@@ -131,3 +131,27 @@ export function getNeighborhoodHierarchy(id: string):
   if (!municipality || !county || !taxJurisdiction) return undefined
   return { neighborhood, municipality, county, taxJurisdiction }
 }
+
+/**
+ * Region-wide median rent for a given bedroom count, across every
+ * neighborhood that has data for it. Used as a quick, no-neighborhood-
+ * selected-yet starting point for the profile's own rent field (e.g. when
+ * the user taps a "2BR" toggle before they've picked where to live) — not a
+ * substitute for a specific neighborhood's own median rent.
+ */
+export function getTypicalMonthlyRent(bedrooms: number): number {
+  function pick(h: HousingData): number | undefined {
+    if (bedrooms <= 0) return h.medianRentStudio
+    if (bedrooms === 1) return h.medianRent1BR
+    if (bedrooms === 2) return h.medianRent2BR
+    return h.medianRent3BR ?? h.medianRent2BR
+  }
+  const values = Object.values(housingById)
+    .map(pick)
+    .filter((v): v is number => typeof v === 'number')
+  if (values.length === 0) return 0
+  const sorted = [...values].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+  const median = sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
+  return Math.round(median)
+}
