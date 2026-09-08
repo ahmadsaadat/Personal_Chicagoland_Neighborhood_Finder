@@ -1,5 +1,5 @@
 import { ChevronDown, Home } from 'lucide-react'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { PopoverPanel } from '../common/PopoverPanel'
 import { yourMonthlyRentShare, type HousingChoice, type UserProfile } from '../../types'
 import { formatCurrencyCompact } from '../../utils/format'
@@ -21,6 +21,23 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
   // The chip shows what actually drives your disposable income — your own
   // share after splitting with roommates, not the whole unit's rent.
   const chipAmount = isRent ? yourMonthlyRentShare(profile) : profile.homePurchasePrice
+
+  // The roommate-count input is allowed to sit empty while typing (e.g.
+  // backspacing to retype) rather than snapping to 0/1 on every keystroke —
+  // only a real finite number commits to the profile. Kept as local text
+  // state, synced back in whenever the committed value changes elsewhere
+  // (e.g. a profile reset).
+  const [peopleInput, setPeopleInput] = useState(String(profile.numPeopleSplittingRent))
+  useEffect(() => {
+    setPeopleInput(String(profile.numPeopleSplittingRent))
+  }, [profile.numPeopleSplittingRent])
+
+  function handlePeopleInputChange(raw: string) {
+    setPeopleInput(raw)
+    if (raw === '') return
+    const n = Number(raw)
+    if (Number.isFinite(n)) onProfileChange({ ...profile, numPeopleSplittingRent: n })
+  }
 
   return (
     <>
@@ -92,20 +109,20 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
             {profile.hasRoommates && (
               <div className="mt-2.5">
                 <label className="mb-1 block text-xs font-medium text-slate-500" htmlFor="housing-roommates">
-                  Number of roommates (not counting you)
+                  Total people splitting rent (including you)
                 </label>
                 <input
                   id="housing-roommates"
                   type="number"
-                  min={1}
+                  min={2}
                   max={10}
                   step={1}
-                  value={profile.numRoommates}
-                  onChange={(e) => onProfileChange({ ...profile, numRoommates: Number(e.target.value) })}
+                  value={peopleInput}
+                  onChange={(e) => handlePeopleInputChange(e.target.value)}
                   className={inputClass()}
                 />
                 <p className="mt-1.5 text-xs text-slate-400">
-                  Split {Math.max(1, profile.numRoommates) + 1} ways — your share is{' '}
+                  Split {Math.max(1, profile.numPeopleSplittingRent)} ways — your share is{' '}
                   {formatCurrencyCompact(yourMonthlyRentShare(profile))}/mo
                 </p>
               </div>
