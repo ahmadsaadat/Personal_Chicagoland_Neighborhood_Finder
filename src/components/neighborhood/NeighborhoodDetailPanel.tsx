@@ -39,14 +39,10 @@ function SectionHeader({ icon: Icon, title }: { icon: LucideIcon; title: string 
   )
 }
 
-/** A pill around a header's headline number — green (text + border) for income, red for an expense — so it stands out from the section label around it. */
+/** A header's headline number, colored green for income or red for an expense so it stands out from the section label next to it. */
 function AmountBadge({ value, variant }: { value: string; variant: 'income' | 'expense' }) {
   return (
-    <span
-      className={`rounded-md border px-2 py-0.5 text-sm font-semibold tabular-nums ${
-        variant === 'income' ? 'border-green-700 text-green-700' : 'border-red-700 text-red-700'
-      }`}
-    >
+    <span className={`text-sm font-semibold tabular-nums ${variant === 'income' ? 'text-green-700' : 'text-red-700'}`}>
       {value}
     </span>
   )
