@@ -32,22 +32,44 @@ interface NeighborhoodDetailPanelProps {
 
 function SectionHeader({ icon: Icon, title }: { icon: LucideIcon; title: string }) {
   return (
-    <div className="mb-3 flex items-center gap-2">
+    <div className="mb-3 flex items-center gap-2 rounded-xl border border-slate-100 px-3 py-2.5">
       <Icon size={15} className="text-slate-400" />
       <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</h3>
     </div>
   )
 }
 
-/** A section header with a value inline on the right, like CollapsibleSectionHeader but static (no toggle/chevron) — for a section with nothing to expand. */
+/** A black-bordered pill around a header's headline number — green for income, red for an expense — so it stands out from the section label around it. */
+function AmountBadge({ value, variant }: { value: string; variant: 'income' | 'expense' }) {
+  return (
+    <span
+      className={`rounded-md border border-slate-900 px-2 py-0.5 text-sm font-semibold tabular-nums ${
+        variant === 'income' ? 'text-green-700' : 'text-red-700'
+      }`}
+    >
+      {value}
+    </span>
+  )
+}
+
+/**
+ * A section header with a value inline on the right, like
+ * CollapsibleSectionHeader but static (no toggle) — for a section with
+ * nothing to expand. Reserves the same width a chevron would take (via an
+ * invisible one) so its value lines up with the collapsible headers' values
+ * above/below it instead of extending further right.
+ */
 function StaticSectionHeader({ icon: Icon, title, value }: { icon: LucideIcon; title: string; value: string }) {
   return (
-    <div className="flex items-center justify-between gap-2">
+    <div className="flex items-center justify-between gap-2 rounded-xl border border-slate-100 px-3 py-2.5">
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
         <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
       </span>
-      <span className="text-sm font-semibold tabular-nums text-slate-800">{value}</span>
+      <span className="flex items-center gap-1.5">
+        <AmountBadge value={value} variant="income" />
+        <ChevronDown size={14} className="invisible" />
+      </span>
     </div>
   )
 }
@@ -83,13 +105,17 @@ function CollapsibleSectionHeader({
   onToggle: () => void
 }) {
   return (
-    <button type="button" onClick={onToggle} className="mb-3 flex w-full items-center justify-between gap-2">
+    <button
+      type="button"
+      onClick={onToggle}
+      className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border border-slate-100 px-3 py-2.5 text-left transition hover:border-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-100"
+    >
       <span className="flex items-center gap-2">
         <Icon size={15} className="text-slate-400" />
         <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</span>
       </span>
       <span className="flex items-center gap-1.5">
-        <span className="text-sm font-semibold tabular-nums text-slate-800">{summaryValue}</span>
+        <AmountBadge value={summaryValue} variant="expense" />
         <ChevronDown size={14} className={`text-slate-400 transition-transform ${expanded ? 'rotate-180' : ''}`} />
       </span>
     </button>
