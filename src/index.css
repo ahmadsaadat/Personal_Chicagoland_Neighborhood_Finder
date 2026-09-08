@@ -3,14 +3,14 @@
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-  /* Warm sequential scale used for the choropleth map + magnitude bars (see
-     src/utils/colorScale.ts's DIVERGING_STEPS for the full 7-step ramp).
-     Which raw direction ("high" or "low") maps to "best"/"worst" depends on
-     each metric's goodDirection. These two tokens are darker/more legible
-     variants of the scale's two ends, used for small text labels (e.g. the
+  /* Red-to-green scale used for the choropleth map + magnitude bars (see
+     src/utils/colorScale.ts and src/utils/incomeColor.ts for the shared
+     red/neutral/green anchors). Which raw direction ("high" or "low") maps
+     to "best"/"worst" depends on each metric's goodDirection. These two
+     tokens match the scale's two ends, used for small text labels (e.g. the
      legend) rather than map fills. */
-  --color-scale-worst: #9f3f46; /* matches DIVERGING_STEPS' darkest red */
-  --color-scale-best: #8c6239; /* a legible dark caramel standing in for the scale's light cream end, which is too pale for text */
+  --color-scale-worst: #b91c1c; /* red-700, matches incomeColor.ts's NEGATIVE_RGB */
+  --color-scale-best: #15803d; /* green-700, matches incomeColor.ts's POSITIVE_RGB */
 
   /* Fixed status palette — never reassigned to a series, always paired with an icon/label. */
   --color-status-good: #0ca30c;

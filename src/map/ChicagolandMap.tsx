@@ -6,6 +6,7 @@ import { useMemo } from 'react'
 import { GeoJSON, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { formatBedrooms, formatCurrency } from '../utils/format'
 import { divergingColor, NO_DATA_COLOR } from '../utils/colorScale'
+import { disposableIncomeColor } from '../utils/incomeColor'
 import { getMetricConfig, type NeighborhoodEntry } from '../utils/metrics'
 import type { HousingChoice, MapMetric } from '../types'
 import { fixLeafletDefaultIcon } from './leafletIconFix'
@@ -67,9 +68,17 @@ export function ChicagolandMap({
   function styleFeature(feature?: Feature<Geometry, NeighborhoodFeatureProps>): PathOptions {
     const id = feature?.properties.id
     const entry = id ? entriesById.get(id) : undefined
-    const fillColor = entry
-      ? divergingColor(metricConfig.getValue(entry), min, max, metricConfig.goodDirection)
-      : NO_DATA_COLOR
+    // For disposable income specifically, color against the same absolute
+    // income-ratio scale used for the number itself elsewhere in the app
+    // (sidebar cards, detail panel) rather than this metric's min/max among
+    // currently-shown neighborhoods — so a map full of bad options for this
+    // profile reads as uniformly red instead of always having a "best" one
+    // colored as if it were actually good.
+    const fillColor = !entry
+      ? NO_DATA_COLOR
+      : metric === 'disposableIncome'
+        ? disposableIncomeColor(entry.summary.estimatedDisposableIncome, entry.summary.grossIncome)
+        : divergingColor(metricConfig.getValue(entry), min, max, metricConfig.goodDirection)
     const isSelected = entry?.neighborhood.id === selectedNeighborhoodId
     const isCompared = entry ? compareIds.includes(entry.neighborhood.id) : false
 

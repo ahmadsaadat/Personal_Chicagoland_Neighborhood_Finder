@@ -5,7 +5,7 @@ import { SpendingField } from './SpendingField'
 import { NeighborhoodCard } from '../neighborhood/NeighborhoodCard'
 import { ProfileChips } from '../profile/ProfileChips'
 import { RankedList } from '../ranking/RankedList'
-import { DIVERGING_STEPS, NO_DATA_COLOR } from '../../utils/colorScale'
+import { GRADIENT_STOPS, NO_DATA_COLOR } from '../../utils/colorScale'
 import type { MetricConfig, NeighborhoodEntry } from '../../utils/metrics'
 import type { RankedNeighborhood } from '../../calculations/ranking'
 import type { MaritalStatus, UserProfile } from '../../types'
@@ -212,11 +212,10 @@ export function ToolsPanel({
 
       <div className="border-t border-slate-100 px-4 py-3">
         <div className="text-xs font-semibold text-slate-700">{metricConfig.label}</div>
-        <div className="mt-2 flex h-2.5 overflow-hidden rounded-full">
-          {DIVERGING_STEPS.map((color, i) => (
-            <span key={`${color}-${i}`} className="flex-1" style={{ backgroundColor: color }} />
-          ))}
-        </div>
+        <div
+          className="mt-2 h-2.5 overflow-hidden rounded-full"
+          style={{ background: `linear-gradient(to right, ${GRADIENT_STOPS.join(', ')})` }}
+        />
         <div className="mt-1 flex justify-between text-[11px] tabular-nums text-slate-500">
           <span>{metricConfig.format(worstValue)}</span>
           <span>{metricConfig.format(bestValue)}</span>
