@@ -50,6 +50,22 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
     if (Number.isFinite(n)) onProfileChange({ ...profile, numPeopleSplittingRent: n })
   }
 
+  // Same empty-while-typing treatment as peopleInput above — a controlled
+  // number input bound straight to a value snaps an emptied field back to
+  // "0" immediately, so backspacing to retype (e.g. clearing "2000" to type
+  // "1500") leaves a stray leading zero ("02000") instead of a blank field.
+  const [mortgageInput, setMortgageInput] = useState(String(profile.monthlyMortgagePayment))
+  useEffect(() => {
+    setMortgageInput(String(profile.monthlyMortgagePayment))
+  }, [profile.monthlyMortgagePayment])
+
+  function handleMortgageInputChange(raw: string) {
+    setMortgageInput(raw)
+    if (raw === '') return
+    const n = Number(raw)
+    if (Number.isFinite(n)) onProfileChange({ ...profile, monthlyMortgagePayment: n })
+  }
+
   return (
     <>
       <button
@@ -153,8 +169,8 @@ export function HousingField({ profile, onProfileChange }: HousingFieldProps) {
                 type="number"
                 min={0}
                 step={50}
-                value={profile.monthlyMortgagePayment}
-                onChange={(e) => onProfileChange({ ...profile, monthlyMortgagePayment: Number(e.target.value) })}
+                value={mortgageInput}
+                onChange={(e) => handleMortgageInputChange(e.target.value)}
                 className={inputClass('pl-5')}
               />
             </div>
