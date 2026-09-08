@@ -93,13 +93,16 @@ export function calculateFinancialSummary(
   // counting — this is the one figure used for them.
   const monthlyUtilitiesShare = fairUtilitiesShare(costOfLiving.utilitiesMonthly, profile)
 
+  const monthlyHousingPayment =
+    profile.housingChoice === 'own'
+      ? monthlyMortgagePayment(profile.homePurchasePrice) +
+        (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12
+      : 0
+
   const housingAnnualCost =
     profile.housingChoice === 'rent'
       ? (monthlyRentShare + monthlyUtilitiesShare) * 12
-      : (monthlyMortgagePayment(profile.homePurchasePrice) +
-          (profile.homePurchasePrice * HOME_INSURANCE_MAINTENANCE_PCT_OF_VALUE) / 12 +
-          monthlyUtilitiesShare) *
-        12
+      : (monthlyHousingPayment + monthlyUtilitiesShare) * 12
 
   const transportationAnnualCost = profile.ownsCar
     ? profile.annualMilesDriven * MILEAGE_COST_PER_MILE + transportation.parkingMonthlyEstimate * 12
@@ -136,6 +139,7 @@ export function calculateFinancialSummary(
     taxes,
     monthlyRentShare,
     monthlyUtilitiesShare,
+    monthlyHousingPayment,
     housingAnnualCost,
     transportationAnnualCost,
     everydayExpensesAnnual,

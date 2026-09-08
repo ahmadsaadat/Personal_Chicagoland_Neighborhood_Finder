@@ -145,11 +145,16 @@ export function NeighborhoodDetailPanel({
         <section>
           <SectionHeader icon={Home} title="Housing" />
           <div className="divide-y divide-slate-100 rounded-xl border border-slate-100 px-3">
-            <Row label={`Median ${bedroomLabel} rent (this area)`} value={`${formatCurrency(bedroomRent)}/mo`} />
-            <Row label="Median home price" value={formatCurrency(profile.housing.medianHomePrice)} />
-            <Row label="Effective property tax rate" value={formatPercent(profile.housing.effectivePropertyTaxRate, 2)} />
-            {userProfile.housingChoice === 'rent' && (
+            {userProfile.housingChoice === 'rent' ? (
               <Row label="Your monthly rent" value={`${formatCurrency(Math.round(summary.monthlyRentShare))}/mo`} />
+            ) : (
+              <>
+                <Row label="Housing payment" value={`${formatCurrency(Math.round(summary.monthlyHousingPayment))}/mo`} />
+                <Row
+                  label="Property tax rate & monthly due"
+                  value={`${formatPercent(profile.housing.effectivePropertyTaxRate, 2)} · ${formatCurrency(Math.round(summary.taxes.propertyTaxEstimate / 12))}/mo`}
+                />
+              </>
             )}
             <Row label="Your monthly utilities" value={`${formatCurrency(Math.round(summary.monthlyUtilitiesShare))}/mo`} />
             <Row label="Your est. annual housing cost" value={formatCurrency(Math.round(summary.housingAnnualCost))} />

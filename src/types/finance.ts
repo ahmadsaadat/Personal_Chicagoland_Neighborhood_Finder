@@ -18,6 +18,8 @@ export interface FinancialSummary {
   monthlyRentShare: number
   /** Your monthly utilities share, using the neighborhood's cost-of-living estimate and (if renting with roommates) a fair-usage split. */
   monthlyUtilitiesShare: number
+  /** Monthly mortgage principal & interest plus insurance/maintenance, for owners. 0 if renting. */
+  monthlyHousingPayment: number
   housingAnnualCost: number
   transportationAnnualCost: number
   everydayExpensesAnnual: number
